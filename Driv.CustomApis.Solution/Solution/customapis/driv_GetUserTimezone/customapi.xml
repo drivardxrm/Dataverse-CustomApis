@@ -1,0 +1,17 @@
+<customapi uniquename="driv_GetUserTimezone">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>1</bindingtype>
+  <boundentitylogicalname>systemuser</boundentitylogicalname>
+  <description default="Return a User Timezone information">
+    <label description="Return a User Timezone information" languagecode="1033" />
+  </description>
+  <displayname default="GetUserTimezone">
+    <label description="GetUserTimezone" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <name>GetUserTimezone</name>
+  <plugintypeid>
+    <plugintypeid>56915356-e10a-49f3-9f4a-77d51264cd35</plugintypeid>
+  </plugintypeid>
+</customapi>

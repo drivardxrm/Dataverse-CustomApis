@@ -821,6 +821,22 @@ public abstract class PluginBase : IPlugin
             null,
             action));
 
+    protected void RegisterCustomApi(string eventOperationName, Action<LocalPluginContext> action)
+    => RegisteredEvents.Add(
+        new Tuple<int, string, string, Action<LocalPluginContext>>(
+            (int)ExecutionStage.MainOperation,  //custom Api are registered on Main operation (30)
+            eventOperationName,
+            null,
+            action));
+
+    protected void RegisterCustomApi<T>(string eventOperationName, Action<LocalPluginContext> action) where T: Entity
+    => RegisteredEvents.Add(
+        new Tuple<int, string, string, Action<LocalPluginContext>>(
+            (int)ExecutionStage.MainOperation,  //custom Api are registered on Main operation (30)
+            eventOperationName,
+            null,
+            action));
+
     public enum Locale
     {
         English = 1033,

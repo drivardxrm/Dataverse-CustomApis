@@ -1,0 +1,2 @@
+1:56:06 AM	No change: C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution\PluginAssemblies/DrivCustomApis-A449769D-5EA4-4A41-98E5-6F1E4C5BBDCB/DrivCustomApis.dll
+1:56:06 AM	No change: C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution\Other\Customizations.xml

@@ -1,0 +1,10 @@
+1:55:42 AM	Unpacking solution
+1:55:42 AM	Searching for packager config in 'C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\spkl\..'
+1:55:42 AM	Using Config 'C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution'
+1:56:05 AM	Target C:\GithubRepos\Dataverse-CustomApis\packages\spkl.1.0.431\tools
+1:56:05 AM	Map xml created at 'C:\GithubRepos\Dataverse-CustomApis\packages\Microsoft.CrmSdk.CoreTools.9.1.0.64\content\bin\coretools\packager_map.xml'
+1:56:05 AM	Running C:\GithubRepos\Dataverse-CustomApis\packages\spkl.1.0.431\tools\..\..\Microsoft.CrmSdk.CoreTools.9.1.0.64\content\bin\coretools\SolutionPackager.exe /action:Extract /zipfile:"C:\Users\DavidRivard\AppData\Local\Temp\tmp1AA4.zip" /folder:"C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution" /packagetype:unmanaged /allowWrite:Yes /allowDelete:Yes /clobber /errorlevel:Verbose /nologo /log:packagerlog.txt /map:packager_map.xml
+1:56:14 AM	Target C:\GithubRepos\Dataverse-CustomApis\packages\spkl.1.0.431\tools
+1:56:14 AM	Map xml created at 'C:\GithubRepos\Dataverse-CustomApis\packages\Microsoft.CrmSdk.CoreTools.9.1.0.64\content\bin\coretools\packager_map.xml'
+1:56:14 AM	Running C:\GithubRepos\Dataverse-CustomApis\packages\spkl.1.0.431\tools\..\..\Microsoft.CrmSdk.CoreTools.9.1.0.64\content\bin\coretools\SolutionPackager.exe /action:Extract /zipfile:"C:\Users\DavidRivard\AppData\Local\Temp\tmp7893_managed.zip" /folder:"C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution_Managed" /packagetype:managed /allowWrite:Yes /allowDelete:Yes /clobber /errorlevel:Verbose /nologo /log:packagerlog.txt /map:packager_map.xml
+1:56:14 AM	Processed 1 config(s)

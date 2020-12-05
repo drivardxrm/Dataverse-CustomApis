@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="TimezoneName">
+  <description default="Name of User time zone (Use for Power Automate Date conversion)">
+    <label description="Name of User time zone (Use for Power Automate Date conversion)" languagecode="1033" />
+  </description>
+  <displayname default="GetUserTimezone-Out-TimezoneName">
+    <label description="GetUserTimezone-Out-TimezoneName" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>GetUserTimezone-Out-TimezoneName</name>
+  <type>10</type>
+</customapiresponseproperty>

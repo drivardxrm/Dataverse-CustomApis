@@ -12,7 +12,7 @@ namespace Driv.CustomApis.API
     {
         public GetEnvironmentVariable()
         {
-            RegisterEventOnAllEntities("driv_GetEnvironmentVariable", ExecutionStage.MainOperation, Execute);
+            RegisterCustomApi("driv_GetEnvironmentVariable", Execute);
         }
 
         public void Execute(LocalPluginContext localcontext)
@@ -26,18 +26,12 @@ namespace Driv.CustomApis.API
 
             var key = inputparameters["Key"] as string;
 
-            localcontext.Trace($"KEY:{key}\n");
+           
 
             //default values
             outputparameters["Exists"] = false;
             outputparameters["ValueString"] = string.Empty;
-            outputparameters["ValueBool"] = false;
-
-            localcontext.Trace($"OUTPUT : DEFAULT\n");
-            outputparameters.ToList().ForEach(o => localcontext.Trace($"--{o.Key}:{o.Value}\n"));
-            //outputparameters["ValueNumber"] = decimal.Zero;
-            //outputparameters["Type"] = ;
-
+            
 
             var definition = xrmcontext.GetEnvironmentVariableDefinition(key);
             if (definition != null)
@@ -49,41 +43,15 @@ namespace Driv.CustomApis.API
                                                             overridenvalue.Value :
                                                             definition.DefaultValue;
 
-                //outputparameters["Type"] = definition.Type;
 
-                if (definition.Type == EnvironmentVariableDefinition_Type.Boolean)
-                {
-                    outputparameters["ValueBool"] = overridenvalue != null ?
-                                                            overridenvalue.Value == "yes" :
-                                                            definition.DefaultValue == "yes";
-                }
-
-                //if (definition.Type == EnvironmentVariableDefinition_Type.Number)
+                //if (definition.Type == EnvironmentVariableDefinition_Type.Boolean)
                 //{
-                //    if (overridenvalue != null && decimal.TryParse(overridenvalue.Value, out decimal value) 
-                //        || 
-                //        decimal.TryParse(definition.DefaultValue, out value))
-                //    {
-                //        outputparameters["ValueNumber"] = value;
-                //    }
-
+                //    outputparameters["ValueBool"] = overridenvalue != null ?
+                //                                            overridenvalue.Value == "yes" :
+                //                                            definition.DefaultValue == "yes";
                 //}
-
-
             }
-
-
-
-
-
         }
-        //    private void Execute(LocalPluginContext localcontext)
-        //{
-        //    var key = localcontext.PluginExecutionContext.InputParameters["Key"];
-
-        //    localcontext.PluginExecutionContext.OutputParameters["Exists"] = true;
-
-        //    localcontext.PluginExecutionContext.OutputParameters["Value"] = key;
-        //}
+        
     }
 }
