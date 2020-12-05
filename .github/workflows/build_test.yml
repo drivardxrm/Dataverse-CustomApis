@@ -27,10 +27,10 @@ jobs:
 
       # Setup MSBuild
       - name: Add msbuild to PATH
-        uses: microsoft/setup-msbuild@v1.0.2
+        uses: microsoft/setup-msbuild@v1
 
       - name: Setup NuGet
-        uses: NuGet/setup-nuget@v1.0.2
+        uses: NuGet/setup-nuget@v1.0.5
      
       - name: Restore NuGet Packages
         run: nuget restore Driv.CustomApis.sln
