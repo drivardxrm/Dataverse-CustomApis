@@ -1,0 +1,50 @@
+{
+  /*
+  The solutions section defines a solution that can be extracted to individual xml files to make
+  versioning of Dynamics metadata (entities, attributes etc) easier
+  */
+  "solutions": [
+    {
+
+      /*The unique name of the solution to extract, unpack, pack and import*/
+      "solution_uniquename": "DataverseCustomApis",
+      "packagetype": "unmanaged",
+
+      /*The relative folder path to store the extracted solution metadata xml files*/
+      "packagepath": "Solution",
+
+
+      /*Map code artefacts to the solution package folder*/
+      "map": [
+
+        {
+          "map": "file",
+          "from": "Driv.CustomApis.dll",
+          "to": "..\\..\\Driv.CustomApis.Code\\bin\\**\\Criv.CustomApis.dll"
+        }
+
+      ]
+    },
+    {
+
+      /*The unique name of the solution to extract, unpack, pack and import*/
+      "solution_uniquename": "DataverseCustomApis",
+      "packagetype": "managed",
+
+      /*The relative folder path to store the extracted solution metadata xml files*/
+      "packagepath": "Solution_Managed",
+
+
+      /*Map code artefacts to the solution package folder*/
+      "map": [
+
+        {
+          "map": "file",
+          "from": "Driv.CustomApis.dll",
+          "to": "..\\..\\Driv.CustomApis.Code\\bin\\**\\Criv.CustomApis.dll"
+        }
+
+      ]
+    }
+  ]
+}

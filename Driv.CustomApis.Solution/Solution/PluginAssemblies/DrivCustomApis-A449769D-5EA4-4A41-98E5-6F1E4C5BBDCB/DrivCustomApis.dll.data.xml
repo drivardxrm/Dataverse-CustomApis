@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PluginAssembly FullName="Driv.CustomApis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e86c979a4e901f1" PluginAssemblyId="a449769d-5ea4-4a41-98e5-6f1e4c5bbdcb" CustomizationLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsolationMode>2</IsolationMode>
+  <SourceType>0</SourceType>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <FileName>/PluginAssemblies/DrivCustomApis-A449769D-5EA4-4A41-98E5-6F1E4C5BBDCB/DrivCustomApis.dll</FileName>
+  <PluginTypes>
+    <PluginType AssemblyQualifiedName="Driv.CustomApis.API.GetEnvironmentVariable, Driv.CustomApis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e86c979a4e901f1" PluginTypeId="5658bbb0-870a-451a-80c7-e6078366993f" Name="Driv.CustomApis.API.GetEnvironmentVariable">
+      <FriendlyName>6e7e6df2-51b3-4db6-ad2d-82682883a4ca</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="Driv.CustomApis.API.GetUserTimezone, Driv.CustomApis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e86c979a4e901f1" PluginTypeId="56915356-e10a-49f3-9f4a-77d51264cd35" Name="Driv.CustomApis.API.GetUserTimezone">
+      <FriendlyName>3931f353-1812-4fde-969a-f66d4709c605</FriendlyName>
+    </PluginType>
+  </PluginTypes>
+</PluginAssembly>

@@ -1,0 +1,16 @@
+<customapi uniquename="driv_GetEnvironmentVariable">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Retrieve an environment variable value">
+    <label description="Retrieve an environment variable value" languagecode="1033" />
+  </description>
+  <displayname default="GetEnvironmentVariable">
+    <label description="GetEnvironmentVariable" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <name>GetEnvironmentVariable</name>
+  <plugintypeid>
+    <plugintypeid>5658bbb0-870a-451a-80c7-e6078366993f</plugintypeid>
+  </plugintypeid>
+</customapi>

@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="Key">
+  <description default="Environment variable key">
+    <label description="Environment variable key" languagecode="1033" />
+  </description>
+  <displayname default="GetEnvironmentVariable-In-Key">
+    <label description="GetEnvironmentVariable-In-Key" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>GetEnvironmentVariable-In-Key</name>
+  <type>10</type>
+</customapirequestparameter>
