@@ -37,3 +37,6 @@ jobs:
         
       - name: Build Solution
         run: msbuild Driv.CustomApis.sln -p:Configuration=Release
+        
+      - name: Run Unit Tests
+        run: MSTest("./src/**/bin/Release/*.Tests.dll")
