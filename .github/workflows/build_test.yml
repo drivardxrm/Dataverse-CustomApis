@@ -39,4 +39,4 @@ jobs:
         run: msbuild Driv.CustomApis.sln -p:Configuration=Release
         
       - name: Run Unit Tests
-        run: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /testcontainer:"./Driv.CustomApis.Tests/bin/Release/Driv.CustomApis.Tests.dll"'
+        run: '& "$(vswhere -property installationPath)\Common7\IDE\MSTest.exe" /testcontainer:"D:\a\Dataverse-CustomApis\Dataverse-CustomApis\Driv.CustomApis.Tests\bin\Release\Driv.CustomApis.Tests.dll"'
