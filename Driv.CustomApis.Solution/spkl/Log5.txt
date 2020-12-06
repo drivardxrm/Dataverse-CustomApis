@@ -1,7 +1,0 @@
-1:56:14 AM	Creating: C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution_Managed\customapis\driv_GetUserTimezone\customapiresponseproperties\TimezoneName\customapiresponseproperty.xml
-1:56:14 AM	
-1:56:14 AM	Managed Extract complete.
-1:56:14 AM	
-1:56:14 AM	1 warnings encountered
-1:56:14 AM	Read-only files will be over-written or deleted.
-1:56:14 AM	CrmSvcUtil Runtime = 00:00:00.6060539

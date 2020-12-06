@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using XrmVision.Extensions.Extensions;
 
 namespace Driv.CustomApis.API
 {
@@ -43,13 +44,27 @@ namespace Driv.CustomApis.API
                                                             overridenvalue.Value :
                                                             definition.DefaultValue;
 
+ 
+                outputparameters["Type"] = new OptionSetValue((int)definition.Type);
+                outputparameters["TypeName"] = service.GetOptionsetText(EnvironmentVariableDefinition.EntityLogicalName, "type", (int)definition.Type);
 
-                //if (definition.Type == EnvironmentVariableDefinition_Type.Boolean)
-                //{
-                //    outputparameters["ValueBool"] = overridenvalue != null ?
-                //                                            overridenvalue.Value == "yes" :
-                //                                            definition.DefaultValue == "yes";
-                //}
+                switch (definition.Type) 
+                {
+                    case EnvironmentVariableDefinition_Type.Boolean:
+                
+                            outputparameters["ValueBool"] = overridenvalue != null ?
+                                                                    overridenvalue.Value == "yes" :
+                                                                    definition.DefaultValue == "yes";
+                        break;
+
+                    case EnvironmentVariableDefinition_Type.Number:
+                        outputparameters["ValueDecimal"] = overridenvalue != null ?
+                                                                 decimal.Parse(overridenvalue.Value):
+                                                                 decimal.Parse(definition.DefaultValue);
+
+                        break;
+
+                } 
             }
         }
         

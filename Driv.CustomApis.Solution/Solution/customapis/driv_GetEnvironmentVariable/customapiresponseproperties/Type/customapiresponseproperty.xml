@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="Type">
+  <description default="Type of the environment variable">
+    <label description="Type of the environment variable" languagecode="1033" />
+  </description>
+  <displayname default="GetEnvironmentVariable-Out-Type">
+    <label description="GetEnvironmentVariable-Out-Type" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>GetEnvironmentVariable-Out-Type</name>
+  <type>9</type>
+</customapiresponseproperty>

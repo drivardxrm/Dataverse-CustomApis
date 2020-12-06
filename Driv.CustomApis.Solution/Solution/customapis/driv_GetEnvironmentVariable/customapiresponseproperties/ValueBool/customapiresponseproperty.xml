@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="ValueBool">
+  <description default="Value when type is Boolean">
+    <label description="Value when type is Boolean" languagecode="1033" />
+  </description>
+  <displayname default="GetEnvironmentVariable-Out-ValueBool">
+    <label description="GetEnvironmentVariable-Out-ValueBool" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>GetEnvironmentVariable-Out-ValueBool</name>
+  <type>0</type>
+</customapiresponseproperty>

@@ -19,8 +19,8 @@
 
         {
           "map": "file",
-          "from": "Driv.CustomApis.dll",
-          "to": "..\\..\\Driv.CustomApis.Code\\bin\\**\\Criv.CustomApis.dll"
+          "from": "DrivCustomApis.dll",
+          "to": "..\\..\\Driv.CustomApis.Code\\bin\\**\\Driv.CustomApis.dll"
         }
 
       ]
@@ -40,8 +40,8 @@
 
         {
           "map": "file",
-          "from": "Driv.CustomApis.dll",
-          "to": "..\\..\\Driv.CustomApis.Code\\bin\\**\\Criv.CustomApis.dll"
+          "from": "DrivCustomApis.dll",
+          "to": "..\\..\\Driv.CustomApis.Code\\bin\\**\\Driv.CustomApis.dll"
         }
 
       ]
