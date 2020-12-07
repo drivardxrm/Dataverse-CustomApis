@@ -9,7 +9,7 @@ The goal of the project is to enhance the capability of PowerPlatform developers
 ## Disclaimer 
 > Custom Api functionality is still considered as a Preview feature. While unlikely, some breaking changes might occur.
 
-Here is the link to the official documentation : https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/custom-actions
+Here is the link to the Dataverse Custom Apis [official documentation](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/custom-api)
 
 ## Current API list
 ### GetEnvironmentVariable (driv_GetEnvironmentVariable)
@@ -72,5 +72,5 @@ Power Automate:
 
 
 ## Installation
-Managed and unmanaged solutions are provided in the Release section : https://github.com/drivardxrm/Dataverse-CustomApis/releases/
+Managed and unmanaged solutions are provided in the [Release section](https://github.com/drivardxrm/Dataverse-CustomApis/releases/)
 
