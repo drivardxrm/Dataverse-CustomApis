@@ -31,6 +31,17 @@ This Api is used to retrieve an Environment Variable value for a given key.
 | **Type**            |  Picklist   |  Returns the optionset value of the Environment Variable type. (String-100000000, Number-100000001, Boolean-100000002,JSON-100000003) |
 | **TypeName**            |  String   |  Return the label of the Environment Variable type   |                                       |
 
+**Usage**
+
+WebApi : 
+
+`https://{{baseurl}}/api/data/v9.1/driv_GetEnvironmentVariable`
+```
+{
+    "Key" : "{{SchemaName}}"
+}
+```
+Power Automate:
 
 
 
@@ -50,6 +61,14 @@ SystemUser
 |-------------------|-----|-----------------------------------------------------------------------------------------|
 | **TimezoneCode**            |  Integer   |  Timezone code                                           |
 | **TimezoneName**            |  String   |  Timezone Standard Name (Use this value in Power Automate date conversion                                           |
+
+**Usage**
+
+WebApi : 
+
+`https://{{baseurl}}/api/data/v9.1/systemusers(00000000-0000-0000-0000-000000000000)/Microsoft.Dynamics.CRM.driv_GetUserTimezone`
+
+Power Automate:
 
 
 ## Installation
