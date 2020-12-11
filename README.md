@@ -79,6 +79,7 @@ SystemUser
 `https://{{baseurl}}/api/data/v9.1/systemusers(00000000-0000-0000-0000-000000000000)/Microsoft.Dynamics.CRM.driv_GetUserTimezone`
 
 **Power Automate:**
+
 ![bound-action-trigger](https://github.com/drivardxrm/Dataverse-CustomApis/blob/main/images/bound_action.png)
 
 ![GetUserTimezone-Flow-Request](https://github.com/drivardxrm/Dataverse-CustomApis/blob/main/images/GetUserTimezone.png)
