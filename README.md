@@ -5,12 +5,15 @@ This project contains a set of generic Dataverse Custom APIs that can be install
 
 The goal of the project is to enhance the capability of PowerPlatform developers and makers by providing robust and easy to use API that can be consumed agnostically by any calling mechanism. (Ex. Power Automate, PCF, Model-Driven Form javascript, ...)
 
-Please submit any ideas for further addition to the collection [here](https://github.com/drivardxrm/Dataverse-CustomApis/issues).
+Please submit any ideas for further addition to the collection in the [discussions](https://github.com/drivardxrm/Dataverse-CustomApis/discussions).
 
 ## Disclaimer 
-> Custom Api functionality is still considered as a Preview feature. While unlikely, some breaking changes might occur.
+> Custom Api functionality is still considered as a Preview feature. While unlikely, some breaking changes might occur and will be fixed ASAP.
 
 Here is the link to the Dataverse Custom Apis [official documentation](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/custom-api)
+
+## Installation
+Managed and unmanaged solutions are provided in the [Release section](https://github.com/drivardxrm/Dataverse-CustomApis/releases/)
 
 ## Current API list
 ### GetEnvironmentVariable (driv_GetEnvironmentVariable)
@@ -34,7 +37,7 @@ This Api is used to retrieve an Environment Variable value for a given key.
 
 **Usage**
 
-WebApi : 
+**WebApi:**
 
 `https://{{baseurl}}/api/data/v9.1/driv_GetEnvironmentVariable`
 ```
@@ -42,8 +45,14 @@ WebApi :
     "Key" : "{{SchemaName}}"
 }
 ```
-Power Automate:
 
+**Power Automate:**
+
+![unbound-action-trigger](https://github.com/drivardxrm/Dataverse-CustomApis/blob/main/images/unboundaction.png)
+
+![GetEnvironmentVariable-Flow-Request](https://github.com/drivardxrm/Dataverse-CustomApis/blob/main/images/GetEnvironmentVariable.png)
+
+![GetEnvironmentVariable-Flow-Response](https://github.com/drivardxrm/Dataverse-CustomApis/blob/main/images/GetEnvironmentVariable_result.png)
 
 
 ---
@@ -65,13 +74,18 @@ SystemUser
 
 **Usage**
 
-WebApi : 
+**WebApi:**
 
 `https://{{baseurl}}/api/data/v9.1/systemusers(00000000-0000-0000-0000-000000000000)/Microsoft.Dynamics.CRM.driv_GetUserTimezone`
 
-Power Automate:
+**Power Automate:**
+![bound-action-trigger](https://github.com/drivardxrm/Dataverse-CustomApis/blob/main/images/bound_action.png)
+
+![GetUserTimezone-Flow-Request](https://github.com/drivardxrm/Dataverse-CustomApis/blob/main/images/GetUserTimezone.png)
+
+![GetUserTimezone-Flow-Response](https://github.com/drivardxrm/Dataverse-CustomApis/blob/main/images/GetUserTimezone_result.png)
 
 
-## Installation
-Managed and unmanaged solutions are provided in the [Release section](https://github.com/drivardxrm/Dataverse-CustomApis/releases/)
+
+
 
