@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="ChoiceValue">
+  <description default="Choice (optionset) integer value">
+    <label description="Choice (optionset) integer value" languagecode="1033" />
+  </description>
+  <displayname default="GetLocalizedChoiceLabel-In-ChoiceValue">
+    <label description="GetLocalizedChoiceLabel-In-ChoiceValue" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>GetLocalizedChoiceLabel-In-ChoiceValue</name>
+  <type>7</type>
+</customapirequestparameter>

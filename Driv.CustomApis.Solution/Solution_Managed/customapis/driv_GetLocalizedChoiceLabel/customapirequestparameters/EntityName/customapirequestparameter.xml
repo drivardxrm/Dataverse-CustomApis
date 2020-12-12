@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="EntityName">
+  <description default="Entity Logical name">
+    <label description="Entity Logical name" languagecode="1033" />
+  </description>
+  <displayname default="GetLocalizedChoiceLabel-In-EntityName">
+    <label description="GetLocalizedChoiceLabel-In-EntityName" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>GetLocalizedChoiceLabel-In-EntityName</name>
+  <type>10</type>
+</customapirequestparameter>

@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\GetEnvironmentVariable.cs" />
+    <Compile Include="API\GetLocalizedChoiceLabel.cs" />
     <Compile Include="API\GetUserTimezone.cs" />
     <Compile Include="Entities\XrmContext.cs" />
     <Compile Include="Entities\XrmExtensions.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Extensions\UserSettingsHelper.cs" />
     <Compile Include="Extensions\WorkflowHelper.cs" />
     <Compile Include="Helpers\EnvironmentVariableHelper.cs" />
+    <Compile Include="Helpers\ChoiceHelper.cs" />
     <Compile Include="Helpers\UserHelper.cs" />
     <Compile Include="PluginBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

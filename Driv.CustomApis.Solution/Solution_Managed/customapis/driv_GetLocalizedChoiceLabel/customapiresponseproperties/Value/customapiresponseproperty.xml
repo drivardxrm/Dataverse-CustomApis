@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="Value">
+  <description default="Label value retrieved">
+    <label description="Label value retrieved" languagecode="1033" />
+  </description>
+  <displayname default="GetLocalizedChoiceLabel-Out-Value">
+    <label description="GetLocalizedChoiceLabel-Out-Value" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>GetLocalizedChoiceLabel-Out-Value</name>
+  <type>10</type>
+</customapiresponseproperty>

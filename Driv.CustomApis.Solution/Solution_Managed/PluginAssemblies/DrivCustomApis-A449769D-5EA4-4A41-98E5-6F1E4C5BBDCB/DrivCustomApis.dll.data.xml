@@ -8,6 +8,9 @@
     <PluginType AssemblyQualifiedName="Driv.CustomApis.API.GetEnvironmentVariable, Driv.CustomApis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e86c979a4e901f1" PluginTypeId="5658bbb0-870a-451a-80c7-e6078366993f" Name="Driv.CustomApis.API.GetEnvironmentVariable">
       <FriendlyName>6e7e6df2-51b3-4db6-ad2d-82682883a4ca</FriendlyName>
     </PluginType>
+    <PluginType AssemblyQualifiedName="Driv.CustomApis.API.GetLocalizedChoiceLabel, Driv.CustomApis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e86c979a4e901f1" PluginTypeId="2939cb71-36f3-4c60-a6b2-b4e0adb7a2b8" Name="Driv.CustomApis.API.GetLocalizedChoiceLabel">
+      <FriendlyName>b379b2b4-70ce-426e-a431-2edd9205753d</FriendlyName>
+    </PluginType>
     <PluginType AssemblyQualifiedName="Driv.CustomApis.API.GetUserTimezone, Driv.CustomApis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e86c979a4e901f1" PluginTypeId="56915356-e10a-49f3-9f4a-77d51264cd35" Name="Driv.CustomApis.API.GetUserTimezone">
       <FriendlyName>3931f353-1812-4fde-969a-f66d4709c605</FriendlyName>
     </PluginType>

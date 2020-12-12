@@ -1,0 +1,16 @@
+<customapi uniquename="driv_GetLocalizedChoiceLabel">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Retrieves the label of a Choice (Optionset) value in a given language">
+    <label description="Retrieves the label of a Choice (Optionset) value in a given language" languagecode="1033" />
+  </description>
+  <displayname default="GetLocalizedChoiceLabel">
+    <label description="GetLocalizedChoiceLabel" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <name>GetLocalizedChoiceLabel</name>
+  <plugintypeid>
+    <plugintypeid>2939cb71-36f3-4c60-a6b2-b4e0adb7a2b8</plugintypeid>
+  </plugintypeid>
+</customapi>

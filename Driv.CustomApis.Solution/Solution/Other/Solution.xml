@@ -6,7 +6,7 @@
       <LocalizedName description="Dataverse.CustomApis" languagecode="1033" />
     </LocalizedNames>
     <Descriptions />
-    <Version>1.0.0.202012032</Version>
+    <Version>1.0.1.0</Version>
     <Managed>0</Managed>
     <Publisher>
       <UniqueName>drivardxrm</UniqueName>

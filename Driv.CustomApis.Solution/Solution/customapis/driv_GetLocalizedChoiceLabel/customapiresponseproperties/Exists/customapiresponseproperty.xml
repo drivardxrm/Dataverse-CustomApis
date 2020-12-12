@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="Exists">
+  <description default="False if choice value was not found for the given language code">
+    <label description="False if choice value was not found for the given language code" languagecode="1033" />
+  </description>
+  <displayname default="GetLocalizedChoiceLabel-Out-Exists">
+    <label description="GetLocalizedChoiceLabel-Out-Exists" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>GetLocalizedChoiceLabel-Out-Exists</name>
+  <type>0</type>
+</customapiresponseproperty>

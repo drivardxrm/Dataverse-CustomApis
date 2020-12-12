@@ -28,6 +28,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Driv.CustomApis.Solution", 
 		SlnRelativePath = "Driv.CustomApis.Solution\"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Driv.CustomApis.Entities", "Driv.CustomApis.Entities\Driv.CustomApis.Entities.csproj", "{BDA5856E-C9A7-4EE4-A934-27B484AAF8CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{9F2ECC89-CC50-4DBD-960D-75AEEFF9559C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F2ECC89-CC50-4DBD-960D-75AEEFF9559C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{9F2ECC89-CC50-4DBD-960D-75AEEFF9559C}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{BDA5856E-C9A7-4EE4-A934-27B484AAF8CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDA5856E-C9A7-4EE4-A934-27B484AAF8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDA5856E-C9A7-4EE4-A934-27B484AAF8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDA5856E-C9A7-4EE4-A934-27B484AAF8CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

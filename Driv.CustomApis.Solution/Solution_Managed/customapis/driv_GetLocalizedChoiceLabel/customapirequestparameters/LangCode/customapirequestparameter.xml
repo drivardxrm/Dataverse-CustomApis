@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="LangCode">
+  <description default="language code">
+    <label description="language code" languagecode="1033" />
+  </description>
+  <displayname default="GetLocalizedChoiceLabel-In-LangCode">
+    <label description="GetLocalizedChoiceLabel-In-LangCode" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>GetLocalizedChoiceLabel-In-LangCode</name>
+  <type>7</type>
+</customapirequestparameter>

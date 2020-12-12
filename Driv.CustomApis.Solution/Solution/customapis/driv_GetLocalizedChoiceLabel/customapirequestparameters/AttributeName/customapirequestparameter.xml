@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="AttributeName">
+  <description default="Attribute schema name">
+    <label description="Attribute schema name" languagecode="1033" />
+  </description>
+  <displayname default="GetLocalizedChoiceLabel-In-AttributeName">
+    <label description="GetLocalizedChoiceLabel-In-AttributeName" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>GetLocalizedChoiceLabel-In-AttributeName</name>
+  <type>10</type>
+</customapirequestparameter>

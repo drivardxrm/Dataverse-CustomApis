@@ -75,15 +75,15 @@ public partial class EnvironmentVariableDefinition : ExtendedEntity<EnvironmentV
     }
     
     /// <summary>
-    /// <para>Display Name: Application Id</para>
+    /// <para>Display Name: API Id</para>
     /// </summary>
-    [AttributeLogicalName("appid")]
-    public string AppId {
+    [AttributeLogicalName("apiid")]
+    public string ApiId {
         get {
-            return GetAttributeValue<string>("appid");
+            return GetAttributeValue<string>("apiid");
         }
         set {
-            SetAttributeValue("appid", value);
+            SetAttributeValue("apiid", value);
         }
     }
     
@@ -95,19 +95,6 @@ public partial class EnvironmentVariableDefinition : ExtendedEntity<EnvironmentV
     public componentstate? ComponentState {
         get {
             return GetOptionSetValue<componentstate>("componentstate");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Display Name: Connection Id</para>
-    /// </summary>
-    [AttributeLogicalName("connectionid")]
-    public string ConnectionId {
-        get {
-            return GetAttributeValue<string>("connectionid");
-        }
-        set {
-            SetAttributeValue("connectionid", value);
         }
     }
     
@@ -540,6 +527,27 @@ public partial class EnvironmentVariableDefinition : ExtendedEntity<EnvironmentV
         }
         set {
             SetOptionSetValue("statuscode", value);
+        }
+    }
+    
+    [RelationshipSchemaName("envdefinition_envdefinition", EntityRole.Referenced)]
+    public IEnumerable<EnvironmentVariableDefinition> Referencedenvdefinition_envdefinition {
+        get {
+            return GetRelatedEntities<EnvironmentVariableDefinition>("envdefinition_envdefinition", EntityRole.Referenced);
+        }
+        set {
+            SetRelatedEntities("envdefinition_envdefinition", EntityRole.Referenced, value);
+        }
+    }
+    
+    [AttributeLogicalName("parentdefinitionid")]
+    [RelationshipSchemaName("envdefinition_envdefinition", EntityRole.Referencing)]
+    public EnvironmentVariableDefinition Referencingenvdefinition_envdefinition {
+        get {
+            return GetRelatedEntity<EnvironmentVariableDefinition>("envdefinition_envdefinition", EntityRole.Referencing);
+        }
+        set {
+            SetRelatedEntity("envdefinition_envdefinition", EntityRole.Referencing, value);
         }
     }
     

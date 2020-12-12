@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping>
+  
+  <!-- Keep the filename as mapping.xml - this is the only way it will be used during pack & extract operations -->-->
+  
+  <!--https://msdn.microsoft.com/en-us/library/jj602987.aspx-->
+  
+  <!-- Match specific named files to an alternate folder -->
+  
+  <!-- Match any file in and under WebResources to an alternate set of sub-folders -->
+  <FileToFile map="DrivCustomApis.dll" to="..\..\Driv.CustomApis.Code\bin\**\Driv.CustomApis.dll" />
+</Mapping>
