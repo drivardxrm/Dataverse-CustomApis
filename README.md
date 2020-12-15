@@ -86,6 +86,23 @@ SystemUser
 
 ![GetUserTimezone-Flow-Response](https://github.com/drivardxrm/Dataverse-CustomApis/blob/main/images/GetUserTimezone_result.png)
 
+### GetLocalizedChoiceLabel (driv_GetLocalizedChoiceLabel)
+This Api can be used to retrieve a choice (optionset) label for a known OptionsetValue in the langage code passed in parameter (given that the language is installed on the environment)
+
+**Input Parameters**
+| **Parameter**         | **Type**   |**Description**                                                                                  | **Required**     |
+|-------------------|------   |----------------------------------------------------------------------------------------|----------   |
+| **EntityName**               |String   |Entity Logical name                                            |    X         |
+| **Attribute**               |String   |Attribute schema name                                           |    X         |
+| **ChoiceValue**               |Integer   |Choice (optionset) integer value                                            |    X         |
+| **LangCode**               |Integer   |Language code (ex. English = 1033, French = 1036 ...)                                           |    X         |
+
+**Output Properties**
+|**Property**         | **Type** | **Description**                                                                                  | 
+|-------------------|-----|-----------------------------------------------------------------------------------------|
+| **Exists**            |  Boolean   |  Returns true if the value exists                                           |
+| **Value**            |  String   |  Label value retrieved                                           |
+
 
 
 
