@@ -15,8 +15,8 @@ namespace XrmVision.Extensions.Extensions
 
             var attmetadata = service.GetAttributeMetadata(entityName, attributeName) as EnumAttributeMetadata;
 
-            return attmetadata.OptionSet.Options.Where(x => x.Value == optionSetValue).FirstOrDefault()?
-                                                .Label.UserLocalizedLabel.Label;
+            return attmetadata?.OptionSet?.Options?.Where(x => x.Value == optionSetValue).FirstOrDefault()?
+                                                .Label?.UserLocalizedLabel?.Label;
 
         }
 
@@ -26,8 +26,8 @@ namespace XrmVision.Extensions.Extensions
 
 
 
-            return attmetadata.OptionSet.Options.Where(x => x.Value == optionSetValue).FirstOrDefault()?
-                                                .Label.LocalizedLabels.Where(l => l.LanguageCode == langcode).FirstOrDefault()?
+            return attmetadata?.OptionSet?.Options.Where(x => x.Value == optionSetValue).FirstOrDefault()?
+                                                .Label?.LocalizedLabels?.Where(l => l.LanguageCode == langcode).FirstOrDefault()?
                                                 .Label;
         }
 
