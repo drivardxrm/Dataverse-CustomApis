@@ -11,6 +11,9 @@
     <PluginType AssemblyQualifiedName="Driv.CustomApis.API.GetLocalizedChoiceLabel, Driv.CustomApis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e86c979a4e901f1" PluginTypeId="2939cb71-36f3-4c60-a6b2-b4e0adb7a2b8" Name="Driv.CustomApis.API.GetLocalizedChoiceLabel">
       <FriendlyName>b379b2b4-70ce-426e-a431-2edd9205753d</FriendlyName>
     </PluginType>
+    <PluginType AssemblyQualifiedName="Driv.CustomApis.API.GetTableInfo, Driv.CustomApis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e86c979a4e901f1" PluginTypeId="6d8b95d3-44de-4885-98d1-e6c51f8b80ed" Name="Driv.CustomApis.API.GetTableInfo">
+      <FriendlyName>d49fff01-f742-4e07-b513-e89bee7ba715</FriendlyName>
+    </PluginType>
     <PluginType AssemblyQualifiedName="Driv.CustomApis.API.GetUserTimezone, Driv.CustomApis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e86c979a4e901f1" PluginTypeId="56915356-e10a-49f3-9f4a-77d51264cd35" Name="Driv.CustomApis.API.GetUserTimezone">
       <FriendlyName>3931f353-1812-4fde-969a-f66d4709c605</FriendlyName>
     </PluginType>

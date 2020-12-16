@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="LogicalName">
+  <description default="Logical name of the Table">
+    <label description="Logical name of the Table" languagecode="1033" />
+  </description>
+  <displayname default="GetTableInfo-In-LogicalName">
+    <label description="GetTableInfo-In-LogicalName" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>GetTableInfo-In-LogicalName</name>
+  <type>10</type>
+</customapirequestparameter>

@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="SchemaName">
+  <description default="SchemaName of the Table">
+    <label description="SchemaName of the Table" languagecode="1033" />
+  </description>
+  <displayname default="GetTableInfo-Out-SchemaName">
+    <label description="GetTableInfo-Out-SchemaName" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>GetTableInfo-Out-SchemaName</name>
+  <type>10</type>
+</customapiresponseproperty>

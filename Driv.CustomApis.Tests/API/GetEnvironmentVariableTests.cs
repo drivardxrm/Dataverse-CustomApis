@@ -81,9 +81,10 @@ namespace Driv.CustomApis.Tests.API
         [TestMethod]
         public void WhenKeyExistsNoOverride()
         {
+            #region ARRANGE
             var fakedContext = new XrmFakedContext();
 
-            #region data
+            
             var environmentvariabledef = new EnvironmentVariableDefinition()
             {
                 Id = Guid.NewGuid(),
@@ -97,7 +98,7 @@ namespace Driv.CustomApis.Tests.API
                 environmentvariabledef
             });
             fakedContext.InitializeMetadata(Assembly.GetAssembly(typeof(EnvironmentVariableDefinition)));
-            #endregion
+            
 
 
             var inputparameters = new ParameterCollection
@@ -115,7 +116,7 @@ namespace Driv.CustomApis.Tests.API
                 { "Type", null },
                 { "TypeName", null }
             };
-
+            #endregion
 
             #region ACT
             var context = new XrmFakedPluginExecutionContext
@@ -131,19 +132,21 @@ namespace Driv.CustomApis.Tests.API
             #endregion
 
 
-
+            #region ASSERT
             Assert.IsTrue((bool)context.OutputParameters["Exists"]);
             Assert.AreEqual("MyKeyValue",(string)context.OutputParameters["ValueString"]);
             Assert.AreEqual(new OptionSetValue((int)EnvironmentVariableDefinition_Type.String), (OptionSetValue)context.OutputParameters["Type"]);
+            #endregion
         }
 
         [TestMethod]
         public void WhenKeyExistsAndOverriden()
         {
+            #region ARRANGE
             var fakedContext = new XrmFakedContext();
 
 
-            #region data
+            
             var environmentvariabledef = new EnvironmentVariableDefinition()
             {
                 Id = Guid.NewGuid(),
@@ -166,12 +169,6 @@ namespace Driv.CustomApis.Tests.API
             });
             fakedContext.InitializeMetadata(Assembly.GetAssembly(typeof(EnvironmentVariableDefinition)));
 
-            #endregion
-
-
-
-
-
 
             var inputparameters = new ParameterCollection
             {
@@ -188,7 +185,7 @@ namespace Driv.CustomApis.Tests.API
                 { "Type", null },
                 { "TypeName", null }
             };
-
+            #endregion
 
 
             #region ACT
@@ -205,19 +202,20 @@ namespace Driv.CustomApis.Tests.API
             #endregion
 
 
-
+            #region ASSERT
             Assert.IsTrue((bool)context.OutputParameters["Exists"]);
             Assert.AreEqual("MyOverridenValue", (string)context.OutputParameters["ValueString"]);
             Assert.AreEqual(new OptionSetValue((int)EnvironmentVariableDefinition_Type.String), (OptionSetValue)context.OutputParameters["Type"]);
+            #endregion 
         }
 
         [TestMethod]
         public void WhenKeyExistsAndTypeIsBool()
         {
+
+            #region ARRANGE
             var fakedContext = new XrmFakedContext();
 
-
-            #region data
             var environmentvariabledef = new EnvironmentVariableDefinition()
             {
                 Id = Guid.NewGuid(),
@@ -240,13 +238,6 @@ namespace Driv.CustomApis.Tests.API
             });
             fakedContext.InitializeMetadata(Assembly.GetAssembly(typeof(EnvironmentVariableDefinition)));
 
-            #endregion
-
-
-
-
-
-
             var inputparameters = new ParameterCollection
             {
                 { "Key", "MyKey" }
@@ -263,6 +254,7 @@ namespace Driv.CustomApis.Tests.API
                 { "TypeName", null }
             };
 
+            #endregion
 
 
             #region ACT
@@ -279,20 +271,21 @@ namespace Driv.CustomApis.Tests.API
             #endregion
 
 
-
+            #region ASSERT
             Assert.IsTrue((bool)context.OutputParameters["Exists"]);
             Assert.AreEqual("yes", (string)context.OutputParameters["ValueString"]);
             Assert.AreEqual(true, (bool)context.OutputParameters["ValueBool"]);
             Assert.AreEqual(new OptionSetValue((int)EnvironmentVariableDefinition_Type.Boolean), (OptionSetValue)context.OutputParameters["Type"]);
+            #endregion 
         }
 
         [TestMethod]
         public void WhenKeyExistsAndTypeIsNumber()
         {
+
+            #region ARRANGE
             var fakedContext = new XrmFakedContext();
-
-
-            #region data
+    
             var environmentvariabledef = new EnvironmentVariableDefinition()
             {
                 Id = Guid.NewGuid(),
@@ -315,10 +308,74 @@ namespace Driv.CustomApis.Tests.API
             });
             fakedContext.InitializeMetadata(Assembly.GetAssembly(typeof(EnvironmentVariableDefinition)));
 
+
+
+            var inputparameters = new ParameterCollection
+            {
+                { "Key", "MyKey" }
+            };
+
+
+            var outputparameters = new ParameterCollection
+            {
+                { "Exists", null },
+                { "ValueString", null },
+                { "ValueBool", null },
+                { "ValueDecimal", null },
+                { "Type", null },
+                { "TypeName", null }
+            };
             #endregion
 
+            #region ACT
+            var context = new XrmFakedPluginExecutionContext
+            {
+                MessageName = "driv_GetEnvironmentVariable",
+                InputParameters = inputparameters,
+                OutputParameters = outputparameters,
+                Stage = 30
+            };
 
 
+            fakedContext.ExecutePluginWith<GetEnvironmentVariable>(context);
+            #endregion
+
+            #region ASSERT
+            Assert.IsTrue((bool)context.OutputParameters["Exists"]);
+            Assert.AreEqual("100.5", (string)context.OutputParameters["ValueString"]);
+            Assert.AreEqual(new decimal(100.5), (decimal)context.OutputParameters["ValueDecimal"]);
+            Assert.AreEqual(new OptionSetValue((int)EnvironmentVariableDefinition_Type.Number), (OptionSetValue)context.OutputParameters["Type"]);
+            #endregion
+        }
+
+        [TestMethod]
+        public void WhenKeyExistsAndTypeIsJson()
+        {
+
+            #region ARRANGE
+            var fakedContext = new XrmFakedContext();
+
+            var environmentvariabledef = new EnvironmentVariableDefinition()
+            {
+                Id = Guid.NewGuid(),
+                SchemaName = "MyKey",
+                DefaultValue = "{'test':'test'}",
+                Type = EnvironmentVariableDefinition_Type.JSON
+
+            };
+            var environmentvariblevalue = new EnvironmentVariableValue()
+            {
+                Id = Guid.NewGuid(),
+                EnvironmentVariableDefinitionId = environmentvariabledef.ToEntityReference(),
+                Value = "{'test2':'test2'}" //overriden value
+
+            };
+
+            fakedContext.Initialize(new List<Entity>() {
+                environmentvariabledef,
+                environmentvariblevalue
+            });
+            fakedContext.InitializeMetadata(Assembly.GetAssembly(typeof(EnvironmentVariableDefinition)));
 
 
 
@@ -337,7 +394,7 @@ namespace Driv.CustomApis.Tests.API
                 { "Type", null },
                 { "TypeName", null }
             };
-
+            #endregion
 
             #region ACT
             var context = new XrmFakedPluginExecutionContext
@@ -352,11 +409,11 @@ namespace Driv.CustomApis.Tests.API
             fakedContext.ExecutePluginWith<GetEnvironmentVariable>(context);
             #endregion
 
-
+            #region ASSERT
             Assert.IsTrue((bool)context.OutputParameters["Exists"]);
-            Assert.AreEqual("100.5", (string)context.OutputParameters["ValueString"]);
-            Assert.AreEqual(new decimal(100.5), (decimal)context.OutputParameters["ValueDecimal"]);
-            Assert.AreEqual(new OptionSetValue((int)EnvironmentVariableDefinition_Type.Number), (OptionSetValue)context.OutputParameters["Type"]);
+            Assert.AreEqual("{'test2':'test2'}", (string)context.OutputParameters["ValueString"]);
+            Assert.AreEqual(new OptionSetValue((int)EnvironmentVariableDefinition_Type.JSON), (OptionSetValue)context.OutputParameters["Type"]);
+            #endregion
         }
     }
     

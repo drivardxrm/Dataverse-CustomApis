@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="DisplayName">
+  <description default="Display name of the Table">
+    <label description="Display name of the Table" languagecode="1033" />
+  </description>
+  <displayname default="GetTableInfo-Out-DisplayName">
+    <label description="GetTableInfo-Out-DisplayName" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>GetTableInfo-Out-DisplayName</name>
+  <type>10</type>
+</customapiresponseproperty>

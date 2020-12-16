@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="Exists">
+  <description default="True if the Table exists">
+    <label description="True if the Table exists" languagecode="1033" />
+  </description>
+  <displayname default="GetTableInfo-Out-Exists">
+    <label description="GetTableInfo-Out-Exists" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>GetTableInfo-Out-Exists</name>
+  <type>0</type>
+</customapiresponseproperty>

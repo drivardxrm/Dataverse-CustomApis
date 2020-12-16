@@ -1,0 +1,16 @@
+<customapi uniquename="driv_GetTableInfo">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Get valuable information about a Table">
+    <label description="Get valuable information about a Table" languagecode="1033" />
+  </description>
+  <displayname default="GetTableInfo">
+    <label description="GetTableInfo" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <name>GetTableInfo</name>
+  <plugintypeid>
+    <plugintypeid>6d8b95d3-44de-4885-98d1-e6c51f8b80ed</plugintypeid>
+  </plugintypeid>
+</customapi>

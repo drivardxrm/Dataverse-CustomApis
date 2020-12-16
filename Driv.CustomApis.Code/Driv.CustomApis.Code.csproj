@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="API\GetEnvironmentVariable.cs" />
     <Compile Include="API\GetLocalizedChoiceLabel.cs" />
+    <Compile Include="API\GetTableInfo.cs" />
     <Compile Include="API\GetUserTimezone.cs" />
     <Compile Include="Entities\XrmContext.cs" />
     <Compile Include="Entities\XrmExtensions.cs" />

@@ -29,13 +29,20 @@ namespace Driv.CustomApis.API
             var choicevalue = inputparameters["ChoiceValue"] as int?;
             var langcode = inputparameters["LangCode"] as int?;
 
-            //todo better error handling
+            try
+            {
+                var objecttypecode = service.GetObjectTypeCode(entityname);
+                var label = service.GetLocalizedOptionsetLabel(objecttypecode, attributename, choicevalue.Value, langcode.Value);
 
-            var objecttypecode = service.GetObjectTypeCode(entityname);
-            var label = service.GetLocalizedOptionsetLabel(objecttypecode, attributename, choicevalue.Value, langcode.Value);
+                outputparameters["Exists"] = !string.IsNullOrEmpty(label);
+                outputparameters["Value"] = label;
+            }
+            catch (Exception)
+            {
 
-            outputparameters["Exists"] = !string.IsNullOrEmpty(label);
-            outputparameters["Value"] = label;
+                outputparameters["Exists"] = false;
+            }
+            
             
 
             

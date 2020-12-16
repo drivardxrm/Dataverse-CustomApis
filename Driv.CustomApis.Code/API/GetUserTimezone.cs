@@ -25,11 +25,20 @@ namespace Driv.CustomApis.API
 
             var xrmcontext = new XrmContext(service);
 
+            try
+            {
+                var timezonedef = xrmcontext.GetTimezoneDefinitionFor(user);
 
-            var timezonedef = xrmcontext.GetTimezoneDefinitionFor(user);
+                outputparameters["TimezoneCode"] = timezonedef.TimeZoneCode;
+                outputparameters["TimezoneName"] = timezonedef.StandardName;
+            }
+            catch (Exception)
+            {
 
-            outputparameters["TimezoneCode"] = timezonedef.TimeZoneCode;
-            outputparameters["TimezoneName"] = timezonedef.StandardName;
+                throw new InvalidPluginExecutionException($"User '{user.Id}' does not exists.");
+            }
+
+            
 
             
         }

@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="ObjectTypeCode">
+  <description default="ObjectTypeCode of the Table">
+    <label description="ObjectTypeCode of the Table" languagecode="1033" />
+  </description>
+  <displayname default="GetTableInfo-Out-ObjectTypeCode">
+    <label description="GetTableInfo-Out-ObjectTypeCode" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>GetTableInfo-Out-ObjectTypeCode</name>
+  <type>7</type>
+</customapiresponseproperty>

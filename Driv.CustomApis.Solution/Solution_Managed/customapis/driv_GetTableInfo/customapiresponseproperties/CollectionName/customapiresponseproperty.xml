@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="CollectionName">
+  <description default="CollectionName of the Table">
+    <label description="CollectionName of the Table" languagecode="1033" />
+  </description>
+  <displayname default="GetTableInfo-Out-CollectionName">
+    <label description="GetTableInfo-Out-CollectionName" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>GetTableInfo-Out-CollectionName</name>
+  <type>10</type>
+</customapiresponseproperty>

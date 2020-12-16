@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="PrimaryNameAttribute">
+  <description default="PrimaryNameAttribute of the Table">
+    <label description="PrimaryNameAttribute of the Table" languagecode="1033" />
+  </description>
+  <displayname default="GetTableInfo-Out-PrimaryNameAttribute">
+    <label description="GetTableInfo-Out-PrimaryNameAttribute" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>GetTableInfo-Out-PrimaryNameAttribute</name>
+  <type>10</type>
+</customapiresponseproperty>
