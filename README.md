@@ -103,7 +103,45 @@ This Api can be used to retrieve a choice (optionset) label for a known Optionse
 | **Exists**            |  Boolean   |  Returns true if the value exists                                           |
 | **Value**            |  String   |  Label value retrieved                                           |
 
+`https://{{baseurl}}/api/data/v9.1/driv_GetLocalizedChoiceLabel`
+```
+{
+    "EntityName" : "{{EntityLogicalName}}",
+    "EntityName" : "{{EntityLogicalName}}"
+
+}
+```
 
 
+### GetTableInfo (driv_GetTableInfo)
+This Api can be used to  retrieve some information on a table like 'CollectionName', 'SchemaName', "ObjectTypeCode'. The goal is not to replace a Metadata request but to surface some information more easilly (ex. via a custom action connector in Power Automate).
 
+**Input Parameters**
+| **Parameter**         | **Type**   |**Description**                                                                                  | **Required**     |
+|-------------------|------   |----------------------------------------------------------------------------------------|----------   |
+| **LogicalName**               |String   |Entity Logical name                                            |    X         |
+
+
+**Output Properties**
+|**Property**         | **Type** | **Description**                                                                                  | 
+|-------------------|-----|-----------------------------------------------------------------------------------------|
+| **Exists**            |  Boolean   |  Returns true if the Table exists                                           |
+| **DisplayName**            |  String   |  DisplayName of the Table                                         |
+| **SchemaName**            |  String   |  SchemaName of the Table                                         |
+| **CollectionName**            |  String   |  CollectionName of the Table                                         |
+| **CollectionSchemaName**            |  String   |  CollectionSchemaName of the Table                                         |
+| **PrimaryIdAttribute**            |  String   |  PrimaryIdAttribute of the Table                                         |
+| **PrimaryNameAttribute**            |  String   |  PrimaryNameAttribute of the Table                                         |
+| **ObjectTypeCode**            |  Integer   |  ObjectTypeCode of the Table                                         |
+
+**Usage**
+
+**WebApi:**
+
+`https://{{baseurl}}/api/data/v9.1/driv_GetTableInfo`
+```
+{
+    "LogicalName" : "{{TableLogicalName}}"
+}
+```
 
