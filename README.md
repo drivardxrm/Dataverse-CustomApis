@@ -1,5 +1,4 @@
 # Dataverse-CustomApis
---WORK IN PROGESS--
 
 This project contains a set of generic Dataverse Custom APIs that can be installed and consumed on any Dataverse environment.
 
@@ -8,9 +7,9 @@ The goal of the project is to enhance the capability of PowerPlatform developers
 Please submit any ideas for further addition to the collection in the [discussions](https://github.com/drivardxrm/Dataverse-CustomApis/discussions).
 
 ## Disclaimer 
-> Custom Api functionality is still considered as a Preview feature. While unlikely, some breaking changes might occur and will be fixed ASAP.
+> Custom API functionality is still considered as a Preview feature. While unlikely, some breaking changes might occur and will be fixed ASAP.
 
-Here is the link to the Dataverse Custom Apis [official documentation](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/custom-api)
+Here is the link to the Dataverse Custom API's [official documentation](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/custom-api)
 
 ## Installation
 Managed and unmanaged solutions are provided in the [Release section](https://github.com/drivardxrm/Dataverse-CustomApis/releases/)
@@ -30,13 +29,13 @@ This is especialy usefull in PowerAutomate Flows for date conversion from UTC.à
 see [API Definition](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetUserTimezone)
 
 ### GetLocalizedChoiceLabel 
-This Api can be used to retrieve a choice (optionset) label for a known OptionsetValue in the langage code passed in parameter (given that the language is installed on the environment)
+This API can be used to retrieve a choice (optionset) label for a known OptionsetValue in the langage code passed in parameter (given that the language is installed on the environment)
 
 see [API Definition](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetLocalizedChoiceLabel)
 
 
 ### GetTableInfo 
-This Api can be used to  retrieve some information on a table like 'CollectionName', 'SchemaName', "ObjectTypeCode'. The goal is not to replace a Metadata request but to surface some information more easilly (ex. via a custom action connector in Power Automate).
+This API can be used to  retrieve some information on a table like 'CollectionName', 'SchemaName', "ObjectTypeCode'. The goal is not to replace a Metadata request but to surface some information more easilly (ex. via a custom action connector in Power Automate).
 
 see [API Definition](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetTableInfo)
 
