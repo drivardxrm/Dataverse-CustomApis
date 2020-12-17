@@ -24,7 +24,7 @@ see [API Definition](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/Get
 
 ### GetUserTimezone
 This API is Bound to the SystemUser Table and will provide easy access to the TimeZone code and TimeZone Standard name of a given user.
-This is especialy usefull in PowerAutomate Flows for date conversion from UTC.à
+This is especialy usefull in PowerAutomate Flows for date conversion from UTC.
 
 see [API Definition](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetUserTimezone)
 
