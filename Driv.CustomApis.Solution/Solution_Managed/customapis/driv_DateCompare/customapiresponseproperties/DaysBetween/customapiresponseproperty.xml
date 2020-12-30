@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="DaysBetween">
+  <description default="Days between the 2 dates">
+    <label description="Days between the 2 dates" languagecode="1033" />
+  </description>
+  <displayname default="DateCompare-Out-DaysBetween">
+    <label description="DateCompare-Out-DaysBetween" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>DateCompare-Out-DaysBetween</name>
+  <type>7</type>
+</customapiresponseproperty>

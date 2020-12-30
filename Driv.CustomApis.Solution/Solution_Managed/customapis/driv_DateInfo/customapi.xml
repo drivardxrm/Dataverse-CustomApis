@@ -1,0 +1,16 @@
+<customapi uniquename="driv_DateInfo">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Get usefull information about a given date">
+    <label description="Get usefull information about a given date" languagecode="1033" />
+  </description>
+  <displayname default="DateInfo">
+    <label description="DateInfo" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <name>DateInfo</name>
+  <plugintypeid>
+    <plugintypeid>22cc9ee6-6b77-4de7-93a2-47ba79e5fcac</plugintypeid>
+  </plugintypeid>
+</customapi>

@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="Day">
+  <description default="Day of the month">
+    <label description="Day of the month" languagecode="1033" />
+  </description>
+  <displayname default="DateInfo-Out-Day">
+    <label description="DateInfo-Out-Day" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>DateInfo-Out-Day</name>
+  <type>7</type>
+</customapiresponseproperty>

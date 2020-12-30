@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="DayOfYear">
+  <description default="Day of the year">
+    <label description="Day of the year" languagecode="1033" />
+  </description>
+  <displayname default="DateInfo-Out-DayOfYear">
+    <label description="DateInfo-Out-DayOfYear" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>DateInfo-Out-DayOfYear</name>
+  <type>7</type>
+</customapiresponseproperty>

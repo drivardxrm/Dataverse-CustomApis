@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="DayOfWeek">
+  <description default="Day of the week (Sunday = 0)">
+    <label description="Day of the week (Sunday = 0)" languagecode="1033" />
+  </description>
+  <displayname default="DateInfo-Out-DayOfWeek">
+    <label description="DateInfo-Out-DayOfWeek" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>DateInfo-Out-DayOfWeek</name>
+  <type>7</type>
+</customapiresponseproperty>

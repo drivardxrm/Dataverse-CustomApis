@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="SameDay">
+  <description default="Are the 2 dates in the same day of month ? (regardless of month and year)">
+    <label description="Are the 2 dates in the same day of month ? (regardless of month and year)" languagecode="1033" />
+  </description>
+  <displayname default="DateCompare-Out-SameDay">
+    <label description="DateCompare-Out-SameDay" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>DateCompare-Out-SameDay</name>
+  <type>0</type>
+</customapiresponseproperty>

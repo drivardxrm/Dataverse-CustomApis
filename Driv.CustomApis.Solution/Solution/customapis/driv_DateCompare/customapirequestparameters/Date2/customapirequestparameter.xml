@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="Date2">
+  <description default="date #2">
+    <label description="date #2" languagecode="1033" />
+  </description>
+  <displayname default="DateCompare-In-Date2">
+    <label description="DateCompare-In-Date2" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>DateCompare-In-Date2</name>
+  <type>1</type>
+</customapirequestparameter>

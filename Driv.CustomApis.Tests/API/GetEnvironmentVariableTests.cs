@@ -16,17 +16,14 @@ using System.Threading.Tasks;
 namespace Driv.CustomApis.Tests.API
 {
     [TestClass]
-    public class GetEnvironnementVariableTest
+    public class GetEnvironnementVariableTest : FakeXrmEasyTestBase
     {
         [TestMethod]
         public void WhenKeyNotExists()
         {
 
             #region ARRANGE
-            var fakedContext = new XrmFakedContext();
 
-
-            
             var environmentvariabledef = new EnvironmentVariableDefinition()
             {
                 Id = Guid.NewGuid(),
@@ -36,7 +33,7 @@ namespace Driv.CustomApis.Tests.API
 
             };
 
-            fakedContext.Initialize(new List<Entity>() {
+            _context.Initialize(new List<Entity>() {
                 environmentvariabledef
             });
 
@@ -68,7 +65,7 @@ namespace Driv.CustomApis.Tests.API
             };
 
 
-            fakedContext.ExecutePluginWith<GetEnvironmentVariable>(context);
+            _context.ExecutePluginWith<GetEnvironmentVariable>(context);
             #endregion
 
 
@@ -82,9 +79,6 @@ namespace Driv.CustomApis.Tests.API
         public void WhenKeyExistsNoOverride()
         {
             #region ARRANGE
-            var fakedContext = new XrmFakedContext();
-
-            
             var environmentvariabledef = new EnvironmentVariableDefinition()
             {
                 Id = Guid.NewGuid(),
@@ -94,10 +88,10 @@ namespace Driv.CustomApis.Tests.API
 
             };
 
-            fakedContext.Initialize(new List<Entity>() {
+            _context.Initialize(new List<Entity>() {
                 environmentvariabledef
             });
-            fakedContext.InitializeMetadata(Assembly.GetAssembly(typeof(EnvironmentVariableDefinition)));
+            _context.InitializeMetadata(Assembly.GetAssembly(typeof(EnvironmentVariableDefinition)));
             
 
 
@@ -128,7 +122,7 @@ namespace Driv.CustomApis.Tests.API
             };
 
 
-            fakedContext.ExecutePluginWith<GetEnvironmentVariable>(context);
+            _context.ExecutePluginWith<GetEnvironmentVariable>(context);
             #endregion
 
 
@@ -143,10 +137,7 @@ namespace Driv.CustomApis.Tests.API
         public void WhenKeyExistsAndOverriden()
         {
             #region ARRANGE
-            var fakedContext = new XrmFakedContext();
 
-
-            
             var environmentvariabledef = new EnvironmentVariableDefinition()
             {
                 Id = Guid.NewGuid(),
@@ -163,11 +154,11 @@ namespace Driv.CustomApis.Tests.API
 
             };
 
-            fakedContext.Initialize(new List<Entity>() {
+            _context.Initialize(new List<Entity>() {
                 environmentvariabledef,
                 environmentvariblevalue
             });
-            fakedContext.InitializeMetadata(Assembly.GetAssembly(typeof(EnvironmentVariableDefinition)));
+            _context.InitializeMetadata(Assembly.GetAssembly(typeof(EnvironmentVariableDefinition)));
 
 
             var inputparameters = new ParameterCollection
@@ -198,7 +189,7 @@ namespace Driv.CustomApis.Tests.API
             };
 
 
-            fakedContext.ExecutePluginWith<GetEnvironmentVariable>(context);
+            _context.ExecutePluginWith<GetEnvironmentVariable>(context);
             #endregion
 
 
@@ -214,8 +205,6 @@ namespace Driv.CustomApis.Tests.API
         {
 
             #region ARRANGE
-            var fakedContext = new XrmFakedContext();
-
             var environmentvariabledef = new EnvironmentVariableDefinition()
             {
                 Id = Guid.NewGuid(),
@@ -232,11 +221,11 @@ namespace Driv.CustomApis.Tests.API
 
             };
 
-            fakedContext.Initialize(new List<Entity>() {
+            _context.Initialize(new List<Entity>() {
                 environmentvariabledef,
                 environmentvariblevalue
             });
-            fakedContext.InitializeMetadata(Assembly.GetAssembly(typeof(EnvironmentVariableDefinition)));
+            _context.InitializeMetadata(Assembly.GetAssembly(typeof(EnvironmentVariableDefinition)));
 
             var inputparameters = new ParameterCollection
             {
@@ -267,7 +256,7 @@ namespace Driv.CustomApis.Tests.API
             };
 
 
-            fakedContext.ExecutePluginWith<GetEnvironmentVariable>(context);
+            _context.ExecutePluginWith<GetEnvironmentVariable>(context);
             #endregion
 
 
@@ -284,7 +273,7 @@ namespace Driv.CustomApis.Tests.API
         {
 
             #region ARRANGE
-            var fakedContext = new XrmFakedContext();
+            
     
             var environmentvariabledef = new EnvironmentVariableDefinition()
             {
@@ -302,11 +291,11 @@ namespace Driv.CustomApis.Tests.API
 
             };
 
-            fakedContext.Initialize(new List<Entity>() {
+            _context.Initialize(new List<Entity>() {
                 environmentvariabledef,
                 environmentvariblevalue
             });
-            fakedContext.InitializeMetadata(Assembly.GetAssembly(typeof(EnvironmentVariableDefinition)));
+            _context.InitializeMetadata(Assembly.GetAssembly(typeof(EnvironmentVariableDefinition)));
 
 
 
@@ -337,7 +326,7 @@ namespace Driv.CustomApis.Tests.API
             };
 
 
-            fakedContext.ExecutePluginWith<GetEnvironmentVariable>(context);
+            _context.ExecutePluginWith<GetEnvironmentVariable>(context);
             #endregion
 
             #region ASSERT
@@ -353,8 +342,7 @@ namespace Driv.CustomApis.Tests.API
         {
 
             #region ARRANGE
-            var fakedContext = new XrmFakedContext();
-
+            
             var environmentvariabledef = new EnvironmentVariableDefinition()
             {
                 Id = Guid.NewGuid(),
@@ -371,11 +359,11 @@ namespace Driv.CustomApis.Tests.API
 
             };
 
-            fakedContext.Initialize(new List<Entity>() {
+            _context.Initialize(new List<Entity>() {
                 environmentvariabledef,
                 environmentvariblevalue
             });
-            fakedContext.InitializeMetadata(Assembly.GetAssembly(typeof(EnvironmentVariableDefinition)));
+            _context.InitializeMetadata(Assembly.GetAssembly(typeof(EnvironmentVariableDefinition)));
 
 
 
@@ -406,7 +394,7 @@ namespace Driv.CustomApis.Tests.API
             };
 
 
-            fakedContext.ExecutePluginWith<GetEnvironmentVariable>(context);
+            _context.ExecutePluginWith<GetEnvironmentVariable>(context);
             #endregion
 
             #region ASSERT

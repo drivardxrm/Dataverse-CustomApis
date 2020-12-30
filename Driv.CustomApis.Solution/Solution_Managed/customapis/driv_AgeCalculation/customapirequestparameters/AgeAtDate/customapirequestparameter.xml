@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="AgeAtDate">
+  <description default="Date at wich the age will be calculated">
+    <label description="Date at wich the age will be calculated" languagecode="1033" />
+  </description>
+  <displayname default="AgeCalculation-In-AgeAtDate">
+    <label description="AgeCalculation-In-AgeAtDate" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>AgeCalculation-In-AgeAtDate</name>
+  <type>1</type>
+</customapirequestparameter>

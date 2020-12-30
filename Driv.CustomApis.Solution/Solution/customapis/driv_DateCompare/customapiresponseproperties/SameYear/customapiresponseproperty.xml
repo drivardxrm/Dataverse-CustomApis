@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="SameYear">
+  <description default="Are the 2 dates in the same year ?">
+    <label description="Are the 2 dates in the same year ?" languagecode="1033" />
+  </description>
+  <displayname default="DateCompare-Out-SameYear">
+    <label description="DateCompare-Out-SameYear" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>DateCompare-Out-SameYear</name>
+  <type>0</type>
+</customapiresponseproperty>

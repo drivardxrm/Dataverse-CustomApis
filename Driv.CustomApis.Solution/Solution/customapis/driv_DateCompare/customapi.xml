@@ -1,0 +1,16 @@
+<customapi uniquename="driv_DateCompare">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Comparison information between 2 dates">
+    <label description="Comparison information between 2 dates" languagecode="1033" />
+  </description>
+  <displayname default="DateCompare">
+    <label description="DateCompare" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <name>DateCompare</name>
+  <plugintypeid>
+    <plugintypeid>a23b487f-ec77-4315-834a-9e58eed0d35c</plugintypeid>
+  </plugintypeid>
+</customapi>

@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="Age">
+  <description default="Age of the subject">
+    <label description="Age of the subject" languagecode="1033" />
+  </description>
+  <displayname default="AgeCalculation-Out-Age">
+    <label description="AgeCalculation-Out-Age" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>AgeCalculation-Out-Age</name>
+  <type>7</type>
+</customapiresponseproperty>

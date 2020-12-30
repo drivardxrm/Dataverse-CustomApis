@@ -1,0 +1,8 @@
+<customapiresponseproperty uniquename="Month">
+  <displayname default="DateInfo-Out-Month">
+    <label description="DateInfo-Out-Month" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>DateInfo-Out-Month</name>
+  <type>7</type>
+</customapiresponseproperty>

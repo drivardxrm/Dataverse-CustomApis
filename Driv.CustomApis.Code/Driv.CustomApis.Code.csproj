@@ -62,6 +62,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\DateInfo.cs" />
+    <Compile Include="API\DateCompare.cs" />
+    <Compile Include="API\AgeCalculation.cs" />
     <Compile Include="API\GetEnvironmentVariable.cs" />
     <Compile Include="API\GetLocalizedChoiceLabel.cs" />
     <Compile Include="API\GetTableInfo.cs" />

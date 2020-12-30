@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="IsLeapYear">
+  <description default="Is the date in a Leap year">
+    <label description="Is the date in a Leap year" languagecode="1033" />
+  </description>
+  <displayname default="DateInfo-Out-IsLeapYear">
+    <label description="DateInfo-Out-IsLeapYear" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>DateInfo-Out-IsLeapYear</name>
+  <type>0</type>
+</customapiresponseproperty>

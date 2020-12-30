@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="IsLastDayOfMonth">
+  <description default="Is the date the last day of the month">
+    <label description="Is the date the last day of the month" languagecode="1033" />
+  </description>
+  <displayname default="DateInfo-Out-IsLastDayOfMonth">
+    <label description="DateInfo-Out-IsLastDayOfMonth" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>DateInfo-Out-IsLastDayOfMonth</name>
+  <type>0</type>
+</customapiresponseproperty>

@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="Date">
+  <description default="Date to analyze">
+    <label description="Date to analyze" languagecode="1033" />
+  </description>
+  <displayname default="DateInfo-In-Date">
+    <label description="DateInfo-In-Date" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>DateInfo-In-Date</name>
+  <type>1</type>
+</customapirequestparameter>

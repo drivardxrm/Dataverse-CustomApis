@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="Birthday">
+  <description default="Birthday of the subject">
+    <label description="Birthday of the subject" languagecode="1033" />
+  </description>
+  <displayname default="AgeCalculation-In-Birthday">
+    <label description="AgeCalculation-In-Birthday" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>AgeCalculation-In-Birthday</name>
+  <type>1</type>
+</customapirequestparameter>
