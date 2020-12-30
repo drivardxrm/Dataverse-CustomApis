@@ -5,7 +5,7 @@
   <displayname default="DateInfo-Out-DayOfYear">
     <label description="DateInfo-Out-DayOfYear" languagecode="1033" />
   </displayname>
-  <iscustomizable>1</iscustomizable>
+  <iscustomizable>0</iscustomizable>
   <name>DateInfo-Out-DayOfYear</name>
   <type>7</type>
 </customapiresponseproperty>

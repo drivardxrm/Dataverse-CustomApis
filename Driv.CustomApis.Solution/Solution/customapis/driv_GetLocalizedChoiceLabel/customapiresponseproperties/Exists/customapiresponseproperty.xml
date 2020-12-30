@@ -5,7 +5,7 @@
   <displayname default="GetLocalizedChoiceLabel-Out-Exists">
     <label description="GetLocalizedChoiceLabel-Out-Exists" languagecode="1033" />
   </displayname>
-  <iscustomizable>1</iscustomizable>
+  <iscustomizable>0</iscustomizable>
   <name>GetLocalizedChoiceLabel-Out-Exists</name>
   <type>0</type>
 </customapiresponseproperty>

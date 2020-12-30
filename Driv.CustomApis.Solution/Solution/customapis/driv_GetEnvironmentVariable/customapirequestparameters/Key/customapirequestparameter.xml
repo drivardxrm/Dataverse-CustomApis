@@ -5,7 +5,7 @@
   <displayname default="GetEnvironmentVariable-In-Key">
     <label description="GetEnvironmentVariable-In-Key" languagecode="1033" />
   </displayname>
-  <iscustomizable>1</iscustomizable>
+  <iscustomizable>0</iscustomizable>
   <isoptional>0</isoptional>
   <name>GetEnvironmentVariable-In-Key</name>
   <type>10</type>

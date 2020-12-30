@@ -5,7 +5,7 @@
   <displayname default="AgeCalculation-Out-Age">
     <label description="AgeCalculation-Out-Age" languagecode="1033" />
   </displayname>
-  <iscustomizable>1</iscustomizable>
+  <iscustomizable>0</iscustomizable>
   <name>AgeCalculation-Out-Age</name>
   <type>7</type>
 </customapiresponseproperty>

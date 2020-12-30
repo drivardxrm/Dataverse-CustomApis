@@ -8,7 +8,7 @@
   <displayname default="GetUserTimezone">
     <label description="GetUserTimezone" languagecode="1033" />
   </displayname>
-  <iscustomizable>1</iscustomizable>
+  <iscustomizable>0</iscustomizable>
   <isfunction>0</isfunction>
   <name>GetUserTimezone</name>
   <plugintypeid>

@@ -5,7 +5,7 @@
   <displayname default="DateCompare-Out-SameDay">
     <label description="DateCompare-Out-SameDay" languagecode="1033" />
   </displayname>
-  <iscustomizable>1</iscustomizable>
+  <iscustomizable>0</iscustomizable>
   <name>DateCompare-Out-SameDay</name>
   <type>0</type>
 </customapiresponseproperty>

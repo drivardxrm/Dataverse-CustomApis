@@ -7,7 +7,7 @@
   <displayname default="GetTableInfo">
     <label description="GetTableInfo" languagecode="1033" />
   </displayname>
-  <iscustomizable>1</iscustomizable>
+  <iscustomizable>0</iscustomizable>
   <isfunction>0</isfunction>
   <name>GetTableInfo</name>
   <plugintypeid>
