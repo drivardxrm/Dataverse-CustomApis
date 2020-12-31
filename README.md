@@ -15,27 +15,13 @@ Here is the link to the Dataverse Custom API's [official documentation](https://
 Managed and unmanaged solutions are provided in the [Release section](https://github.com/drivardxrm/Dataverse-CustomApis/releases/)
 
 ## Current API list (see [Wiki](https://github.com/drivardxrm/Dataverse-CustomApis/wiki) for API Definitions)
-### GetEnvironmentVariable 
-This API is used to retrieve an Environment Variable value for a given key.
-> Environment Variables are a great feature, but the lack of unified method to retrieve the values makes it somehow difficult to use. This API tries to simplify this process.  
 
-see [API Definition](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetEnvironmentVariable)
+* [AgeCalculation](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/AgeCalculation)
+* [DateInfo ](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/DateInfo)
+* [DateCompare ](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/DateCompare)
+* [GetEnvironmentVariable ](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetEnvironmentVariable)
+* [GetLocalizedChoiceLabel](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetLocalizedChoiceLabel)
+* [GetTableInfo](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetTableInfo)
+* [GetUserTimezone ](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetUserTimezone)
 
-
-### GetUserTimezone
-This API is Bound to the SystemUser Table and will provide easy access to the TimeZone code and TimeZone Standard name of a given user.
-This is especialy usefull in PowerAutomate Flows for date conversion from UTC.
-
-see [API Definition](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetUserTimezone)
-
-### GetLocalizedChoiceLabel 
-This API can be used to retrieve a choice (optionset) label for a known OptionsetValue in the langage code passed in parameter (given that the language is installed on the environment)
-
-see [API Definition](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetLocalizedChoiceLabel)
-
-
-### GetTableInfo 
-This API can be used to  retrieve some information on a table like 'CollectionName', 'SchemaName', "ObjectTypeCode'. The goal is not to replace a Metadata request but to surface some information more easilly (ex. via a custom action connector in Power Automate).
-
-see [API Definition](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetTableInfo)
 
