@@ -1,6 +1,6 @@
 # Dataverse-CustomApis
 
-This project contains a set of generic Dataverse Custom APIs that can be installed and consumed on any Dataverse environment.
+This project contains a set of generic Dataverse Custom APIs that can be installed and consumed in any Dataverse environment.
 
 The goal of the project is to enhance the capability of PowerPlatform developers and makers by providing robust and easy to use API that can be consumed agnostically by any calling mechanism. (Ex. Power Automate, PCF, Model-Driven Form javascript, ...)
 
