@@ -18,12 +18,13 @@ Managed and unmanaged solutions are provided in the [Release section](https://gi
 
 ## Current API list (see [Wiki](https://github.com/drivardxrm/Dataverse-CustomApis/wiki) for API Definitions)
 
-* [AgeCalculation](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/AgeCalculation) (:new: v1.2020.12.25)
-* [DateInfo ](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/DateInfo) (:new: v1.2020.12.25)
-* [DateCompare ](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/DateCompare) (:new: v1.2020.12.25)
+* [AgeCalculation](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/AgeCalculation)
+* [DateInfo ](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/DateInfo) 
+* [DateCompare ](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/DateCompare) 
 * [GetEnvironmentVariable ](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetEnvironmentVariable)
 * [GetLocalizedChoiceLabel](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetLocalizedChoiceLabel)
 * [GetTableInfo](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetTableInfo)
-* [GetUserTimezone ](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetUserTimezone)
+* [GetUserTimezone](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetUserTimezone)
+* [RemoveDiacritics](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/RemoveDiacritics) (:new: v1.2021.01.28)
 
 
