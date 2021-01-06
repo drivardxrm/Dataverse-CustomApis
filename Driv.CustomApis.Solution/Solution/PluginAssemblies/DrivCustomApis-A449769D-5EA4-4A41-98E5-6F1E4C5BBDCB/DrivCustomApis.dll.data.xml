@@ -26,5 +26,8 @@
     <PluginType AssemblyQualifiedName="Driv.CustomApis.API.GetUserTimezone, Driv.CustomApis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e86c979a4e901f1" PluginTypeId="56915356-e10a-49f3-9f4a-77d51264cd35" Name="Driv.CustomApis.API.GetUserTimezone">
       <FriendlyName>3931f353-1812-4fde-969a-f66d4709c605</FriendlyName>
     </PluginType>
+    <PluginType AssemblyQualifiedName="Driv.CustomApis.API.RemoveDiacritics, Driv.CustomApis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e86c979a4e901f1" PluginTypeId="a2c9fa2e-3c49-418f-97a2-98d478bb6e99" Name="Driv.CustomApis.API.RemoveDiacritics">
+      <FriendlyName>b5ccd3c8-9d00-4ace-b634-8c254a3feba0</FriendlyName>
+    </PluginType>
   </PluginTypes>
 </PluginAssembly>

@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="OutputString">
+  <description default="Processed string">
+    <label description="Processed string" languagecode="1033" />
+  </description>
+  <displayname default="RemoveDiacritics-Out-OutputString">
+    <label description="RemoveDiacritics-Out-OutputString" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>RemoveDiacritics-Out-OutputString</name>
+  <type>10</type>
+</customapiresponseproperty>

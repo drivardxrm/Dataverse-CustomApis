@@ -1,0 +1,16 @@
+<customapi uniquename="driv_RemoveDiacritics">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="API that removes diacritics (accents) in a given string. (Ex. Hèllô =&gt; Hello) ">
+    <label description="API that removes diacritics (accents) in a given string. (Ex. Hèllô =&gt; Hello) " languagecode="1033" />
+  </description>
+  <displayname default="RemoveDiacritics">
+    <label description="RemoveDiacritics" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <name>RemoveDiacritics</name>
+  <plugintypeid>
+    <plugintypeid>a2c9fa2e-3c49-418f-97a2-98d478bb6e99</plugintypeid>
+  </plugintypeid>
+</customapi>

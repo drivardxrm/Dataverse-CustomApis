@@ -25,47 +25,6 @@ namespace Driv.CustomApis.API
 
             var date = (DateTime)inputparameters["Date"];
 
-            
-
-            
-
-
-            var isLastDayofMonth = false;
-            switch (date.Month)
-            {
-                case 1:
-                case 3:
-                case 5:
-                case 7:
-                case 8:
-                case 10:
-                case 12:
-                    if (date.Day == 31)
-                    {
-                        isLastDayofMonth = true;
-                    }
-                    break;
-                case 2:
-                    if ((DateTime.IsLeapYear(date.Year) && date.Day == 29)
-                        ||
-                        (!DateTime.IsLeapYear(date.Year) && date.Day == 28))
-                    {
-                        isLastDayofMonth = true;
-                    }
-                    
-                    break;
-                case 4:
-                case 6:
-                case 9:
-                case 11:
-                    if (date.Day == 30)
-                    {
-                        isLastDayofMonth = true;
-                    }
-                    break;
-
-            }
-
 
             outputparameters["Year"] = date.Year;
             outputparameters["Month"] = date.Month;
@@ -73,7 +32,7 @@ namespace Driv.CustomApis.API
             outputparameters["DayOfYear"] = date.DayOfYear;
             outputparameters["DayOfWeek"] = (int)date.DayOfWeek;
             outputparameters["IsLeapYear"] = DateTime.IsLeapYear(date.Year);
-            outputparameters["IsLastDayOfMonth"] = isLastDayofMonth;
+            outputparameters["IsLastDayOfMonth"] = date.IsLastDayOfMonth();
 
 
         }

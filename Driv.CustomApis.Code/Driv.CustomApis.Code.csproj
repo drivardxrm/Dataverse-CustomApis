@@ -62,6 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\RemoveDiacritics.cs" />
     <Compile Include="API\DateInfo.cs" />
     <Compile Include="API\DateCompare.cs" />
     <Compile Include="API\AgeCalculation.cs" />

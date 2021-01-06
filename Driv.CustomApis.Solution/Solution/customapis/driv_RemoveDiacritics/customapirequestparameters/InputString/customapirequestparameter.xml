@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="InputString">
+  <description default="String to process">
+    <label description="String to process" languagecode="1033" />
+  </description>
+  <displayname default="RemoveDiacritics-In-InputString">
+    <label description="RemoveDiacritics-In-InputString" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>RemoveDiacritics-In-InputString</name>
+  <type>10</type>
+</customapirequestparameter>
