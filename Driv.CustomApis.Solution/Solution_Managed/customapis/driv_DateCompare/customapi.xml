@@ -9,6 +9,7 @@
   </displayname>
   <iscustomizable>0</iscustomizable>
   <isfunction>0</isfunction>
+  <workflowsdkstepenabled>1</workflowsdkstepenabled>
   <name>DateCompare</name>
   <plugintypeid>
     <plugintypeid>a23b487f-ec77-4315-834a-9e58eed0d35c</plugintypeid>

@@ -9,6 +9,7 @@
   </displayname>
   <iscustomizable>0</iscustomizable>
   <isfunction>0</isfunction>
+  <workflowsdkstepenabled>1</workflowsdkstepenabled>
   <name>GetLocalizedChoiceLabel</name>
   <plugintypeid>
     <plugintypeid>2939cb71-36f3-4c60-a6b2-b4e0adb7a2b8</plugintypeid>

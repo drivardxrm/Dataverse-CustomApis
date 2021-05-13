@@ -9,6 +9,7 @@
   </displayname>
   <iscustomizable>0</iscustomizable>
   <isfunction>0</isfunction>
+  <workflowsdkstepenabled>1</workflowsdkstepenabled>
   <name>DateInfo</name>
   <plugintypeid>
     <plugintypeid>22cc9ee6-6b77-4de7-93a2-47ba79e5fcac</plugintypeid>

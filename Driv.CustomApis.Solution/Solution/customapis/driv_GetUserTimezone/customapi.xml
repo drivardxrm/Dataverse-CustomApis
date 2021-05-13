@@ -10,6 +10,7 @@
   </displayname>
   <iscustomizable>0</iscustomizable>
   <isfunction>0</isfunction>
+  <workflowsdkstepenabled>1</workflowsdkstepenabled>
   <name>GetUserTimezone</name>
   <plugintypeid>
     <plugintypeid>56915356-e10a-49f3-9f4a-77d51264cd35</plugintypeid>

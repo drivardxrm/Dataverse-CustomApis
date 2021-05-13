@@ -9,6 +9,7 @@
   </displayname>
   <iscustomizable>0</iscustomizable>
   <isfunction>0</isfunction>
+  <workflowsdkstepenabled>1</workflowsdkstepenabled>
   <name>GetTableInfo</name>
   <plugintypeid>
     <plugintypeid>6d8b95d3-44de-4885-98d1-e6c51f8b80ed</plugintypeid>

@@ -9,6 +9,7 @@
   </displayname>
   <iscustomizable>0</iscustomizable>
   <isfunction>0</isfunction>
+  <workflowsdkstepenabled>1</workflowsdkstepenabled>
   <name>GetEnvironmentVariable</name>
   <plugintypeid>
     <plugintypeid>5658bbb0-870a-451a-80c7-e6078366993f</plugintypeid>

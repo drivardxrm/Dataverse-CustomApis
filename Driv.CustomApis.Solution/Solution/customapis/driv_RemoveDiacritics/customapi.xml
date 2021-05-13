@@ -9,6 +9,7 @@
   </displayname>
   <iscustomizable>1</iscustomizable>
   <isfunction>0</isfunction>
+  <workflowsdkstepenabled>1</workflowsdkstepenabled>
   <name>RemoveDiacritics</name>
   <plugintypeid>
     <plugintypeid>a2c9fa2e-3c49-418f-97a2-98d478bb6e99</plugintypeid>
