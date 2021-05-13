@@ -5,7 +5,7 @@
   <displayname default="AgeCalculation-In-AgeAtDate">
     <label description="AgeCalculation-In-AgeAtDate" languagecode="1033" />
   </displayname>
-  <iscustomizable>0</iscustomizable>
+  <iscustomizable>1</iscustomizable>
   <isoptional>0</isoptional>
   <name>AgeCalculation-In-AgeAtDate</name>
   <type>1</type>

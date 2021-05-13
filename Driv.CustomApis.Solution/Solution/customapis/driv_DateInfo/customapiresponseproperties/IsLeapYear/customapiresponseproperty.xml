@@ -5,7 +5,7 @@
   <displayname default="DateInfo-Out-IsLeapYear">
     <label description="DateInfo-Out-IsLeapYear" languagecode="1033" />
   </displayname>
-  <iscustomizable>0</iscustomizable>
+  <iscustomizable>1</iscustomizable>
   <name>DateInfo-Out-IsLeapYear</name>
   <type>0</type>
 </customapiresponseproperty>
