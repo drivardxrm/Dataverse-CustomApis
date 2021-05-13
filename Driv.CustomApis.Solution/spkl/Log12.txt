@@ -1,0 +1,7 @@
+4:31:53 PM	Writing: C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution_Managed\customapis\driv_GetTableInfo\customapiresponseproperties\PrimaryNameAttribute\customapiresponseproperty.xml
+4:31:53 PM	Writing: C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution_Managed\customapis\driv_GetTableInfo\customapiresponseproperties\SchemaName\customapiresponseproperty.xml
+4:31:53 PM	Writing: C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution_Managed\customapis\driv_GetUserTimezone\customapi.xml
+4:31:53 PM	Writing: C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution_Managed\customapis\driv_GetUserTimezone\customapiresponseproperties\TimezoneCode\customapiresponseproperty.xml
+4:31:53 PM	Writing: C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution_Managed\customapis\driv_GetUserTimezone\customapiresponseproperties\TimezoneName\customapiresponseproperty.xml
+4:31:53 PM	Writing: C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution_Managed\customapis\driv_RemoveDiacritics\customapi.xml
+4:31:53 PM	No change: C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution_Managed\customapis\driv_RemoveDiacritics\customapirequestparameters\InputString\customapirequestparameter.xml

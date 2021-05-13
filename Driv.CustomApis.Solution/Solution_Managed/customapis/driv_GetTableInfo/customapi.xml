@@ -7,11 +7,12 @@
   <displayname default="GetTableInfo">
     <label description="GetTableInfo" languagecode="1033" />
   </displayname>
-  <iscustomizable>0</iscustomizable>
+  <iscustomizable>1</iscustomizable>
   <isfunction>0</isfunction>
-  <workflowsdkstepenabled>1</workflowsdkstepenabled>
+  <isprivate>0</isprivate>
   <name>GetTableInfo</name>
   <plugintypeid>
     <plugintypeid>6d8b95d3-44de-4885-98d1-e6c51f8b80ed</plugintypeid>
   </plugintypeid>
+  <workflowsdkstepenabled>1</workflowsdkstepenabled>
 </customapi>

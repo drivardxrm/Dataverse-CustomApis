@@ -5,7 +5,7 @@
   <displayname default="GetTableInfo-Out-ObjectTypeCode">
     <label description="GetTableInfo-Out-ObjectTypeCode" languagecode="1033" />
   </displayname>
-  <iscustomizable>0</iscustomizable>
+  <iscustomizable>1</iscustomizable>
   <name>GetTableInfo-Out-ObjectTypeCode</name>
   <type>7</type>
 </customapiresponseproperty>

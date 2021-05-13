@@ -7,11 +7,12 @@
   <displayname default="GetEnvironmentVariable">
     <label description="GetEnvironmentVariable" languagecode="1033" />
   </displayname>
-  <iscustomizable>0</iscustomizable>
+  <iscustomizable>1</iscustomizable>
   <isfunction>0</isfunction>
-  <workflowsdkstepenabled>1</workflowsdkstepenabled>
+  <isprivate>0</isprivate>
   <name>GetEnvironmentVariable</name>
   <plugintypeid>
     <plugintypeid>5658bbb0-870a-451a-80c7-e6078366993f</plugintypeid>
   </plugintypeid>
+  <workflowsdkstepenabled>1</workflowsdkstepenabled>
 </customapi>

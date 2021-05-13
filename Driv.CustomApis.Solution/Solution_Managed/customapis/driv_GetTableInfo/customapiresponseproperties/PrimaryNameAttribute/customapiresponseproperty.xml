@@ -5,7 +5,7 @@
   <displayname default="GetTableInfo-Out-PrimaryNameAttribute">
     <label description="GetTableInfo-Out-PrimaryNameAttribute" languagecode="1033" />
   </displayname>
-  <iscustomizable>0</iscustomizable>
+  <iscustomizable>1</iscustomizable>
   <name>GetTableInfo-Out-PrimaryNameAttribute</name>
   <type>10</type>
 </customapiresponseproperty>

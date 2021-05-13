@@ -9,9 +9,10 @@
   </displayname>
   <iscustomizable>1</iscustomizable>
   <isfunction>0</isfunction>
-  <workflowsdkstepenabled>1</workflowsdkstepenabled>
+  <isprivate>0</isprivate>
   <name>AgeCalculation</name>
   <plugintypeid>
     <plugintypeid>84bfe2a6-3bf4-49b1-b1d0-5d523f932e47</plugintypeid>
   </plugintypeid>
+  <workflowsdkstepenabled>1</workflowsdkstepenabled>
 </customapi>

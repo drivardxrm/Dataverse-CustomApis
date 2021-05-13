@@ -1,0 +1,17 @@
+4:31:39 PM	No change: C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution\customapis\driv_GetTableInfo\customapiresponseproperties\Exists\customapiresponseproperty.xml
+4:31:39 PM	No change: C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution\customapis\driv_GetTableInfo\customapiresponseproperties\ObjectTypeCode\customapiresponseproperty.xml
+4:31:39 PM	No change: C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution\customapis\driv_GetTableInfo\customapiresponseproperties\PrimaryIdAttribute\customapiresponseproperty.xml
+4:31:39 PM	No change: C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution\customapis\driv_GetTableInfo\customapiresponseproperties\PrimaryNameAttribute\customapiresponseproperty.xml
+4:31:39 PM	No change: C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution\customapis\driv_GetTableInfo\customapiresponseproperties\SchemaName\customapiresponseproperty.xml
+4:31:39 PM	Writing: C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution\customapis\driv_GetUserTimezone\customapi.xml
+4:31:39 PM	No change: C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution\customapis\driv_GetUserTimezone\customapiresponseproperties\TimezoneCode\customapiresponseproperty.xml
+4:31:39 PM	No change: C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution\customapis\driv_GetUserTimezone\customapiresponseproperties\TimezoneName\customapiresponseproperty.xml
+4:31:39 PM	Writing: C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution\customapis\driv_RemoveDiacritics\customapi.xml
+4:31:39 PM	No change: C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution\customapis\driv_RemoveDiacritics\customapirequestparameters\InputString\customapirequestparameter.xml
+4:31:39 PM	No change: C:\GithubRepos\Dataverse-CustomApis\Driv.CustomApis.Solution\Solution\customapis\driv_RemoveDiacritics\customapiresponseproperties\OutputString\customapiresponseproperty.xml
+4:31:39 PM	
+4:31:39 PM	Unmanaged Extract complete.
+4:31:39 PM	
+4:31:40 PM	1 warnings encountered
+4:31:40 PM	Read-only files will be over-written or deleted.
+4:31:40 PM	CrmSvcUtil Runtime = 00:00:02.0975530

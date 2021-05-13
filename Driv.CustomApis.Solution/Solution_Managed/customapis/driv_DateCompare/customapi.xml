@@ -7,11 +7,12 @@
   <displayname default="DateCompare">
     <label description="DateCompare" languagecode="1033" />
   </displayname>
-  <iscustomizable>0</iscustomizable>
+  <iscustomizable>1</iscustomizable>
   <isfunction>0</isfunction>
-  <workflowsdkstepenabled>1</workflowsdkstepenabled>
+  <isprivate>0</isprivate>
   <name>DateCompare</name>
   <plugintypeid>
     <plugintypeid>a23b487f-ec77-4315-834a-9e58eed0d35c</plugintypeid>
   </plugintypeid>
+  <workflowsdkstepenabled>1</workflowsdkstepenabled>
 </customapi>

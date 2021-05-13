@@ -9,9 +9,10 @@
   </displayname>
   <iscustomizable>1</iscustomizable>
   <isfunction>0</isfunction>
-  <workflowsdkstepenabled>1</workflowsdkstepenabled>
+  <isprivate>0</isprivate>
   <name>DateInfo</name>
   <plugintypeid>
     <plugintypeid>22cc9ee6-6b77-4de7-93a2-47ba79e5fcac</plugintypeid>
   </plugintypeid>
+  <workflowsdkstepenabled>1</workflowsdkstepenabled>
 </customapi>
