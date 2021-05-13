@@ -8,7 +8,7 @@
   <displayname default="GetUserTimezone">
     <label description="GetUserTimezone" languagecode="1033" />
   </displayname>
-  <iscustomizable>0</iscustomizable>
+  <iscustomizable>1</iscustomizable>
   <isfunction>0</isfunction>
   <workflowsdkstepenabled>1</workflowsdkstepenabled>
   <name>GetUserTimezone</name>
