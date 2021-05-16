@@ -5,7 +5,7 @@
   <displayname default="DateCompare-Out-SameYear">
     <label description="DateCompare-Out-SameYear" languagecode="1033" />
   </displayname>
-  <iscustomizable>0</iscustomizable>
+  <iscustomizable>1</iscustomizable>
   <name>DateCompare-Out-SameYear</name>
   <type>0</type>
 </customapiresponseproperty>
