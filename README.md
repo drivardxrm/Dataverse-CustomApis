@@ -6,9 +6,6 @@ The goal of the project is to enhance the capability of PowerPlatform developers
 
 Please submit any ideas :bulb: or questions :question: in the [discussions](https://github.com/drivardxrm/Dataverse-CustomApis/discussions) section.
 
-## Disclaimer 
-> Custom API functionality is still considered as a Preview feature. While unlikely, some breaking changes might occur and will be fixed ASAP.
-
 Here is the link to the Dataverse Custom API's [official documentation](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/custom-api)
 
 ## Installation
