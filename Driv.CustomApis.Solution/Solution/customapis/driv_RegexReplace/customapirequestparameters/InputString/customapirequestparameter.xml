@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="InputString">
+  <description default="String that will be passed to the regex replace function">
+    <label description="String that will be passed to the regex replace function" languagecode="1033" />
+  </description>
+  <displayname default="RegexReplace-In-InputString">
+    <label description="RegexReplace-In-InputString" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>RegexReplace-In-InputString</name>
+  <type>10</type>
+</customapirequestparameter>

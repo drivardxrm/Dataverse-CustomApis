@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="ReplaceString">
+  <description default="String to replace the regex matches">
+    <label description="String to replace the regex matches" languagecode="1033" />
+  </description>
+  <displayname default="RegexReplace-In-ReplaceString">
+    <label description="RegexReplace-In-ReplaceString" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>RegexReplace-In-ReplaceString</name>
+  <type>10</type>
+</customapirequestparameter>

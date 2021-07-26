@@ -5,7 +5,7 @@
   <displayname default="DateInfo-In-Date">
     <label description="DateInfo-In-Date" languagecode="1033" />
   </displayname>
-  <iscustomizable>1</iscustomizable>
+  <iscustomizable>0</iscustomizable>
   <isoptional>0</isoptional>
   <name>DateInfo-In-Date</name>
   <type>1</type>

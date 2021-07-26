@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="Regex">
+  <description default="Regular expression">
+    <label description="Regular expression" languagecode="1033" />
+  </description>
+  <displayname default="RegexMatch-In-Regex">
+    <label description="RegexMatch-In-Regex" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>RegexMatch-In-Regex</name>
+  <type>10</type>
+</customapirequestparameter>

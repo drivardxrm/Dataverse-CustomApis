@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.21041.172" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.21072.129" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>DataverseCustomApis</UniqueName>
     <LocalizedNames>
       <LocalizedName description="Dataverse.CustomApis" languagecode="1033" />
     </LocalizedNames>
     <Descriptions />
-    <Version>1.2021.05.40</Version>
+    <Version>1.2021.05.41</Version>
     <Managed>1</Managed>
     <Publisher>
       <UniqueName>drivardxrm</UniqueName>

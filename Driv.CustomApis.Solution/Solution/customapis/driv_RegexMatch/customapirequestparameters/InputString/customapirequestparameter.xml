@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="InputString">
+  <description default="string to perform regex match on">
+    <label description="string to perform regex match on" languagecode="1033" />
+  </description>
+  <displayname default="RegexMatch-In-InputString">
+    <label description="RegexMatch-In-InputString" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>RegexMatch-In-InputString</name>
+  <type>10</type>
+</customapirequestparameter>

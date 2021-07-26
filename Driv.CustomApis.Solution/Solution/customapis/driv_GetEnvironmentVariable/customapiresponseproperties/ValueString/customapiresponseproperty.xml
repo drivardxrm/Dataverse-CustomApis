@@ -5,7 +5,7 @@
   <displayname default="GetEnvironmentVariable-Out-ValueString">
     <label description="GetEnvironmentVariable-Out-ValueString" languagecode="1033" />
   </displayname>
-  <iscustomizable>1</iscustomizable>
+  <iscustomizable>0</iscustomizable>
   <name>GetEnvironmentVariable-Out-ValueString</name>
   <type>10</type>
 </customapiresponseproperty>

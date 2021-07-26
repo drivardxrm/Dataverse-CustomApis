@@ -7,7 +7,7 @@
   <displayname default="GetLocalizedChoiceLabel">
     <label description="GetLocalizedChoiceLabel" languagecode="1033" />
   </displayname>
-  <iscustomizable>1</iscustomizable>
+  <iscustomizable>0</iscustomizable>
   <isfunction>0</isfunction>
   <isprivate>0</isprivate>
   <name>GetLocalizedChoiceLabel</name>
