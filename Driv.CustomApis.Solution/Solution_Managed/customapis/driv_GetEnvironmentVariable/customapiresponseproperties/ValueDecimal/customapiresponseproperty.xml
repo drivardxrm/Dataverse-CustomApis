@@ -5,7 +5,7 @@
   <displayname default="GetEnvironmentVariable-Out-ValueDecimal">
     <label description="GetEnvironmentVariable-Out-ValueDecimal" languagecode="1033" />
   </displayname>
-  <iscustomizable>0</iscustomizable>
+  <iscustomizable>1</iscustomizable>
   <name>GetEnvironmentVariable-Out-ValueDecimal</name>
   <type>2</type>
 </customapiresponseproperty>

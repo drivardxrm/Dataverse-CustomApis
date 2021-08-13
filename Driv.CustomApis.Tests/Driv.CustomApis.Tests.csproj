@@ -107,8 +107,6 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API\RegexMatchTest.cs" />
-    <Compile Include="API\RegexReplaceTest.cs" />
     <Compile Include="API\RemoveDiacriticsTests.cs" />
     <Compile Include="API\DateInfoTests.cs" />
     <Compile Include="API\AgeCalculationTests.cs" />

@@ -7,7 +7,7 @@
   <displayname default="GetEnvironmentVariable">
     <label description="GetEnvironmentVariable" languagecode="1033" />
   </displayname>
-  <iscustomizable>0</iscustomizable>
+  <iscustomizable>1</iscustomizable>
   <isfunction>0</isfunction>
   <isprivate>0</isprivate>
   <name>GetEnvironmentVariable</name>

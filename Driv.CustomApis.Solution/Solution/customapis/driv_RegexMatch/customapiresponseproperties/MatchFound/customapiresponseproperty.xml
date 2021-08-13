@@ -1,8 +1,0 @@
-<customapiresponseproperty uniquename="MatchFound">
-  <displayname default="RegexMatch-Out-MatchFound">
-    <label description="RegexMatch-Out-MatchFound" languagecode="1033" />
-  </displayname>
-  <iscustomizable>0</iscustomizable>
-  <name>RegexMatch-Out-MatchFound</name>
-  <type>0</type>
-</customapiresponseproperty>

@@ -7,7 +7,7 @@
   <displayname default="GetTableInfo">
     <label description="GetTableInfo" languagecode="1033" />
   </displayname>
-  <iscustomizable>0</iscustomizable>
+  <iscustomizable>1</iscustomizable>
   <isfunction>0</isfunction>
   <isprivate>0</isprivate>
   <name>GetTableInfo</name>

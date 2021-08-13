@@ -5,7 +5,7 @@
   <displayname default="GetLocalizedChoiceLabel-In-LangCode">
     <label description="GetLocalizedChoiceLabel-In-LangCode" languagecode="1033" />
   </displayname>
-  <iscustomizable>0</iscustomizable>
+  <iscustomizable>1</iscustomizable>
   <isoptional>0</isoptional>
   <name>GetLocalizedChoiceLabel-In-LangCode</name>
   <type>7</type>

@@ -2,7 +2,7 @@
   <displayname default="DateInfo-Out-Year">
     <label description="DateInfo-Out-Year" languagecode="1033" />
   </displayname>
-  <iscustomizable>0</iscustomizable>
+  <iscustomizable>1</iscustomizable>
   <name>DateInfo-Out-Year</name>
   <type>7</type>
 </customapiresponseproperty>

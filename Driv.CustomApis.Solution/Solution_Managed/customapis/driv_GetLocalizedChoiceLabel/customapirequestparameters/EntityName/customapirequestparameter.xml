@@ -5,7 +5,7 @@
   <displayname default="GetLocalizedChoiceLabel-In-EntityName">
     <label description="GetLocalizedChoiceLabel-In-EntityName" languagecode="1033" />
   </displayname>
-  <iscustomizable>0</iscustomizable>
+  <iscustomizable>1</iscustomizable>
   <isoptional>0</isoptional>
   <name>GetLocalizedChoiceLabel-In-EntityName</name>
   <type>10</type>

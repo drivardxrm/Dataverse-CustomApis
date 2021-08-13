@@ -5,7 +5,7 @@
   <displayname default="GetTableInfo-Out-Exists">
     <label description="GetTableInfo-Out-Exists" languagecode="1033" />
   </displayname>
-  <iscustomizable>0</iscustomizable>
+  <iscustomizable>1</iscustomizable>
   <name>GetTableInfo-Out-Exists</name>
   <type>0</type>
 </customapiresponseproperty>
