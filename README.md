@@ -20,6 +20,7 @@ Managed and unmanaged solutions are provided in the [Release section](https://gi
 * [DateCompare ](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/DateCompare) 
 * [GetEnvironmentVariable ](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetEnvironmentVariable)
 * [GetLocalizedChoiceLabel](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetLocalizedChoiceLabel)
+* [GetSetting](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetSettting) (:new: v1.2021.12.60)
 * [GetTableInfo](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetTableInfo)
 * [GetUserTimezone](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetUserTimezone)
 * [RemoveDiacritics](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/RemoveDiacritics) (:new: v1.2021.01.28)
