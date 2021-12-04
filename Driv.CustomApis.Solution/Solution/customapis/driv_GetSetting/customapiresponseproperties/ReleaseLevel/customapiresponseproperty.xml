@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="ReleaseLevel">
+  <description default="Release level of the Setting ">
+    <label description="Release level of the Setting " languagecode="1033" />
+  </description>
+  <displayname default="GetSetting-Out-ReleaseLevel">
+    <label description="GetSetting-Out-ReleaseLevel" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <name>GetSetting-Out-ReleaseLevel</name>
+  <type>9</type>
+</customapiresponseproperty>

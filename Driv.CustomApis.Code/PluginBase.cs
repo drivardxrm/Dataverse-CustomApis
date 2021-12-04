@@ -834,7 +834,7 @@ public abstract class PluginBase : IPlugin
         new Tuple<int, string, string, Action<LocalPluginContext>>(
             (int)ExecutionStage.MainOperation,  //custom Api are registered on Main operation (30)
             eventOperationName,
-            null,
+            Activator.CreateInstance<T>().LogicalName,
             action));
 
     public enum Locale

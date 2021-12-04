@@ -1,0 +1,17 @@
+{
+  "earlyboundtypes": [
+
+    {
+      "entities": "environmentvariabledefinition,environmentvariablevalue,systemuser,timezonedefinition,usersettings,settingdefinition,organizationsetting,appsetting,appmodule",
+      "actions": "",
+      "generateOptionsetEnums": true,
+      "generateGlobalOptionsets": true,
+      "generateStateEnums": true,
+      "filename": "../Driv.CustomApis.Code/Entities/XrmContext.cs",
+      "classNamespace": "Driv.CustomApis",
+      "serviceContextName": "XrmContext",
+      "oneTypePerFile": false
+    }
+
+  ]
+}

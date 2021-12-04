@@ -8,5109 +8,12040 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using DG.XrmContext;
-using Microsoft.Xrm.Sdk;
-using Microsoft.Xrm.Sdk.Client;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Runtime.Serialization;
+[assembly: Microsoft.Xrm.Sdk.Client.ProxyTypesAssemblyAttribute()]
 
-[assembly: ProxyTypesAssembly()]
-
-
-
-
-/// <summary>
-/// <para>Contains information about the settable variable: its type, default value, and etc.</para>
-/// <para>Display Name: Environment Variable Definition</para>
-/// </summary>
-[EntityLogicalName("environmentvariabledefinition")]
-[DebuggerDisplay("{DebuggerDisplay,nq}")]
-[DataContract()]
-public partial class EnvironmentVariableDefinition : ExtendedEntity<EnvironmentVariableDefinitionState, EnvironmentVariableDefinition_statuscode> {
-    
-    public const string EntityLogicalName = "environmentvariabledefinition";
-    
-    public const int EntityTypeCode = 380;
-    
-    public EnvironmentVariableDefinition() : 
-            base(EntityLogicalName) {
-    }
-    
-    public EnvironmentVariableDefinition(Guid Id) : 
-            base(EntityLogicalName, Id) {
-    }
-    
-    private string DebuggerDisplay {
-        get {
-            return GetDebuggerDisplay("schemaname");
-        }
-    }
-    
-    [AttributeLogicalName("environmentvariabledefinitionid")]
-    public override Guid Id {
-        get {
-            return base.Id;
-        }
-        set {
-            SetId("environmentvariabledefinitionid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier for entity instances</para>
-    /// <para>Display Name: Environment Variable Definition</para>
-    /// </summary>
-    [AttributeLogicalName("environmentvariabledefinitionid")]
-    public Guid? EnvironmentVariableDefinitionId {
-        get {
-            return GetAttributeValue<Guid?>("environmentvariabledefinitionid");
-        }
-        set {
-            SetId("environmentvariabledefinitionid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Display Name: API Id</para>
-    /// </summary>
-    [AttributeLogicalName("apiid")]
-    public string ApiId {
-        get {
-            return GetAttributeValue<string>("apiid");
-        }
-        set {
-            SetAttributeValue("apiid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>For internal use only.</para>
-    /// <para>Display Name: Component State</para>
-    /// </summary>
-    [AttributeLogicalName("componentstate")]
-    public componentstate? ComponentState {
-        get {
-            return GetOptionSetValue<componentstate>("componentstate");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier for Connection Reference associated with Environment Variable Definition.</para>
-    /// <para>Display Name: Connection Reference</para>
-    /// </summary>
-    [AttributeLogicalName("connectionreferenceid")]
-    public EntityReference ConnectionReferenceId {
-        get {
-            return GetAttributeValue<EntityReference>("connectionreferenceid");
-        }
-        set {
-            SetAttributeValue("connectionreferenceid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the user who created the record.</para>
-    /// <para>Display Name: Created By</para>
-    /// </summary>
-    [AttributeLogicalName("createdby")]
-    public EntityReference CreatedBy {
-        get {
-            return GetAttributeValue<EntityReference>("createdby");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Date and time when the record was created.</para>
-    /// <para>Display Name: Created On</para>
-    /// </summary>
-    [AttributeLogicalName("createdon")]
-    public DateTime? CreatedOn {
-        get {
-            return GetAttributeValue<DateTime?>("createdon");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the delegate user who created the record.</para>
-    /// <para>Display Name: Created By (Delegate)</para>
-    /// </summary>
-    [AttributeLogicalName("createdonbehalfby")]
-    public EntityReference CreatedOnBehalfBy {
-        get {
-            return GetAttributeValue<EntityReference>("createdonbehalfby");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Default variable value to be used if no associated EnvironmentVariableValue entities exist.</para>
-    /// <para>Display Name: Default Value</para>
-    /// </summary>
-    [AttributeLogicalName("defaultvalue")]
-    public string DefaultValue {
-        get {
-            return GetAttributeValue<string>("defaultvalue");
-        }
-        set {
-            SetAttributeValue("defaultvalue", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Description of the variable definition.</para>
-    /// <para>Display Name: Description</para>
-    /// </summary>
-    [AttributeLogicalName("description")]
-    public string Description {
-        get {
-            return GetAttributeValue<string>("description");
-        }
-        set {
-            SetAttributeValue("description", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Display Name of the variable definition.</para>
-    /// <para>Display Name: Display Name</para>
-    /// </summary>
-    [AttributeLogicalName("displayname")]
-    public string DisplayName {
-        get {
-            return GetAttributeValue<string>("displayname");
-        }
-        set {
-            SetAttributeValue("displayname", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>For internal use only.</para>
-    /// </summary>
-    [AttributeLogicalName("environmentvariabledefinitionidunique")]
-    public Guid? EnvironmentVariableDefinitionIdUnique {
-        get {
-            return GetAttributeValue<Guid?>("environmentvariabledefinitionidunique");
-        }
-    }
-    
-    /// <summary>
-    /// <para>For internal use only.</para>
-    /// <para>Display Name: Hint</para>
-    /// </summary>
-    [AttributeLogicalName("hint")]
-    public string Hint {
-        get {
-            return GetAttributeValue<string>("hint");
-        }
-        set {
-            SetAttributeValue("hint", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Sequence number of the import that created this record.</para>
-    /// <para>Display Name: Import Sequence Number</para>
-    /// </summary>
-    [AttributeLogicalName("importsequencenumber")]
-    public int? ImportSequenceNumber {
-        get {
-            return GetAttributeValue<int?>("importsequencenumber");
-        }
-        set {
-            SetAttributeValue("importsequencenumber", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Version in which the form is introduced.</para>
-    /// <para>Display Name: Introduced Version</para>
-    /// </summary>
-    [AttributeLogicalName("introducedversion")]
-    public string IntroducedVersion {
-        get {
-            return GetAttributeValue<string>("introducedversion");
-        }
-        set {
-            SetAttributeValue("introducedversion", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Tells whether the component can be customized.</para>
-    /// <para>Display Name: Customizable</para>
-    /// </summary>
-    [AttributeLogicalName("iscustomizable")]
-    public BooleanManagedProperty IsCustomizable {
-        get {
-            return GetAttributeValue<BooleanManagedProperty>("iscustomizable");
-        }
-        set {
-            SetAttributeValue("iscustomizable", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Indicates whether the solution component is part of a managed solution.</para>
-    /// <para>Display Name: Is Managed</para>
-    /// </summary>
-    [AttributeLogicalName("ismanaged")]
-    public bool? IsManaged {
-        get {
-            return GetAttributeValue<bool?>("ismanaged");
-        }
-    }
-    
-    /// <summary>
-    /// <para>For internal use only.</para>
-    /// <para>Display Name: Is Required</para>
-    /// </summary>
-    [AttributeLogicalName("isrequired")]
-    public bool? IsRequired {
-        get {
-            return GetAttributeValue<bool?>("isrequired");
-        }
-        set {
-            SetAttributeValue("isrequired", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the user who modified the record.</para>
-    /// <para>Display Name: Modified By</para>
-    /// </summary>
-    [AttributeLogicalName("modifiedby")]
-    public EntityReference ModifiedBy {
-        get {
-            return GetAttributeValue<EntityReference>("modifiedby");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Date and time when the record was modified.</para>
-    /// <para>Display Name: Modified On</para>
-    /// </summary>
-    [AttributeLogicalName("modifiedon")]
-    public DateTime? ModifiedOn {
-        get {
-            return GetAttributeValue<DateTime?>("modifiedon");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the delegate user who modified the record.</para>
-    /// <para>Display Name: Modified By (Delegate)</para>
-    /// </summary>
-    [AttributeLogicalName("modifiedonbehalfby")]
-    public EntityReference ModifiedOnBehalfBy {
-        get {
-            return GetAttributeValue<EntityReference>("modifiedonbehalfby");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Date and time that the record was migrated.</para>
-    /// <para>Display Name: Record Created On</para>
-    /// </summary>
-    [AttributeLogicalName("overriddencreatedon")]
-    public DateTime? OverriddenCreatedOn {
-        get {
-            return GetAttributeValue<DateTime?>("overriddencreatedon");
-        }
-        set {
-            SetAttributeValue("overriddencreatedon", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>For internal use only.</para>
-    /// <para>Display Name: Record Overwrite Time</para>
-    /// </summary>
-    [AttributeLogicalName("overwritetime")]
-    public DateTime? OverwriteTime {
-        get {
-            return GetAttributeValue<DateTime?>("overwritetime");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Owner Id</para>
-    /// <para>Display Name: Owner</para>
-    /// </summary>
-    [AttributeLogicalName("ownerid")]
-    public EntityReference OwnerId {
-        get {
-            return GetAttributeValue<EntityReference>("ownerid");
-        }
-        set {
-            SetAttributeValue("ownerid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier for the business unit that owns the record</para>
-    /// <para>Display Name: Owning Business Unit</para>
-    /// </summary>
-    [AttributeLogicalName("owningbusinessunit")]
-    public EntityReference OwningBusinessUnit {
-        get {
-            return GetAttributeValue<EntityReference>("owningbusinessunit");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier for the team that owns the record.</para>
-    /// <para>Display Name: Owning Team</para>
-    /// </summary>
-    [AttributeLogicalName("owningteam")]
-    public EntityReference OwningTeam {
-        get {
-            return GetAttributeValue<EntityReference>("owningteam");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier for the user that owns the record.</para>
-    /// <para>Display Name: Owning User</para>
-    /// </summary>
-    [AttributeLogicalName("owninguser")]
-    public EntityReference OwningUser {
-        get {
-            return GetAttributeValue<EntityReference>("owninguser");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Display Name: Parameter Key</para>
-    /// </summary>
-    [AttributeLogicalName("parameterkey")]
-    public string ParameterKey {
-        get {
-            return GetAttributeValue<string>("parameterkey");
-        }
-        set {
-            SetAttributeValue("parameterkey", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier for Environment Variable Definition associated with Environment Variable Definition.</para>
-    /// <para>Display Name: Parent Definition</para>
-    /// </summary>
-    [AttributeLogicalName("parentdefinitionid")]
-    public EntityReference ParentDefinitionId {
-        get {
-            return GetAttributeValue<EntityReference>("parentdefinitionid");
-        }
-        set {
-            SetAttributeValue("parentdefinitionid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique entity name.</para>
-    /// <para>Display Name: Schema Name</para>
-    /// </summary>
-    [AttributeLogicalName("schemaname")]
-    public string SchemaName {
-        get {
-            return GetAttributeValue<string>("schemaname");
-        }
-        set {
-            SetAttributeValue("schemaname", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the associated solution.</para>
-    /// <para>Display Name: Solution</para>
-    /// </summary>
-    [AttributeLogicalName("solutionid")]
-    public Guid? SolutionId {
-        get {
-            return GetAttributeValue<Guid?>("solutionid");
-        }
-    }
-    
-    /// <summary>
-    /// <para>For internal use only.</para>
-    /// <para>Display Name: Time Zone Rule Version Number</para>
-    /// </summary>
-    [AttributeLogicalName("timezoneruleversionnumber")]
-    public int? TimeZoneRuleVersionNumber {
-        get {
-            return GetAttributeValue<int?>("timezoneruleversionnumber");
-        }
-        set {
-            SetAttributeValue("timezoneruleversionnumber", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Environment variable value type.</para>
-    /// <para>Display Name: Type</para>
-    /// </summary>
-    [AttributeLogicalName("type")]
-    public EnvironmentVariableDefinition_Type? Type {
-        get {
-            return GetOptionSetValue<EnvironmentVariableDefinition_Type>("type");
-        }
-        set {
-            SetOptionSetValue("type", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Time zone code that was in use when the record was created.</para>
-    /// <para>Display Name: UTC Conversion Time Zone Code</para>
-    /// </summary>
-    [AttributeLogicalName("utcconversiontimezonecode")]
-    public int? UTCConversionTimeZoneCode {
-        get {
-            return GetAttributeValue<int?>("utcconversiontimezonecode");
-        }
-        set {
-            SetAttributeValue("utcconversiontimezonecode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>For internal use only.</para>
-    /// <para>Display Name: Value Schema</para>
-    /// </summary>
-    [AttributeLogicalName("valueschema")]
-    public string ValueSchema {
-        get {
-            return GetAttributeValue<string>("valueschema");
-        }
-        set {
-            SetAttributeValue("valueschema", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Version Number</para>
-    /// <para>Display Name: Version Number</para>
-    /// </summary>
-    [AttributeLogicalName("versionnumber")]
-    public long? VersionNumber {
-        get {
-            return GetAttributeValue<long?>("versionnumber");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Status of the Environment Variable Definition</para>
-    /// <para>Display Name: Status</para>
-    /// </summary>
-    [AttributeLogicalName("statecode")]
-    public EnvironmentVariableDefinitionState? statecode {
-        get {
-            return GetOptionSetValue<EnvironmentVariableDefinitionState>("statecode");
-        }
-        set {
-            SetOptionSetValue("statecode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Reason for the status of the Environment Variable Definition</para>
-    /// <para>Display Name: Status Reason</para>
-    /// </summary>
-    [AttributeLogicalName("statuscode")]
-    public EnvironmentVariableDefinition_statuscode? statuscode {
-        get {
-            return GetOptionSetValue<EnvironmentVariableDefinition_statuscode>("statuscode");
-        }
-        set {
-            SetOptionSetValue("statuscode", value);
-        }
-    }
-    
-    [RelationshipSchemaName("envdefinition_envdefinition", EntityRole.Referenced)]
-    public IEnumerable<EnvironmentVariableDefinition> Referencedenvdefinition_envdefinition {
-        get {
-            return GetRelatedEntities<EnvironmentVariableDefinition>("envdefinition_envdefinition", EntityRole.Referenced);
-        }
-        set {
-            SetRelatedEntities("envdefinition_envdefinition", EntityRole.Referenced, value);
-        }
-    }
-    
-    [AttributeLogicalName("parentdefinitionid")]
-    [RelationshipSchemaName("envdefinition_envdefinition", EntityRole.Referencing)]
-    public EnvironmentVariableDefinition Referencingenvdefinition_envdefinition {
-        get {
-            return GetRelatedEntity<EnvironmentVariableDefinition>("envdefinition_envdefinition", EntityRole.Referencing);
-        }
-        set {
-            SetRelatedEntity("envdefinition_envdefinition", EntityRole.Referencing, value);
-        }
-    }
-    
-    [RelationshipSchemaName("environmentvariabledefinition_environmentvariablevalue")]
-    public IEnumerable<EnvironmentVariableValue> environmentvariabledefinition_environmentvariablevalue {
-        get {
-            return GetRelatedEntities<EnvironmentVariableValue>("environmentvariabledefinition_environmentvariablevalue", null);
-        }
-        set {
-            SetRelatedEntities("environmentvariabledefinition_environmentvariablevalue", null, value);
-        }
-    }
-    
-    [AttributeLogicalName("createdby")]
-    [RelationshipSchemaName("lk_environmentvariabledefinition_createdby")]
-    public SystemUser lk_environmentvariabledefinition_createdby {
-        get {
-            return GetRelatedEntity<SystemUser>("lk_environmentvariabledefinition_createdby", null);
-        }
-        set {
-            SetRelatedEntity("lk_environmentvariabledefinition_createdby", null, value);
-        }
-    }
-    
-    [AttributeLogicalName("createdonbehalfby")]
-    [RelationshipSchemaName("lk_environmentvariabledefinition_createdonbehalfby")]
-    public SystemUser lk_environmentvariabledefinition_createdonbehalfby {
-        get {
-            return GetRelatedEntity<SystemUser>("lk_environmentvariabledefinition_createdonbehalfby", null);
-        }
-        set {
-            SetRelatedEntity("lk_environmentvariabledefinition_createdonbehalfby", null, value);
-        }
-    }
-    
-    [AttributeLogicalName("modifiedby")]
-    [RelationshipSchemaName("lk_environmentvariabledefinition_modifiedby")]
-    public SystemUser lk_environmentvariabledefinition_modifiedby {
-        get {
-            return GetRelatedEntity<SystemUser>("lk_environmentvariabledefinition_modifiedby", null);
-        }
-        set {
-            SetRelatedEntity("lk_environmentvariabledefinition_modifiedby", null, value);
-        }
-    }
-    
-    [AttributeLogicalName("modifiedonbehalfby")]
-    [RelationshipSchemaName("lk_environmentvariabledefinition_modifiedonbehalfby")]
-    public SystemUser lk_environmentvariabledefinition_modifiedonbehalfby {
-        get {
-            return GetRelatedEntity<SystemUser>("lk_environmentvariabledefinition_modifiedonbehalfby", null);
-        }
-        set {
-            SetRelatedEntity("lk_environmentvariabledefinition_modifiedonbehalfby", null, value);
-        }
-    }
-    
-    [AttributeLogicalName("owninguser")]
-    [RelationshipSchemaName("user_environmentvariabledefinition")]
-    public SystemUser user_environmentvariabledefinition {
-        get {
-            return GetRelatedEntity<SystemUser>("user_environmentvariabledefinition", null);
-        }
-        set {
-            SetRelatedEntity("user_environmentvariabledefinition", null, value);
-        }
-    }
-    
-    public static EnvironmentVariableDefinition Retrieve(IOrganizationService service, Guid id, params Expression<Func<EnvironmentVariableDefinition,object>>[] attrs) {
-        return service.Retrieve(id, attrs);
-    }
-}
-
-/// <summary>
-/// <para>Holds the value for the associated EnvironmentVariableDefinition entity.</para>
-/// <para>Display Name: Environment Variable Value</para>
-/// </summary>
-[EntityLogicalName("environmentvariablevalue")]
-[DebuggerDisplay("{DebuggerDisplay,nq}")]
-[DataContract()]
-public partial class EnvironmentVariableValue : ExtendedEntity<EnvironmentVariableValueState, EnvironmentVariableValue_statuscode> {
-    
-    public const string EntityLogicalName = "environmentvariablevalue";
-    
-    public const int EntityTypeCode = 381;
-    
-    public EnvironmentVariableValue() : 
-            base(EntityLogicalName) {
-    }
-    
-    public EnvironmentVariableValue(Guid Id) : 
-            base(EntityLogicalName, Id) {
-    }
-    
-    private string DebuggerDisplay {
-        get {
-            return GetDebuggerDisplay("schemaname");
-        }
-    }
-    
-    [AttributeLogicalName("environmentvariablevalueid")]
-    public override Guid Id {
-        get {
-            return base.Id;
-        }
-        set {
-            SetId("environmentvariablevalueid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier for entity instances</para>
-    /// <para>Display Name: Environment Variable Value</para>
-    /// </summary>
-    [AttributeLogicalName("environmentvariablevalueid")]
-    public Guid? EnvironmentVariableValueId {
-        get {
-            return GetAttributeValue<Guid?>("environmentvariablevalueid");
-        }
-        set {
-            SetId("environmentvariablevalueid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>For internal use only.</para>
-    /// <para>Display Name: Component State</para>
-    /// </summary>
-    [AttributeLogicalName("componentstate")]
-    public componentstate? ComponentState {
-        get {
-            return GetOptionSetValue<componentstate>("componentstate");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the user who created the record.</para>
-    /// <para>Display Name: Created By</para>
-    /// </summary>
-    [AttributeLogicalName("createdby")]
-    public EntityReference CreatedBy {
-        get {
-            return GetAttributeValue<EntityReference>("createdby");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Date and time when the record was created.</para>
-    /// <para>Display Name: Created On</para>
-    /// </summary>
-    [AttributeLogicalName("createdon")]
-    public DateTime? CreatedOn {
-        get {
-            return GetAttributeValue<DateTime?>("createdon");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the delegate user who created the record.</para>
-    /// <para>Display Name: Created By (Delegate)</para>
-    /// </summary>
-    [AttributeLogicalName("createdonbehalfby")]
-    public EntityReference CreatedOnBehalfBy {
-        get {
-            return GetAttributeValue<EntityReference>("createdonbehalfby");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier for Environment Variable Definition associated with Environment Variable Value.</para>
-    /// <para>Display Name: Environment Variable Definition</para>
-    /// </summary>
-    [AttributeLogicalName("environmentvariabledefinitionid")]
-    public EntityReference EnvironmentVariableDefinitionId {
-        get {
-            return GetAttributeValue<EntityReference>("environmentvariabledefinitionid");
-        }
-        set {
-            SetAttributeValue("environmentvariabledefinitionid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>For internal use only.</para>
-    /// </summary>
-    [AttributeLogicalName("environmentvariablevalueidunique")]
-    public Guid? EnvironmentVariableValueIdUnique {
-        get {
-            return GetAttributeValue<Guid?>("environmentvariablevalueidunique");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Sequence number of the import that created this record.</para>
-    /// <para>Display Name: Import Sequence Number</para>
-    /// </summary>
-    [AttributeLogicalName("importsequencenumber")]
-    public int? ImportSequenceNumber {
-        get {
-            return GetAttributeValue<int?>("importsequencenumber");
-        }
-        set {
-            SetAttributeValue("importsequencenumber", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Version in which the form is introduced.</para>
-    /// <para>Display Name: Introduced Version</para>
-    /// </summary>
-    [AttributeLogicalName("introducedversion")]
-    public string IntroducedVersion {
-        get {
-            return GetAttributeValue<string>("introducedversion");
-        }
-        set {
-            SetAttributeValue("introducedversion", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Tells whether the component can be customized.</para>
-    /// <para>Display Name: Customizable</para>
-    /// </summary>
-    [AttributeLogicalName("iscustomizable")]
-    public BooleanManagedProperty IsCustomizable {
-        get {
-            return GetAttributeValue<BooleanManagedProperty>("iscustomizable");
-        }
-        set {
-            SetAttributeValue("iscustomizable", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Indicates whether the solution component is part of a managed solution.</para>
-    /// <para>Display Name: Is Managed</para>
-    /// </summary>
-    [AttributeLogicalName("ismanaged")]
-    public bool? IsManaged {
-        get {
-            return GetAttributeValue<bool?>("ismanaged");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the user who modified the record.</para>
-    /// <para>Display Name: Modified By</para>
-    /// </summary>
-    [AttributeLogicalName("modifiedby")]
-    public EntityReference ModifiedBy {
-        get {
-            return GetAttributeValue<EntityReference>("modifiedby");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Date and time when the record was modified.</para>
-    /// <para>Display Name: Modified On</para>
-    /// </summary>
-    [AttributeLogicalName("modifiedon")]
-    public DateTime? ModifiedOn {
-        get {
-            return GetAttributeValue<DateTime?>("modifiedon");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the delegate user who modified the record.</para>
-    /// <para>Display Name: Modified By (Delegate)</para>
-    /// </summary>
-    [AttributeLogicalName("modifiedonbehalfby")]
-    public EntityReference ModifiedOnBehalfBy {
-        get {
-            return GetAttributeValue<EntityReference>("modifiedonbehalfby");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Date and time that the record was migrated.</para>
-    /// <para>Display Name: Record Created On</para>
-    /// </summary>
-    [AttributeLogicalName("overriddencreatedon")]
-    public DateTime? OverriddenCreatedOn {
-        get {
-            return GetAttributeValue<DateTime?>("overriddencreatedon");
-        }
-        set {
-            SetAttributeValue("overriddencreatedon", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>For internal use only.</para>
-    /// <para>Display Name: Record Overwrite Time</para>
-    /// </summary>
-    [AttributeLogicalName("overwritetime")]
-    public DateTime? OverwriteTime {
-        get {
-            return GetAttributeValue<DateTime?>("overwritetime");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Owner Id</para>
-    /// <para>Display Name: Owner</para>
-    /// </summary>
-    [AttributeLogicalName("ownerid")]
-    public EntityReference OwnerId {
-        get {
-            return GetAttributeValue<EntityReference>("ownerid");
-        }
-        set {
-            SetAttributeValue("ownerid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier for the business unit that owns the record</para>
-    /// <para>Display Name: Owning Business Unit</para>
-    /// </summary>
-    [AttributeLogicalName("owningbusinessunit")]
-    public EntityReference OwningBusinessUnit {
-        get {
-            return GetAttributeValue<EntityReference>("owningbusinessunit");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier for the team that owns the record.</para>
-    /// <para>Display Name: Owning Team</para>
-    /// </summary>
-    [AttributeLogicalName("owningteam")]
-    public EntityReference OwningTeam {
-        get {
-            return GetAttributeValue<EntityReference>("owningteam");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier for the user that owns the record.</para>
-    /// <para>Display Name: Owning User</para>
-    /// </summary>
-    [AttributeLogicalName("owninguser")]
-    public EntityReference OwningUser {
-        get {
-            return GetAttributeValue<EntityReference>("owninguser");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique entity name.</para>
-    /// <para>Display Name: Schema Name</para>
-    /// </summary>
-    [AttributeLogicalName("schemaname")]
-    public string SchemaName {
-        get {
-            return GetAttributeValue<string>("schemaname");
-        }
-        set {
-            SetAttributeValue("schemaname", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the associated solution.</para>
-    /// <para>Display Name: Solution</para>
-    /// </summary>
-    [AttributeLogicalName("solutionid")]
-    public Guid? SolutionId {
-        get {
-            return GetAttributeValue<Guid?>("solutionid");
-        }
-    }
-    
-    /// <summary>
-    /// <para>For internal use only.</para>
-    /// <para>Display Name: Time Zone Rule Version Number</para>
-    /// </summary>
-    [AttributeLogicalName("timezoneruleversionnumber")]
-    public int? TimeZoneRuleVersionNumber {
-        get {
-            return GetAttributeValue<int?>("timezoneruleversionnumber");
-        }
-        set {
-            SetAttributeValue("timezoneruleversionnumber", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Time zone code that was in use when the record was created.</para>
-    /// <para>Display Name: UTC Conversion Time Zone Code</para>
-    /// </summary>
-    [AttributeLogicalName("utcconversiontimezonecode")]
-    public int? UTCConversionTimeZoneCode {
-        get {
-            return GetAttributeValue<int?>("utcconversiontimezonecode");
-        }
-        set {
-            SetAttributeValue("utcconversiontimezonecode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Contains the actual variable data.</para>
-    /// <para>Display Name: Value</para>
-    /// </summary>
-    [AttributeLogicalName("value")]
-    public string Value {
-        get {
-            return GetAttributeValue<string>("value");
-        }
-        set {
-            SetAttributeValue("value", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Version Number</para>
-    /// <para>Display Name: Version Number</para>
-    /// </summary>
-    [AttributeLogicalName("versionnumber")]
-    public long? VersionNumber {
-        get {
-            return GetAttributeValue<long?>("versionnumber");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Status of the Environment Variable Value</para>
-    /// <para>Display Name: Status</para>
-    /// </summary>
-    [AttributeLogicalName("statecode")]
-    public EnvironmentVariableValueState? statecode {
-        get {
-            return GetOptionSetValue<EnvironmentVariableValueState>("statecode");
-        }
-        set {
-            SetOptionSetValue("statecode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Reason for the status of the Environment Variable Value</para>
-    /// <para>Display Name: Status Reason</para>
-    /// </summary>
-    [AttributeLogicalName("statuscode")]
-    public EnvironmentVariableValue_statuscode? statuscode {
-        get {
-            return GetOptionSetValue<EnvironmentVariableValue_statuscode>("statuscode");
-        }
-        set {
-            SetOptionSetValue("statuscode", value);
-        }
-    }
-    
-    [AttributeLogicalName("environmentvariabledefinitionid")]
-    [RelationshipSchemaName("environmentvariabledefinition_environmentvariablevalue")]
-    public EnvironmentVariableDefinition environmentvariabledefinition_environmentvariablevalue {
-        get {
-            return GetRelatedEntity<EnvironmentVariableDefinition>("environmentvariabledefinition_environmentvariablevalue", null);
-        }
-        set {
-            SetRelatedEntity("environmentvariabledefinition_environmentvariablevalue", null, value);
-        }
-    }
-    
-    [AttributeLogicalName("createdby")]
-    [RelationshipSchemaName("lk_environmentvariablevalue_createdby")]
-    public SystemUser lk_environmentvariablevalue_createdby {
-        get {
-            return GetRelatedEntity<SystemUser>("lk_environmentvariablevalue_createdby", null);
-        }
-        set {
-            SetRelatedEntity("lk_environmentvariablevalue_createdby", null, value);
-        }
-    }
-    
-    [AttributeLogicalName("createdonbehalfby")]
-    [RelationshipSchemaName("lk_environmentvariablevalue_createdonbehalfby")]
-    public SystemUser lk_environmentvariablevalue_createdonbehalfby {
-        get {
-            return GetRelatedEntity<SystemUser>("lk_environmentvariablevalue_createdonbehalfby", null);
-        }
-        set {
-            SetRelatedEntity("lk_environmentvariablevalue_createdonbehalfby", null, value);
-        }
-    }
-    
-    [AttributeLogicalName("modifiedby")]
-    [RelationshipSchemaName("lk_environmentvariablevalue_modifiedby")]
-    public SystemUser lk_environmentvariablevalue_modifiedby {
-        get {
-            return GetRelatedEntity<SystemUser>("lk_environmentvariablevalue_modifiedby", null);
-        }
-        set {
-            SetRelatedEntity("lk_environmentvariablevalue_modifiedby", null, value);
-        }
-    }
-    
-    [AttributeLogicalName("modifiedonbehalfby")]
-    [RelationshipSchemaName("lk_environmentvariablevalue_modifiedonbehalfby")]
-    public SystemUser lk_environmentvariablevalue_modifiedonbehalfby {
-        get {
-            return GetRelatedEntity<SystemUser>("lk_environmentvariablevalue_modifiedonbehalfby", null);
-        }
-        set {
-            SetRelatedEntity("lk_environmentvariablevalue_modifiedonbehalfby", null, value);
-        }
-    }
-    
-    [AttributeLogicalName("owninguser")]
-    [RelationshipSchemaName("user_environmentvariablevalue")]
-    public SystemUser user_environmentvariablevalue {
-        get {
-            return GetRelatedEntity<SystemUser>("user_environmentvariablevalue", null);
-        }
-        set {
-            SetRelatedEntity("user_environmentvariablevalue", null, value);
-        }
-    }
-    
-    public static EnvironmentVariableValue Retrieve(IOrganizationService service, Guid id, params Expression<Func<EnvironmentVariableValue,object>>[] attrs) {
-        return service.Retrieve(id, attrs);
-    }
-}
-
-/// <summary>
-/// <para>Person with access to the Microsoft CRM system and who owns objects in the Microsoft CRM database.</para>
-/// <para>Display Name: User</para>
-/// </summary>
-[EntityLogicalName("systemuser")]
-[DebuggerDisplay("{DebuggerDisplay,nq}")]
-[DataContract()]
-public partial class SystemUser : ExtendedEntity<EmptyEnum, EmptyEnum> {
-    
-    public const string EntityLogicalName = "systemuser";
-    
-    public const int EntityTypeCode = 8;
-    
-    public SystemUser() : 
-            base(EntityLogicalName) {
-    }
-    
-    public SystemUser(Guid Id) : 
-            base(EntityLogicalName, Id) {
-    }
-    
-    private string DebuggerDisplay {
-        get {
-            return GetDebuggerDisplay("fullname");
-        }
-    }
-    
-    [AttributeLogicalName("systemuserid")]
-    public override Guid Id {
-        get {
-            return base.Id;
-        }
-        set {
-            SetId("systemuserid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier for the user.</para>
-    /// <para>Display Name: User</para>
-    /// </summary>
-    [AttributeLogicalName("systemuserid")]
-    public Guid? SystemUserId {
-        get {
-            return GetAttributeValue<Guid?>("systemuserid");
-        }
-        set {
-            SetId("systemuserid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Type of user.</para>
-    /// <para>Display Name: Access Mode</para>
-    /// </summary>
-    [AttributeLogicalName("accessmode")]
-    public SystemUser_AccessMode? AccessMode {
-        get {
-            return GetOptionSetValue<SystemUser_AccessMode>("accessmode");
-        }
-        set {
-            SetOptionSetValue("accessmode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier for address 1.</para>
-    /// <para>Display Name: Address 1: ID</para>
-    /// </summary>
-    [AttributeLogicalName("address1_addressid")]
-    public Guid? Address1_AddressId {
-        get {
-            return GetAttributeValue<Guid?>("address1_addressid");
-        }
-        set {
-            SetAttributeValue("address1_addressid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Type of address for address 1, such as billing, shipping, or primary address.</para>
-    /// <para>Display Name: Address 1: Address Type</para>
-    /// </summary>
-    [AttributeLogicalName("address1_addresstypecode")]
-    public SystemUser_Address1_AddressTypeCode? Address1_AddressTypeCode {
-        get {
-            return GetOptionSetValue<SystemUser_Address1_AddressTypeCode>("address1_addresstypecode");
-        }
-        set {
-            SetOptionSetValue("address1_addresstypecode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>City name for address 1.</para>
-    /// <para>Display Name: City</para>
-    /// </summary>
-    [AttributeLogicalName("address1_city")]
-    public string Address1_City {
-        get {
-            return GetAttributeValue<string>("address1_city");
-        }
-        set {
-            SetAttributeValue("address1_city", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Shows the complete primary address.</para>
-    /// <para>Display Name: Address</para>
-    /// </summary>
-    [AttributeLogicalName("address1_composite")]
-    public string Address1_Composite {
-        get {
-            return GetAttributeValue<string>("address1_composite");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Country/region name in address 1.</para>
-    /// <para>Display Name: Country/Region</para>
-    /// </summary>
-    [AttributeLogicalName("address1_country")]
-    public string Address1_Country {
-        get {
-            return GetAttributeValue<string>("address1_country");
-        }
-        set {
-            SetAttributeValue("address1_country", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>County name for address 1.</para>
-    /// <para>Display Name: Address 1: County</para>
-    /// </summary>
-    [AttributeLogicalName("address1_county")]
-    public string Address1_County {
-        get {
-            return GetAttributeValue<string>("address1_county");
-        }
-        set {
-            SetAttributeValue("address1_county", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Fax number for address 1.</para>
-    /// <para>Display Name: Address 1: Fax</para>
-    /// </summary>
-    [AttributeLogicalName("address1_fax")]
-    public string Address1_Fax {
-        get {
-            return GetAttributeValue<string>("address1_fax");
-        }
-        set {
-            SetAttributeValue("address1_fax", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Latitude for address 1.</para>
-    /// <para>Display Name: Address 1: Latitude</para>
-    /// </summary>
-    [AttributeLogicalName("address1_latitude")]
-    public double? Address1_Latitude {
-        get {
-            return GetAttributeValue<double?>("address1_latitude");
-        }
-        set {
-            SetAttributeValue("address1_latitude", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>First line for entering address 1 information.</para>
-    /// <para>Display Name: Street 1</para>
-    /// </summary>
-    [AttributeLogicalName("address1_line1")]
-    public string Address1_Line1 {
-        get {
-            return GetAttributeValue<string>("address1_line1");
-        }
-        set {
-            SetAttributeValue("address1_line1", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Second line for entering address 1 information.</para>
-    /// <para>Display Name: Street 2</para>
-    /// </summary>
-    [AttributeLogicalName("address1_line2")]
-    public string Address1_Line2 {
-        get {
-            return GetAttributeValue<string>("address1_line2");
-        }
-        set {
-            SetAttributeValue("address1_line2", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Third line for entering address 1 information.</para>
-    /// <para>Display Name: Street 3</para>
-    /// </summary>
-    [AttributeLogicalName("address1_line3")]
-    public string Address1_Line3 {
-        get {
-            return GetAttributeValue<string>("address1_line3");
-        }
-        set {
-            SetAttributeValue("address1_line3", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Longitude for address 1.</para>
-    /// <para>Display Name: Address 1: Longitude</para>
-    /// </summary>
-    [AttributeLogicalName("address1_longitude")]
-    public double? Address1_Longitude {
-        get {
-            return GetAttributeValue<double?>("address1_longitude");
-        }
-        set {
-            SetAttributeValue("address1_longitude", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Name to enter for address 1.</para>
-    /// <para>Display Name: Address 1: Name</para>
-    /// </summary>
-    [AttributeLogicalName("address1_name")]
-    public string Address1_Name {
-        get {
-            return GetAttributeValue<string>("address1_name");
-        }
-        set {
-            SetAttributeValue("address1_name", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Post office box number for address 1.</para>
-    /// <para>Display Name: Address 1: Post Office Box</para>
-    /// </summary>
-    [AttributeLogicalName("address1_postofficebox")]
-    public string Address1_PostOfficeBox {
-        get {
-            return GetAttributeValue<string>("address1_postofficebox");
-        }
-        set {
-            SetAttributeValue("address1_postofficebox", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>ZIP Code or postal code for address 1.</para>
-    /// <para>Display Name: ZIP/Postal Code</para>
-    /// </summary>
-    [AttributeLogicalName("address1_postalcode")]
-    public string Address1_PostalCode {
-        get {
-            return GetAttributeValue<string>("address1_postalcode");
-        }
-        set {
-            SetAttributeValue("address1_postalcode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Method of shipment for address 1.</para>
-    /// <para>Display Name: Address 1: Shipping Method</para>
-    /// </summary>
-    [AttributeLogicalName("address1_shippingmethodcode")]
-    public SystemUser_Address1_ShippingMethodCode? Address1_ShippingMethodCode {
-        get {
-            return GetOptionSetValue<SystemUser_Address1_ShippingMethodCode>("address1_shippingmethodcode");
-        }
-        set {
-            SetOptionSetValue("address1_shippingmethodcode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>State or province for address 1.</para>
-    /// <para>Display Name: State/Province</para>
-    /// </summary>
-    [AttributeLogicalName("address1_stateorprovince")]
-    public string Address1_StateOrProvince {
-        get {
-            return GetAttributeValue<string>("address1_stateorprovince");
-        }
-        set {
-            SetAttributeValue("address1_stateorprovince", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>First telephone number associated with address 1.</para>
-    /// <para>Display Name: Main Phone</para>
-    /// </summary>
-    [AttributeLogicalName("address1_telephone1")]
-    public string Address1_Telephone1 {
-        get {
-            return GetAttributeValue<string>("address1_telephone1");
-        }
-        set {
-            SetAttributeValue("address1_telephone1", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Second telephone number associated with address 1.</para>
-    /// <para>Display Name: Other Phone</para>
-    /// </summary>
-    [AttributeLogicalName("address1_telephone2")]
-    public string Address1_Telephone2 {
-        get {
-            return GetAttributeValue<string>("address1_telephone2");
-        }
-        set {
-            SetAttributeValue("address1_telephone2", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Third telephone number associated with address 1.</para>
-    /// <para>Display Name: Pager</para>
-    /// </summary>
-    [AttributeLogicalName("address1_telephone3")]
-    public string Address1_Telephone3 {
-        get {
-            return GetAttributeValue<string>("address1_telephone3");
-        }
-        set {
-            SetAttributeValue("address1_telephone3", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>United Parcel Service (UPS) zone for address 1.</para>
-    /// <para>Display Name: Address 1: UPS Zone</para>
-    /// </summary>
-    [AttributeLogicalName("address1_upszone")]
-    public string Address1_UPSZone {
-        get {
-            return GetAttributeValue<string>("address1_upszone");
-        }
-        set {
-            SetAttributeValue("address1_upszone", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>UTC offset for address 1. This is the difference between local time and standard Coordinated Universal Time.</para>
-    /// <para>Display Name: Address 1: UTC Offset</para>
-    /// </summary>
-    [AttributeLogicalName("address1_utcoffset")]
-    public int? Address1_UTCOffset {
-        get {
-            return GetAttributeValue<int?>("address1_utcoffset");
-        }
-        set {
-            SetAttributeValue("address1_utcoffset", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier for address 2.</para>
-    /// <para>Display Name: Address 2: ID</para>
-    /// </summary>
-    [AttributeLogicalName("address2_addressid")]
-    public Guid? Address2_AddressId {
-        get {
-            return GetAttributeValue<Guid?>("address2_addressid");
-        }
-        set {
-            SetAttributeValue("address2_addressid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Type of address for address 2, such as billing, shipping, or primary address.</para>
-    /// <para>Display Name: Address 2: Address Type</para>
-    /// </summary>
-    [AttributeLogicalName("address2_addresstypecode")]
-    public SystemUser_Address2_AddressTypeCode? Address2_AddressTypeCode {
-        get {
-            return GetOptionSetValue<SystemUser_Address2_AddressTypeCode>("address2_addresstypecode");
-        }
-        set {
-            SetOptionSetValue("address2_addresstypecode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>City name for address 2.</para>
-    /// <para>Display Name: Other City</para>
-    /// </summary>
-    [AttributeLogicalName("address2_city")]
-    public string Address2_City {
-        get {
-            return GetAttributeValue<string>("address2_city");
-        }
-        set {
-            SetAttributeValue("address2_city", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Shows the complete secondary address.</para>
-    /// <para>Display Name: Other Address</para>
-    /// </summary>
-    [AttributeLogicalName("address2_composite")]
-    public string Address2_Composite {
-        get {
-            return GetAttributeValue<string>("address2_composite");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Country/region name in address 2.</para>
-    /// <para>Display Name: Other Country/Region</para>
-    /// </summary>
-    [AttributeLogicalName("address2_country")]
-    public string Address2_Country {
-        get {
-            return GetAttributeValue<string>("address2_country");
-        }
-        set {
-            SetAttributeValue("address2_country", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>County name for address 2.</para>
-    /// <para>Display Name: Address 2: County</para>
-    /// </summary>
-    [AttributeLogicalName("address2_county")]
-    public string Address2_County {
-        get {
-            return GetAttributeValue<string>("address2_county");
-        }
-        set {
-            SetAttributeValue("address2_county", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Fax number for address 2.</para>
-    /// <para>Display Name: Address 2: Fax</para>
-    /// </summary>
-    [AttributeLogicalName("address2_fax")]
-    public string Address2_Fax {
-        get {
-            return GetAttributeValue<string>("address2_fax");
-        }
-        set {
-            SetAttributeValue("address2_fax", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Latitude for address 2.</para>
-    /// <para>Display Name: Address 2: Latitude</para>
-    /// </summary>
-    [AttributeLogicalName("address2_latitude")]
-    public double? Address2_Latitude {
-        get {
-            return GetAttributeValue<double?>("address2_latitude");
-        }
-        set {
-            SetAttributeValue("address2_latitude", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>First line for entering address 2 information.</para>
-    /// <para>Display Name: Other Street 1</para>
-    /// </summary>
-    [AttributeLogicalName("address2_line1")]
-    public string Address2_Line1 {
-        get {
-            return GetAttributeValue<string>("address2_line1");
-        }
-        set {
-            SetAttributeValue("address2_line1", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Second line for entering address 2 information.</para>
-    /// <para>Display Name: Other Street 2</para>
-    /// </summary>
-    [AttributeLogicalName("address2_line2")]
-    public string Address2_Line2 {
-        get {
-            return GetAttributeValue<string>("address2_line2");
-        }
-        set {
-            SetAttributeValue("address2_line2", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Third line for entering address 2 information.</para>
-    /// <para>Display Name: Other Street 3</para>
-    /// </summary>
-    [AttributeLogicalName("address2_line3")]
-    public string Address2_Line3 {
-        get {
-            return GetAttributeValue<string>("address2_line3");
-        }
-        set {
-            SetAttributeValue("address2_line3", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Longitude for address 2.</para>
-    /// <para>Display Name: Address 2: Longitude</para>
-    /// </summary>
-    [AttributeLogicalName("address2_longitude")]
-    public double? Address2_Longitude {
-        get {
-            return GetAttributeValue<double?>("address2_longitude");
-        }
-        set {
-            SetAttributeValue("address2_longitude", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Name to enter for address 2.</para>
-    /// <para>Display Name: Address 2: Name</para>
-    /// </summary>
-    [AttributeLogicalName("address2_name")]
-    public string Address2_Name {
-        get {
-            return GetAttributeValue<string>("address2_name");
-        }
-        set {
-            SetAttributeValue("address2_name", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Post office box number for address 2.</para>
-    /// <para>Display Name: Address 2: Post Office Box</para>
-    /// </summary>
-    [AttributeLogicalName("address2_postofficebox")]
-    public string Address2_PostOfficeBox {
-        get {
-            return GetAttributeValue<string>("address2_postofficebox");
-        }
-        set {
-            SetAttributeValue("address2_postofficebox", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>ZIP Code or postal code for address 2.</para>
-    /// <para>Display Name: Other ZIP/Postal Code</para>
-    /// </summary>
-    [AttributeLogicalName("address2_postalcode")]
-    public string Address2_PostalCode {
-        get {
-            return GetAttributeValue<string>("address2_postalcode");
-        }
-        set {
-            SetAttributeValue("address2_postalcode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Method of shipment for address 2.</para>
-    /// <para>Display Name: Address 2: Shipping Method</para>
-    /// </summary>
-    [AttributeLogicalName("address2_shippingmethodcode")]
-    public SystemUser_Address2_ShippingMethodCode? Address2_ShippingMethodCode {
-        get {
-            return GetOptionSetValue<SystemUser_Address2_ShippingMethodCode>("address2_shippingmethodcode");
-        }
-        set {
-            SetOptionSetValue("address2_shippingmethodcode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>State or province for address 2.</para>
-    /// <para>Display Name: Other State/Province</para>
-    /// </summary>
-    [AttributeLogicalName("address2_stateorprovince")]
-    public string Address2_StateOrProvince {
-        get {
-            return GetAttributeValue<string>("address2_stateorprovince");
-        }
-        set {
-            SetAttributeValue("address2_stateorprovince", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>First telephone number associated with address 2.</para>
-    /// <para>Display Name: Address 2: Telephone 1</para>
-    /// </summary>
-    [AttributeLogicalName("address2_telephone1")]
-    public string Address2_Telephone1 {
-        get {
-            return GetAttributeValue<string>("address2_telephone1");
-        }
-        set {
-            SetAttributeValue("address2_telephone1", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Second telephone number associated with address 2.</para>
-    /// <para>Display Name: Address 2: Telephone 2</para>
-    /// </summary>
-    [AttributeLogicalName("address2_telephone2")]
-    public string Address2_Telephone2 {
-        get {
-            return GetAttributeValue<string>("address2_telephone2");
-        }
-        set {
-            SetAttributeValue("address2_telephone2", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Third telephone number associated with address 2.</para>
-    /// <para>Display Name: Address 2: Telephone 3</para>
-    /// </summary>
-    [AttributeLogicalName("address2_telephone3")]
-    public string Address2_Telephone3 {
-        get {
-            return GetAttributeValue<string>("address2_telephone3");
-        }
-        set {
-            SetAttributeValue("address2_telephone3", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>United Parcel Service (UPS) zone for address 2.</para>
-    /// <para>Display Name: Address 2: UPS Zone</para>
-    /// </summary>
-    [AttributeLogicalName("address2_upszone")]
-    public string Address2_UPSZone {
-        get {
-            return GetAttributeValue<string>("address2_upszone");
-        }
-        set {
-            SetAttributeValue("address2_upszone", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>UTC offset for address 2. This is the difference between local time and standard Coordinated Universal Time.</para>
-    /// <para>Display Name: Address 2: UTC Offset</para>
-    /// </summary>
-    [AttributeLogicalName("address2_utcoffset")]
-    public int? Address2_UTCOffset {
-        get {
-            return GetAttributeValue<int?>("address2_utcoffset");
-        }
-        set {
-            SetAttributeValue("address2_utcoffset", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>The identifier for the application. This is used to access data in another application.</para>
-    /// <para>Display Name: Application ID</para>
-    /// </summary>
-    [AttributeLogicalName("applicationid")]
-    public Guid? ApplicationId {
-        get {
-            return GetAttributeValue<Guid?>("applicationid");
-        }
-        set {
-            SetAttributeValue("applicationid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>The URI used as a unique logical identifier for the external app. This can be used to validate the application.</para>
-    /// <para>Display Name: Application ID URI</para>
-    /// </summary>
-    [AttributeLogicalName("applicationiduri")]
-    public string ApplicationIdUri {
-        get {
-            return GetAttributeValue<string>("applicationiduri");
-        }
-    }
-    
-    /// <summary>
-    /// <para>This is the application directory object Id.</para>
-    /// <para>Display Name: Azure AD Object ID</para>
-    /// </summary>
-    [AttributeLogicalName("azureactivedirectoryobjectid")]
-    public Guid? AzureActiveDirectoryObjectId {
-        get {
-            return GetAttributeValue<Guid?>("azureactivedirectoryobjectid");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the business unit with which the user is associated.</para>
-    /// <para>Display Name: Business Unit</para>
-    /// </summary>
-    [AttributeLogicalName("businessunitid")]
-    public EntityReference BusinessUnitId {
-        get {
-            return GetAttributeValue<EntityReference>("businessunitid");
-        }
-        set {
-            SetAttributeValue("businessunitid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>License type of user.</para>
-    /// <para>Display Name: License Type</para>
-    /// </summary>
-    [AttributeLogicalName("caltype")]
-    public SystemUser_CALType? CALType {
-        get {
-            return GetOptionSetValue<SystemUser_CALType>("caltype");
-        }
-        set {
-            SetOptionSetValue("caltype", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Fiscal calendar associated with the user.</para>
-    /// <para>Display Name: Calendar</para>
-    /// </summary>
-    [AttributeLogicalName("calendarid")]
-    public EntityReference CalendarId {
-        get {
-            return GetAttributeValue<EntityReference>("calendarid");
-        }
-        set {
-            SetAttributeValue("calendarid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the user who created the user.</para>
-    /// <para>Display Name: Created By</para>
-    /// </summary>
-    [AttributeLogicalName("createdby")]
-    public EntityReference CreatedBy {
-        get {
-            return GetAttributeValue<EntityReference>("createdby");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Date and time when the user was created.</para>
-    /// <para>Display Name: Created On</para>
-    /// </summary>
-    [AttributeLogicalName("createdon")]
-    public DateTime? CreatedOn {
-        get {
-            return GetAttributeValue<DateTime?>("createdon");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the delegate user who created the systemuser.</para>
-    /// <para>Display Name: Created By (Delegate)</para>
-    /// </summary>
-    [AttributeLogicalName("createdonbehalfby")]
-    public EntityReference CreatedOnBehalfBy {
-        get {
-            return GetAttributeValue<EntityReference>("createdonbehalfby");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Indicates if default outlook filters have been populated.</para>
-    /// <para>Display Name: Default Filters Populated</para>
-    /// </summary>
-    [AttributeLogicalName("defaultfilterspopulated")]
-    public bool? DefaultFiltersPopulated {
-        get {
-            return GetAttributeValue<bool?>("defaultfilterspopulated");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Select the mailbox associated with this user.</para>
-    /// <para>Display Name: Mailbox</para>
-    /// </summary>
-    [AttributeLogicalName("defaultmailbox")]
-    public EntityReference DefaultMailbox {
-        get {
-            return GetAttributeValue<EntityReference>("defaultmailbox");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Type a default folder name for the user's OneDrive For Business location.</para>
-    /// <para>Display Name: Default OneDrive for Business Folder Name</para>
-    /// </summary>
-    [AttributeLogicalName("defaultodbfoldername")]
-    public string DefaultOdbFolderName {
-        get {
-            return GetAttributeValue<string>("defaultodbfoldername");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Reason for disabling the user.</para>
-    /// <para>Display Name: Disabled Reason</para>
-    /// </summary>
-    [AttributeLogicalName("disabledreason")]
-    public string DisabledReason {
-        get {
-            return GetAttributeValue<string>("disabledreason");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Whether to display the user in service views.</para>
-    /// <para>Display Name: Display in Service Views</para>
-    /// </summary>
-    [AttributeLogicalName("displayinserviceviews")]
-    public bool? DisplayInServiceViews {
-        get {
-            return GetAttributeValue<bool?>("displayinserviceviews");
-        }
-        set {
-            SetAttributeValue("displayinserviceviews", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Active Directory domain of which the user is a member.</para>
-    /// <para>Display Name: User Name</para>
-    /// </summary>
-    [AttributeLogicalName("domainname")]
-    public string DomainName {
-        get {
-            return GetAttributeValue<string>("domainname");
-        }
-        set {
-            SetAttributeValue("domainname", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Shows the status of the primary email address.</para>
-    /// <para>Display Name: Primary Email Status</para>
-    /// </summary>
-    [AttributeLogicalName("emailrouteraccessapproval")]
-    public SystemUser_EmailRouterAccessApproval? EmailRouterAccessApproval {
-        get {
-            return GetOptionSetValue<SystemUser_EmailRouterAccessApproval>("emailrouteraccessapproval");
-        }
-        set {
-            SetOptionSetValue("emailrouteraccessapproval", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Employee identifier for the user.</para>
-    /// <para>Display Name: Employee</para>
-    /// </summary>
-    [AttributeLogicalName("employeeid")]
-    public string EmployeeId {
-        get {
-            return GetAttributeValue<string>("employeeid");
-        }
-        set {
-            SetAttributeValue("employeeid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>For internal use only.</para>
-    /// <para>Display Name: Entity Image Id</para>
-    /// </summary>
-    [AttributeLogicalName("entityimageid")]
-    public Guid? EntityImageId {
-        get {
-            return GetAttributeValue<Guid?>("entityimageid");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Exchange rate for the currency associated with the systemuser with respect to the base currency.</para>
-    /// <para>Display Name: Exchange Rate</para>
-    /// </summary>
-    [AttributeLogicalName("exchangerate")]
-    public decimal? ExchangeRate {
-        get {
-            return GetAttributeValue<decimal?>("exchangerate");
-        }
-    }
-    
-    /// <summary>
-    /// <para>First name of the user.</para>
-    /// <para>Display Name: First Name</para>
-    /// </summary>
-    [AttributeLogicalName("firstname")]
-    public string FirstName {
-        get {
-            return GetAttributeValue<string>("firstname");
-        }
-        set {
-            SetAttributeValue("firstname", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Full name of the user.</para>
-    /// <para>Display Name: Full Name</para>
-    /// </summary>
-    [AttributeLogicalName("fullname")]
-    public string FullName {
-        get {
-            return GetAttributeValue<string>("fullname");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Government identifier for the user.</para>
-    /// <para>Display Name: Government</para>
-    /// </summary>
-    [AttributeLogicalName("governmentid")]
-    public string GovernmentId {
-        get {
-            return GetAttributeValue<string>("governmentid");
-        }
-        set {
-            SetAttributeValue("governmentid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Home phone number for the user.</para>
-    /// <para>Display Name: Home Phone</para>
-    /// </summary>
-    [AttributeLogicalName("homephone")]
-    public string HomePhone {
-        get {
-            return GetAttributeValue<string>("homephone");
-        }
-        set {
-            SetAttributeValue("homephone", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>For internal use only.</para>
-    /// <para>Display Name: Unique user identity id</para>
-    /// </summary>
-    [AttributeLogicalName("identityid")]
-    public int? IdentityId {
-        get {
-            return GetAttributeValue<int?>("identityid");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the data import or data migration that created this record.</para>
-    /// <para>Display Name: Import Sequence Number</para>
-    /// </summary>
-    [AttributeLogicalName("importsequencenumber")]
-    public int? ImportSequenceNumber {
-        get {
-            return GetAttributeValue<int?>("importsequencenumber");
-        }
-        set {
-            SetAttributeValue("importsequencenumber", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Incoming email delivery method for the user.</para>
-    /// <para>Display Name: Incoming Email Delivery Method</para>
-    /// </summary>
-    [AttributeLogicalName("incomingemaildeliverymethod")]
-    public SystemUser_IncomingEmailDeliveryMethod? IncomingEmailDeliveryMethod {
-        get {
-            return GetOptionSetValue<SystemUser_IncomingEmailDeliveryMethod>("incomingemaildeliverymethod");
-        }
-        set {
-            SetOptionSetValue("incomingemaildeliverymethod", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Internal email address for the user.</para>
-    /// <para>Display Name: Primary Email</para>
-    /// </summary>
-    [AttributeLogicalName("internalemailaddress")]
-    public string InternalEMailAddress {
-        get {
-            return GetAttributeValue<string>("internalemailaddress");
-        }
-        set {
-            SetAttributeValue("internalemailaddress", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>User invitation status.</para>
-    /// <para>Display Name: Invitation Status</para>
-    /// </summary>
-    [AttributeLogicalName("invitestatuscode")]
-    public SystemUser_InviteStatusCode? InviteStatusCode {
-        get {
-            return GetOptionSetValue<SystemUser_InviteStatusCode>("invitestatuscode");
-        }
-        set {
-            SetOptionSetValue("invitestatuscode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Information about whether the user is enabled.</para>
-    /// <para>Display Name: Status</para>
-    /// </summary>
-    [AttributeLogicalName("isdisabled")]
-    public bool? IsDisabled {
-        get {
-            return GetAttributeValue<bool?>("isdisabled");
-        }
-        set {
-            SetAttributeValue("isdisabled", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Shows the status of approval of the email address by O365 Admin.</para>
-    /// <para>Display Name: Email Address O365 Admin Approval Status</para>
-    /// </summary>
-    [AttributeLogicalName("isemailaddressapprovedbyo365admin")]
-    public bool? IsEmailAddressApprovedByO365Admin {
-        get {
-            return GetAttributeValue<bool?>("isemailaddressapprovedbyo365admin");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Check if user is an integration user.</para>
-    /// <para>Display Name: Integration user mode</para>
-    /// </summary>
-    [AttributeLogicalName("isintegrationuser")]
-    public bool? IsIntegrationUser {
-        get {
-            return GetAttributeValue<bool?>("isintegrationuser");
-        }
-        set {
-            SetAttributeValue("isintegrationuser", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Information about whether the user is licensed.</para>
-    /// <para>Display Name: User Licensed</para>
-    /// </summary>
-    [AttributeLogicalName("islicensed")]
-    public bool? IsLicensed {
-        get {
-            return GetAttributeValue<bool?>("islicensed");
-        }
-        set {
-            SetAttributeValue("islicensed", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Information about whether the user is synced with the directory.</para>
-    /// <para>Display Name: User Synced</para>
-    /// </summary>
-    [AttributeLogicalName("issyncwithdirectory")]
-    public bool? IsSyncWithDirectory {
-        get {
-            return GetAttributeValue<bool?>("issyncwithdirectory");
-        }
-        set {
-            SetAttributeValue("issyncwithdirectory", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Job title of the user.</para>
-    /// <para>Display Name: Job Title</para>
-    /// </summary>
-    [AttributeLogicalName("jobtitle")]
-    public string JobTitle {
-        get {
-            return GetAttributeValue<string>("jobtitle");
-        }
-        set {
-            SetAttributeValue("jobtitle", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Last name of the user.</para>
-    /// <para>Display Name: Last Name</para>
-    /// </summary>
-    [AttributeLogicalName("lastname")]
-    public string LastName {
-        get {
-            return GetAttributeValue<string>("lastname");
-        }
-        set {
-            SetAttributeValue("lastname", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Middle name of the user.</para>
-    /// <para>Display Name: Middle Name</para>
-    /// </summary>
-    [AttributeLogicalName("middlename")]
-    public string MiddleName {
-        get {
-            return GetAttributeValue<string>("middlename");
-        }
-        set {
-            SetAttributeValue("middlename", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Mobile alert email address for the user.</para>
-    /// <para>Display Name: Mobile Alert Email</para>
-    /// </summary>
-    [AttributeLogicalName("mobilealertemail")]
-    public string MobileAlertEMail {
-        get {
-            return GetAttributeValue<string>("mobilealertemail");
-        }
-        set {
-            SetAttributeValue("mobilealertemail", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Items contained with a particular SystemUser.</para>
-    /// <para>Display Name: Mobile Offline Profile</para>
-    /// </summary>
-    [AttributeLogicalName("mobileofflineprofileid")]
-    public EntityReference MobileOfflineProfileId {
-        get {
-            return GetAttributeValue<EntityReference>("mobileofflineprofileid");
-        }
-        set {
-            SetAttributeValue("mobileofflineprofileid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Mobile phone number for the user.</para>
-    /// <para>Display Name: Mobile Phone</para>
-    /// </summary>
-    [AttributeLogicalName("mobilephone")]
-    public string MobilePhone {
-        get {
-            return GetAttributeValue<string>("mobilephone");
-        }
-        set {
-            SetAttributeValue("mobilephone", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the user who last modified the user.</para>
-    /// <para>Display Name: Modified By</para>
-    /// </summary>
-    [AttributeLogicalName("modifiedby")]
-    public EntityReference ModifiedBy {
-        get {
-            return GetAttributeValue<EntityReference>("modifiedby");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Date and time when the user was last modified.</para>
-    /// <para>Display Name: Modified On</para>
-    /// </summary>
-    [AttributeLogicalName("modifiedon")]
-    public DateTime? ModifiedOn {
-        get {
-            return GetAttributeValue<DateTime?>("modifiedon");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the delegate user who last modified the systemuser.</para>
-    /// <para>Display Name: Modified By (Delegate)</para>
-    /// </summary>
-    [AttributeLogicalName("modifiedonbehalfby")]
-    public EntityReference ModifiedOnBehalfBy {
-        get {
-            return GetAttributeValue<EntityReference>("modifiedonbehalfby");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Nickname of the user.</para>
-    /// <para>Display Name: Nickname</para>
-    /// </summary>
-    [AttributeLogicalName("nickname")]
-    public string NickName {
-        get {
-            return GetAttributeValue<string>("nickname");
-        }
-        set {
-            SetAttributeValue("nickname", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the organization associated with the user.</para>
-    /// <para>Display Name: Organization </para>
-    /// </summary>
-    [AttributeLogicalName("organizationid")]
-    public Guid? OrganizationId {
-        get {
-            return GetAttributeValue<Guid?>("organizationid");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Outgoing email delivery method for the user.</para>
-    /// <para>Display Name: Outgoing Email Delivery Method</para>
-    /// </summary>
-    [AttributeLogicalName("outgoingemaildeliverymethod")]
-    public SystemUser_OutgoingEmailDeliveryMethod? OutgoingEmailDeliveryMethod {
-        get {
-            return GetOptionSetValue<SystemUser_OutgoingEmailDeliveryMethod>("outgoingemaildeliverymethod");
-        }
-        set {
-            SetOptionSetValue("outgoingemaildeliverymethod", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Date and time that the record was migrated.</para>
-    /// <para>Display Name: Record Created On</para>
-    /// </summary>
-    [AttributeLogicalName("overriddencreatedon")]
-    public DateTime? OverriddenCreatedOn {
-        get {
-            return GetAttributeValue<DateTime?>("overriddencreatedon");
-        }
-        set {
-            SetAttributeValue("overriddencreatedon", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the manager of the user.</para>
-    /// <para>Display Name: Manager</para>
-    /// </summary>
-    [AttributeLogicalName("parentsystemuserid")]
-    public EntityReference ParentSystemUserId {
-        get {
-            return GetAttributeValue<EntityReference>("parentsystemuserid");
-        }
-        set {
-            SetAttributeValue("parentsystemuserid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>For internal use only.</para>
-    /// <para>Display Name: Passport Hi</para>
-    /// </summary>
-    [AttributeLogicalName("passporthi")]
-    public int? PassportHi {
-        get {
-            return GetAttributeValue<int?>("passporthi");
-        }
-        set {
-            SetAttributeValue("passporthi", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>For internal use only.</para>
-    /// <para>Display Name: Passport Lo</para>
-    /// </summary>
-    [AttributeLogicalName("passportlo")]
-    public int? PassportLo {
-        get {
-            return GetAttributeValue<int?>("passportlo");
-        }
-        set {
-            SetAttributeValue("passportlo", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Personal email address of the user.</para>
-    /// <para>Display Name: Email 2</para>
-    /// </summary>
-    [AttributeLogicalName("personalemailaddress")]
-    public string PersonalEMailAddress {
-        get {
-            return GetAttributeValue<string>("personalemailaddress");
-        }
-        set {
-            SetAttributeValue("personalemailaddress", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>URL for the Website on which a photo of the user is located.</para>
-    /// <para>Display Name: Photo URL</para>
-    /// </summary>
-    [AttributeLogicalName("photourl")]
-    public string PhotoUrl {
-        get {
-            return GetAttributeValue<string>("photourl");
-        }
-        set {
-            SetAttributeValue("photourl", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>User's position in hierarchical security model.</para>
-    /// <para>Display Name: Position</para>
-    /// </summary>
-    [AttributeLogicalName("positionid")]
-    public EntityReference PositionId {
-        get {
-            return GetAttributeValue<EntityReference>("positionid");
-        }
-        set {
-            SetAttributeValue("positionid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Preferred address for the user.</para>
-    /// <para>Display Name: Preferred Address</para>
-    /// </summary>
-    [AttributeLogicalName("preferredaddresscode")]
-    public SystemUser_PreferredAddressCode? PreferredAddressCode {
-        get {
-            return GetOptionSetValue<SystemUser_PreferredAddressCode>("preferredaddresscode");
-        }
-        set {
-            SetOptionSetValue("preferredaddresscode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Preferred email address for the user.</para>
-    /// <para>Display Name: Preferred Email</para>
-    /// </summary>
-    [AttributeLogicalName("preferredemailcode")]
-    public SystemUser_PreferredEmailCode? PreferredEmailCode {
-        get {
-            return GetOptionSetValue<SystemUser_PreferredEmailCode>("preferredemailcode");
-        }
-        set {
-            SetOptionSetValue("preferredemailcode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Preferred phone number for the user.</para>
-    /// <para>Display Name: Preferred Phone</para>
-    /// </summary>
-    [AttributeLogicalName("preferredphonecode")]
-    public SystemUser_PreferredPhoneCode? PreferredPhoneCode {
-        get {
-            return GetOptionSetValue<SystemUser_PreferredPhoneCode>("preferredphonecode");
-        }
-        set {
-            SetOptionSetValue("preferredphonecode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Shows the ID of the process.</para>
-    /// <para>Display Name: Process</para>
-    /// </summary>
-    [AttributeLogicalName("processid")]
-    public Guid? ProcessId {
-        get {
-            return GetAttributeValue<Guid?>("processid");
-        }
-        set {
-            SetAttributeValue("processid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the default queue for the user.</para>
-    /// <para>Display Name: Default Queue</para>
-    /// </summary>
-    [AttributeLogicalName("queueid")]
-    public EntityReference QueueId {
-        get {
-            return GetAttributeValue<EntityReference>("queueid");
-        }
-        set {
-            SetAttributeValue("queueid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Salutation for correspondence with the user.</para>
-    /// <para>Display Name: Salutation</para>
-    /// </summary>
-    [AttributeLogicalName("salutation")]
-    public string Salutation {
-        get {
-            return GetAttributeValue<string>("salutation");
-        }
-        set {
-            SetAttributeValue("salutation", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Check if user is a setup user.</para>
-    /// <para>Display Name: Restricted Access Mode</para>
-    /// </summary>
-    [AttributeLogicalName("setupuser")]
-    public bool? SetupUser {
-        get {
-            return GetAttributeValue<bool?>("setupuser");
-        }
-        set {
-            SetAttributeValue("setupuser", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>SharePoint Work Email Address</para>
-    /// <para>Display Name: SharePoint Email Address</para>
-    /// </summary>
-    [AttributeLogicalName("sharepointemailaddress")]
-    public string SharePointEmailAddress {
-        get {
-            return GetAttributeValue<string>("sharepointemailaddress");
-        }
-        set {
-            SetAttributeValue("sharepointemailaddress", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Skill set of the user.</para>
-    /// <para>Display Name: Skills</para>
-    /// </summary>
-    [AttributeLogicalName("skills")]
-    public string Skills {
-        get {
-            return GetAttributeValue<string>("skills");
-        }
-        set {
-            SetAttributeValue("skills", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Shows the ID of the stage.</para>
-    /// <para>Display Name: (Deprecated) Process Stage</para>
-    /// </summary>
-    [AttributeLogicalName("stageid")]
-    public Guid? StageId {
-        get {
-            return GetAttributeValue<Guid?>("stageid");
-        }
-        set {
-            SetAttributeValue("stageid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the territory to which the user is assigned.</para>
-    /// <para>Display Name: Territory</para>
-    /// </summary>
-    [AttributeLogicalName("territoryid")]
-    public EntityReference TerritoryId {
-        get {
-            return GetAttributeValue<EntityReference>("territoryid");
-        }
-        set {
-            SetAttributeValue("territoryid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>For internal use only.</para>
-    /// <para>Display Name: Time Zone Rule Version Number</para>
-    /// </summary>
-    [AttributeLogicalName("timezoneruleversionnumber")]
-    public int? TimeZoneRuleVersionNumber {
-        get {
-            return GetAttributeValue<int?>("timezoneruleversionnumber");
-        }
-        set {
-            SetAttributeValue("timezoneruleversionnumber", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Title of the user.</para>
-    /// <para>Display Name: Title</para>
-    /// </summary>
-    [AttributeLogicalName("title")]
-    public string Title {
-        get {
-            return GetAttributeValue<string>("title");
-        }
-        set {
-            SetAttributeValue("title", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the currency associated with the systemuser.</para>
-    /// <para>Display Name: Currency</para>
-    /// </summary>
-    [AttributeLogicalName("transactioncurrencyid")]
-    public EntityReference TransactionCurrencyId {
-        get {
-            return GetAttributeValue<EntityReference>("transactioncurrencyid");
-        }
-        set {
-            SetAttributeValue("transactioncurrencyid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>For internal use only.</para>
-    /// <para>Display Name: (Deprecated) Traversed Path</para>
-    /// </summary>
-    [AttributeLogicalName("traversedpath")]
-    public string TraversedPath {
-        get {
-            return GetAttributeValue<string>("traversedpath");
-        }
-        set {
-            SetAttributeValue("traversedpath", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Time zone code that was in use when the record was created.</para>
-    /// <para>Display Name: UTC Conversion Time Zone Code</para>
-    /// </summary>
-    [AttributeLogicalName("utcconversiontimezonecode")]
-    public int? UTCConversionTimeZoneCode {
-        get {
-            return GetAttributeValue<int?>("utcconversiontimezonecode");
-        }
-        set {
-            SetAttributeValue("utcconversiontimezonecode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Shows the type of user license.</para>
-    /// <para>Display Name: User License Type</para>
-    /// </summary>
-    [AttributeLogicalName("userlicensetype")]
-    public int? UserLicenseType {
-        get {
-            return GetAttributeValue<int?>("userlicensetype");
-        }
-        set {
-            SetAttributeValue("userlicensetype", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para> User PUID User Identifiable Information</para>
-    /// <para>Display Name: User PUID</para>
-    /// </summary>
-    [AttributeLogicalName("userpuid")]
-    public string UserPuid {
-        get {
-            return GetAttributeValue<string>("userpuid");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Version number of the user.</para>
-    /// <para>Display Name: Version number</para>
-    /// </summary>
-    [AttributeLogicalName("versionnumber")]
-    public long? VersionNumber {
-        get {
-            return GetAttributeValue<long?>("versionnumber");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Windows Live ID</para>
-    /// <para>Display Name: Windows Live ID</para>
-    /// </summary>
-    [AttributeLogicalName("windowsliveid")]
-    public string WindowsLiveID {
-        get {
-            return GetAttributeValue<string>("windowsliveid");
-        }
-        set {
-            SetAttributeValue("windowsliveid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>User's Yammer login email address</para>
-    /// <para>Display Name: Yammer Email</para>
-    /// </summary>
-    [AttributeLogicalName("yammeremailaddress")]
-    public string YammerEmailAddress {
-        get {
-            return GetAttributeValue<string>("yammeremailaddress");
-        }
-        set {
-            SetAttributeValue("yammeremailaddress", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>User's Yammer ID</para>
-    /// <para>Display Name: Yammer User ID</para>
-    /// </summary>
-    [AttributeLogicalName("yammeruserid")]
-    public string YammerUserId {
-        get {
-            return GetAttributeValue<string>("yammeruserid");
-        }
-        set {
-            SetAttributeValue("yammeruserid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Pronunciation of the first name of the user, written in phonetic hiragana or katakana characters.</para>
-    /// <para>Display Name: Yomi First Name</para>
-    /// </summary>
-    [AttributeLogicalName("yomifirstname")]
-    public string YomiFirstName {
-        get {
-            return GetAttributeValue<string>("yomifirstname");
-        }
-        set {
-            SetAttributeValue("yomifirstname", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Pronunciation of the full name of the user, written in phonetic hiragana or katakana characters.</para>
-    /// <para>Display Name: Yomi Full Name</para>
-    /// </summary>
-    [AttributeLogicalName("yomifullname")]
-    public string YomiFullName {
-        get {
-            return GetAttributeValue<string>("yomifullname");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Pronunciation of the last name of the user, written in phonetic hiragana or katakana characters.</para>
-    /// <para>Display Name: Yomi Last Name</para>
-    /// </summary>
-    [AttributeLogicalName("yomilastname")]
-    public string YomiLastName {
-        get {
-            return GetAttributeValue<string>("yomilastname");
-        }
-        set {
-            SetAttributeValue("yomilastname", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Pronunciation of the middle name of the user, written in phonetic hiragana or katakana characters.</para>
-    /// <para>Display Name: Yomi Middle Name</para>
-    /// </summary>
-    [AttributeLogicalName("yomimiddlename")]
-    public string YomiMiddleName {
-        get {
-            return GetAttributeValue<string>("yomimiddlename");
-        }
-        set {
-            SetAttributeValue("yomimiddlename", value);
-        }
-    }
-    
-    [RelationshipSchemaName("lk_systemuser_createdonbehalfby", EntityRole.Referenced)]
-    public IEnumerable<SystemUser> Referencedlk_systemuser_createdonbehalfby {
-        get {
-            return GetRelatedEntities<SystemUser>("lk_systemuser_createdonbehalfby", EntityRole.Referenced);
-        }
-        set {
-            SetRelatedEntities("lk_systemuser_createdonbehalfby", EntityRole.Referenced, value);
-        }
-    }
-    
-    [RelationshipSchemaName("lk_systemuser_modifiedonbehalfby", EntityRole.Referenced)]
-    public IEnumerable<SystemUser> Referencedlk_systemuser_modifiedonbehalfby {
-        get {
-            return GetRelatedEntities<SystemUser>("lk_systemuser_modifiedonbehalfby", EntityRole.Referenced);
-        }
-        set {
-            SetRelatedEntities("lk_systemuser_modifiedonbehalfby", EntityRole.Referenced, value);
-        }
-    }
-    
-    [RelationshipSchemaName("lk_systemuserbase_createdby", EntityRole.Referenced)]
-    public IEnumerable<SystemUser> Referencedlk_systemuserbase_createdby {
-        get {
-            return GetRelatedEntities<SystemUser>("lk_systemuserbase_createdby", EntityRole.Referenced);
-        }
-        set {
-            SetRelatedEntities("lk_systemuserbase_createdby", EntityRole.Referenced, value);
-        }
-    }
-    
-    [RelationshipSchemaName("lk_systemuserbase_modifiedby", EntityRole.Referenced)]
-    public IEnumerable<SystemUser> Referencedlk_systemuserbase_modifiedby {
-        get {
-            return GetRelatedEntities<SystemUser>("lk_systemuserbase_modifiedby", EntityRole.Referenced);
-        }
-        set {
-            SetRelatedEntities("lk_systemuserbase_modifiedby", EntityRole.Referenced, value);
-        }
-    }
-    
-    [RelationshipSchemaName("user_parent_user", EntityRole.Referenced)]
-    public IEnumerable<SystemUser> Referenceduser_parent_user {
-        get {
-            return GetRelatedEntities<SystemUser>("user_parent_user", EntityRole.Referenced);
-        }
-        set {
-            SetRelatedEntities("user_parent_user", EntityRole.Referenced, value);
-        }
-    }
-    
-    [AttributeLogicalName("createdonbehalfby")]
-    [RelationshipSchemaName("lk_systemuser_createdonbehalfby", EntityRole.Referencing)]
-    public SystemUser Referencinglk_systemuser_createdonbehalfby {
-        get {
-            return GetRelatedEntity<SystemUser>("lk_systemuser_createdonbehalfby", EntityRole.Referencing);
-        }
-        set {
-            SetRelatedEntity("lk_systemuser_createdonbehalfby", EntityRole.Referencing, value);
-        }
-    }
-    
-    [AttributeLogicalName("modifiedonbehalfby")]
-    [RelationshipSchemaName("lk_systemuser_modifiedonbehalfby", EntityRole.Referencing)]
-    public SystemUser Referencinglk_systemuser_modifiedonbehalfby {
-        get {
-            return GetRelatedEntity<SystemUser>("lk_systemuser_modifiedonbehalfby", EntityRole.Referencing);
-        }
-        set {
-            SetRelatedEntity("lk_systemuser_modifiedonbehalfby", EntityRole.Referencing, value);
-        }
-    }
-    
-    [AttributeLogicalName("createdby")]
-    [RelationshipSchemaName("lk_systemuserbase_createdby", EntityRole.Referencing)]
-    public SystemUser Referencinglk_systemuserbase_createdby {
-        get {
-            return GetRelatedEntity<SystemUser>("lk_systemuserbase_createdby", EntityRole.Referencing);
-        }
-        set {
-            SetRelatedEntity("lk_systemuserbase_createdby", EntityRole.Referencing, value);
-        }
-    }
-    
-    [AttributeLogicalName("modifiedby")]
-    [RelationshipSchemaName("lk_systemuserbase_modifiedby", EntityRole.Referencing)]
-    public SystemUser Referencinglk_systemuserbase_modifiedby {
-        get {
-            return GetRelatedEntity<SystemUser>("lk_systemuserbase_modifiedby", EntityRole.Referencing);
-        }
-        set {
-            SetRelatedEntity("lk_systemuserbase_modifiedby", EntityRole.Referencing, value);
-        }
-    }
-    
-    [AttributeLogicalName("parentsystemuserid")]
-    [RelationshipSchemaName("user_parent_user", EntityRole.Referencing)]
-    public SystemUser Referencinguser_parent_user {
-        get {
-            return GetRelatedEntity<SystemUser>("user_parent_user", EntityRole.Referencing);
-        }
-        set {
-            SetRelatedEntity("user_parent_user", EntityRole.Referencing, value);
-        }
-    }
-    
-    [RelationshipSchemaName("lk_environmentvariabledefinition_createdby")]
-    public IEnumerable<EnvironmentVariableDefinition> lk_environmentvariabledefinition_createdby {
-        get {
-            return GetRelatedEntities<EnvironmentVariableDefinition>("lk_environmentvariabledefinition_createdby", null);
-        }
-        set {
-            SetRelatedEntities("lk_environmentvariabledefinition_createdby", null, value);
-        }
-    }
-    
-    [RelationshipSchemaName("lk_environmentvariabledefinition_createdonbehalfby")]
-    public IEnumerable<EnvironmentVariableDefinition> lk_environmentvariabledefinition_createdonbehalfby {
-        get {
-            return GetRelatedEntities<EnvironmentVariableDefinition>("lk_environmentvariabledefinition_createdonbehalfby", null);
-        }
-        set {
-            SetRelatedEntities("lk_environmentvariabledefinition_createdonbehalfby", null, value);
-        }
-    }
-    
-    [RelationshipSchemaName("lk_environmentvariabledefinition_modifiedby")]
-    public IEnumerable<EnvironmentVariableDefinition> lk_environmentvariabledefinition_modifiedby {
-        get {
-            return GetRelatedEntities<EnvironmentVariableDefinition>("lk_environmentvariabledefinition_modifiedby", null);
-        }
-        set {
-            SetRelatedEntities("lk_environmentvariabledefinition_modifiedby", null, value);
-        }
-    }
-    
-    [RelationshipSchemaName("lk_environmentvariabledefinition_modifiedonbehalfby")]
-    public IEnumerable<EnvironmentVariableDefinition> lk_environmentvariabledefinition_modifiedonbehalfby {
-        get {
-            return GetRelatedEntities<EnvironmentVariableDefinition>("lk_environmentvariabledefinition_modifiedonbehalfby", null);
-        }
-        set {
-            SetRelatedEntities("lk_environmentvariabledefinition_modifiedonbehalfby", null, value);
-        }
-    }
-    
-    [RelationshipSchemaName("lk_environmentvariablevalue_createdby")]
-    public IEnumerable<EnvironmentVariableValue> lk_environmentvariablevalue_createdby {
-        get {
-            return GetRelatedEntities<EnvironmentVariableValue>("lk_environmentvariablevalue_createdby", null);
-        }
-        set {
-            SetRelatedEntities("lk_environmentvariablevalue_createdby", null, value);
-        }
-    }
-    
-    [RelationshipSchemaName("lk_environmentvariablevalue_createdonbehalfby")]
-    public IEnumerable<EnvironmentVariableValue> lk_environmentvariablevalue_createdonbehalfby {
-        get {
-            return GetRelatedEntities<EnvironmentVariableValue>("lk_environmentvariablevalue_createdonbehalfby", null);
-        }
-        set {
-            SetRelatedEntities("lk_environmentvariablevalue_createdonbehalfby", null, value);
-        }
-    }
-    
-    [RelationshipSchemaName("lk_environmentvariablevalue_modifiedby")]
-    public IEnumerable<EnvironmentVariableValue> lk_environmentvariablevalue_modifiedby {
-        get {
-            return GetRelatedEntities<EnvironmentVariableValue>("lk_environmentvariablevalue_modifiedby", null);
-        }
-        set {
-            SetRelatedEntities("lk_environmentvariablevalue_modifiedby", null, value);
-        }
-    }
-    
-    [RelationshipSchemaName("lk_environmentvariablevalue_modifiedonbehalfby")]
-    public IEnumerable<EnvironmentVariableValue> lk_environmentvariablevalue_modifiedonbehalfby {
-        get {
-            return GetRelatedEntities<EnvironmentVariableValue>("lk_environmentvariablevalue_modifiedonbehalfby", null);
-        }
-        set {
-            SetRelatedEntities("lk_environmentvariablevalue_modifiedonbehalfby", null, value);
-        }
-    }
-    
-    [RelationshipSchemaName("lk_timezonedefinition_createdby")]
-    public IEnumerable<TimeZoneDefinition> lk_timezonedefinition_createdby {
-        get {
-            return GetRelatedEntities<TimeZoneDefinition>("lk_timezonedefinition_createdby", null);
-        }
-        set {
-            SetRelatedEntities("lk_timezonedefinition_createdby", null, value);
-        }
-    }
-    
-    [RelationshipSchemaName("lk_timezonedefinition_createdonbehalfby")]
-    public IEnumerable<TimeZoneDefinition> lk_timezonedefinition_createdonbehalfby {
-        get {
-            return GetRelatedEntities<TimeZoneDefinition>("lk_timezonedefinition_createdonbehalfby", null);
-        }
-        set {
-            SetRelatedEntities("lk_timezonedefinition_createdonbehalfby", null, value);
-        }
-    }
-    
-    [RelationshipSchemaName("lk_timezonedefinition_modifiedby")]
-    public IEnumerable<TimeZoneDefinition> lk_timezonedefinition_modifiedby {
-        get {
-            return GetRelatedEntities<TimeZoneDefinition>("lk_timezonedefinition_modifiedby", null);
-        }
-        set {
-            SetRelatedEntities("lk_timezonedefinition_modifiedby", null, value);
-        }
-    }
-    
-    [RelationshipSchemaName("lk_timezonedefinition_modifiedonbehalfby")]
-    public IEnumerable<TimeZoneDefinition> lk_timezonedefinition_modifiedonbehalfby {
-        get {
-            return GetRelatedEntities<TimeZoneDefinition>("lk_timezonedefinition_modifiedonbehalfby", null);
-        }
-        set {
-            SetRelatedEntities("lk_timezonedefinition_modifiedonbehalfby", null, value);
-        }
-    }
-    
-    [RelationshipSchemaName("lk_usersettings_createdonbehalfby")]
-    public IEnumerable<UserSettings> lk_usersettings_createdonbehalfby {
-        get {
-            return GetRelatedEntities<UserSettings>("lk_usersettings_createdonbehalfby", null);
-        }
-        set {
-            SetRelatedEntities("lk_usersettings_createdonbehalfby", null, value);
-        }
-    }
-    
-    [RelationshipSchemaName("lk_usersettings_modifiedonbehalfby")]
-    public IEnumerable<UserSettings> lk_usersettings_modifiedonbehalfby {
-        get {
-            return GetRelatedEntities<UserSettings>("lk_usersettings_modifiedonbehalfby", null);
-        }
-        set {
-            SetRelatedEntities("lk_usersettings_modifiedonbehalfby", null, value);
-        }
-    }
-    
-    [RelationshipSchemaName("lk_usersettingsbase_createdby")]
-    public IEnumerable<UserSettings> lk_usersettingsbase_createdby {
-        get {
-            return GetRelatedEntities<UserSettings>("lk_usersettingsbase_createdby", null);
-        }
-        set {
-            SetRelatedEntities("lk_usersettingsbase_createdby", null, value);
-        }
-    }
-    
-    [RelationshipSchemaName("lk_usersettingsbase_modifiedby")]
-    public IEnumerable<UserSettings> lk_usersettingsbase_modifiedby {
-        get {
-            return GetRelatedEntities<UserSettings>("lk_usersettingsbase_modifiedby", null);
-        }
-        set {
-            SetRelatedEntities("lk_usersettingsbase_modifiedby", null, value);
-        }
-    }
-    
-    [RelationshipSchemaName("user_environmentvariabledefinition")]
-    public IEnumerable<EnvironmentVariableDefinition> user_environmentvariabledefinition {
-        get {
-            return GetRelatedEntities<EnvironmentVariableDefinition>("user_environmentvariabledefinition", null);
-        }
-        set {
-            SetRelatedEntities("user_environmentvariabledefinition", null, value);
-        }
-    }
-    
-    [RelationshipSchemaName("user_environmentvariablevalue")]
-    public IEnumerable<EnvironmentVariableValue> user_environmentvariablevalue {
-        get {
-            return GetRelatedEntities<EnvironmentVariableValue>("user_environmentvariablevalue", null);
-        }
-        set {
-            SetRelatedEntities("user_environmentvariablevalue", null, value);
-        }
-    }
-    
-    [RelationshipSchemaName("user_settings")]
-    public IEnumerable<UserSettings> user_settings {
-        get {
-            return GetRelatedEntities<UserSettings>("user_settings", null);
-        }
-        set {
-            SetRelatedEntities("user_settings", null, value);
-        }
-    }
-    
-    public static SystemUser Retrieve(IOrganizationService service, Guid id, params Expression<Func<SystemUser,object>>[] attrs) {
-        return service.Retrieve(id, attrs);
-    }
-}
-
-/// <summary>
-/// <para>Time zone definition, including name and time zone code.</para>
-/// <para>Display Name: Time Zone Definition</para>
-/// </summary>
-[EntityLogicalName("timezonedefinition")]
-[DebuggerDisplay("{DebuggerDisplay,nq}")]
-[DataContract()]
-public partial class TimeZoneDefinition : ExtendedEntity<EmptyEnum, EmptyEnum> {
-    
-    public const string EntityLogicalName = "timezonedefinition";
-    
-    public const int EntityTypeCode = 4810;
-    
-    public TimeZoneDefinition() : 
-            base(EntityLogicalName) {
-    }
-    
-    public TimeZoneDefinition(Guid Id) : 
-            base(EntityLogicalName, Id) {
-    }
-    
-    private string DebuggerDisplay {
-        get {
-            return GetDebuggerDisplay("userinterfacename");
-        }
-    }
-    
-    [AttributeLogicalName("timezonedefinitionid")]
-    public override Guid Id {
-        get {
-            return base.Id;
-        }
-        set {
-            SetId("timezonedefinitionid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the time zone record.</para>
-    /// <para>Display Name: Time Zone Definition</para>
-    /// </summary>
-    [AttributeLogicalName("timezonedefinitionid")]
-    public Guid? TimeZoneDefinitionId {
-        get {
-            return GetAttributeValue<Guid?>("timezonedefinitionid");
-        }
-        set {
-            SetId("timezonedefinitionid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Base time bias of the time zone.</para>
-    /// <para>Display Name: Bias</para>
-    /// </summary>
-    [AttributeLogicalName("bias")]
-    public int? Bias {
-        get {
-            return GetAttributeValue<int?>("bias");
-        }
-        set {
-            SetAttributeValue("bias", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the user who created the time zone record.</para>
-    /// <para>Display Name: Created By</para>
-    /// </summary>
-    [AttributeLogicalName("createdby")]
-    public EntityReference CreatedBy {
-        get {
-            return GetAttributeValue<EntityReference>("createdby");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Date and time when the time zone record was created.</para>
-    /// <para>Display Name: Created On</para>
-    /// </summary>
-    [AttributeLogicalName("createdon")]
-    public DateTime? CreatedOn {
-        get {
-            return GetAttributeValue<DateTime?>("createdon");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the delegate user who created the timezonedefinition.</para>
-    /// <para>Display Name: Created By (Delegate)</para>
-    /// </summary>
-    [AttributeLogicalName("createdonbehalfby")]
-    public EntityReference CreatedOnBehalfBy {
-        get {
-            return GetAttributeValue<EntityReference>("createdonbehalfby");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Time zone name for the daylight time.</para>
-    /// <para>Display Name: Daylight Name</para>
-    /// </summary>
-    [AttributeLogicalName("daylightname")]
-    public string DaylightName {
-        get {
-            return GetAttributeValue<string>("daylightname");
-        }
-        set {
-            SetAttributeValue("daylightname", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the user who last modified the time zone record.</para>
-    /// <para>Display Name: Modified By</para>
-    /// </summary>
-    [AttributeLogicalName("modifiedby")]
-    public EntityReference ModifiedBy {
-        get {
-            return GetAttributeValue<EntityReference>("modifiedby");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Date and time when the time zone record was modified.</para>
-    /// <para>Display Name: Modified On</para>
-    /// </summary>
-    [AttributeLogicalName("modifiedon")]
-    public DateTime? ModifiedOn {
-        get {
-            return GetAttributeValue<DateTime?>("modifiedon");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the delegate user who last modified the timezonedefinition.</para>
-    /// <para>Display Name: Modified By (Delegate)</para>
-    /// </summary>
-    [AttributeLogicalName("modifiedonbehalfby")]
-    public EntityReference ModifiedOnBehalfBy {
-        get {
-            return GetAttributeValue<EntityReference>("modifiedonbehalfby");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the organization associated with the time zone definition.</para>
-    /// <para>Display Name: Organization</para>
-    /// </summary>
-    [AttributeLogicalName("organizationid")]
-    public EntityReference OrganizationId {
-        get {
-            return GetAttributeValue<EntityReference>("organizationid");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Order an entry for a time zone definition is retired. 0 for the latest entry.</para>
-    /// <para>Display Name: Retired Order</para>
-    /// </summary>
-    [AttributeLogicalName("retiredorder")]
-    public int? RetiredOrder {
-        get {
-            return GetAttributeValue<int?>("retiredorder");
-        }
-        set {
-            SetAttributeValue("retiredorder", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Time zone name for the standard time.</para>
-    /// <para>Display Name: Standard Name</para>
-    /// </summary>
-    [AttributeLogicalName("standardname")]
-    public string StandardName {
-        get {
-            return GetAttributeValue<string>("standardname");
-        }
-        set {
-            SetAttributeValue("standardname", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Time zone identification code.</para>
-    /// <para>Display Name: Time Zone Code</para>
-    /// </summary>
-    [AttributeLogicalName("timezonecode")]
-    public int? TimeZoneCode {
-        get {
-            return GetAttributeValue<int?>("timezonecode");
-        }
-        set {
-            SetAttributeValue("timezonecode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Display name for the time zone in the Microsoft Windows registry.</para>
-    /// <para>Display Name: User Interface Name</para>
-    /// </summary>
-    [AttributeLogicalName("userinterfacename")]
-    public string UserInterfaceName {
-        get {
-            return GetAttributeValue<string>("userinterfacename");
-        }
-        set {
-            SetAttributeValue("userinterfacename", value);
-        }
-    }
-    
-    [AttributeLogicalName("versionnumber")]
-    public long? VersionNumber {
-        get {
-            return GetAttributeValue<long?>("versionnumber");
-        }
-    }
-    
-    [AttributeLogicalName("createdby")]
-    [RelationshipSchemaName("lk_timezonedefinition_createdby")]
-    public SystemUser lk_timezonedefinition_createdby {
-        get {
-            return GetRelatedEntity<SystemUser>("lk_timezonedefinition_createdby", null);
-        }
-        set {
-            SetRelatedEntity("lk_timezonedefinition_createdby", null, value);
-        }
-    }
-    
-    [AttributeLogicalName("createdonbehalfby")]
-    [RelationshipSchemaName("lk_timezonedefinition_createdonbehalfby")]
-    public SystemUser lk_timezonedefinition_createdonbehalfby {
-        get {
-            return GetRelatedEntity<SystemUser>("lk_timezonedefinition_createdonbehalfby", null);
-        }
-        set {
-            SetRelatedEntity("lk_timezonedefinition_createdonbehalfby", null, value);
-        }
-    }
-    
-    [AttributeLogicalName("modifiedby")]
-    [RelationshipSchemaName("lk_timezonedefinition_modifiedby")]
-    public SystemUser lk_timezonedefinition_modifiedby {
-        get {
-            return GetRelatedEntity<SystemUser>("lk_timezonedefinition_modifiedby", null);
-        }
-        set {
-            SetRelatedEntity("lk_timezonedefinition_modifiedby", null, value);
-        }
-    }
-    
-    [AttributeLogicalName("modifiedonbehalfby")]
-    [RelationshipSchemaName("lk_timezonedefinition_modifiedonbehalfby")]
-    public SystemUser lk_timezonedefinition_modifiedonbehalfby {
-        get {
-            return GetRelatedEntity<SystemUser>("lk_timezonedefinition_modifiedonbehalfby", null);
-        }
-        set {
-            SetRelatedEntity("lk_timezonedefinition_modifiedonbehalfby", null, value);
-        }
-    }
-    
-    public static TimeZoneDefinition Retrieve(IOrganizationService service, Guid id, params Expression<Func<TimeZoneDefinition,object>>[] attrs) {
-        return service.Retrieve(id, attrs);
-    }
-}
-
-/// <summary>
-/// <para>User's preferred settings.</para>
-/// <para>Display Name: User Settings</para>
-/// </summary>
-[EntityLogicalName("usersettings")]
-[DebuggerDisplay("{DebuggerDisplay,nq}")]
-[DataContract()]
-public partial class UserSettings : ExtendedEntity<EmptyEnum, EmptyEnum> {
-    
-    public const string EntityLogicalName = "usersettings";
-    
-    public const int EntityTypeCode = 150;
-    
-    public UserSettings() : 
-            base(EntityLogicalName) {
-    }
-    
-    public UserSettings(Guid Id) : 
-            base(EntityLogicalName, Id) {
-    }
-    
-    private string DebuggerDisplay {
-        get {
-            return GetDebuggerDisplay(null);
-        }
-    }
-    
-    [AttributeLogicalName("systemuserid")]
-    public override Guid Id {
-        get {
-            return base.Id;
-        }
-        set {
-            SetId("systemuserid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the user.</para>
-    /// </summary>
-    [AttributeLogicalName("systemuserid")]
-    public Guid? SystemUserId {
-        get {
-            return GetAttributeValue<Guid?>("systemuserid");
-        }
-        set {
-            SetId("systemuserid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>AM designator to use in Microsoft Dynamics 365.</para>
-    /// </summary>
-    [AttributeLogicalName("amdesignator")]
-    public string AMDesignator {
-        get {
-            return GetAttributeValue<string>("amdesignator");
-        }
-        set {
-            SetAttributeValue("amdesignator", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Normal polling frequency used for address book synchronization in Microsoft Office Outlook.</para>
-    /// </summary>
-    [AttributeLogicalName("addressbooksyncinterval")]
-    public int? AddressBookSyncInterval {
-        get {
-            return GetAttributeValue<int?>("addressbooksyncinterval");
-        }
-        set {
-            SetAttributeValue("addressbooksyncinterval", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Default mode, such as simple or detailed, for advanced find.</para>
-    /// </summary>
-    [AttributeLogicalName("advancedfindstartupmode")]
-    public int? AdvancedFindStartupMode {
-        get {
-            return GetAttributeValue<int?>("advancedfindstartupmode");
-        }
-        set {
-            SetAttributeValue("advancedfindstartupmode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>This attribute is no longer used. The data is now in the Mailbox.AllowEmailConnectorToUseCredentials attribute.</para>
-    /// </summary>
-    [AttributeLogicalName("allowemailcredentials")]
-    public bool? AllowEmailCredentials {
-        get {
-            return GetAttributeValue<bool?>("allowemailcredentials");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Set user status for ADC Suggestions</para>
-    /// </summary>
-    [AttributeLogicalName("autocaptureuserstatus")]
-    public int? AutoCaptureUserStatus {
-        get {
-            return GetAttributeValue<int?>("autocaptureuserstatus");
-        }
-        set {
-            SetAttributeValue("autocaptureuserstatus", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Auto-create contact on client promote</para>
-    /// </summary>
-    [AttributeLogicalName("autocreatecontactonpromote")]
-    public int? AutoCreateContactOnPromote {
-        get {
-            return GetAttributeValue<int?>("autocreatecontactonpromote");
-        }
-        set {
-            SetAttributeValue("autocreatecontactonpromote", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the business unit with which the user is associated.</para>
-    /// </summary>
-    [AttributeLogicalName("businessunitid")]
-    public Guid? BusinessUnitId {
-        get {
-            return GetAttributeValue<Guid?>("businessunitid");
-        }
-        set {
-            SetAttributeValue("businessunitid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Calendar type for the system. Set to Gregorian US by default.</para>
-    /// </summary>
-    [AttributeLogicalName("calendartype")]
-    public int? CalendarType {
-        get {
-            return GetAttributeValue<int?>("calendartype");
-        }
-        set {
-            SetAttributeValue("calendartype", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the user who created the user settings.</para>
-    /// </summary>
-    [AttributeLogicalName("createdby")]
-    public EntityReference CreatedBy {
-        get {
-            return GetAttributeValue<EntityReference>("createdby");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Date and time when the user settings object was created.</para>
-    /// </summary>
-    [AttributeLogicalName("createdon")]
-    public DateTime? CreatedOn {
-        get {
-            return GetAttributeValue<DateTime?>("createdon");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the delegate user who created the usersettings.</para>
-    /// <para>Display Name: Created By (Delegate)</para>
-    /// </summary>
-    [AttributeLogicalName("createdonbehalfby")]
-    public EntityReference CreatedOnBehalfBy {
-        get {
-            return GetAttributeValue<EntityReference>("createdonbehalfby");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Number of decimal places that can be used for currency.</para>
-    /// </summary>
-    [AttributeLogicalName("currencydecimalprecision")]
-    public int? CurrencyDecimalPrecision {
-        get {
-            return GetAttributeValue<int?>("currencydecimalprecision");
-        }
-        set {
-            SetAttributeValue("currencydecimalprecision", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Information about how currency symbols are placed in Microsoft Dynamics 365.</para>
-    /// </summary>
-    [AttributeLogicalName("currencyformatcode")]
-    public int? CurrencyFormatCode {
-        get {
-            return GetAttributeValue<int?>("currencyformatcode");
-        }
-        set {
-            SetAttributeValue("currencyformatcode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Symbol used for currency in Microsoft Dynamics 365.</para>
-    /// </summary>
-    [AttributeLogicalName("currencysymbol")]
-    public string CurrencySymbol {
-        get {
-            return GetAttributeValue<string>("currencysymbol");
-        }
-        set {
-            SetAttributeValue("currencysymbol", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Information that specifies the level of data validation in excel worksheets exported in a format suitable for import.</para>
-    /// <para>Display Name: Data Validation Mode For Export To Excel</para>
-    /// </summary>
-    [AttributeLogicalName("datavalidationmodeforexporttoexcel")]
-    public UserSettings_DataValidationModeForExportToExcel? DataValidationModeForExportToExcel {
-        get {
-            return GetOptionSetValue<UserSettings_DataValidationModeForExportToExcel>("datavalidationmodeforexporttoexcel");
-        }
-        set {
-            SetOptionSetValue("datavalidationmodeforexporttoexcel", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Information about how the date is displayed in Microsoft Dynamics 365.</para>
-    /// </summary>
-    [AttributeLogicalName("dateformatcode")]
-    public int? DateFormatCode {
-        get {
-            return GetAttributeValue<int?>("dateformatcode");
-        }
-        set {
-            SetAttributeValue("dateformatcode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>String showing how the date is displayed throughout Microsoft 365.</para>
-    /// </summary>
-    [AttributeLogicalName("dateformatstring")]
-    public string DateFormatString {
-        get {
-            return GetAttributeValue<string>("dateformatstring");
-        }
-        set {
-            SetAttributeValue("dateformatstring", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Character used to separate the month, the day, and the year in dates in Microsoft Dynamics 365.</para>
-    /// </summary>
-    [AttributeLogicalName("dateseparator")]
-    public string DateSeparator {
-        get {
-            return GetAttributeValue<string>("dateseparator");
-        }
-        set {
-            SetAttributeValue("dateseparator", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Symbol used for decimal in Microsoft Dynamics 365.</para>
-    /// </summary>
-    [AttributeLogicalName("decimalsymbol")]
-    public string DecimalSymbol {
-        get {
-            return GetAttributeValue<string>("decimalsymbol");
-        }
-        set {
-            SetAttributeValue("decimalsymbol", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Default calendar view for the user.</para>
-    /// </summary>
-    [AttributeLogicalName("defaultcalendarview")]
-    public int? DefaultCalendarView {
-        get {
-            return GetAttributeValue<int?>("defaultcalendarview");
-        }
-        set {
-            SetAttributeValue("defaultcalendarview", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Text area to enter default country code.</para>
-    /// <para>Display Name: Default Country Code</para>
-    /// </summary>
-    [AttributeLogicalName("defaultcountrycode")]
-    public string DefaultCountryCode {
-        get {
-            return GetAttributeValue<string>("defaultcountrycode");
-        }
-        set {
-            SetAttributeValue("defaultcountrycode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the default dashboard.</para>
-    /// </summary>
-    [AttributeLogicalName("defaultdashboardid")]
-    public Guid? DefaultDashboardId {
-        get {
-            return GetAttributeValue<Guid?>("defaultdashboardid");
-        }
-        set {
-            SetAttributeValue("defaultdashboardid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Default search experience for the user.</para>
-    /// <para>Display Name: Default Search Experience</para>
-    /// </summary>
-    [AttributeLogicalName("defaultsearchexperience")]
-    public UserSettings_DefaultSearchExperience? DefaultSearchExperience {
-        get {
-            return GetOptionSetValue<UserSettings_DefaultSearchExperience>("defaultsearchexperience");
-        }
-        set {
-            SetOptionSetValue("defaultsearchexperience", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>This attribute is no longer used. The data is now in the Mailbox.Password attribute.</para>
-    /// </summary>
-    [AttributeLogicalName("emailpassword")]
-    public string EmailPassword {
-        get {
-            return GetAttributeValue<string>("emailpassword");
-        }
-    }
-    
-    /// <summary>
-    /// <para>This attribute is no longer used. The data is now in the Mailbox.UserName attribute.</para>
-    /// </summary>
-    [AttributeLogicalName("emailusername")]
-    public string EmailUsername {
-        get {
-            return GetAttributeValue<string>("emailusername");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Indicates the form mode to be used.</para>
-    /// <para>Display Name: Form Mode</para>
-    /// </summary>
-    [AttributeLogicalName("entityformmode")]
-    public UserSettings_EntityFormMode? EntityFormMode {
-        get {
-            return GetOptionSetValue<UserSettings_EntityFormMode>("entityformmode");
-        }
-        set {
-            SetOptionSetValue("entityformmode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Order in which names are to be displayed in Microsoft Dynamics 365.</para>
-    /// </summary>
-    [AttributeLogicalName("fullnameconventioncode")]
-    public int? FullNameConventionCode {
-        get {
-            return GetAttributeValue<int?>("fullnameconventioncode");
-        }
-        set {
-            SetAttributeValue("fullnameconventioncode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Information that specifies whether the Get Started pane in lists is enabled.</para>
-    /// </summary>
-    [AttributeLogicalName("getstartedpanecontentenabled")]
-    public bool? GetStartedPaneContentEnabled {
-        get {
-            return GetAttributeValue<bool?>("getstartedpanecontentenabled");
-        }
-        set {
-            SetAttributeValue("getstartedpanecontentenabled", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the Help language.</para>
-    /// </summary>
-    [AttributeLogicalName("helplanguageid")]
-    public int? HelpLanguageId {
-        get {
-            return GetAttributeValue<int?>("helplanguageid");
-        }
-        set {
-            SetAttributeValue("helplanguageid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Web site home page for the user.</para>
-    /// </summary>
-    [AttributeLogicalName("homepagearea")]
-    public string HomepageArea {
-        get {
-            return GetAttributeValue<string>("homepagearea");
-        }
-        set {
-            SetAttributeValue("homepagearea", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Configuration of the home page layout.</para>
-    /// </summary>
-    [AttributeLogicalName("homepagelayout")]
-    public string HomepageLayout {
-        get {
-            return GetAttributeValue<string>("homepagelayout");
-        }
-        set {
-            SetAttributeValue("homepagelayout", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Web site page for the user.</para>
-    /// </summary>
-    [AttributeLogicalName("homepagesubarea")]
-    public string HomepageSubarea {
-        get {
-            return GetAttributeValue<string>("homepagesubarea");
-        }
-        set {
-            SetAttributeValue("homepagesubarea", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Information that specifies whether a user account is to ignore unsolicited email (deprecated).</para>
-    /// </summary>
-    [AttributeLogicalName("ignoreunsolicitedemail")]
-    public bool? IgnoreUnsolicitedEmail {
-        get {
-            return GetAttributeValue<bool?>("ignoreunsolicitedemail");
-        }
-        set {
-            SetAttributeValue("ignoreunsolicitedemail", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Incoming email filtering method.</para>
-    /// <para>Display Name: Incoming Email Filtering Method</para>
-    /// </summary>
-    [AttributeLogicalName("incomingemailfilteringmethod")]
-    public UserSettings_IncomingEmailFilteringMethod? IncomingEmailFilteringMethod {
-        get {
-            return GetOptionSetValue<UserSettings_IncomingEmailFilteringMethod>("incomingemailfilteringmethod");
-        }
-        set {
-            SetOptionSetValue("incomingemailfilteringmethod", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Show or dismiss alert for Apps for 365.</para>
-    /// <para>Display Name: Show alert for Apps for 365.</para>
-    /// </summary>
-    [AttributeLogicalName("isappsforcrmalertdismissed")]
-    public bool? IsAppsForCrmAlertDismissed {
-        get {
-            return GetAttributeValue<bool?>("isappsforcrmalertdismissed");
-        }
-        set {
-            SetAttributeValue("isappsforcrmalertdismissed", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Indicates whether to use the Auto Capture feature enabled or not.</para>
-    /// </summary>
-    [AttributeLogicalName("isautodatacaptureenabled")]
-    public bool? IsAutoDataCaptureEnabled {
-        get {
-            return GetAttributeValue<bool?>("isautodatacaptureenabled");
-        }
-        set {
-            SetAttributeValue("isautodatacaptureenabled", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Enable or disable country code selection .</para>
-    /// <para>Display Name: Enable Default Country Code</para>
-    /// </summary>
-    [AttributeLogicalName("isdefaultcountrycodecheckenabled")]
-    public bool? IsDefaultCountryCodeCheckEnabled {
-        get {
-            return GetAttributeValue<bool?>("isdefaultcountrycodecheckenabled");
-        }
-        set {
-            SetAttributeValue("isdefaultcountrycodecheckenabled", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Indicates if duplicate detection is enabled when going online.</para>
-    /// </summary>
-    [AttributeLogicalName("isduplicatedetectionenabledwhengoingonline")]
-    public bool? IsDuplicateDetectionEnabledWhenGoingOnline {
-        get {
-            return GetAttributeValue<bool?>("isduplicatedetectionenabledwhengoingonline");
-        }
-        set {
-            SetAttributeValue("isduplicatedetectionenabledwhengoingonline", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Enable or disable email conversation view on timeline wall selection.</para>
-    /// </summary>
-    [AttributeLogicalName("isemailconversationviewenabled")]
-    public bool? IsEmailConversationViewEnabled {
-        get {
-            return GetAttributeValue<bool?>("isemailconversationviewenabled");
-        }
-        set {
-            SetAttributeValue("isemailconversationviewenabled", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Enable or disable guided help.</para>
-    /// <para>Display Name: Enable Default Guided Help</para>
-    /// </summary>
-    [AttributeLogicalName("isguidedhelpenabled")]
-    public bool? IsGuidedHelpEnabled {
-        get {
-            return GetAttributeValue<bool?>("isguidedhelpenabled");
-        }
-        set {
-            SetAttributeValue("isguidedhelpenabled", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Indicates if the synchronization of user resource booking with Exchange is enabled at user level.</para>
-    /// <para>Display Name: Resource booking synchronization enabled</para>
-    /// </summary>
-    [AttributeLogicalName("isresourcebookingexchangesyncenabled")]
-    public bool? IsResourceBookingExchangeSyncEnabled {
-        get {
-            return GetAttributeValue<bool?>("isresourcebookingexchangesyncenabled");
-        }
-        set {
-            SetAttributeValue("isresourcebookingexchangesyncenabled", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Indicates if send as other user privilege is enabled or not.</para>
-    /// </summary>
-    [AttributeLogicalName("issendasallowed")]
-    public bool? IsSendAsAllowed {
-        get {
-            return GetAttributeValue<bool?>("issendasallowed");
-        }
-        set {
-            SetAttributeValue("issendasallowed", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Shows the last time when the traces were read from the database.</para>
-    /// </summary>
-    [AttributeLogicalName("lastalertsviewedtime")]
-    public DateTime? LastAlertsViewedTime {
-        get {
-            return GetAttributeValue<DateTime?>("lastalertsviewedtime");
-        }
-        set {
-            SetAttributeValue("lastalertsviewedtime", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the user locale.</para>
-    /// </summary>
-    [AttributeLogicalName("localeid")]
-    public int? LocaleId {
-        get {
-            return GetAttributeValue<int?>("localeid");
-        }
-        set {
-            SetAttributeValue("localeid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Information that specifies how Long Date is displayed throughout Microsoft 365.</para>
-    /// </summary>
-    [AttributeLogicalName("longdateformatcode")]
-    public int? LongDateFormatCode {
-        get {
-            return GetAttributeValue<int?>("longdateformatcode");
-        }
-        set {
-            SetAttributeValue("longdateformatcode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the user who last modified the user settings.</para>
-    /// </summary>
-    [AttributeLogicalName("modifiedby")]
-    public EntityReference ModifiedBy {
-        get {
-            return GetAttributeValue<EntityReference>("modifiedby");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Date and time when the user settings object was last modified.</para>
-    /// </summary>
-    [AttributeLogicalName("modifiedon")]
-    public DateTime? ModifiedOn {
-        get {
-            return GetAttributeValue<DateTime?>("modifiedon");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the delegate user who last modified the usersettings.</para>
-    /// <para>Display Name: Modified By (Delegate)</para>
-    /// </summary>
-    [AttributeLogicalName("modifiedonbehalfby")]
-    public EntityReference ModifiedOnBehalfBy {
-        get {
-            return GetAttributeValue<EntityReference>("modifiedonbehalfby");
-        }
-    }
-    
-    /// <summary>
-    /// <para>Information that specifies how negative currency numbers are displayed in Microsoft Dynamics 365.</para>
-    /// </summary>
-    [AttributeLogicalName("negativecurrencyformatcode")]
-    public int? NegativeCurrencyFormatCode {
-        get {
-            return GetAttributeValue<int?>("negativecurrencyformatcode");
-        }
-        set {
-            SetAttributeValue("negativecurrencyformatcode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Information that specifies how negative numbers are displayed in Microsoft Dynamics 365.</para>
-    /// </summary>
-    [AttributeLogicalName("negativeformatcode")]
-    public int? NegativeFormatCode {
-        get {
-            return GetAttributeValue<int?>("negativeformatcode");
-        }
-        set {
-            SetAttributeValue("negativeformatcode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Next tracking number.</para>
-    /// </summary>
-    [AttributeLogicalName("nexttrackingnumber")]
-    public int? NextTrackingNumber {
-        get {
-            return GetAttributeValue<int?>("nexttrackingnumber");
-        }
-        set {
-            SetAttributeValue("nexttrackingnumber", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Information that specifies how numbers are grouped in Microsoft Dynamics 365.</para>
-    /// </summary>
-    [AttributeLogicalName("numbergroupformat")]
-    public string NumberGroupFormat {
-        get {
-            return GetAttributeValue<string>("numbergroupformat");
-        }
-        set {
-            SetAttributeValue("numbergroupformat", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Symbol used for number separation in Microsoft Dynamics 365.</para>
-    /// </summary>
-    [AttributeLogicalName("numberseparator")]
-    public string NumberSeparator {
-        get {
-            return GetAttributeValue<string>("numberseparator");
-        }
-        set {
-            SetAttributeValue("numberseparator", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Normal polling frequency used for background offline synchronization in Microsoft Office Outlook.</para>
-    /// </summary>
-    [AttributeLogicalName("offlinesyncinterval")]
-    public int? OfflineSyncInterval {
-        get {
-            return GetAttributeValue<int?>("offlinesyncinterval");
-        }
-        set {
-            SetAttributeValue("offlinesyncinterval", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Normal polling frequency used for record synchronization in Microsoft Office Outlook.</para>
-    /// </summary>
-    [AttributeLogicalName("outlooksyncinterval")]
-    public int? OutlookSyncInterval {
-        get {
-            return GetAttributeValue<int?>("outlooksyncinterval");
-        }
-        set {
-            SetAttributeValue("outlooksyncinterval", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>PM designator to use in Microsoft Dynamics 365.</para>
-    /// </summary>
-    [AttributeLogicalName("pmdesignator")]
-    public string PMDesignator {
-        get {
-            return GetAttributeValue<string>("pmdesignator");
-        }
-        set {
-            SetAttributeValue("pmdesignator", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Information that specifies how many items to list on a page in list views.</para>
-    /// </summary>
-    [AttributeLogicalName("paginglimit")]
-    public int? PagingLimit {
-        get {
-            return GetAttributeValue<int?>("paginglimit");
-        }
-        set {
-            SetAttributeValue("paginglimit", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>For internal use only.</para>
-    /// </summary>
-    [AttributeLogicalName("personalizationsettings")]
-    public string PersonalizationSettings {
-        get {
-            return GetAttributeValue<string>("personalizationsettings");
-        }
-        set {
-            SetAttributeValue("personalizationsettings", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Number of decimal places that can be used for prices.</para>
-    /// </summary>
-    [AttributeLogicalName("pricingdecimalprecision")]
-    public int? PricingDecimalPrecision {
-        get {
-            return GetAttributeValue<int?>("pricingdecimalprecision");
-        }
-        set {
-            SetAttributeValue("pricingdecimalprecision", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Picklist for selecting the user preference for reporting scripting errors.</para>
-    /// <para>Display Name: Report Script Errors</para>
-    /// </summary>
-    [AttributeLogicalName("reportscripterrors")]
-    public UserSettings_ReportScriptErrors? ReportScriptErrors {
-        get {
-            return GetOptionSetValue<UserSettings_ReportScriptErrors>("reportscripterrors");
-        }
-        set {
-            SetOptionSetValue("reportscripterrors", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>The version number for resource booking synchronization with Exchange.</para>
-    /// <para>Display Name: User resource booking synchronization version</para>
-    /// </summary>
-    [AttributeLogicalName("resourcebookingexchangesyncversion")]
-    public long? ResourceBookingExchangeSyncVersion {
-        get {
-            return GetAttributeValue<long?>("resourcebookingexchangesyncversion");
-        }
-        set {
-            SetAttributeValue("resourcebookingexchangesyncversion", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Store selected customer service hub dashboard saved filter id.</para>
-    /// </summary>
-    [AttributeLogicalName("selectedglobalfilterid")]
-    public Guid? SelectedGlobalFilterId {
-        get {
-            return GetAttributeValue<Guid?>("selectedglobalfilterid");
-        }
-        set {
-            SetAttributeValue("selectedglobalfilterid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Information that specifies whether to display the week number in calendar displays in Microsoft Dynamics 365.</para>
-    /// </summary>
-    [AttributeLogicalName("showweeknumber")]
-    public bool? ShowWeekNumber {
-        get {
-            return GetAttributeValue<bool?>("showweeknumber");
-        }
-        set {
-            SetAttributeValue("showweeknumber", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>For Internal use only</para>
-    /// </summary>
-    [AttributeLogicalName("splitviewstate")]
-    public bool? SplitViewState {
-        get {
-            return GetAttributeValue<bool?>("splitviewstate");
-        }
-        set {
-            SetAttributeValue("splitviewstate", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Indicates if the company field in Microsoft Office Outlook items are set during Outlook synchronization.</para>
-    /// </summary>
-    [AttributeLogicalName("synccontactcompany")]
-    public bool? SyncContactCompany {
-        get {
-            return GetAttributeValue<bool?>("synccontactcompany");
-        }
-        set {
-            SetAttributeValue("synccontactcompany", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Information that specifies how the time is displayed in Microsoft Dynamics 365.</para>
-    /// </summary>
-    [AttributeLogicalName("timeformatcode")]
-    public int? TimeFormatCode {
-        get {
-            return GetAttributeValue<int?>("timeformatcode");
-        }
-        set {
-            SetAttributeValue("timeformatcode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Text for how time is displayed in Microsoft Dynamics 365.</para>
-    /// </summary>
-    [AttributeLogicalName("timeformatstring")]
-    public string TimeFormatString {
-        get {
-            return GetAttributeValue<string>("timeformatstring");
-        }
-        set {
-            SetAttributeValue("timeformatstring", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Text for how time is displayed in Microsoft Dynamics 365.</para>
-    /// </summary>
-    [AttributeLogicalName("timeseparator")]
-    public string TimeSeparator {
-        get {
-            return GetAttributeValue<string>("timeseparator");
-        }
-        set {
-            SetAttributeValue("timeseparator", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Local time zone adjustment for the user. System calculated based on the time zone selected.</para>
-    /// </summary>
-    [AttributeLogicalName("timezonebias")]
-    public int? TimeZoneBias {
-        get {
-            return GetAttributeValue<int?>("timezonebias");
-        }
-        set {
-            SetAttributeValue("timezonebias", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Local time zone for the user.</para>
-    /// </summary>
-    [AttributeLogicalName("timezonecode")]
-    public int? TimeZoneCode {
-        get {
-            return GetAttributeValue<int?>("timezonecode");
-        }
-        set {
-            SetAttributeValue("timezonecode", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Local time zone daylight adjustment for the user. System calculated based on the time zone selected.</para>
-    /// </summary>
-    [AttributeLogicalName("timezonedaylightbias")]
-    public int? TimeZoneDaylightBias {
-        get {
-            return GetAttributeValue<int?>("timezonedaylightbias");
-        }
-        set {
-            SetAttributeValue("timezonedaylightbias", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Local time zone daylight day for the user. System calculated based on the time zone selected.</para>
-    /// </summary>
-    [AttributeLogicalName("timezonedaylightday")]
-    public int? TimeZoneDaylightDay {
-        get {
-            return GetAttributeValue<int?>("timezonedaylightday");
-        }
-        set {
-            SetAttributeValue("timezonedaylightday", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Local time zone daylight day of week for the user. System calculated based on the time zone selected in Options.</para>
-    /// </summary>
-    [AttributeLogicalName("timezonedaylightdayofweek")]
-    public int? TimeZoneDaylightDayOfWeek {
-        get {
-            return GetAttributeValue<int?>("timezonedaylightdayofweek");
-        }
-        set {
-            SetAttributeValue("timezonedaylightdayofweek", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Local time zone daylight hour for the user. System calculated based on the time zone selected.</para>
-    /// </summary>
-    [AttributeLogicalName("timezonedaylighthour")]
-    public int? TimeZoneDaylightHour {
-        get {
-            return GetAttributeValue<int?>("timezonedaylighthour");
-        }
-        set {
-            SetAttributeValue("timezonedaylighthour", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Local time zone daylight minute for the user. System calculated based on the time zone selected.</para>
-    /// </summary>
-    [AttributeLogicalName("timezonedaylightminute")]
-    public int? TimeZoneDaylightMinute {
-        get {
-            return GetAttributeValue<int?>("timezonedaylightminute");
-        }
-        set {
-            SetAttributeValue("timezonedaylightminute", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Local time zone daylight month for the user. System calculated based on the time zone selected.</para>
-    /// </summary>
-    [AttributeLogicalName("timezonedaylightmonth")]
-    public int? TimeZoneDaylightMonth {
-        get {
-            return GetAttributeValue<int?>("timezonedaylightmonth");
-        }
-        set {
-            SetAttributeValue("timezonedaylightmonth", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Local time zone daylight second for the user. System calculated based on the time zone selected.</para>
-    /// </summary>
-    [AttributeLogicalName("timezonedaylightsecond")]
-    public int? TimeZoneDaylightSecond {
-        get {
-            return GetAttributeValue<int?>("timezonedaylightsecond");
-        }
-        set {
-            SetAttributeValue("timezonedaylightsecond", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Local time zone daylight year for the user. System calculated based on the time zone selected.</para>
-    /// </summary>
-    [AttributeLogicalName("timezonedaylightyear")]
-    public int? TimeZoneDaylightYear {
-        get {
-            return GetAttributeValue<int?>("timezonedaylightyear");
-        }
-        set {
-            SetAttributeValue("timezonedaylightyear", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Local time zone standard time bias for the user. System calculated based on the time zone selected.</para>
-    /// </summary>
-    [AttributeLogicalName("timezonestandardbias")]
-    public int? TimeZoneStandardBias {
-        get {
-            return GetAttributeValue<int?>("timezonestandardbias");
-        }
-        set {
-            SetAttributeValue("timezonestandardbias", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Local time zone standard day for the user. System calculated based on the time zone selected.</para>
-    /// </summary>
-    [AttributeLogicalName("timezonestandardday")]
-    public int? TimeZoneStandardDay {
-        get {
-            return GetAttributeValue<int?>("timezonestandardday");
-        }
-        set {
-            SetAttributeValue("timezonestandardday", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Local time zone standard day of week for the user. System calculated based on the time zone selected.</para>
-    /// </summary>
-    [AttributeLogicalName("timezonestandarddayofweek")]
-    public int? TimeZoneStandardDayOfWeek {
-        get {
-            return GetAttributeValue<int?>("timezonestandarddayofweek");
-        }
-        set {
-            SetAttributeValue("timezonestandarddayofweek", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Local time zone standard hour for the user. System calculated based on the time zone selected.</para>
-    /// </summary>
-    [AttributeLogicalName("timezonestandardhour")]
-    public int? TimeZoneStandardHour {
-        get {
-            return GetAttributeValue<int?>("timezonestandardhour");
-        }
-        set {
-            SetAttributeValue("timezonestandardhour", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Local time zone standard minute for the user. System calculated based on the time zone selected.</para>
-    /// </summary>
-    [AttributeLogicalName("timezonestandardminute")]
-    public int? TimeZoneStandardMinute {
-        get {
-            return GetAttributeValue<int?>("timezonestandardminute");
-        }
-        set {
-            SetAttributeValue("timezonestandardminute", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Local time zone standard month for the user. System calculated based on the time zone selected.</para>
-    /// </summary>
-    [AttributeLogicalName("timezonestandardmonth")]
-    public int? TimeZoneStandardMonth {
-        get {
-            return GetAttributeValue<int?>("timezonestandardmonth");
-        }
-        set {
-            SetAttributeValue("timezonestandardmonth", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Local time zone standard second for the user. System calculated based on the time zone selected.</para>
-    /// </summary>
-    [AttributeLogicalName("timezonestandardsecond")]
-    public int? TimeZoneStandardSecond {
-        get {
-            return GetAttributeValue<int?>("timezonestandardsecond");
-        }
-        set {
-            SetAttributeValue("timezonestandardsecond", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Local time zone standard year for the user. System calculated based on the time zone selected.</para>
-    /// </summary>
-    [AttributeLogicalName("timezonestandardyear")]
-    public int? TimeZoneStandardYear {
-        get {
-            return GetAttributeValue<int?>("timezonestandardyear");
-        }
-        set {
-            SetAttributeValue("timezonestandardyear", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Tracking token ID.</para>
-    /// </summary>
-    [AttributeLogicalName("trackingtokenid")]
-    public int? TrackingTokenId {
-        get {
-            return GetAttributeValue<int?>("trackingtokenid");
-        }
-        set {
-            SetAttributeValue("trackingtokenid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the default currency of the user.</para>
-    /// <para>Display Name: Currency</para>
-    /// </summary>
-    [AttributeLogicalName("transactioncurrencyid")]
-    public EntityReference TransactionCurrencyId {
-        get {
-            return GetAttributeValue<EntityReference>("transactioncurrencyid");
-        }
-        set {
-            SetAttributeValue("transactioncurrencyid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Unique identifier of the language in which to view the user interface (UI).</para>
-    /// </summary>
-    [AttributeLogicalName("uilanguageid")]
-    public int? UILanguageId {
-        get {
-            return GetAttributeValue<int?>("uilanguageid");
-        }
-        set {
-            SetAttributeValue("uilanguageid", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Indicates whether to use the Microsoft Dynamics 365 appointment form within Microsoft Office Outlook for creating new appointments.</para>
-    /// </summary>
-    [AttributeLogicalName("usecrmformforappointment")]
-    public bool? UseCrmFormForAppointment {
-        get {
-            return GetAttributeValue<bool?>("usecrmformforappointment");
-        }
-        set {
-            SetAttributeValue("usecrmformforappointment", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Indicates whether to use the Microsoft Dynamics 365 contact form within Microsoft Office Outlook for creating new contacts.</para>
-    /// </summary>
-    [AttributeLogicalName("usecrmformforcontact")]
-    public bool? UseCrmFormForContact {
-        get {
-            return GetAttributeValue<bool?>("usecrmformforcontact");
-        }
-        set {
-            SetAttributeValue("usecrmformforcontact", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Indicates whether to use the Microsoft Dynamics 365 email form within Microsoft Office Outlook for creating new emails.</para>
-    /// </summary>
-    [AttributeLogicalName("usecrmformforemail")]
-    public bool? UseCrmFormForEmail {
-        get {
-            return GetAttributeValue<bool?>("usecrmformforemail");
-        }
-        set {
-            SetAttributeValue("usecrmformforemail", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Indicates whether to use the Microsoft Dynamics 365 task form within Microsoft Office Outlook for creating new tasks.</para>
-    /// </summary>
-    [AttributeLogicalName("usecrmformfortask")]
-    public bool? UseCrmFormForTask {
-        get {
-            return GetAttributeValue<bool?>("usecrmformfortask");
-        }
-        set {
-            SetAttributeValue("usecrmformfortask", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Indicates whether image strips are used to render images.</para>
-    /// </summary>
-    [AttributeLogicalName("useimagestrips")]
-    public bool? UseImageStrips {
-        get {
-            return GetAttributeValue<bool?>("useimagestrips");
-        }
-        set {
-            SetAttributeValue("useimagestrips", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Specifies user profile ids in comma separated list.</para>
-    /// </summary>
-    [AttributeLogicalName("userprofile")]
-    public string UserProfile {
-        get {
-            return GetAttributeValue<string>("userprofile");
-        }
-        set {
-            SetAttributeValue("userprofile", value);
-        }
-    }
-    
-    [AttributeLogicalName("versionnumber")]
-    public long? VersionNumber {
-        get {
-            return GetAttributeValue<long?>("versionnumber");
-        }
-    }
-    
-    /// <summary>
-    /// <para>The layout of the visualization pane.</para>
-    /// <para>Display Name: Visualization Pane Layout.</para>
-    /// </summary>
-    [AttributeLogicalName("visualizationpanelayout")]
-    public UserSettings_VisualizationPaneLayout? VisualizationPaneLayout {
-        get {
-            return GetOptionSetValue<UserSettings_VisualizationPaneLayout>("visualizationpanelayout");
-        }
-        set {
-            SetOptionSetValue("visualizationpanelayout", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Workday start time for the user.</para>
-    /// </summary>
-    [AttributeLogicalName("workdaystarttime")]
-    public string WorkdayStartTime {
-        get {
-            return GetAttributeValue<string>("workdaystarttime");
-        }
-        set {
-            SetAttributeValue("workdaystarttime", value);
-        }
-    }
-    
-    /// <summary>
-    /// <para>Workday stop time for the user.</para>
-    /// </summary>
-    [AttributeLogicalName("workdaystoptime")]
-    public string WorkdayStopTime {
-        get {
-            return GetAttributeValue<string>("workdaystoptime");
-        }
-        set {
-            SetAttributeValue("workdaystoptime", value);
-        }
-    }
-    
-    [AttributeLogicalName("createdonbehalfby")]
-    [RelationshipSchemaName("lk_usersettings_createdonbehalfby")]
-    public SystemUser lk_usersettings_createdonbehalfby {
-        get {
-            return GetRelatedEntity<SystemUser>("lk_usersettings_createdonbehalfby", null);
-        }
-        set {
-            SetRelatedEntity("lk_usersettings_createdonbehalfby", null, value);
-        }
-    }
-    
-    [AttributeLogicalName("modifiedonbehalfby")]
-    [RelationshipSchemaName("lk_usersettings_modifiedonbehalfby")]
-    public SystemUser lk_usersettings_modifiedonbehalfby {
-        get {
-            return GetRelatedEntity<SystemUser>("lk_usersettings_modifiedonbehalfby", null);
-        }
-        set {
-            SetRelatedEntity("lk_usersettings_modifiedonbehalfby", null, value);
-        }
-    }
-    
-    [AttributeLogicalName("createdby")]
-    [RelationshipSchemaName("lk_usersettingsbase_createdby")]
-    public SystemUser lk_usersettingsbase_createdby {
-        get {
-            return GetRelatedEntity<SystemUser>("lk_usersettingsbase_createdby", null);
-        }
-        set {
-            SetRelatedEntity("lk_usersettingsbase_createdby", null, value);
-        }
-    }
-    
-    [AttributeLogicalName("modifiedby")]
-    [RelationshipSchemaName("lk_usersettingsbase_modifiedby")]
-    public SystemUser lk_usersettingsbase_modifiedby {
-        get {
-            return GetRelatedEntity<SystemUser>("lk_usersettingsbase_modifiedby", null);
-        }
-        set {
-            SetRelatedEntity("lk_usersettingsbase_modifiedby", null, value);
-        }
-    }
-    
-    [AttributeLogicalName("systemuserid")]
-    [RelationshipSchemaName("user_settings")]
-    public SystemUser user_settings {
-        get {
-            return GetRelatedEntity<SystemUser>("user_settings", null);
-        }
-        set {
-            SetRelatedEntity("user_settings", null, value);
-        }
-    }
-    
-    public static UserSettings Retrieve(IOrganizationService service, Guid id, params Expression<Func<UserSettings,object>>[] attrs) {
-        return service.Retrieve(id, attrs);
-    }
-}
-
-public partial class XrmContext : ExtendedOrganizationServiceContext {
-    
-    public XrmContext(IOrganizationService service) : 
-            base(service) {
-    }
-    
-    public IQueryable<EnvironmentVariableDefinition> EnvironmentVariableDefinitionSet {
-        get {
-            return CreateQuery<EnvironmentVariableDefinition>();
-        }
-    }
-    
-    public IQueryable<EnvironmentVariableValue> EnvironmentVariableValueSet {
-        get {
-            return CreateQuery<EnvironmentVariableValue>();
-        }
-    }
-    
-    public IQueryable<SystemUser> SystemUserSet {
-        get {
-            return CreateQuery<SystemUser>();
-        }
-    }
-    
-    public IQueryable<TimeZoneDefinition> TimeZoneDefinitionSet {
-        get {
-            return CreateQuery<TimeZoneDefinition>();
-        }
-    }
-    
-    public IQueryable<UserSettings> UserSettingsSet {
-        get {
-            return CreateQuery<UserSettings>();
-        }
-    }
-}
-
-[DataContract()]
-public enum EnvironmentVariableDefinitionState {
-    
-    [EnumMember()]
-    Active = 0,
-    
-    [EnumMember()]
-    Inactive = 1,
-}
-
-[DataContract()]
-public enum EnvironmentVariableDefinition_Type {
-    
-    [EnumMember()]
-    String = 100000000,
-    
-    [EnumMember()]
-    Number = 100000001,
-    
-    [EnumMember()]
-    Boolean = 100000002,
-    
-    [EnumMember()]
-    JSON = 100000003,
-    
-    [EnumMember()]
-    DataSource = 100000004,
-}
-
-[DataContract()]
-public enum EnvironmentVariableDefinition_statuscode {
-    
-    [EnumMember()]
-    Active = 1,
-    
-    [EnumMember()]
-    Inactive = 2,
-}
-
-[DataContract()]
-public enum EnvironmentVariableValueState {
-    
-    [EnumMember()]
-    Active = 0,
-    
-    [EnumMember()]
-    Inactive = 1,
-}
-
-[DataContract()]
-public enum EnvironmentVariableValue_statuscode {
-    
-    [EnumMember()]
-    Active = 1,
-    
-    [EnumMember()]
-    Inactive = 2,
-}
-
-[DataContract()]
-public enum SystemUser_AccessMode {
-    
-    [EnumMember()]
-    ReadWrite = 0,
-    
-    [EnumMember()]
-    Administrative = 1,
-    
-    [EnumMember()]
-    Read = 2,
-    
-    [EnumMember()]
-    SupportUser = 3,
-    
-    [EnumMember()]
-    Noninteractive = 4,
-    
-    [EnumMember()]
-    DelegatedAdmin = 5,
-}
-
-[DataContract()]
-public enum SystemUser_Address1_AddressTypeCode {
-    
-    [EnumMember()]
-    DefaultValue = 1,
-}
-
-[DataContract()]
-public enum SystemUser_Address1_ShippingMethodCode {
-    
-    [EnumMember()]
-    DefaultValue = 1,
-}
-
-[DataContract()]
-public enum SystemUser_Address2_AddressTypeCode {
-    
-    [EnumMember()]
-    DefaultValue = 1,
-}
-
-[DataContract()]
-public enum SystemUser_Address2_ShippingMethodCode {
-    
-    [EnumMember()]
-    DefaultValue = 1,
-}
-
-[DataContract()]
-public enum SystemUser_CALType {
-    
-    [EnumMember()]
-    Professional = 0,
-    
-    [EnumMember()]
-    Administrative = 1,
-    
-    [EnumMember()]
-    Basic = 2,
-    
-    [EnumMember()]
-    DeviceProfessional = 3,
-    
-    [EnumMember()]
-    DeviceBasic = 4,
-    
-    [EnumMember()]
-    Essential = 5,
-    
-    [EnumMember()]
-    DeviceEssential = 6,
-    
-    [EnumMember()]
-    Enterprise = 7,
-    
-    [EnumMember()]
-    DeviceEnterprise = 8,
-    
-    [EnumMember()]
-    Sales = 9,
-    
-    [EnumMember()]
-    Service = 10,
-    
-    [EnumMember()]
-    FieldService = 11,
-    
-    [EnumMember()]
-    ProjectService = 12,
-}
-
-[DataContract()]
-public enum SystemUser_EmailRouterAccessApproval {
-    
-    [EnumMember()]
-    Empty = 0,
-    
-    [EnumMember()]
-    Approved = 1,
-    
-    [EnumMember()]
-    PendingApproval = 2,
-    
-    [EnumMember()]
-    Rejected = 3,
-}
-
-[DataContract()]
-public enum SystemUser_IncomingEmailDeliveryMethod {
-    
-    [EnumMember()]
-    None = 0,
-    
-    [EnumMember()]
-    MicrosoftDynamics365forOutlook = 1,
-    
-    [EnumMember()]
-    ServerSideSynchronizationorEmailRouter = 2,
-    
-    [EnumMember()]
-    ForwardMailbox = 3,
-}
-
-[DataContract()]
-public enum SystemUser_InviteStatusCode {
-    
-    [EnumMember()]
-    InvitationNotSent = 0,
-    
-    [EnumMember()]
-    Invited = 1,
-    
-    [EnumMember()]
-    InvitationNearExpired = 2,
-    
-    [EnumMember()]
-    InvitationExpired = 3,
-    
-    [EnumMember()]
-    InvitationAccepted = 4,
-    
-    [EnumMember()]
-    InvitationRejected = 5,
-    
-    [EnumMember()]
-    InvitationRevoked = 6,
-}
-
-[DataContract()]
-public enum SystemUser_OutgoingEmailDeliveryMethod {
-    
-    [EnumMember()]
-    None = 0,
-    
-    [EnumMember()]
-    MicrosoftDynamics365forOutlook = 1,
-    
-    [EnumMember()]
-    ServerSideSynchronizationorEmailRouter = 2,
-}
-
-[DataContract()]
-public enum SystemUser_PreferredAddressCode {
-    
-    [EnumMember()]
-    MailingAddress = 1,
-    
-    [EnumMember()]
-    OtherAddress = 2,
-}
-
-[DataContract()]
-public enum SystemUser_PreferredEmailCode {
-    
-    [EnumMember()]
-    DefaultValue = 1,
-}
-
-[DataContract()]
-public enum SystemUser_PreferredPhoneCode {
-    
-    [EnumMember()]
-    MainPhone = 1,
-    
-    [EnumMember()]
-    OtherPhone = 2,
-    
-    [EnumMember()]
-    HomePhone = 3,
-    
-    [EnumMember()]
-    MobilePhone = 4,
-}
-
-[DataContract()]
-public enum UserSettings_DataValidationModeForExportToExcel {
-    
-    [EnumMember()]
-    Full = 0,
-    
-    [EnumMember()]
-    None = 1,
-}
-
-[DataContract()]
-public enum UserSettings_DefaultSearchExperience {
-    
-    [EnumMember()]
-    Relevancesearch = 0,
-    
-    [EnumMember()]
-    Categorizedsearch = 1,
-    
-    [EnumMember()]
-    Uselastsearch = 2,
-    
-    [EnumMember()]
-    Customsearch = 3,
-}
-
-[DataContract()]
-public enum UserSettings_EntityFormMode {
-    
-    [EnumMember()]
-    Organizationdefault = 0,
-    
-    [EnumMember()]
-    Readoptimized = 1,
-    
-    [EnumMember()]
-    Edit = 2,
-}
-
-[DataContract()]
-public enum UserSettings_IncomingEmailFilteringMethod {
-    
-    [EnumMember()]
-    Allemailmessages = 0,
-    
-    [EnumMember()]
-    EmailmessagesinresponsetoDynamics365email = 1,
-    
-    [EnumMember()]
-    EmailmessagesfromDynamics365LeadsContactsandAccounts = 2,
-    
-    [EnumMember()]
-    EmailmessagesfromDynamics365recordsthatareemailenabled = 3,
-    
-    [EnumMember()]
-    Noemailmessages = 4,
-}
-
-[DataContract()]
-public enum UserSettings_ReportScriptErrors {
-    
-    [EnumMember()]
-    AskmeforpermissiontosendanerrorreporttoMicrosoft = 1,
-    
-    [EnumMember()]
-    AutomaticallysendanerrorreporttoMicrosoftwithoutaskingmeforpermission = 2,
-    
-    [EnumMember()]
-    NeversendanerrorreporttoMicrosoftaboutMicrosoftDynamics365 = 3,
-}
-
-[DataContract()]
-public enum UserSettings_VisualizationPaneLayout {
-    
-    [EnumMember()]
-    Topbottom = 0,
-    
-    [EnumMember()]
-    Sidebyside = 1,
-}
-
-[DataContract()]
-public enum componentstate {
-    
-    [EnumMember()]
-    Published = 0,
-    
-    [EnumMember()]
-    Unpublished = 1,
-    
-    [EnumMember()]
-    Deleted = 2,
-    
-    [EnumMember()]
-    DeletedUnpublished = 3,
+namespace Driv.CustomApis
+{
+	
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum goal_fiscalperiod
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Quarter1 = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Quarter2 = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Quarter3 = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Quarter4 = 4,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		January = 101,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		February = 102,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		March = 103,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		April = 104,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		May = 105,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		June = 106,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		July = 107,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		August = 108,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		September = 109,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		October = 110,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		November = 111,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		December = 112,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Semester1 = 201,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Semester2 = 202,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Annual = 301,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		P1 = 401,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		P2 = 402,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		P3 = 403,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		P4 = 404,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		P5 = 405,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		P6 = 406,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		P7 = 407,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		P8 = 408,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		P9 = 409,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		P10 = 410,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		P11 = 411,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		P12 = 412,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		P13 = 413,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum goal_fiscalyear
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2038 = 2038,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2037 = 2037,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2036 = 2036,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2035 = 2035,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2034 = 2034,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2033 = 2033,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2032 = 2032,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2031 = 2031,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2030 = 2030,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2029 = 2029,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2028 = 2028,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2027 = 2027,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2026 = 2026,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2025 = 2025,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2024 = 2024,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2023 = 2023,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2022 = 2022,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2021 = 2021,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2020 = 2020,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2019 = 2019,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2018 = 2018,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2017 = 2017,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2016 = 2016,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2015 = 2015,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2014 = 2014,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2013 = 2013,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2012 = 2012,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2011 = 2011,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2010 = 2010,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2009 = 2009,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2008 = 2008,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2007 = 2007,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2006 = 2006,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2005 = 2005,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2004 = 2004,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2003 = 2003,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2002 = 2002,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2001 = 2001,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY2000 = 2000,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1999 = 1999,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1998 = 1998,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1997 = 1997,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1996 = 1996,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1995 = 1995,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1994 = 1994,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1993 = 1993,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1992 = 1992,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1991 = 1991,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1990 = 1990,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1989 = 1989,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1988 = 1988,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1987 = 1987,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1986 = 1986,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1985 = 1985,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1984 = 1984,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1983 = 1983,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1982 = 1982,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1981 = 1981,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1980 = 1980,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1979 = 1979,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1978 = 1978,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1977 = 1977,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1976 = 1976,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1975 = 1975,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1974 = 1974,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1973 = 1973,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1972 = 1972,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1971 = 1971,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FY1970 = 1970,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum metric_goaltype
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Money = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Decimal = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Integer = 2,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum componentstate
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Published = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Unpublished = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Deleted = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		DeletedUnpublished = 3,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum workflowlog_objecttypecode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SystemJob = 4700,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		WorkflowSession = 4710,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FlowSession = 4720,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum customapifieldtype
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Boolean = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		DateTime = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Decimal = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Entity = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		EntityCollection = 4,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		EntityReference = 5,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Float = 6,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Integer = 7,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Money = 8,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Picklist = 9,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		String = 10,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		StringArray = 11,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Guid = 12,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum yearlymonth_options
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		January = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		February = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		March = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		April = 4,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		May = 5,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		June = 6,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		July = 7,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		August = 8,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		September = 9,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		October = 10,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		November = 11,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		December = 12,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum bulkemail_recipient
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Selectedrecordsoncurrentpage = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Allrecordsoncurrentpage = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Allrecordsonallpages = 3,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum chatbotlanguage
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		English = 1033,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Spanish = 1034,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Portuguese_Brazilian = 1046,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		French = 1036,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Dutch = 1043,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Norwegian = 1044,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Danish = 1030,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Swedish = 1053,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Italian = 1040,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		German = 1031,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Chinese_Simplified = 2052,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Chinese_Traditional = 1028,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Arabic = 1025,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Japanese = 1041,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Korean = 1042,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Hindi = 1081,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Indonesian = 1057,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Russian = 1049,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Polish = 1045,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Turkish = 1055,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum connectionrole_category
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Business = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Family = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Social = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Sales = 4,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Other = 5,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Stakeholder = 1000,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SalesTeam = 1001,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Service = 1002,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum repeatpattern_options
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Daily = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Weekly = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Monthly = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Yearly = 3,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum isinherited
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Teamprivilegesonly = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		DirectUser_BasicaccesslevelandTeamprivileges = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum orginsightsconfiguration_plotoption
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Line = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Column = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Area = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Pie = 4,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Bar = 5,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Donut = 6,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Infocard = 7,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		List = 8,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		DoubleDonut = 9,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		LinearGauge = 10,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Bubble = 11,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum sharepointdocumentlocation_locationtype
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		General = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		DedicatedforOneNoteIntegration = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum activitypointer_deliveryprioritycode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Low = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Normal = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		High = 2,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum connectortype
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		CustomConnector = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		NotSpecified = 0,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum sla_slaenabledentities
+	{
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum adx_likertscaleagreement
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		StronglyDisagree = 100000000,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Disagree = 100000001,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Undecided = 100000002,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Agree = 100000003,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		StronglyAgree = 100000004,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum componenttype
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Entity = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Attribute = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Relationship = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		AttributePicklistValue = 4,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		AttributeLookupValue = 5,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ViewAttribute = 6,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		LocalizedLabel = 7,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		RelationshipExtraCondition = 8,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		OptionSet = 9,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		EntityRelationship = 10,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		EntityRelationshipRole = 11,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		EntityRelationshipRelationships = 12,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ManagedProperty = 13,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		EntityKey = 14,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Privilege = 16,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		PrivilegeObjectTypeCode = 17,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Role = 20,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		RolePrivilege = 21,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		DisplayString = 22,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		DisplayStringMap = 23,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Form = 24,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Organization = 25,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SavedQuery = 26,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Workflow = 29,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Report = 31,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ReportEntity = 32,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ReportCategory = 33,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ReportVisibility = 34,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Attachment = 35,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		EmailTemplate = 36,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ContractTemplate = 37,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		KBArticleTemplate = 38,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		MailMergeTemplate = 39,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		DuplicateRule = 44,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		DuplicateRuleCondition = 45,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		EntityMap = 46,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		AttributeMap = 47,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		RibbonCommand = 48,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		RibbonContextGroup = 49,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		RibbonCustomization = 50,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		RibbonRule = 52,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		RibbonTabToCommandMap = 53,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		RibbonDiff = 55,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SavedQueryVisualization = 59,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SystemForm = 60,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		WebResource = 61,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SiteMap = 62,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ConnectionRole = 63,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ComplexControl = 64,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FieldSecurityProfile = 70,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FieldPermission = 71,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		PluginType = 90,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		PluginAssembly = 91,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SDKMessageProcessingStep = 92,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SDKMessageProcessingStepImage = 93,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ServiceEndpoint = 95,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		RoutingRule = 150,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		RoutingRuleItem = 151,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SLA = 152,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SLAItem = 153,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ConvertRule = 154,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ConvertRuleItem = 155,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		HierarchyRule = 65,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		MobileOfflineProfile = 161,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		MobileOfflineProfileItem = 162,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SimilarityRule = 165,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		CustomControl = 66,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		CustomControlDefaultConfig = 68,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		DataSourceMapping = 166,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SDKMessage = 201,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SDKMessageFilter = 202,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SdkMessagePair = 203,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SdkMessageRequest = 204,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SdkMessageRequestField = 205,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SdkMessageResponse = 206,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SdkMessageResponseField = 207,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		WebWizard = 210,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Index = 18,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ImportMap = 208,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		CanvasApp = 300,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Connector371 = 371,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Connector = 372,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		EnvironmentVariableDefinition = 380,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		EnvironmentVariableValue = 381,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		AIProjectType = 400,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		AIProject = 401,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		AIConfiguration = 402,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		EntityAnalyticsConfiguration = 430,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		AttributeImageConfiguration = 431,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		EntityImageConfiguration = 432,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum activitypointer_activitytypecode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Fax = 4204,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		PhoneCall = 4210,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Email = 4202,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Letter = 4207,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Appointment = 4201,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Task = 4212,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		RecurringAppointment = 4251,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		AlertSubscription = 10205,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		InviteRedemption = 10207,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		PortalComment = 10240,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum workflow_runas
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Owner = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		CallingUser = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum orginsightsconfiguration_lookback
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Number_2H = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Number_48H = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Number_7D = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Number_30D = 4,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum sharepoint_validationstatus
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		NotValidated = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		InProgress = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Invalid = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Valid = 4,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Couldnotvalidate = 5,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum activityfileattachment_objectcode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Post = 8000,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		PostComment = 8005,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum adx_likertscalefrequency
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Never = 100000000,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Rarely = 100000001,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Occasionally = 100000002,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Frequently = 100000003,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		VeryFrequently = 100000004,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum emailserverprofile_authenticationprotocol
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		AutoDetect = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Negotiate = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		NTLM = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Basic = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		OAuth = 4,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum sharepointsite_servicetype
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SharePoint = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		OneDrive = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Sharedwithme = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		MSTeams = 3,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum officedocument_documenttype
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		MicrosoftExcel = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		MicrosoftWord = 2,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum botsharingroletypes
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Chatbotmanager = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Chatbotauthor = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Chatbotreviewer = 3,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum adx_likertscaleimportance
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Unimportant = 100000000,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		OfLittleImportance = 100000001,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ModeratelyImportant = 100000002,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Important = 100000003,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		VeryImportant = 100000004,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum mobileofflineenabledentities
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Account = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Contact = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Note = 5,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		User = 8,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Team = 9,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Attachment = 1001,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Queue = 2020,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		QueueItem = 2029,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Appointment = 4201,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Email = 4202,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Task = 4212,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SLAKPIInstance = 9752,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ActivityFileAttachment = 10074,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		KnowledgeArticleImage = 10080,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		KnowledgeArticleAttachment = 10084,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ImageDescriptor = 1007,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ChangePasswordforPortalsContact = 10231,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum convertrule_channelactivity
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		PhoneCall = 4210,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Email = 4202,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Appointment = 4201,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Task = 4212,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SocialActivity = 4216,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		AlertSubscription = 10205,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		InviteRedemption = 10207,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		PortalComment = 10240,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum selectedmobileofflineenabledentityrelationships
+	{
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum sameweekday_options
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Day = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Weekday = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		WeekendDay = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Sunday = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Monday = 4,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Tuesday = 5,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Wednesday = 6,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Thursday = 7,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Friday = 8,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Saturday = 9,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum knowledgearticle_expirationstate
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Expired = 4,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Published = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Archived = 5,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum adx_likertscalesatisfaction
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		VeryDissatisfied = 100000000,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Dissatisfied = 100000001,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Neutral = 100000002,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Satisfied = 100000003,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		VerySatisfied = 100000004,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum socialactivity_postmessagetype
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		PublicMessage = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		PrivateMessage = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum syncattributemapping_syncdirection
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		None = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ToExchange = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ToCRM = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Bidirectional = 3,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum workflow_stage
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Preoperation = 20,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Postoperation = 40,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum sameweekweek_options
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		First = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Second = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Third = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Fourth = 4,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Last = 5,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum documenttemplate_associatedentitytypecode
+	{
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum adx_likertscalelikelihood
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		AlmostNeverTrue = 100000000,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		UsuallyNotTrue = 100000001,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		OccasionallyTrue = 100000002,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		UsuallyTrue = 100000003,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		AlmostAlwaysTrue = 100000004,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum dependencytype
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		None = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SolutionInternal = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Published = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Unpublished = 4,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum adx_likertscalequality
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Poor = 100000000,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Fair = 100000001,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Good = 100000002,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		VeryGood = 100000003,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Excellent = 100000004,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum bulkemail_recipients
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Selectedrecordsoncurrentpage = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Allrecordsoncurrentpage = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Allrecordsonallpages = 3,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum socialprofile_community
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Facebook = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Twitter = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Other = 0,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum msdynce_contentstate
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Released = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Draft = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum field_security_permission_type
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		NotAllowed = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Allowed = 4,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum photo_resolution
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		DeviceDefault = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Number_640x480 = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Number_1024x768 = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Number_1600x1200 = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Number_2048x1536 = 4,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Number_2592x1936 = 5,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum flipswitch_options
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Off = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		On = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum delete_recurringappointmentmaster
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Allinstances = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Theseriesleavepastappointments = 2,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum processstage_category
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Qualify = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Develop = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Propose = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Close = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Identify = 4,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Research = 5,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Resolve = 6,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Approval = 7,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum rangeends_options
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Never = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Bynumberofoccurrences = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Byenddate = 3,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum botcomponentreusepolicy
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		None = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Private = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Public = 2,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum sharepoint_validationstatusreason
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ThisrecordsURLhasnotbeenvalidated = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ThisrecordsURLisvalid = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ThisrecordsURLisnotvalid = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		TheURLschemesofMicrosoftDynamics365andSharePointaredifferent = 4,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		TheURLcouldnotbeaccessedbecauseofInternetExplorersecuritysettings = 5,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Authenticationfailure = 6,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Invalidcertificates = 7,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum recurrencerule_monthofyear
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		InvalidMonthOfYear = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		January = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		February = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		March = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		April = 4,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		May = 5,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		June = 6,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		July = 7,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		August = 8,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		September = 9,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		October = 10,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		November = 11,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		December = 12,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum principalsyncattributemapping_syncdirection
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		None = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ToExchange = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ToCRM = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Bidirectional = 3,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum appmodule_navigationtype
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Singlesession = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Multisession = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum AppModuleState
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Active = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Inactive = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum appmodule_statuscode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Active = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Inactive = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Deleted = 3,
+	}
+	
+	/// <summary>
+	/// A role-based, modular business app that provides task-based functionality for a particular area of work.
+	/// </summary>
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[Microsoft.Xrm.Sdk.Client.EntityLogicalNameAttribute("appmodule")]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public partial class AppModule : Microsoft.Xrm.Sdk.Entity, System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	{
+		
+		/// <summary>
+		/// Default Constructor.
+		/// </summary>
+		public AppModule() : 
+				base(EntityLogicalName)
+		{
+		}
+		
+		public const string EntityLogicalName = "appmodule";
+		
+		public const int EntityTypeCode = 9006;
+		
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+		
+		public event System.ComponentModel.PropertyChangingEventHandler PropertyChanging;
+		
+		private void OnPropertyChanged(string propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void OnPropertyChanging(string propertyName)
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, new System.ComponentModel.PropertyChangingEventArgs(propertyName));
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for entity instances
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("appmoduleid")]
+		public System.Nullable<System.Guid> AppModuleId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("appmoduleid");
+			}
+			set
+			{
+				this.OnPropertyChanging("AppModuleId");
+				this.SetAttributeValue("appmoduleid", value);
+				if (value.HasValue)
+				{
+					base.Id = value.Value;
+				}
+				else
+				{
+					base.Id = System.Guid.Empty;
+				}
+				this.OnPropertyChanged("AppModuleId");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("appmoduleid")]
+		public override System.Guid Id
+		{
+			get
+			{
+				return base.Id;
+			}
+			set
+			{
+				this.AppModuleId = value;
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the App Module used when synchronizing customizations for the Microsoft Dynamics 365 client for Outlook
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("appmoduleidunique")]
+		public System.Nullable<System.Guid> AppModuleIdUnique
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("appmoduleidunique");
+			}
+			set
+			{
+				this.OnPropertyChanging("AppModuleIdUnique");
+				this.SetAttributeValue("appmoduleidunique", value);
+				this.OnPropertyChanged("AppModuleIdUnique");
+			}
+		}
+		
+		/// <summary>
+		/// App Module Version
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("appmoduleversion")]
+		public string AppModuleVersion
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("appmoduleversion");
+			}
+			set
+			{
+				this.OnPropertyChanging("AppModuleVersion");
+				this.SetAttributeValue("appmoduleversion", value);
+				this.OnPropertyChanged("AppModuleVersion");
+			}
+		}
+		
+		/// <summary>
+		/// App Module Xml Managed
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("appmodulexmlmanaged")]
+		public string AppModuleXmlManaged
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("appmodulexmlmanaged");
+			}
+			set
+			{
+				this.OnPropertyChanging("AppModuleXmlManaged");
+				this.SetAttributeValue("appmodulexmlmanaged", value);
+				this.OnPropertyChanged("AppModuleXmlManaged");
+			}
+		}
+		
+		/// <summary>
+		/// Client Type such as Web or UCI
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("clienttype")]
+		public System.Nullable<int> ClientType
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("clienttype");
+			}
+			set
+			{
+				this.OnPropertyChanging("ClientType");
+				this.SetAttributeValue("clienttype", value);
+				this.OnPropertyChanged("ClientType");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("componentstate")]
+		public System.Nullable<Driv.CustomApis.componentstate> ComponentState
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("componentstate");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.componentstate)(System.Enum.ToObject(typeof(Driv.CustomApis.componentstate), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Contains configuration XML
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("configxml")]
+		public string ConfigXML
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("configxml");
+			}
+			set
+			{
+				this.OnPropertyChanging("ConfigXML");
+				this.SetAttributeValue("configxml", value);
+				this.OnPropertyChanged("ConfigXML");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the user who created the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
+		public Microsoft.Xrm.Sdk.EntityReference CreatedBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdby");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time when the record was created.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdon")]
+		public System.Nullable<System.DateTime> CreatedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("createdon");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the delegate user who created the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
+		public Microsoft.Xrm.Sdk.EntityReference CreatedOnBehalfBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// Description for entity
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("description")]
+		public string Description
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("description");
+			}
+			set
+			{
+				this.OnPropertyChanging("Description");
+				this.SetAttributeValue("description", value);
+				this.OnPropertyChanged("Description");
+			}
+		}
+		
+		/// <summary>
+		/// App Module Descriptor
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("descriptor")]
+		public string Descriptor
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("descriptor");
+			}
+		}
+		
+		/// <summary>
+		/// App Module Event Handlers
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("eventhandlers")]
+		public string EventHandlers
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("eventhandlers");
+			}
+			set
+			{
+				this.OnPropertyChanging("EventHandlers");
+				this.SetAttributeValue("eventhandlers", value);
+				this.OnPropertyChanged("EventHandlers");
+			}
+		}
+		
+		/// <summary>
+		/// Form Factor
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("formfactor")]
+		public System.Nullable<int> FormFactor
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("formfactor");
+			}
+			set
+			{
+				this.OnPropertyChanging("FormFactor");
+				this.SetAttributeValue("formfactor", value);
+				this.OnPropertyChanged("FormFactor");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the data import or data migration that created this record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("importsequencenumber")]
+		public System.Nullable<int> ImportSequenceNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("importsequencenumber");
+			}
+			set
+			{
+				this.OnPropertyChanging("ImportSequenceNumber");
+				this.SetAttributeValue("importsequencenumber", value);
+				this.OnPropertyChanged("ImportSequenceNumber");
+			}
+		}
+		
+		/// <summary>
+		/// Version in which the similarity rule is introduced.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("introducedversion")]
+		public string IntroducedVersion
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("introducedversion");
+			}
+			set
+			{
+				this.OnPropertyChanging("IntroducedVersion");
+				this.SetAttributeValue("introducedversion", value);
+				this.OnPropertyChanged("IntroducedVersion");
+			}
+		}
+		
+		/// <summary>
+		/// Is Default
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isdefault")]
+		public System.Nullable<bool> IsDefault
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isdefault");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsDefault");
+				this.SetAttributeValue("isdefault", value);
+				this.OnPropertyChanged("IsDefault");
+			}
+		}
+		
+		/// <summary>
+		/// Is Featured
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isfeatured")]
+		public System.Nullable<bool> IsFeatured
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isfeatured");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsFeatured");
+				this.SetAttributeValue("isfeatured", value);
+				this.OnPropertyChanged("IsFeatured");
+			}
+		}
+		
+		/// <summary>
+		/// Is Managed
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("ismanaged")]
+		public System.Nullable<bool> IsManaged
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("ismanaged");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the user who modified the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
+		public Microsoft.Xrm.Sdk.EntityReference ModifiedBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedby");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time when the record was modified.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedon")]
+		public System.Nullable<System.DateTime> ModifiedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("modifiedon");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the delegate user who modified the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
+		public Microsoft.Xrm.Sdk.EntityReference ModifiedOnBehalfBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// Name of App Module
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("name")]
+		public string Name
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("name");
+			}
+			set
+			{
+				this.OnPropertyChanging("Name");
+				this.SetAttributeValue("name", value);
+				this.OnPropertyChanged("Name");
+			}
+		}
+		
+		/// <summary>
+		/// App navigation type
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("navigationtype")]
+		public System.Nullable<Driv.CustomApis.appmodule_navigationtype> NavigationType
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("navigationtype");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.appmodule_navigationtype)(System.Enum.ToObject(typeof(Driv.CustomApis.appmodule_navigationtype), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("NavigationType");
+				if ((value == null))
+				{
+					this.SetAttributeValue("navigationtype", null);
+				}
+				else
+				{
+					this.SetAttributeValue("navigationtype", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("NavigationType");
+			}
+		}
+		
+		/// <summary>
+		/// The client that this app is optimized for
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("optimizedfor")]
+		public string OptimizedFor
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("optimizedfor");
+			}
+			set
+			{
+				this.OnPropertyChanging("OptimizedFor");
+				this.SetAttributeValue("optimizedfor", value);
+				this.OnPropertyChanged("OptimizedFor");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the organization associated with the app.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("organizationid")]
+		public Microsoft.Xrm.Sdk.EntityReference OrganizationId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("organizationid");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time that the record was migrated.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("overriddencreatedon")]
+		public System.Nullable<System.DateTime> OverriddenCreatedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("overriddencreatedon");
+			}
+			set
+			{
+				this.OnPropertyChanging("OverriddenCreatedOn");
+				this.SetAttributeValue("overriddencreatedon", value);
+				this.OnPropertyChanged("OverriddenCreatedOn");
+			}
+		}
+		
+		/// <summary>
+		/// Internal use only
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("overwritetime")]
+		public System.Nullable<System.DateTime> OverwriteTime
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("overwritetime");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time when the record was published.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("publishedon")]
+		public System.Nullable<System.DateTime> PublishedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("publishedon");
+			}
+			set
+			{
+				this.OnPropertyChanging("PublishedOn");
+				this.SetAttributeValue("publishedon", value);
+				this.OnPropertyChanged("PublishedOn");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the publisher.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("publisherid")]
+		public Microsoft.Xrm.Sdk.EntityReference PublisherId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("publisherid");
+			}
+			set
+			{
+				this.OnPropertyChanging("PublisherId");
+				this.SetAttributeValue("publisherid", value);
+				this.OnPropertyChanged("PublisherId");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the associated solution.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("solutionid")]
+		public System.Nullable<System.Guid> SolutionId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("solutionid");
+			}
+		}
+		
+		/// <summary>
+		/// Status of the Model-driven App
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statecode")]
+		public System.Nullable<Driv.CustomApis.AppModuleState> statecode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("statecode");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.AppModuleState)(System.Enum.ToObject(typeof(Driv.CustomApis.AppModuleState), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("statecode");
+				if ((value == null))
+				{
+					this.SetAttributeValue("statecode", null);
+				}
+				else
+				{
+					this.SetAttributeValue("statecode", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("statecode");
+			}
+		}
+		
+		/// <summary>
+		/// Reason for the status of the Model-driven App
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statuscode")]
+		public System.Nullable<Driv.CustomApis.appmodule_statuscode> statuscode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("statuscode");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.appmodule_statuscode)(System.Enum.ToObject(typeof(Driv.CustomApis.appmodule_statuscode), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("statuscode");
+				if ((value == null))
+				{
+					this.SetAttributeValue("statuscode", null);
+				}
+				else
+				{
+					this.SetAttributeValue("statuscode", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("statuscode");
+			}
+		}
+		
+		/// <summary>
+		/// Unique Name of App Module
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("uniquename")]
+		public string UniqueName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("uniquename");
+			}
+			set
+			{
+				this.OnPropertyChanging("UniqueName");
+				this.SetAttributeValue("uniquename", value);
+				this.OnPropertyChanged("UniqueName");
+			}
+		}
+		
+		/// <summary>
+		/// Contains URL
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("url")]
+		public string URL
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("url");
+			}
+			set
+			{
+				this.OnPropertyChanging("URL");
+				this.SetAttributeValue("url", value);
+				this.OnPropertyChanged("URL");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("versionnumber")]
+		public System.Nullable<long> VersionNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<long>>("versionnumber");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the Web Resource
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("webresourceid")]
+		public System.Nullable<System.Guid> WebResourceId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("webresourceid");
+			}
+			set
+			{
+				this.OnPropertyChanging("WebResourceId");
+				this.SetAttributeValue("webresourceid", value);
+				this.OnPropertyChanged("WebResourceId");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the Web Resource as Welcome Page Id
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("welcomepageid")]
+		public System.Nullable<System.Guid> WelcomePageId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("welcomepageid");
+			}
+			set
+			{
+				this.OnPropertyChanging("WelcomePageId");
+				this.SetAttributeValue("welcomepageid", value);
+				this.OnPropertyChanged("WelcomePageId");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N appmodule_appsetting_parentappmoduleid
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("appmodule_appsetting_parentappmoduleid")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.AppSetting> appmodule_appsetting_parentappmoduleid
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.AppSetting>("appmodule_appsetting_parentappmoduleid", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("appmodule_appsetting_parentappmoduleid");
+				this.SetRelatedEntities<Driv.CustomApis.AppSetting>("appmodule_appsetting_parentappmoduleid", null, value);
+				this.OnPropertyChanged("appmodule_appsetting_parentappmoduleid");
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_appmodule_createdby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_appmodule_createdby")]
+		public Driv.CustomApis.SystemUser lk_appmodule_createdby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_appmodule_createdby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_appmodule_createdonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_appmodule_createdonbehalfby")]
+		public Driv.CustomApis.SystemUser lk_appmodule_createdonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_appmodule_createdonbehalfby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_appmodule_modifiedby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_appmodule_modifiedby")]
+		public Driv.CustomApis.SystemUser lk_appmodule_modifiedby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_appmodule_modifiedby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_appmodule_modifiedonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_appmodule_modifiedonbehalfby")]
+		public Driv.CustomApis.SystemUser lk_appmodule_modifiedonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_appmodule_modifiedonbehalfby", null);
+			}
+		}
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum AppSettingState
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Active = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Inactive = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum appsetting_statuscode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Active = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Inactive = 2,
+	}
+	
+	/// <summary>
+	/// Holds the value for the associated App Setting Definition.
+	/// </summary>
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[Microsoft.Xrm.Sdk.Client.EntityLogicalNameAttribute("appsetting")]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public partial class AppSetting : Microsoft.Xrm.Sdk.Entity, System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	{
+		
+		/// <summary>
+		/// Default Constructor.
+		/// </summary>
+		public AppSetting() : 
+				base(EntityLogicalName)
+		{
+		}
+		
+		public const string EntityLogicalName = "appsetting";
+		
+		public const int EntityTypeCode = 10034;
+		
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+		
+		public event System.ComponentModel.PropertyChangingEventHandler PropertyChanging;
+		
+		private void OnPropertyChanged(string propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void OnPropertyChanging(string propertyName)
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, new System.ComponentModel.PropertyChangingEventArgs(propertyName));
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for entity instances
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("appsettingid")]
+		public System.Nullable<System.Guid> AppSettingId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("appsettingid");
+			}
+			set
+			{
+				this.OnPropertyChanging("AppSettingId");
+				this.SetAttributeValue("appsettingid", value);
+				if (value.HasValue)
+				{
+					base.Id = value.Value;
+				}
+				else
+				{
+					base.Id = System.Guid.Empty;
+				}
+				this.OnPropertyChanged("AppSettingId");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("appsettingid")]
+		public override System.Guid Id
+		{
+			get
+			{
+				return base.Id;
+			}
+			set
+			{
+				this.AppSettingId = value;
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("componentidunique")]
+		public System.Nullable<System.Guid> ComponentIdUnique
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("componentidunique");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("componentstate")]
+		public System.Nullable<Driv.CustomApis.componentstate> ComponentState
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("componentstate");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.componentstate)(System.Enum.ToObject(typeof(Driv.CustomApis.componentstate), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the user who created the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
+		public Microsoft.Xrm.Sdk.EntityReference CreatedBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdby");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time when the record was created.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdon")]
+		public System.Nullable<System.DateTime> CreatedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("createdon");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the delegate user who created the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
+		public Microsoft.Xrm.Sdk.EntityReference CreatedOnBehalfBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// The description of the App Setting.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("description")]
+		public string Description
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("description");
+			}
+		}
+		
+		/// <summary>
+		/// Display name of the App Setting.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("displayname")]
+		public string DisplayName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("displayname");
+			}
+		}
+		
+		/// <summary>
+		/// Sequence number of the import that created this record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("importsequencenumber")]
+		public System.Nullable<int> ImportSequenceNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("importsequencenumber");
+			}
+			set
+			{
+				this.OnPropertyChanging("ImportSequenceNumber");
+				this.SetAttributeValue("importsequencenumber", value);
+				this.OnPropertyChanged("ImportSequenceNumber");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("iscustomizable")]
+		public Microsoft.Xrm.Sdk.BooleanManagedProperty IsCustomizable
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.BooleanManagedProperty>("iscustomizable");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsCustomizable");
+				this.SetAttributeValue("iscustomizable", value);
+				this.OnPropertyChanged("IsCustomizable");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether the solution component is part of a managed solution.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("ismanaged")]
+		public System.Nullable<bool> IsManaged
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("ismanaged");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the user who modified the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
+		public Microsoft.Xrm.Sdk.EntityReference ModifiedBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedby");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time when the record was modified.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedon")]
+		public System.Nullable<System.DateTime> ModifiedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("modifiedon");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the delegate user who modified the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
+		public Microsoft.Xrm.Sdk.EntityReference ModifiedOnBehalfBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for the organization
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("organizationid")]
+		public Microsoft.Xrm.Sdk.EntityReference OrganizationId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("organizationid");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time that the record was migrated.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("overriddencreatedon")]
+		public System.Nullable<System.DateTime> OverriddenCreatedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("overriddencreatedon");
+			}
+			set
+			{
+				this.OnPropertyChanging("OverriddenCreatedOn");
+				this.SetAttributeValue("overriddencreatedon", value);
+				this.OnPropertyChanged("OverriddenCreatedOn");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("overwritetime")]
+		public System.Nullable<System.DateTime> OverwriteTime
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("overwritetime");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for AppModule associated with AppSetting.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("parentappmoduleid")]
+		public Microsoft.Xrm.Sdk.EntityReference ParentAppModuleId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("parentappmoduleid");
+			}
+			set
+			{
+				this.OnPropertyChanging("ParentAppModuleId");
+				this.SetAttributeValue("parentappmoduleid", value);
+				this.OnPropertyChanged("ParentAppModuleId");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for SettingDefinition associated with AppSetting.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("settingdefinitionid")]
+		public Microsoft.Xrm.Sdk.EntityReference SettingDefinitionId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("settingdefinitionid");
+			}
+			set
+			{
+				this.OnPropertyChanging("SettingDefinitionId");
+				this.SetAttributeValue("settingdefinitionid", value);
+				this.OnPropertyChanged("SettingDefinitionId");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the associated solution.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("solutionid")]
+		public System.Nullable<System.Guid> SolutionId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("solutionid");
+			}
+		}
+		
+		/// <summary>
+		/// Status of the AppSetting
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statecode")]
+		public System.Nullable<Driv.CustomApis.AppSettingState> statecode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("statecode");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.AppSettingState)(System.Enum.ToObject(typeof(Driv.CustomApis.AppSettingState), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Reason for the status of the AppSetting
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statuscode")]
+		public System.Nullable<Driv.CustomApis.appsetting_statuscode> statuscode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("statuscode");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.appsetting_statuscode)(System.Enum.ToObject(typeof(Driv.CustomApis.appsetting_statuscode), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezoneruleversionnumber")]
+		public System.Nullable<int> TimeZoneRuleVersionNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezoneruleversionnumber");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneRuleVersionNumber");
+				this.SetAttributeValue("timezoneruleversionnumber", value);
+				this.OnPropertyChanged("TimeZoneRuleVersionNumber");
+			}
+		}
+		
+		/// <summary>
+		/// Unique name of the App Setting.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("uniquename")]
+		public string UniqueName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("uniquename");
+			}
+			set
+			{
+				this.OnPropertyChanging("UniqueName");
+				this.SetAttributeValue("uniquename", value);
+				this.OnPropertyChanged("UniqueName");
+			}
+		}
+		
+		/// <summary>
+		/// Time zone code that was in use when the record was created.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("utcconversiontimezonecode")]
+		public System.Nullable<int> UTCConversionTimeZoneCode
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("utcconversiontimezonecode");
+			}
+			set
+			{
+				this.OnPropertyChanging("UTCConversionTimeZoneCode");
+				this.SetAttributeValue("utcconversiontimezonecode", value);
+				this.OnPropertyChanged("UTCConversionTimeZoneCode");
+			}
+		}
+		
+		/// <summary>
+		/// Contains the actual value of app settings.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("value")]
+		public string Value
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("value");
+			}
+			set
+			{
+				this.OnPropertyChanging("Value");
+				this.SetAttributeValue("value", value);
+				this.OnPropertyChanged("Value");
+			}
+		}
+		
+		/// <summary>
+		/// Version Number
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("versionnumber")]
+		public System.Nullable<long> VersionNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<long>>("versionnumber");
+			}
+		}
+		
+		/// <summary>
+		/// N:1 appmodule_appsetting_parentappmoduleid
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("parentappmoduleid")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("appmodule_appsetting_parentappmoduleid")]
+		public Driv.CustomApis.AppModule appmodule_appsetting_parentappmoduleid
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.AppModule>("appmodule_appsetting_parentappmoduleid", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("appmodule_appsetting_parentappmoduleid");
+				this.SetRelatedEntity<Driv.CustomApis.AppModule>("appmodule_appsetting_parentappmoduleid", null, value);
+				this.OnPropertyChanged("appmodule_appsetting_parentappmoduleid");
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_appsetting_createdby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_appsetting_createdby")]
+		public Driv.CustomApis.SystemUser lk_appsetting_createdby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_appsetting_createdby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_appsetting_createdonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_appsetting_createdonbehalfby")]
+		public Driv.CustomApis.SystemUser lk_appsetting_createdonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_appsetting_createdonbehalfby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_appsetting_modifiedby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_appsetting_modifiedby")]
+		public Driv.CustomApis.SystemUser lk_appsetting_modifiedby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_appsetting_modifiedby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_appsetting_modifiedonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_appsetting_modifiedonbehalfby")]
+		public Driv.CustomApis.SystemUser lk_appsetting_modifiedonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_appsetting_modifiedonbehalfby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 settingdefinition_appsetting_settingdefinitionid
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("settingdefinitionid")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("settingdefinition_appsetting_settingdefinitionid")]
+		public Driv.CustomApis.SettingDefinition settingdefinition_appsetting_settingdefinitionid
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SettingDefinition>("settingdefinition_appsetting_settingdefinitionid", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("settingdefinition_appsetting_settingdefinitionid");
+				this.SetRelatedEntity<Driv.CustomApis.SettingDefinition>("settingdefinition_appsetting_settingdefinitionid", null, value);
+				this.OnPropertyChanged("settingdefinition_appsetting_settingdefinitionid");
+			}
+		}
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum environmentvariabledefinition_secretstore
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		AzureKeyVault = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		MicrosoftDataverse = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum EnvironmentVariableDefinitionState
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Active = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Inactive = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum environmentvariabledefinition_statuscode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Active = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Inactive = 2,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum environmentvariabledefinition_type
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		String = 100000000,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Number = 100000001,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Boolean = 100000002,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		JSON = 100000003,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		DataSource = 100000004,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Secret = 100000005,
+	}
+	
+	/// <summary>
+	/// Contains information about the settable variable: its type, default value, and etc.
+	/// </summary>
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[Microsoft.Xrm.Sdk.Client.EntityLogicalNameAttribute("environmentvariabledefinition")]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public partial class EnvironmentVariableDefinition : Microsoft.Xrm.Sdk.Entity, System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	{
+		
+		/// <summary>
+		/// Default Constructor.
+		/// </summary>
+		public EnvironmentVariableDefinition() : 
+				base(EntityLogicalName)
+		{
+		}
+		
+		public const string EntityLogicalName = "environmentvariabledefinition";
+		
+		public const int EntityTypeCode = 380;
+		
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+		
+		public event System.ComponentModel.PropertyChangingEventHandler PropertyChanging;
+		
+		private void OnPropertyChanged(string propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void OnPropertyChanging(string propertyName)
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, new System.ComponentModel.PropertyChangingEventArgs(propertyName));
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("apiid")]
+		public string ApiId
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("apiid");
+			}
+			set
+			{
+				this.OnPropertyChanging("ApiId");
+				this.SetAttributeValue("apiid", value);
+				this.OnPropertyChanged("ApiId");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("componentstate")]
+		public System.Nullable<Driv.CustomApis.componentstate> ComponentState
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("componentstate");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.componentstate)(System.Enum.ToObject(typeof(Driv.CustomApis.componentstate), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for Connection Reference associated with Environment Variable Definition.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("connectionreferenceid")]
+		public Microsoft.Xrm.Sdk.EntityReference ConnectionReferenceId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("connectionreferenceid");
+			}
+			set
+			{
+				this.OnPropertyChanging("ConnectionReferenceId");
+				this.SetAttributeValue("connectionreferenceid", value);
+				this.OnPropertyChanged("ConnectionReferenceId");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the user who created the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
+		public Microsoft.Xrm.Sdk.EntityReference CreatedBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdby");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time when the record was created.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdon")]
+		public System.Nullable<System.DateTime> CreatedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("createdon");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the delegate user who created the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
+		public Microsoft.Xrm.Sdk.EntityReference CreatedOnBehalfBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// Default variable value to be used if no associated EnvironmentVariableValue entities exist.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("defaultvalue")]
+		public string DefaultValue
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("defaultvalue");
+			}
+			set
+			{
+				this.OnPropertyChanging("DefaultValue");
+				this.SetAttributeValue("defaultvalue", value);
+				this.OnPropertyChanged("DefaultValue");
+			}
+		}
+		
+		/// <summary>
+		/// Description of the variable definition.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("description")]
+		public string Description
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("description");
+			}
+			set
+			{
+				this.OnPropertyChanging("Description");
+				this.SetAttributeValue("description", value);
+				this.OnPropertyChanged("Description");
+			}
+		}
+		
+		/// <summary>
+		/// Display Name of the variable definition.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("displayname")]
+		public string DisplayName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("displayname");
+			}
+			set
+			{
+				this.OnPropertyChanging("DisplayName");
+				this.SetAttributeValue("displayname", value);
+				this.OnPropertyChanged("DisplayName");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for entity instances
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("environmentvariabledefinitionid")]
+		public System.Nullable<System.Guid> EnvironmentVariableDefinitionId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("environmentvariabledefinitionid");
+			}
+			set
+			{
+				this.OnPropertyChanging("EnvironmentVariableDefinitionId");
+				this.SetAttributeValue("environmentvariabledefinitionid", value);
+				if (value.HasValue)
+				{
+					base.Id = value.Value;
+				}
+				else
+				{
+					base.Id = System.Guid.Empty;
+				}
+				this.OnPropertyChanged("EnvironmentVariableDefinitionId");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("environmentvariabledefinitionid")]
+		public override System.Guid Id
+		{
+			get
+			{
+				return base.Id;
+			}
+			set
+			{
+				this.EnvironmentVariableDefinitionId = value;
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("environmentvariabledefinitionidunique")]
+		public System.Nullable<System.Guid> EnvironmentVariableDefinitionIdUnique
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("environmentvariabledefinitionidunique");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("hint")]
+		public string Hint
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("hint");
+			}
+			set
+			{
+				this.OnPropertyChanging("Hint");
+				this.SetAttributeValue("hint", value);
+				this.OnPropertyChanged("Hint");
+			}
+		}
+		
+		/// <summary>
+		/// Sequence number of the import that created this record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("importsequencenumber")]
+		public System.Nullable<int> ImportSequenceNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("importsequencenumber");
+			}
+			set
+			{
+				this.OnPropertyChanging("ImportSequenceNumber");
+				this.SetAttributeValue("importsequencenumber", value);
+				this.OnPropertyChanged("ImportSequenceNumber");
+			}
+		}
+		
+		/// <summary>
+		/// Version in which the form is introduced.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("introducedversion")]
+		public string IntroducedVersion
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("introducedversion");
+			}
+			set
+			{
+				this.OnPropertyChanging("IntroducedVersion");
+				this.SetAttributeValue("introducedversion", value);
+				this.OnPropertyChanged("IntroducedVersion");
+			}
+		}
+		
+		/// <summary>
+		/// Tells whether the component can be customized.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("iscustomizable")]
+		public Microsoft.Xrm.Sdk.BooleanManagedProperty IsCustomizable
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.BooleanManagedProperty>("iscustomizable");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsCustomizable");
+				this.SetAttributeValue("iscustomizable", value);
+				this.OnPropertyChanged("IsCustomizable");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether the solution component is part of a managed solution.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("ismanaged")]
+		public System.Nullable<bool> IsManaged
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("ismanaged");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isrequired")]
+		public System.Nullable<bool> IsRequired
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isrequired");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsRequired");
+				this.SetAttributeValue("isrequired", value);
+				this.OnPropertyChanged("IsRequired");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the user who modified the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
+		public Microsoft.Xrm.Sdk.EntityReference ModifiedBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedby");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time when the record was modified.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedon")]
+		public System.Nullable<System.DateTime> ModifiedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("modifiedon");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the delegate user who modified the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
+		public Microsoft.Xrm.Sdk.EntityReference ModifiedOnBehalfBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time that the record was migrated.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("overriddencreatedon")]
+		public System.Nullable<System.DateTime> OverriddenCreatedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("overriddencreatedon");
+			}
+			set
+			{
+				this.OnPropertyChanging("OverriddenCreatedOn");
+				this.SetAttributeValue("overriddencreatedon", value);
+				this.OnPropertyChanged("OverriddenCreatedOn");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("overwritetime")]
+		public System.Nullable<System.DateTime> OverwriteTime
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("overwritetime");
+			}
+		}
+		
+		/// <summary>
+		/// Owner Id
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("ownerid")]
+		public Microsoft.Xrm.Sdk.EntityReference OwnerId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("ownerid");
+			}
+			set
+			{
+				this.OnPropertyChanging("OwnerId");
+				this.SetAttributeValue("ownerid", value);
+				this.OnPropertyChanged("OwnerId");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for the business unit that owns the record
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owningbusinessunit")]
+		public Microsoft.Xrm.Sdk.EntityReference OwningBusinessUnit
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("owningbusinessunit");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for the team that owns the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owningteam")]
+		public Microsoft.Xrm.Sdk.EntityReference OwningTeam
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("owningteam");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for the user that owns the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owninguser")]
+		public Microsoft.Xrm.Sdk.EntityReference OwningUser
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("owninguser");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("parameterkey")]
+		public string ParameterKey
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("parameterkey");
+			}
+			set
+			{
+				this.OnPropertyChanging("ParameterKey");
+				this.SetAttributeValue("parameterkey", value);
+				this.OnPropertyChanged("ParameterKey");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for Environment Variable Definition associated with Environment Variable Definition.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("parentdefinitionid")]
+		public Microsoft.Xrm.Sdk.EntityReference ParentDefinitionId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("parentdefinitionid");
+			}
+			set
+			{
+				this.OnPropertyChanging("ParentDefinitionId");
+				this.SetAttributeValue("parentdefinitionid", value);
+				this.OnPropertyChanged("ParentDefinitionId");
+			}
+		}
+		
+		/// <summary>
+		/// Unique entity name.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("schemaname")]
+		public string SchemaName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("schemaname");
+			}
+			set
+			{
+				this.OnPropertyChanging("SchemaName");
+				this.SetAttributeValue("schemaname", value);
+				this.OnPropertyChanged("SchemaName");
+			}
+		}
+		
+		/// <summary>
+		/// Environment variable secret store.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("secretstore")]
+		public System.Nullable<Driv.CustomApis.environmentvariabledefinition_secretstore> SecretStore
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("secretstore");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.environmentvariabledefinition_secretstore)(System.Enum.ToObject(typeof(Driv.CustomApis.environmentvariabledefinition_secretstore), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("SecretStore");
+				if ((value == null))
+				{
+					this.SetAttributeValue("secretstore", null);
+				}
+				else
+				{
+					this.SetAttributeValue("secretstore", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("SecretStore");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the associated solution.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("solutionid")]
+		public System.Nullable<System.Guid> SolutionId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("solutionid");
+			}
+		}
+		
+		/// <summary>
+		/// Status of the Environment Variable Definition
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statecode")]
+		public System.Nullable<Driv.CustomApis.EnvironmentVariableDefinitionState> statecode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("statecode");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.EnvironmentVariableDefinitionState)(System.Enum.ToObject(typeof(Driv.CustomApis.EnvironmentVariableDefinitionState), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("statecode");
+				if ((value == null))
+				{
+					this.SetAttributeValue("statecode", null);
+				}
+				else
+				{
+					this.SetAttributeValue("statecode", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("statecode");
+			}
+		}
+		
+		/// <summary>
+		/// Reason for the status of the Environment Variable Definition
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statuscode")]
+		public System.Nullable<Driv.CustomApis.environmentvariabledefinition_statuscode> statuscode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("statuscode");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.environmentvariabledefinition_statuscode)(System.Enum.ToObject(typeof(Driv.CustomApis.environmentvariabledefinition_statuscode), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("statuscode");
+				if ((value == null))
+				{
+					this.SetAttributeValue("statuscode", null);
+				}
+				else
+				{
+					this.SetAttributeValue("statuscode", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("statuscode");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezoneruleversionnumber")]
+		public System.Nullable<int> TimeZoneRuleVersionNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezoneruleversionnumber");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneRuleVersionNumber");
+				this.SetAttributeValue("timezoneruleversionnumber", value);
+				this.OnPropertyChanged("TimeZoneRuleVersionNumber");
+			}
+		}
+		
+		/// <summary>
+		/// Environment variable value type.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("type")]
+		public System.Nullable<Driv.CustomApis.environmentvariabledefinition_type> Type
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("type");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.environmentvariabledefinition_type)(System.Enum.ToObject(typeof(Driv.CustomApis.environmentvariabledefinition_type), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("Type");
+				if ((value == null))
+				{
+					this.SetAttributeValue("type", null);
+				}
+				else
+				{
+					this.SetAttributeValue("type", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("Type");
+			}
+		}
+		
+		/// <summary>
+		/// Time zone code that was in use when the record was created.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("utcconversiontimezonecode")]
+		public System.Nullable<int> UTCConversionTimeZoneCode
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("utcconversiontimezonecode");
+			}
+			set
+			{
+				this.OnPropertyChanging("UTCConversionTimeZoneCode");
+				this.SetAttributeValue("utcconversiontimezonecode", value);
+				this.OnPropertyChanged("UTCConversionTimeZoneCode");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("valueschema")]
+		public string ValueSchema
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("valueschema");
+			}
+			set
+			{
+				this.OnPropertyChanging("ValueSchema");
+				this.SetAttributeValue("valueschema", value);
+				this.OnPropertyChanged("ValueSchema");
+			}
+		}
+		
+		/// <summary>
+		/// Version Number
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("versionnumber")]
+		public System.Nullable<long> VersionNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<long>>("versionnumber");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N envdefinition_envdefinition
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("envdefinition_envdefinition", Microsoft.Xrm.Sdk.EntityRole.Referenced)]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.EnvironmentVariableDefinition> Referencedenvdefinition_envdefinition
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.EnvironmentVariableDefinition>("envdefinition_envdefinition", Microsoft.Xrm.Sdk.EntityRole.Referenced);
+			}
+			set
+			{
+				this.OnPropertyChanging("Referencedenvdefinition_envdefinition");
+				this.SetRelatedEntities<Driv.CustomApis.EnvironmentVariableDefinition>("envdefinition_envdefinition", Microsoft.Xrm.Sdk.EntityRole.Referenced, value);
+				this.OnPropertyChanged("Referencedenvdefinition_envdefinition");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N environmentvariabledefinition_environmentvariablevalue
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("environmentvariabledefinition_environmentvariablevalue")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.EnvironmentVariableValue> environmentvariabledefinition_environmentvariablevalue
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.EnvironmentVariableValue>("environmentvariabledefinition_environmentvariablevalue", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("environmentvariabledefinition_environmentvariablevalue");
+				this.SetRelatedEntities<Driv.CustomApis.EnvironmentVariableValue>("environmentvariabledefinition_environmentvariablevalue", null, value);
+				this.OnPropertyChanged("environmentvariabledefinition_environmentvariablevalue");
+			}
+		}
+		
+		/// <summary>
+		/// N:1 envdefinition_envdefinition
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("parentdefinitionid")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("envdefinition_envdefinition", Microsoft.Xrm.Sdk.EntityRole.Referencing)]
+		public Driv.CustomApis.EnvironmentVariableDefinition Referencingenvdefinition_envdefinition
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.EnvironmentVariableDefinition>("envdefinition_envdefinition", Microsoft.Xrm.Sdk.EntityRole.Referencing);
+			}
+			set
+			{
+				this.OnPropertyChanging("Referencingenvdefinition_envdefinition");
+				this.SetRelatedEntity<Driv.CustomApis.EnvironmentVariableDefinition>("envdefinition_envdefinition", Microsoft.Xrm.Sdk.EntityRole.Referencing, value);
+				this.OnPropertyChanged("Referencingenvdefinition_envdefinition");
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_environmentvariabledefinition_createdby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_environmentvariabledefinition_createdby")]
+		public Driv.CustomApis.SystemUser lk_environmentvariabledefinition_createdby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_environmentvariabledefinition_createdby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_environmentvariabledefinition_createdonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_environmentvariabledefinition_createdonbehalfby")]
+		public Driv.CustomApis.SystemUser lk_environmentvariabledefinition_createdonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_environmentvariabledefinition_createdonbehalfby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_environmentvariabledefinition_modifiedby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_environmentvariabledefinition_modifiedby")]
+		public Driv.CustomApis.SystemUser lk_environmentvariabledefinition_modifiedby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_environmentvariabledefinition_modifiedby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_environmentvariabledefinition_modifiedonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_environmentvariabledefinition_modifiedonbehalfby")]
+		public Driv.CustomApis.SystemUser lk_environmentvariabledefinition_modifiedonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_environmentvariabledefinition_modifiedonbehalfby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 user_environmentvariabledefinition
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owninguser")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("user_environmentvariabledefinition")]
+		public Driv.CustomApis.SystemUser user_environmentvariabledefinition
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("user_environmentvariabledefinition", null);
+			}
+		}
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum EnvironmentVariableValueState
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Active = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Inactive = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum environmentvariablevalue_statuscode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Active = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Inactive = 2,
+	}
+	
+	/// <summary>
+	/// Holds the value for the associated EnvironmentVariableDefinition entity.
+	/// </summary>
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[Microsoft.Xrm.Sdk.Client.EntityLogicalNameAttribute("environmentvariablevalue")]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public partial class EnvironmentVariableValue : Microsoft.Xrm.Sdk.Entity, System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	{
+		
+		/// <summary>
+		/// Default Constructor.
+		/// </summary>
+		public EnvironmentVariableValue() : 
+				base(EntityLogicalName)
+		{
+		}
+		
+		public const string EntityLogicalName = "environmentvariablevalue";
+		
+		public const int EntityTypeCode = 381;
+		
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+		
+		public event System.ComponentModel.PropertyChangingEventHandler PropertyChanging;
+		
+		private void OnPropertyChanged(string propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void OnPropertyChanging(string propertyName)
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, new System.ComponentModel.PropertyChangingEventArgs(propertyName));
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("componentstate")]
+		public System.Nullable<Driv.CustomApis.componentstate> ComponentState
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("componentstate");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.componentstate)(System.Enum.ToObject(typeof(Driv.CustomApis.componentstate), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the user who created the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
+		public Microsoft.Xrm.Sdk.EntityReference CreatedBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdby");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time when the record was created.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdon")]
+		public System.Nullable<System.DateTime> CreatedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("createdon");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the delegate user who created the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
+		public Microsoft.Xrm.Sdk.EntityReference CreatedOnBehalfBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for Environment Variable Definition associated with Environment Variable Value.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("environmentvariabledefinitionid")]
+		public Microsoft.Xrm.Sdk.EntityReference EnvironmentVariableDefinitionId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("environmentvariabledefinitionid");
+			}
+			set
+			{
+				this.OnPropertyChanging("EnvironmentVariableDefinitionId");
+				this.SetAttributeValue("environmentvariabledefinitionid", value);
+				this.OnPropertyChanged("EnvironmentVariableDefinitionId");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for entity instances
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("environmentvariablevalueid")]
+		public System.Nullable<System.Guid> EnvironmentVariableValueId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("environmentvariablevalueid");
+			}
+			set
+			{
+				this.OnPropertyChanging("EnvironmentVariableValueId");
+				this.SetAttributeValue("environmentvariablevalueid", value);
+				if (value.HasValue)
+				{
+					base.Id = value.Value;
+				}
+				else
+				{
+					base.Id = System.Guid.Empty;
+				}
+				this.OnPropertyChanged("EnvironmentVariableValueId");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("environmentvariablevalueid")]
+		public override System.Guid Id
+		{
+			get
+			{
+				return base.Id;
+			}
+			set
+			{
+				this.EnvironmentVariableValueId = value;
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("environmentvariablevalueidunique")]
+		public System.Nullable<System.Guid> EnvironmentVariableValueIdUnique
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("environmentvariablevalueidunique");
+			}
+		}
+		
+		/// <summary>
+		/// Sequence number of the import that created this record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("importsequencenumber")]
+		public System.Nullable<int> ImportSequenceNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("importsequencenumber");
+			}
+			set
+			{
+				this.OnPropertyChanging("ImportSequenceNumber");
+				this.SetAttributeValue("importsequencenumber", value);
+				this.OnPropertyChanged("ImportSequenceNumber");
+			}
+		}
+		
+		/// <summary>
+		/// Version in which the form is introduced.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("introducedversion")]
+		public string IntroducedVersion
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("introducedversion");
+			}
+			set
+			{
+				this.OnPropertyChanging("IntroducedVersion");
+				this.SetAttributeValue("introducedversion", value);
+				this.OnPropertyChanged("IntroducedVersion");
+			}
+		}
+		
+		/// <summary>
+		/// Tells whether the component can be customized.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("iscustomizable")]
+		public Microsoft.Xrm.Sdk.BooleanManagedProperty IsCustomizable
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.BooleanManagedProperty>("iscustomizable");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsCustomizable");
+				this.SetAttributeValue("iscustomizable", value);
+				this.OnPropertyChanged("IsCustomizable");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether the solution component is part of a managed solution.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("ismanaged")]
+		public System.Nullable<bool> IsManaged
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("ismanaged");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the user who modified the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
+		public Microsoft.Xrm.Sdk.EntityReference ModifiedBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedby");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time when the record was modified.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedon")]
+		public System.Nullable<System.DateTime> ModifiedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("modifiedon");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the delegate user who modified the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
+		public Microsoft.Xrm.Sdk.EntityReference ModifiedOnBehalfBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time that the record was migrated.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("overriddencreatedon")]
+		public System.Nullable<System.DateTime> OverriddenCreatedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("overriddencreatedon");
+			}
+			set
+			{
+				this.OnPropertyChanging("OverriddenCreatedOn");
+				this.SetAttributeValue("overriddencreatedon", value);
+				this.OnPropertyChanged("OverriddenCreatedOn");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("overwritetime")]
+		public System.Nullable<System.DateTime> OverwriteTime
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("overwritetime");
+			}
+		}
+		
+		/// <summary>
+		/// Owner Id
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("ownerid")]
+		public Microsoft.Xrm.Sdk.EntityReference OwnerId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("ownerid");
+			}
+			set
+			{
+				this.OnPropertyChanging("OwnerId");
+				this.SetAttributeValue("ownerid", value);
+				this.OnPropertyChanged("OwnerId");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for the business unit that owns the record
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owningbusinessunit")]
+		public Microsoft.Xrm.Sdk.EntityReference OwningBusinessUnit
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("owningbusinessunit");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for the team that owns the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owningteam")]
+		public Microsoft.Xrm.Sdk.EntityReference OwningTeam
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("owningteam");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for the user that owns the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owninguser")]
+		public Microsoft.Xrm.Sdk.EntityReference OwningUser
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("owninguser");
+			}
+		}
+		
+		/// <summary>
+		/// Unique entity name.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("schemaname")]
+		public string SchemaName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("schemaname");
+			}
+			set
+			{
+				this.OnPropertyChanging("SchemaName");
+				this.SetAttributeValue("schemaname", value);
+				this.OnPropertyChanged("SchemaName");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the associated solution.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("solutionid")]
+		public System.Nullable<System.Guid> SolutionId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("solutionid");
+			}
+		}
+		
+		/// <summary>
+		/// Status of the Environment Variable Value
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statecode")]
+		public System.Nullable<Driv.CustomApis.EnvironmentVariableValueState> statecode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("statecode");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.EnvironmentVariableValueState)(System.Enum.ToObject(typeof(Driv.CustomApis.EnvironmentVariableValueState), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("statecode");
+				if ((value == null))
+				{
+					this.SetAttributeValue("statecode", null);
+				}
+				else
+				{
+					this.SetAttributeValue("statecode", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("statecode");
+			}
+		}
+		
+		/// <summary>
+		/// Reason for the status of the Environment Variable Value
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statuscode")]
+		public System.Nullable<Driv.CustomApis.environmentvariablevalue_statuscode> statuscode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("statuscode");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.environmentvariablevalue_statuscode)(System.Enum.ToObject(typeof(Driv.CustomApis.environmentvariablevalue_statuscode), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("statuscode");
+				if ((value == null))
+				{
+					this.SetAttributeValue("statuscode", null);
+				}
+				else
+				{
+					this.SetAttributeValue("statuscode", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("statuscode");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezoneruleversionnumber")]
+		public System.Nullable<int> TimeZoneRuleVersionNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezoneruleversionnumber");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneRuleVersionNumber");
+				this.SetAttributeValue("timezoneruleversionnumber", value);
+				this.OnPropertyChanged("TimeZoneRuleVersionNumber");
+			}
+		}
+		
+		/// <summary>
+		/// Time zone code that was in use when the record was created.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("utcconversiontimezonecode")]
+		public System.Nullable<int> UTCConversionTimeZoneCode
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("utcconversiontimezonecode");
+			}
+			set
+			{
+				this.OnPropertyChanging("UTCConversionTimeZoneCode");
+				this.SetAttributeValue("utcconversiontimezonecode", value);
+				this.OnPropertyChanged("UTCConversionTimeZoneCode");
+			}
+		}
+		
+		/// <summary>
+		/// Contains the actual variable data.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("value")]
+		public string Value
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("value");
+			}
+			set
+			{
+				this.OnPropertyChanging("Value");
+				this.SetAttributeValue("value", value);
+				this.OnPropertyChanged("Value");
+			}
+		}
+		
+		/// <summary>
+		/// Version Number
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("versionnumber")]
+		public System.Nullable<long> VersionNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<long>>("versionnumber");
+			}
+		}
+		
+		/// <summary>
+		/// N:1 environmentvariabledefinition_environmentvariablevalue
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("environmentvariabledefinitionid")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("environmentvariabledefinition_environmentvariablevalue")]
+		public Driv.CustomApis.EnvironmentVariableDefinition environmentvariabledefinition_environmentvariablevalue
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.EnvironmentVariableDefinition>("environmentvariabledefinition_environmentvariablevalue", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("environmentvariabledefinition_environmentvariablevalue");
+				this.SetRelatedEntity<Driv.CustomApis.EnvironmentVariableDefinition>("environmentvariabledefinition_environmentvariablevalue", null, value);
+				this.OnPropertyChanged("environmentvariabledefinition_environmentvariablevalue");
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_environmentvariablevalue_createdby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_environmentvariablevalue_createdby")]
+		public Driv.CustomApis.SystemUser lk_environmentvariablevalue_createdby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_environmentvariablevalue_createdby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_environmentvariablevalue_createdonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_environmentvariablevalue_createdonbehalfby")]
+		public Driv.CustomApis.SystemUser lk_environmentvariablevalue_createdonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_environmentvariablevalue_createdonbehalfby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_environmentvariablevalue_modifiedby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_environmentvariablevalue_modifiedby")]
+		public Driv.CustomApis.SystemUser lk_environmentvariablevalue_modifiedby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_environmentvariablevalue_modifiedby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_environmentvariablevalue_modifiedonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_environmentvariablevalue_modifiedonbehalfby")]
+		public Driv.CustomApis.SystemUser lk_environmentvariablevalue_modifiedonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_environmentvariablevalue_modifiedonbehalfby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 user_environmentvariablevalue
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owninguser")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("user_environmentvariablevalue")]
+		public Driv.CustomApis.SystemUser user_environmentvariablevalue
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("user_environmentvariablevalue", null);
+			}
+		}
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum OrganizationSettingState
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Active = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Inactive = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum organizationsetting_statuscode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Active = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Inactive = 2,
+	}
+	
+	/// <summary>
+	/// Holds the value for the associated Organization Setting Definition.
+	/// </summary>
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[Microsoft.Xrm.Sdk.Client.EntityLogicalNameAttribute("organizationsetting")]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public partial class OrganizationSetting : Microsoft.Xrm.Sdk.Entity, System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	{
+		
+		/// <summary>
+		/// Default Constructor.
+		/// </summary>
+		public OrganizationSetting() : 
+				base(EntityLogicalName)
+		{
+		}
+		
+		public const string EntityLogicalName = "organizationsetting";
+		
+		public const int EntityTypeCode = 10036;
+		
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+		
+		public event System.ComponentModel.PropertyChangingEventHandler PropertyChanging;
+		
+		private void OnPropertyChanged(string propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void OnPropertyChanging(string propertyName)
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, new System.ComponentModel.PropertyChangingEventArgs(propertyName));
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("componentidunique")]
+		public System.Nullable<System.Guid> ComponentIdUnique
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("componentidunique");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("componentstate")]
+		public System.Nullable<Driv.CustomApis.componentstate> ComponentState
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("componentstate");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.componentstate)(System.Enum.ToObject(typeof(Driv.CustomApis.componentstate), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the user who created the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
+		public Microsoft.Xrm.Sdk.EntityReference CreatedBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdby");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time when the record was created.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdon")]
+		public System.Nullable<System.DateTime> CreatedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("createdon");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the delegate user who created the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
+		public Microsoft.Xrm.Sdk.EntityReference CreatedOnBehalfBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// Display name of the Organization Setting.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("displayname")]
+		public string DisplayName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("displayname");
+			}
+		}
+		
+		/// <summary>
+		/// Sequence number of the import that created this record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("importsequencenumber")]
+		public System.Nullable<int> ImportSequenceNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("importsequencenumber");
+			}
+			set
+			{
+				this.OnPropertyChanging("ImportSequenceNumber");
+				this.SetAttributeValue("importsequencenumber", value);
+				this.OnPropertyChanged("ImportSequenceNumber");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("iscustomizable")]
+		public Microsoft.Xrm.Sdk.BooleanManagedProperty IsCustomizable
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.BooleanManagedProperty>("iscustomizable");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsCustomizable");
+				this.SetAttributeValue("iscustomizable", value);
+				this.OnPropertyChanged("IsCustomizable");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether the solution component is part of a managed solution.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("ismanaged")]
+		public System.Nullable<bool> IsManaged
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("ismanaged");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the user who modified the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
+		public Microsoft.Xrm.Sdk.EntityReference ModifiedBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedby");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time when the record was modified.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedon")]
+		public System.Nullable<System.DateTime> ModifiedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("modifiedon");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the delegate user who modified the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
+		public Microsoft.Xrm.Sdk.EntityReference ModifiedOnBehalfBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for the organization
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("organizationid")]
+		public Microsoft.Xrm.Sdk.EntityReference OrganizationId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("organizationid");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for entity instances
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("organizationsettingid")]
+		public System.Nullable<System.Guid> OrganizationSettingId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("organizationsettingid");
+			}
+			set
+			{
+				this.OnPropertyChanging("OrganizationSettingId");
+				this.SetAttributeValue("organizationsettingid", value);
+				if (value.HasValue)
+				{
+					base.Id = value.Value;
+				}
+				else
+				{
+					base.Id = System.Guid.Empty;
+				}
+				this.OnPropertyChanged("OrganizationSettingId");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("organizationsettingid")]
+		public override System.Guid Id
+		{
+			get
+			{
+				return base.Id;
+			}
+			set
+			{
+				this.OrganizationSettingId = value;
+			}
+		}
+		
+		/// <summary>
+		/// Date and time that the record was migrated.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("overriddencreatedon")]
+		public System.Nullable<System.DateTime> OverriddenCreatedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("overriddencreatedon");
+			}
+			set
+			{
+				this.OnPropertyChanging("OverriddenCreatedOn");
+				this.SetAttributeValue("overriddencreatedon", value);
+				this.OnPropertyChanged("OverriddenCreatedOn");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("overwritetime")]
+		public System.Nullable<System.DateTime> OverwriteTime
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("overwritetime");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for Setting Definition associated with OrganizationSetting.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("settingdefinitionid")]
+		public Microsoft.Xrm.Sdk.EntityReference SettingDefinitionId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("settingdefinitionid");
+			}
+			set
+			{
+				this.OnPropertyChanging("SettingDefinitionId");
+				this.SetAttributeValue("settingdefinitionid", value);
+				this.OnPropertyChanged("SettingDefinitionId");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the associated solution.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("solutionid")]
+		public System.Nullable<System.Guid> SolutionId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("solutionid");
+			}
+		}
+		
+		/// <summary>
+		/// Status of the OrganizationSetting
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statecode")]
+		public System.Nullable<Driv.CustomApis.OrganizationSettingState> statecode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("statecode");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.OrganizationSettingState)(System.Enum.ToObject(typeof(Driv.CustomApis.OrganizationSettingState), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Reason for the status of the OrganizationSetting
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statuscode")]
+		public System.Nullable<Driv.CustomApis.organizationsetting_statuscode> statuscode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("statuscode");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.organizationsetting_statuscode)(System.Enum.ToObject(typeof(Driv.CustomApis.organizationsetting_statuscode), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezoneruleversionnumber")]
+		public System.Nullable<int> TimeZoneRuleVersionNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezoneruleversionnumber");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneRuleVersionNumber");
+				this.SetAttributeValue("timezoneruleversionnumber", value);
+				this.OnPropertyChanged("TimeZoneRuleVersionNumber");
+			}
+		}
+		
+		/// <summary>
+		/// Unique Name for the Organization Setting.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("uniquename")]
+		public string UniqueName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("uniquename");
+			}
+			set
+			{
+				this.OnPropertyChanging("UniqueName");
+				this.SetAttributeValue("uniquename", value);
+				this.OnPropertyChanged("UniqueName");
+			}
+		}
+		
+		/// <summary>
+		/// Time zone code that was in use when the record was created.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("utcconversiontimezonecode")]
+		public System.Nullable<int> UTCConversionTimeZoneCode
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("utcconversiontimezonecode");
+			}
+			set
+			{
+				this.OnPropertyChanging("UTCConversionTimeZoneCode");
+				this.SetAttributeValue("utcconversiontimezonecode", value);
+				this.OnPropertyChanged("UTCConversionTimeZoneCode");
+			}
+		}
+		
+		/// <summary>
+		/// Contains the actual value of organization settings.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("value")]
+		public string Value
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("value");
+			}
+			set
+			{
+				this.OnPropertyChanging("Value");
+				this.SetAttributeValue("value", value);
+				this.OnPropertyChanged("Value");
+			}
+		}
+		
+		/// <summary>
+		/// Version Number
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("versionnumber")]
+		public System.Nullable<long> VersionNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<long>>("versionnumber");
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_organizationsetting_createdby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_organizationsetting_createdby")]
+		public Driv.CustomApis.SystemUser lk_organizationsetting_createdby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_organizationsetting_createdby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_organizationsetting_createdonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_organizationsetting_createdonbehalfby")]
+		public Driv.CustomApis.SystemUser lk_organizationsetting_createdonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_organizationsetting_createdonbehalfby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_organizationsetting_modifiedby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_organizationsetting_modifiedby")]
+		public Driv.CustomApis.SystemUser lk_organizationsetting_modifiedby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_organizationsetting_modifiedby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_organizationsetting_modifiedonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_organizationsetting_modifiedonbehalfby")]
+		public Driv.CustomApis.SystemUser lk_organizationsetting_modifiedonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_organizationsetting_modifiedonbehalfby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 settingdefinition_organizationsetting_settingdefinitionid
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("settingdefinitionid")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("settingdefinition_organizationsetting_settingdefinitionid")]
+		public Driv.CustomApis.SettingDefinition settingdefinition_organizationsetting_settingdefinitionid
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SettingDefinition>("settingdefinition_organizationsetting_settingdefinitionid", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("settingdefinition_organizationsetting_settingdefinitionid");
+				this.SetRelatedEntity<Driv.CustomApis.SettingDefinition>("settingdefinition_organizationsetting_settingdefinitionid", null, value);
+				this.OnPropertyChanged("settingdefinition_organizationsetting_settingdefinitionid");
+			}
+		}
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum settingdefinition_datatype
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Number = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		String = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Boolean = 2,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum settingdefinition_overridablelevel
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		AppAndOrganization = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		OrganizationOnly = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		AppOnly = 2,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum settingdefinition_releaselevel
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		GA = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		EarlyAccess = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Preview = 2,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum SettingDefinitionState
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Active = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Inactive = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum settingdefinition_statuscode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Active = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Inactive = 2,
+	}
+	
+	/// <summary>
+	/// Contains Setting Definitions
+	/// </summary>
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[Microsoft.Xrm.Sdk.Client.EntityLogicalNameAttribute("settingdefinition")]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public partial class SettingDefinition : Microsoft.Xrm.Sdk.Entity, System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	{
+		
+		/// <summary>
+		/// Default Constructor.
+		/// </summary>
+		public SettingDefinition() : 
+				base(EntityLogicalName)
+		{
+		}
+		
+		public const string EntityLogicalName = "settingdefinition";
+		
+		public const int EntityTypeCode = 10037;
+		
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+		
+		public event System.ComponentModel.PropertyChangingEventHandler PropertyChanging;
+		
+		private void OnPropertyChanged(string propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void OnPropertyChanging(string propertyName)
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, new System.ComponentModel.PropertyChangingEventArgs(propertyName));
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("componentidunique")]
+		public System.Nullable<System.Guid> ComponentIdUnique
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("componentidunique");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("componentstate")]
+		public System.Nullable<Driv.CustomApis.componentstate> ComponentState
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("componentstate");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.componentstate)(System.Enum.ToObject(typeof(Driv.CustomApis.componentstate), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the user who created the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
+		public Microsoft.Xrm.Sdk.EntityReference CreatedBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdby");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time when the record was created.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdon")]
+		public System.Nullable<System.DateTime> CreatedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("createdon");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the delegate user who created the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
+		public Microsoft.Xrm.Sdk.EntityReference CreatedOnBehalfBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// Data type of Setting Definition.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("datatype")]
+		public System.Nullable<Driv.CustomApis.settingdefinition_datatype> DataType
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("datatype");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.settingdefinition_datatype)(System.Enum.ToObject(typeof(Driv.CustomApis.settingdefinition_datatype), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("DataType");
+				if ((value == null))
+				{
+					this.SetAttributeValue("datatype", null);
+				}
+				else
+				{
+					this.SetAttributeValue("datatype", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("DataType");
+			}
+		}
+		
+		/// <summary>
+		/// Default value to be used, if there is no associated App Setting Value.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("defaultvalue")]
+		public string DefaultValue
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("defaultvalue");
+			}
+			set
+			{
+				this.OnPropertyChanging("DefaultValue");
+				this.SetAttributeValue("defaultvalue", value);
+				this.OnPropertyChanged("DefaultValue");
+			}
+		}
+		
+		/// <summary>
+		/// The description of the Setting Definition.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("description")]
+		public string Description
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("description");
+			}
+			set
+			{
+				this.OnPropertyChanging("Description");
+				this.SetAttributeValue("description", value);
+				this.OnPropertyChanged("Description");
+			}
+		}
+		
+		/// <summary>
+		/// Display name of the Setting Definition.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("displayname")]
+		public string DisplayName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("displayname");
+			}
+			set
+			{
+				this.OnPropertyChanging("DisplayName");
+				this.SetAttributeValue("displayname", value);
+				this.OnPropertyChanged("DisplayName");
+			}
+		}
+		
+		/// <summary>
+		/// Sequence number of the import that created this record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("importsequencenumber")]
+		public System.Nullable<int> ImportSequenceNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("importsequencenumber");
+			}
+			set
+			{
+				this.OnPropertyChanging("ImportSequenceNumber");
+				this.SetAttributeValue("importsequencenumber", value);
+				this.OnPropertyChanged("ImportSequenceNumber");
+			}
+		}
+		
+		/// <summary>
+		/// Specifies information url of the setting.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("informationurl")]
+		public string InformationUrl
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("informationurl");
+			}
+			set
+			{
+				this.OnPropertyChanging("InformationUrl");
+				this.SetAttributeValue("informationurl", value);
+				this.OnPropertyChanged("InformationUrl");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("iscustomizable")]
+		public Microsoft.Xrm.Sdk.BooleanManagedProperty IsCustomizable
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.BooleanManagedProperty>("iscustomizable");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsCustomizable");
+				this.SetAttributeValue("iscustomizable", value);
+				this.OnPropertyChanged("IsCustomizable");
+			}
+		}
+		
+		/// <summary>
+		/// Specifies whether settings is hidden from ui designer.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("ishidden")]
+		public System.Nullable<bool> IsHidden
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("ishidden");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsHidden");
+				this.SetAttributeValue("ishidden", value);
+				this.OnPropertyChanged("IsHidden");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether the solution component is part of a managed solution.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("ismanaged")]
+		public System.Nullable<bool> IsManaged
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("ismanaged");
+			}
+		}
+		
+		/// <summary>
+		/// Specifies whether settings can be overridden at an app or org level by other publishers.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isoverridable")]
+		public System.Nullable<bool> IsOverridable
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isoverridable");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsOverridable");
+				this.SetAttributeValue("isoverridable", value);
+				this.OnPropertyChanged("IsOverridable");
+			}
+		}
+		
+		/// <summary>
+		/// Specifies whether setting is a internal platform setting.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isplatform")]
+		public System.Nullable<bool> IsPlatform
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isplatform");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsPlatform");
+				this.SetAttributeValue("isplatform", value);
+				this.OnPropertyChanged("IsPlatform");
+			}
+		}
+		
+		/// <summary>
+		/// Specifies whether settings controls the flighting a preview feature.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("ispreview")]
+		public System.Nullable<bool> IsPreview
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("ispreview");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the user who modified the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
+		public Microsoft.Xrm.Sdk.EntityReference ModifiedBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedby");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time when the record was modified.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedon")]
+		public System.Nullable<System.DateTime> ModifiedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("modifiedon");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the delegate user who modified the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
+		public Microsoft.Xrm.Sdk.EntityReference ModifiedOnBehalfBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for the organization
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("organizationid")]
+		public Microsoft.Xrm.Sdk.EntityReference OrganizationId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("organizationid");
+			}
+		}
+		
+		/// <summary>
+		/// Overridable Level of Setting Definition.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("overridablelevel")]
+		public System.Nullable<Driv.CustomApis.settingdefinition_overridablelevel> OverridableLevel
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("overridablelevel");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.settingdefinition_overridablelevel)(System.Enum.ToObject(typeof(Driv.CustomApis.settingdefinition_overridablelevel), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("OverridableLevel");
+				if ((value == null))
+				{
+					this.SetAttributeValue("overridablelevel", null);
+				}
+				else
+				{
+					this.SetAttributeValue("overridablelevel", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("OverridableLevel");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time that the record was migrated.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("overriddencreatedon")]
+		public System.Nullable<System.DateTime> OverriddenCreatedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("overriddencreatedon");
+			}
+			set
+			{
+				this.OnPropertyChanging("OverriddenCreatedOn");
+				this.SetAttributeValue("overriddencreatedon", value);
+				this.OnPropertyChanged("OverriddenCreatedOn");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("overwritetime")]
+		public System.Nullable<System.DateTime> OverwriteTime
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("overwritetime");
+			}
+		}
+		
+		/// <summary>
+		/// Specifies settings release level.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("releaselevel")]
+		public System.Nullable<Driv.CustomApis.settingdefinition_releaselevel> ReleaseLevel
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("releaselevel");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.settingdefinition_releaselevel)(System.Enum.ToObject(typeof(Driv.CustomApis.settingdefinition_releaselevel), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("ReleaseLevel");
+				if ((value == null))
+				{
+					this.SetAttributeValue("releaselevel", null);
+				}
+				else
+				{
+					this.SetAttributeValue("releaselevel", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("ReleaseLevel");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for entity instances
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("settingdefinitionid")]
+		public System.Nullable<System.Guid> SettingDefinitionId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("settingdefinitionid");
+			}
+			set
+			{
+				this.OnPropertyChanging("SettingDefinitionId");
+				this.SetAttributeValue("settingdefinitionid", value);
+				if (value.HasValue)
+				{
+					base.Id = value.Value;
+				}
+				else
+				{
+					base.Id = System.Guid.Empty;
+				}
+				this.OnPropertyChanged("SettingDefinitionId");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("settingdefinitionid")]
+		public override System.Guid Id
+		{
+			get
+			{
+				return base.Id;
+			}
+			set
+			{
+				this.SettingDefinitionId = value;
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the associated solution.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("solutionid")]
+		public System.Nullable<System.Guid> SolutionId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("solutionid");
+			}
+		}
+		
+		/// <summary>
+		/// Status of the SettingDefinition
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statecode")]
+		public System.Nullable<Driv.CustomApis.SettingDefinitionState> statecode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("statecode");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.SettingDefinitionState)(System.Enum.ToObject(typeof(Driv.CustomApis.SettingDefinitionState), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("statecode");
+				if ((value == null))
+				{
+					this.SetAttributeValue("statecode", null);
+				}
+				else
+				{
+					this.SetAttributeValue("statecode", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("statecode");
+			}
+		}
+		
+		/// <summary>
+		/// Reason for the status of the SettingDefinition
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statuscode")]
+		public System.Nullable<Driv.CustomApis.settingdefinition_statuscode> statuscode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("statuscode");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.settingdefinition_statuscode)(System.Enum.ToObject(typeof(Driv.CustomApis.settingdefinition_statuscode), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("statuscode");
+				if ((value == null))
+				{
+					this.SetAttributeValue("statuscode", null);
+				}
+				else
+				{
+					this.SetAttributeValue("statuscode", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("statuscode");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezoneruleversionnumber")]
+		public System.Nullable<int> TimeZoneRuleVersionNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezoneruleversionnumber");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneRuleVersionNumber");
+				this.SetAttributeValue("timezoneruleversionnumber", value);
+				this.OnPropertyChanged("TimeZoneRuleVersionNumber");
+			}
+		}
+		
+		/// <summary>
+		/// Unique name of the Setting Definition.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("uniquename")]
+		public string UniqueName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("uniquename");
+			}
+			set
+			{
+				this.OnPropertyChanging("UniqueName");
+				this.SetAttributeValue("uniquename", value);
+				this.OnPropertyChanged("UniqueName");
+			}
+		}
+		
+		/// <summary>
+		/// Time zone code that was in use when the record was created.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("utcconversiontimezonecode")]
+		public System.Nullable<int> UTCConversionTimeZoneCode
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("utcconversiontimezonecode");
+			}
+			set
+			{
+				this.OnPropertyChanging("UTCConversionTimeZoneCode");
+				this.SetAttributeValue("utcconversiontimezonecode", value);
+				this.OnPropertyChanged("UTCConversionTimeZoneCode");
+			}
+		}
+		
+		/// <summary>
+		/// Version Number
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("versionnumber")]
+		public System.Nullable<long> VersionNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<long>>("versionnumber");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N settingdefinition_appsetting_settingdefinitionid
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("settingdefinition_appsetting_settingdefinitionid")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.AppSetting> settingdefinition_appsetting_settingdefinitionid
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.AppSetting>("settingdefinition_appsetting_settingdefinitionid", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("settingdefinition_appsetting_settingdefinitionid");
+				this.SetRelatedEntities<Driv.CustomApis.AppSetting>("settingdefinition_appsetting_settingdefinitionid", null, value);
+				this.OnPropertyChanged("settingdefinition_appsetting_settingdefinitionid");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N settingdefinition_organizationsetting_settingdefinitionid
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("settingdefinition_organizationsetting_settingdefinitionid")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.OrganizationSetting> settingdefinition_organizationsetting_settingdefinitionid
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.OrganizationSetting>("settingdefinition_organizationsetting_settingdefinitionid", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("settingdefinition_organizationsetting_settingdefinitionid");
+				this.SetRelatedEntities<Driv.CustomApis.OrganizationSetting>("settingdefinition_organizationsetting_settingdefinitionid", null, value);
+				this.OnPropertyChanged("settingdefinition_organizationsetting_settingdefinitionid");
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_settingdefinition_createdby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_settingdefinition_createdby")]
+		public Driv.CustomApis.SystemUser lk_settingdefinition_createdby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_settingdefinition_createdby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_settingdefinition_createdonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_settingdefinition_createdonbehalfby")]
+		public Driv.CustomApis.SystemUser lk_settingdefinition_createdonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_settingdefinition_createdonbehalfby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_settingdefinition_modifiedby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_settingdefinition_modifiedby")]
+		public Driv.CustomApis.SystemUser lk_settingdefinition_modifiedby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_settingdefinition_modifiedby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_settingdefinition_modifiedonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_settingdefinition_modifiedonbehalfby")]
+		public Driv.CustomApis.SystemUser lk_settingdefinition_modifiedonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_settingdefinition_modifiedonbehalfby", null);
+			}
+		}
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum systemuser_accessmode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ReadWrite = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Administrative = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Read = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		SupportUser = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Noninteractive = 4,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		DelegatedAdmin = 5,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum systemuser_address1_addresstypecode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		DefaultValue = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum systemuser_address1_shippingmethodcode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		DefaultValue = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum systemuser_address2_addresstypecode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		DefaultValue = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum systemuser_address2_shippingmethodcode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		DefaultValue = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum systemuser_azurestate
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Exists = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Softdeleted = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Notfoundorharddeleted = 2,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum systemuser_caltype
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Professional = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Administrative = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Basic = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		DeviceProfessional = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		DeviceBasic = 4,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Essential = 5,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		DeviceEssential = 6,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Enterprise = 7,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		DeviceEnterprise = 8,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Sales = 9,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Service = 10,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		FieldService = 11,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ProjectService = 12,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum systemuser_deletestate
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Notdeleted = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Softdeleted = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum systemuser_emailrouteraccessapproval
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Empty = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Approved = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		PendingApproval = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Rejected = 3,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum systemuser_incomingemaildeliverymethod
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		None = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		MicrosoftDynamics365forOutlook = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ServerSideSynchronizationorEmailRouter = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ForwardMailbox = 3,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum systemuser_invitestatuscode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		InvitationNotSent = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Invited = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		InvitationNearExpired = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		InvitationExpired = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		InvitationAccepted = 4,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		InvitationRejected = 5,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		InvitationRevoked = 6,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum systemuser_outgoingemaildeliverymethod
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		None = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		MicrosoftDynamics365forOutlook = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		ServerSideSynchronizationorEmailRouter = 2,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum systemuser_preferredaddresscode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		MailingAddress = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		OtherAddress = 2,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum systemuser_preferredemailcode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		DefaultValue = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum systemuser_preferredphonecode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		MainPhone = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		OtherPhone = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		HomePhone = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		MobilePhone = 4,
+	}
+	
+	/// <summary>
+	/// Person with access to the Microsoft CRM system and who owns objects in the Microsoft CRM database.
+	/// </summary>
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[Microsoft.Xrm.Sdk.Client.EntityLogicalNameAttribute("systemuser")]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public partial class SystemUser : Microsoft.Xrm.Sdk.Entity, System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	{
+		
+		/// <summary>
+		/// Default Constructor.
+		/// </summary>
+		public SystemUser() : 
+				base(EntityLogicalName)
+		{
+		}
+		
+		public const string EntityLogicalName = "systemuser";
+		
+		public const int EntityTypeCode = 8;
+		
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+		
+		public event System.ComponentModel.PropertyChangingEventHandler PropertyChanging;
+		
+		private void OnPropertyChanged(string propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void OnPropertyChanging(string propertyName)
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, new System.ComponentModel.PropertyChangingEventArgs(propertyName));
+			}
+		}
+		
+		/// <summary>
+		/// Type of user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("accessmode")]
+		public System.Nullable<Driv.CustomApis.systemuser_accessmode> AccessMode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("accessmode");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.systemuser_accessmode)(System.Enum.ToObject(typeof(Driv.CustomApis.systemuser_accessmode), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("AccessMode");
+				if ((value == null))
+				{
+					this.SetAttributeValue("accessmode", null);
+				}
+				else
+				{
+					this.SetAttributeValue("accessmode", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("AccessMode");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for address 1.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_addressid")]
+		public System.Nullable<System.Guid> Address1_AddressId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("address1_addressid");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address1_AddressId");
+				this.SetAttributeValue("address1_addressid", value);
+				this.OnPropertyChanged("Address1_AddressId");
+			}
+		}
+		
+		/// <summary>
+		/// Type of address for address 1, such as billing, shipping, or primary address.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_addresstypecode")]
+		public System.Nullable<Driv.CustomApis.systemuser_address1_addresstypecode> Address1_AddressTypeCode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("address1_addresstypecode");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.systemuser_address1_addresstypecode)(System.Enum.ToObject(typeof(Driv.CustomApis.systemuser_address1_addresstypecode), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("Address1_AddressTypeCode");
+				if ((value == null))
+				{
+					this.SetAttributeValue("address1_addresstypecode", null);
+				}
+				else
+				{
+					this.SetAttributeValue("address1_addresstypecode", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("Address1_AddressTypeCode");
+			}
+		}
+		
+		/// <summary>
+		/// City name for address 1.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_city")]
+		public string Address1_City
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address1_city");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address1_City");
+				this.SetAttributeValue("address1_city", value);
+				this.OnPropertyChanged("Address1_City");
+			}
+		}
+		
+		/// <summary>
+		/// Shows the complete primary address.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_composite")]
+		public string Address1_Composite
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address1_composite");
+			}
+		}
+		
+		/// <summary>
+		/// Country/region name in address 1.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_country")]
+		public string Address1_Country
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address1_country");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address1_Country");
+				this.SetAttributeValue("address1_country", value);
+				this.OnPropertyChanged("Address1_Country");
+			}
+		}
+		
+		/// <summary>
+		/// County name for address 1.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_county")]
+		public string Address1_County
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address1_county");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address1_County");
+				this.SetAttributeValue("address1_county", value);
+				this.OnPropertyChanged("Address1_County");
+			}
+		}
+		
+		/// <summary>
+		/// Fax number for address 1.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_fax")]
+		public string Address1_Fax
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address1_fax");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address1_Fax");
+				this.SetAttributeValue("address1_fax", value);
+				this.OnPropertyChanged("Address1_Fax");
+			}
+		}
+		
+		/// <summary>
+		/// Latitude for address 1.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_latitude")]
+		public System.Nullable<double> Address1_Latitude
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<double>>("address1_latitude");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address1_Latitude");
+				this.SetAttributeValue("address1_latitude", value);
+				this.OnPropertyChanged("Address1_Latitude");
+			}
+		}
+		
+		/// <summary>
+		/// First line for entering address 1 information.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_line1")]
+		public string Address1_Line1
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address1_line1");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address1_Line1");
+				this.SetAttributeValue("address1_line1", value);
+				this.OnPropertyChanged("Address1_Line1");
+			}
+		}
+		
+		/// <summary>
+		/// Second line for entering address 1 information.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_line2")]
+		public string Address1_Line2
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address1_line2");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address1_Line2");
+				this.SetAttributeValue("address1_line2", value);
+				this.OnPropertyChanged("Address1_Line2");
+			}
+		}
+		
+		/// <summary>
+		/// Third line for entering address 1 information.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_line3")]
+		public string Address1_Line3
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address1_line3");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address1_Line3");
+				this.SetAttributeValue("address1_line3", value);
+				this.OnPropertyChanged("Address1_Line3");
+			}
+		}
+		
+		/// <summary>
+		/// Longitude for address 1.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_longitude")]
+		public System.Nullable<double> Address1_Longitude
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<double>>("address1_longitude");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address1_Longitude");
+				this.SetAttributeValue("address1_longitude", value);
+				this.OnPropertyChanged("Address1_Longitude");
+			}
+		}
+		
+		/// <summary>
+		/// Name to enter for address 1.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_name")]
+		public string Address1_Name
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address1_name");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address1_Name");
+				this.SetAttributeValue("address1_name", value);
+				this.OnPropertyChanged("Address1_Name");
+			}
+		}
+		
+		/// <summary>
+		/// ZIP Code or postal code for address 1.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_postalcode")]
+		public string Address1_PostalCode
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address1_postalcode");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address1_PostalCode");
+				this.SetAttributeValue("address1_postalcode", value);
+				this.OnPropertyChanged("Address1_PostalCode");
+			}
+		}
+		
+		/// <summary>
+		/// Post office box number for address 1.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_postofficebox")]
+		public string Address1_PostOfficeBox
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address1_postofficebox");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address1_PostOfficeBox");
+				this.SetAttributeValue("address1_postofficebox", value);
+				this.OnPropertyChanged("Address1_PostOfficeBox");
+			}
+		}
+		
+		/// <summary>
+		/// Method of shipment for address 1.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_shippingmethodcode")]
+		public System.Nullable<Driv.CustomApis.systemuser_address1_shippingmethodcode> Address1_ShippingMethodCode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("address1_shippingmethodcode");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.systemuser_address1_shippingmethodcode)(System.Enum.ToObject(typeof(Driv.CustomApis.systemuser_address1_shippingmethodcode), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("Address1_ShippingMethodCode");
+				if ((value == null))
+				{
+					this.SetAttributeValue("address1_shippingmethodcode", null);
+				}
+				else
+				{
+					this.SetAttributeValue("address1_shippingmethodcode", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("Address1_ShippingMethodCode");
+			}
+		}
+		
+		/// <summary>
+		/// State or province for address 1.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_stateorprovince")]
+		public string Address1_StateOrProvince
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address1_stateorprovince");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address1_StateOrProvince");
+				this.SetAttributeValue("address1_stateorprovince", value);
+				this.OnPropertyChanged("Address1_StateOrProvince");
+			}
+		}
+		
+		/// <summary>
+		/// First telephone number associated with address 1.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_telephone1")]
+		public string Address1_Telephone1
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address1_telephone1");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address1_Telephone1");
+				this.SetAttributeValue("address1_telephone1", value);
+				this.OnPropertyChanged("Address1_Telephone1");
+			}
+		}
+		
+		/// <summary>
+		/// Second telephone number associated with address 1.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_telephone2")]
+		public string Address1_Telephone2
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address1_telephone2");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address1_Telephone2");
+				this.SetAttributeValue("address1_telephone2", value);
+				this.OnPropertyChanged("Address1_Telephone2");
+			}
+		}
+		
+		/// <summary>
+		/// Third telephone number associated with address 1.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_telephone3")]
+		public string Address1_Telephone3
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address1_telephone3");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address1_Telephone3");
+				this.SetAttributeValue("address1_telephone3", value);
+				this.OnPropertyChanged("Address1_Telephone3");
+			}
+		}
+		
+		/// <summary>
+		/// United Parcel Service (UPS) zone for address 1.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_upszone")]
+		public string Address1_UPSZone
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address1_upszone");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address1_UPSZone");
+				this.SetAttributeValue("address1_upszone", value);
+				this.OnPropertyChanged("Address1_UPSZone");
+			}
+		}
+		
+		/// <summary>
+		/// UTC offset for address 1. This is the difference between local time and standard Coordinated Universal Time.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_utcoffset")]
+		public System.Nullable<int> Address1_UTCOffset
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("address1_utcoffset");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address1_UTCOffset");
+				this.SetAttributeValue("address1_utcoffset", value);
+				this.OnPropertyChanged("Address1_UTCOffset");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for address 2.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_addressid")]
+		public System.Nullable<System.Guid> Address2_AddressId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("address2_addressid");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address2_AddressId");
+				this.SetAttributeValue("address2_addressid", value);
+				this.OnPropertyChanged("Address2_AddressId");
+			}
+		}
+		
+		/// <summary>
+		/// Type of address for address 2, such as billing, shipping, or primary address.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_addresstypecode")]
+		public System.Nullable<Driv.CustomApis.systemuser_address2_addresstypecode> Address2_AddressTypeCode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("address2_addresstypecode");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.systemuser_address2_addresstypecode)(System.Enum.ToObject(typeof(Driv.CustomApis.systemuser_address2_addresstypecode), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("Address2_AddressTypeCode");
+				if ((value == null))
+				{
+					this.SetAttributeValue("address2_addresstypecode", null);
+				}
+				else
+				{
+					this.SetAttributeValue("address2_addresstypecode", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("Address2_AddressTypeCode");
+			}
+		}
+		
+		/// <summary>
+		/// City name for address 2.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_city")]
+		public string Address2_City
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address2_city");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address2_City");
+				this.SetAttributeValue("address2_city", value);
+				this.OnPropertyChanged("Address2_City");
+			}
+		}
+		
+		/// <summary>
+		/// Shows the complete secondary address.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_composite")]
+		public string Address2_Composite
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address2_composite");
+			}
+		}
+		
+		/// <summary>
+		/// Country/region name in address 2.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_country")]
+		public string Address2_Country
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address2_country");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address2_Country");
+				this.SetAttributeValue("address2_country", value);
+				this.OnPropertyChanged("Address2_Country");
+			}
+		}
+		
+		/// <summary>
+		/// County name for address 2.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_county")]
+		public string Address2_County
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address2_county");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address2_County");
+				this.SetAttributeValue("address2_county", value);
+				this.OnPropertyChanged("Address2_County");
+			}
+		}
+		
+		/// <summary>
+		/// Fax number for address 2.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_fax")]
+		public string Address2_Fax
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address2_fax");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address2_Fax");
+				this.SetAttributeValue("address2_fax", value);
+				this.OnPropertyChanged("Address2_Fax");
+			}
+		}
+		
+		/// <summary>
+		/// Latitude for address 2.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_latitude")]
+		public System.Nullable<double> Address2_Latitude
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<double>>("address2_latitude");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address2_Latitude");
+				this.SetAttributeValue("address2_latitude", value);
+				this.OnPropertyChanged("Address2_Latitude");
+			}
+		}
+		
+		/// <summary>
+		/// First line for entering address 2 information.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_line1")]
+		public string Address2_Line1
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address2_line1");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address2_Line1");
+				this.SetAttributeValue("address2_line1", value);
+				this.OnPropertyChanged("Address2_Line1");
+			}
+		}
+		
+		/// <summary>
+		/// Second line for entering address 2 information.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_line2")]
+		public string Address2_Line2
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address2_line2");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address2_Line2");
+				this.SetAttributeValue("address2_line2", value);
+				this.OnPropertyChanged("Address2_Line2");
+			}
+		}
+		
+		/// <summary>
+		/// Third line for entering address 2 information.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_line3")]
+		public string Address2_Line3
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address2_line3");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address2_Line3");
+				this.SetAttributeValue("address2_line3", value);
+				this.OnPropertyChanged("Address2_Line3");
+			}
+		}
+		
+		/// <summary>
+		/// Longitude for address 2.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_longitude")]
+		public System.Nullable<double> Address2_Longitude
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<double>>("address2_longitude");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address2_Longitude");
+				this.SetAttributeValue("address2_longitude", value);
+				this.OnPropertyChanged("Address2_Longitude");
+			}
+		}
+		
+		/// <summary>
+		/// Name to enter for address 2.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_name")]
+		public string Address2_Name
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address2_name");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address2_Name");
+				this.SetAttributeValue("address2_name", value);
+				this.OnPropertyChanged("Address2_Name");
+			}
+		}
+		
+		/// <summary>
+		/// ZIP Code or postal code for address 2.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_postalcode")]
+		public string Address2_PostalCode
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address2_postalcode");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address2_PostalCode");
+				this.SetAttributeValue("address2_postalcode", value);
+				this.OnPropertyChanged("Address2_PostalCode");
+			}
+		}
+		
+		/// <summary>
+		/// Post office box number for address 2.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_postofficebox")]
+		public string Address2_PostOfficeBox
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address2_postofficebox");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address2_PostOfficeBox");
+				this.SetAttributeValue("address2_postofficebox", value);
+				this.OnPropertyChanged("Address2_PostOfficeBox");
+			}
+		}
+		
+		/// <summary>
+		/// Method of shipment for address 2.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_shippingmethodcode")]
+		public System.Nullable<Driv.CustomApis.systemuser_address2_shippingmethodcode> Address2_ShippingMethodCode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("address2_shippingmethodcode");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.systemuser_address2_shippingmethodcode)(System.Enum.ToObject(typeof(Driv.CustomApis.systemuser_address2_shippingmethodcode), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("Address2_ShippingMethodCode");
+				if ((value == null))
+				{
+					this.SetAttributeValue("address2_shippingmethodcode", null);
+				}
+				else
+				{
+					this.SetAttributeValue("address2_shippingmethodcode", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("Address2_ShippingMethodCode");
+			}
+		}
+		
+		/// <summary>
+		/// State or province for address 2.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_stateorprovince")]
+		public string Address2_StateOrProvince
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address2_stateorprovince");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address2_StateOrProvince");
+				this.SetAttributeValue("address2_stateorprovince", value);
+				this.OnPropertyChanged("Address2_StateOrProvince");
+			}
+		}
+		
+		/// <summary>
+		/// First telephone number associated with address 2.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_telephone1")]
+		public string Address2_Telephone1
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address2_telephone1");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address2_Telephone1");
+				this.SetAttributeValue("address2_telephone1", value);
+				this.OnPropertyChanged("Address2_Telephone1");
+			}
+		}
+		
+		/// <summary>
+		/// Second telephone number associated with address 2.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_telephone2")]
+		public string Address2_Telephone2
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address2_telephone2");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address2_Telephone2");
+				this.SetAttributeValue("address2_telephone2", value);
+				this.OnPropertyChanged("Address2_Telephone2");
+			}
+		}
+		
+		/// <summary>
+		/// Third telephone number associated with address 2.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_telephone3")]
+		public string Address2_Telephone3
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address2_telephone3");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address2_Telephone3");
+				this.SetAttributeValue("address2_telephone3", value);
+				this.OnPropertyChanged("Address2_Telephone3");
+			}
+		}
+		
+		/// <summary>
+		/// United Parcel Service (UPS) zone for address 2.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_upszone")]
+		public string Address2_UPSZone
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("address2_upszone");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address2_UPSZone");
+				this.SetAttributeValue("address2_upszone", value);
+				this.OnPropertyChanged("Address2_UPSZone");
+			}
+		}
+		
+		/// <summary>
+		/// UTC offset for address 2. This is the difference between local time and standard Coordinated Universal Time.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_utcoffset")]
+		public System.Nullable<int> Address2_UTCOffset
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("address2_utcoffset");
+			}
+			set
+			{
+				this.OnPropertyChanging("Address2_UTCOffset");
+				this.SetAttributeValue("address2_utcoffset", value);
+				this.OnPropertyChanged("Address2_UTCOffset");
+			}
+		}
+		
+		/// <summary>
+		/// The identifier for the application. This is used to access data in another application.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("applicationid")]
+		public System.Nullable<System.Guid> ApplicationId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("applicationid");
+			}
+			set
+			{
+				this.OnPropertyChanging("ApplicationId");
+				this.SetAttributeValue("applicationid", value);
+				this.OnPropertyChanged("ApplicationId");
+			}
+		}
+		
+		/// <summary>
+		/// The URI used as a unique logical identifier for the external app. This can be used to validate the application.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("applicationiduri")]
+		public string ApplicationIdUri
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("applicationiduri");
+			}
+		}
+		
+		/// <summary>
+		/// This is the application directory object Id.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("azureactivedirectoryobjectid")]
+		public System.Nullable<System.Guid> AzureActiveDirectoryObjectId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("azureactivedirectoryobjectid");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time when the user was set as soft deleted in Azure.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("azuredeletedon")]
+		public System.Nullable<System.DateTime> AzureDeletedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("azuredeletedon");
+			}
+		}
+		
+		/// <summary>
+		/// Azure state of user
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("azurestate")]
+		public System.Nullable<Driv.CustomApis.systemuser_azurestate> AzureState
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("azurestate");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.systemuser_azurestate)(System.Enum.ToObject(typeof(Driv.CustomApis.systemuser_azurestate), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("AzureState");
+				if ((value == null))
+				{
+					this.SetAttributeValue("azurestate", null);
+				}
+				else
+				{
+					this.SetAttributeValue("azurestate", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("AzureState");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the business unit with which the user is associated.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("businessunitid")]
+		public Microsoft.Xrm.Sdk.EntityReference BusinessUnitId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("businessunitid");
+			}
+			set
+			{
+				this.OnPropertyChanging("BusinessUnitId");
+				this.SetAttributeValue("businessunitid", value);
+				this.OnPropertyChanged("BusinessUnitId");
+			}
+		}
+		
+		/// <summary>
+		/// Fiscal calendar associated with the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("calendarid")]
+		public Microsoft.Xrm.Sdk.EntityReference CalendarId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("calendarid");
+			}
+			set
+			{
+				this.OnPropertyChanging("CalendarId");
+				this.SetAttributeValue("calendarid", value);
+				this.OnPropertyChanged("CalendarId");
+			}
+		}
+		
+		/// <summary>
+		/// License type of user. This is used only in the on-premises version of the product. Online licenses are managed through Microsoft 365 Office Portal
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("caltype")]
+		public System.Nullable<Driv.CustomApis.systemuser_caltype> CALType
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("caltype");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.systemuser_caltype)(System.Enum.ToObject(typeof(Driv.CustomApis.systemuser_caltype), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("CALType");
+				if ((value == null))
+				{
+					this.SetAttributeValue("caltype", null);
+				}
+				else
+				{
+					this.SetAttributeValue("caltype", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("CALType");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the user who created the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
+		public Microsoft.Xrm.Sdk.EntityReference CreatedBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdby");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time when the user was created.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdon")]
+		public System.Nullable<System.DateTime> CreatedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("createdon");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the delegate user who created the systemuser.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
+		public Microsoft.Xrm.Sdk.EntityReference CreatedOnBehalfBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates if default outlook filters have been populated.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("defaultfilterspopulated")]
+		public System.Nullable<bool> DefaultFiltersPopulated
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("defaultfilterspopulated");
+			}
+		}
+		
+		/// <summary>
+		/// Select the mailbox associated with this user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("defaultmailbox")]
+		public Microsoft.Xrm.Sdk.EntityReference DefaultMailbox
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("defaultmailbox");
+			}
+		}
+		
+		/// <summary>
+		/// Type a default folder name for the user's OneDrive For Business location.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("defaultodbfoldername")]
+		public string DefaultOdbFolderName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("defaultodbfoldername");
+			}
+		}
+		
+		/// <summary>
+		/// User delete state
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("deletedstate")]
+		public System.Nullable<Driv.CustomApis.systemuser_deletestate> DeletedState
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("deletedstate");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.systemuser_deletestate)(System.Enum.ToObject(typeof(Driv.CustomApis.systemuser_deletestate), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Reason for disabling the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("disabledreason")]
+		public string DisabledReason
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("disabledreason");
+			}
+		}
+		
+		/// <summary>
+		/// Whether to display the user in service views.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("displayinserviceviews")]
+		public System.Nullable<bool> DisplayInServiceViews
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("displayinserviceviews");
+			}
+			set
+			{
+				this.OnPropertyChanging("DisplayInServiceViews");
+				this.SetAttributeValue("displayinserviceviews", value);
+				this.OnPropertyChanged("DisplayInServiceViews");
+			}
+		}
+		
+		/// <summary>
+		/// Active Directory domain of which the user is a member.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("domainname")]
+		public string DomainName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("domainname");
+			}
+			set
+			{
+				this.OnPropertyChanging("DomainName");
+				this.SetAttributeValue("domainname", value);
+				this.OnPropertyChanged("DomainName");
+			}
+		}
+		
+		/// <summary>
+		/// Shows the status of the primary email address.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("emailrouteraccessapproval")]
+		public System.Nullable<Driv.CustomApis.systemuser_emailrouteraccessapproval> EmailRouterAccessApproval
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("emailrouteraccessapproval");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.systemuser_emailrouteraccessapproval)(System.Enum.ToObject(typeof(Driv.CustomApis.systemuser_emailrouteraccessapproval), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("EmailRouterAccessApproval");
+				if ((value == null))
+				{
+					this.SetAttributeValue("emailrouteraccessapproval", null);
+				}
+				else
+				{
+					this.SetAttributeValue("emailrouteraccessapproval", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("EmailRouterAccessApproval");
+			}
+		}
+		
+		/// <summary>
+		/// Employee identifier for the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("employeeid")]
+		public string EmployeeId
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("employeeid");
+			}
+			set
+			{
+				this.OnPropertyChanging("EmployeeId");
+				this.SetAttributeValue("employeeid", value);
+				this.OnPropertyChanged("EmployeeId");
+			}
+		}
+		
+		/// <summary>
+		/// Shows the default image for the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("entityimage")]
+		public byte[] EntityImage
+		{
+			get
+			{
+				return this.GetAttributeValue<byte[]>("entityimage");
+			}
+			set
+			{
+				this.OnPropertyChanging("EntityImage");
+				this.SetAttributeValue("entityimage", value);
+				this.OnPropertyChanged("EntityImage");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("entityimage_timestamp")]
+		public System.Nullable<long> EntityImage_Timestamp
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<long>>("entityimage_timestamp");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("entityimage_url")]
+		public string EntityImage_URL
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("entityimage_url");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("entityimageid")]
+		public System.Nullable<System.Guid> EntityImageId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("entityimageid");
+			}
+		}
+		
+		/// <summary>
+		/// Exchange rate for the currency associated with the systemuser with respect to the base currency.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("exchangerate")]
+		public System.Nullable<decimal> ExchangeRate
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<decimal>>("exchangerate");
+			}
+		}
+		
+		/// <summary>
+		/// First name of the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("firstname")]
+		public string FirstName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("firstname");
+			}
+			set
+			{
+				this.OnPropertyChanging("FirstName");
+				this.SetAttributeValue("firstname", value);
+				this.OnPropertyChanged("FirstName");
+			}
+		}
+		
+		/// <summary>
+		/// Full name of the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("fullname")]
+		public string FullName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("fullname");
+			}
+		}
+		
+		/// <summary>
+		/// Government identifier for the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("governmentid")]
+		public string GovernmentId
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("governmentid");
+			}
+			set
+			{
+				this.OnPropertyChanging("GovernmentId");
+				this.SetAttributeValue("governmentid", value);
+				this.OnPropertyChanged("GovernmentId");
+			}
+		}
+		
+		/// <summary>
+		/// Home phone number for the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("homephone")]
+		public string HomePhone
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("homephone");
+			}
+			set
+			{
+				this.OnPropertyChanging("HomePhone");
+				this.SetAttributeValue("homephone", value);
+				this.OnPropertyChanged("HomePhone");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("identityid")]
+		public System.Nullable<int> IdentityId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("identityid");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the data import or data migration that created this record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("importsequencenumber")]
+		public System.Nullable<int> ImportSequenceNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("importsequencenumber");
+			}
+			set
+			{
+				this.OnPropertyChanging("ImportSequenceNumber");
+				this.SetAttributeValue("importsequencenumber", value);
+				this.OnPropertyChanged("ImportSequenceNumber");
+			}
+		}
+		
+		/// <summary>
+		/// Incoming email delivery method for the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("incomingemaildeliverymethod")]
+		public System.Nullable<Driv.CustomApis.systemuser_incomingemaildeliverymethod> IncomingEmailDeliveryMethod
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("incomingemaildeliverymethod");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.systemuser_incomingemaildeliverymethod)(System.Enum.ToObject(typeof(Driv.CustomApis.systemuser_incomingemaildeliverymethod), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("IncomingEmailDeliveryMethod");
+				if ((value == null))
+				{
+					this.SetAttributeValue("incomingemaildeliverymethod", null);
+				}
+				else
+				{
+					this.SetAttributeValue("incomingemaildeliverymethod", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("IncomingEmailDeliveryMethod");
+			}
+		}
+		
+		/// <summary>
+		/// Internal email address for the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("internalemailaddress")]
+		public string InternalEMailAddress
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("internalemailaddress");
+			}
+			set
+			{
+				this.OnPropertyChanging("InternalEMailAddress");
+				this.SetAttributeValue("internalemailaddress", value);
+				this.OnPropertyChanged("InternalEMailAddress");
+			}
+		}
+		
+		/// <summary>
+		/// User invitation status.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("invitestatuscode")]
+		public System.Nullable<Driv.CustomApis.systemuser_invitestatuscode> InviteStatusCode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("invitestatuscode");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.systemuser_invitestatuscode)(System.Enum.ToObject(typeof(Driv.CustomApis.systemuser_invitestatuscode), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("InviteStatusCode");
+				if ((value == null))
+				{
+					this.SetAttributeValue("invitestatuscode", null);
+				}
+				else
+				{
+					this.SetAttributeValue("invitestatuscode", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("InviteStatusCode");
+			}
+		}
+		
+		/// <summary>
+		/// Information about whether the user is enabled.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isdisabled")]
+		public System.Nullable<bool> IsDisabled
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isdisabled");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsDisabled");
+				this.SetAttributeValue("isdisabled", value);
+				this.OnPropertyChanged("IsDisabled");
+			}
+		}
+		
+		/// <summary>
+		/// Shows the status of approval of the email address by O365 Admin.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isemailaddressapprovedbyo365admin")]
+		public System.Nullable<bool> IsEmailAddressApprovedByO365Admin
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isemailaddressapprovedbyo365admin");
+			}
+		}
+		
+		/// <summary>
+		/// Check if user is an integration user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isintegrationuser")]
+		public System.Nullable<bool> IsIntegrationUser
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isintegrationuser");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsIntegrationUser");
+				this.SetAttributeValue("isintegrationuser", value);
+				this.OnPropertyChanged("IsIntegrationUser");
+			}
+		}
+		
+		/// <summary>
+		/// Information about whether the user is licensed.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("islicensed")]
+		public System.Nullable<bool> IsLicensed
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("islicensed");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsLicensed");
+				this.SetAttributeValue("islicensed", value);
+				this.OnPropertyChanged("IsLicensed");
+			}
+		}
+		
+		/// <summary>
+		/// Information about whether the user is synced with the directory.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("issyncwithdirectory")]
+		public System.Nullable<bool> IsSyncWithDirectory
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("issyncwithdirectory");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsSyncWithDirectory");
+				this.SetAttributeValue("issyncwithdirectory", value);
+				this.OnPropertyChanged("IsSyncWithDirectory");
+			}
+		}
+		
+		/// <summary>
+		/// Job title of the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("jobtitle")]
+		public string JobTitle
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("jobtitle");
+			}
+			set
+			{
+				this.OnPropertyChanging("JobTitle");
+				this.SetAttributeValue("jobtitle", value);
+				this.OnPropertyChanged("JobTitle");
+			}
+		}
+		
+		/// <summary>
+		/// Last name of the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("lastname")]
+		public string LastName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("lastname");
+			}
+			set
+			{
+				this.OnPropertyChanging("LastName");
+				this.SetAttributeValue("lastname", value);
+				this.OnPropertyChanged("LastName");
+			}
+		}
+		
+		/// <summary>
+		/// Middle name of the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("middlename")]
+		public string MiddleName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("middlename");
+			}
+			set
+			{
+				this.OnPropertyChanging("MiddleName");
+				this.SetAttributeValue("middlename", value);
+				this.OnPropertyChanged("MiddleName");
+			}
+		}
+		
+		/// <summary>
+		/// Mobile alert email address for the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("mobilealertemail")]
+		public string MobileAlertEMail
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("mobilealertemail");
+			}
+			set
+			{
+				this.OnPropertyChanging("MobileAlertEMail");
+				this.SetAttributeValue("mobilealertemail", value);
+				this.OnPropertyChanged("MobileAlertEMail");
+			}
+		}
+		
+		/// <summary>
+		/// Items contained with a particular SystemUser.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("mobileofflineprofileid")]
+		public Microsoft.Xrm.Sdk.EntityReference MobileOfflineProfileId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("mobileofflineprofileid");
+			}
+			set
+			{
+				this.OnPropertyChanging("MobileOfflineProfileId");
+				this.SetAttributeValue("mobileofflineprofileid", value);
+				this.OnPropertyChanged("MobileOfflineProfileId");
+			}
+		}
+		
+		/// <summary>
+		/// Mobile phone number for the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("mobilephone")]
+		public string MobilePhone
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("mobilephone");
+			}
+			set
+			{
+				this.OnPropertyChanging("MobilePhone");
+				this.SetAttributeValue("mobilephone", value);
+				this.OnPropertyChanged("MobilePhone");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the user who last modified the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
+		public Microsoft.Xrm.Sdk.EntityReference ModifiedBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedby");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time when the user was last modified.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedon")]
+		public System.Nullable<System.DateTime> ModifiedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("modifiedon");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the delegate user who last modified the systemuser.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
+		public Microsoft.Xrm.Sdk.EntityReference ModifiedOnBehalfBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// Nickname of the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("nickname")]
+		public string NickName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("nickname");
+			}
+			set
+			{
+				this.OnPropertyChanging("NickName");
+				this.SetAttributeValue("nickname", value);
+				this.OnPropertyChanged("NickName");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the organization associated with the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("organizationid")]
+		public System.Nullable<System.Guid> OrganizationId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("organizationid");
+			}
+		}
+		
+		/// <summary>
+		/// Outgoing email delivery method for the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("outgoingemaildeliverymethod")]
+		public System.Nullable<Driv.CustomApis.systemuser_outgoingemaildeliverymethod> OutgoingEmailDeliveryMethod
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("outgoingemaildeliverymethod");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.systemuser_outgoingemaildeliverymethod)(System.Enum.ToObject(typeof(Driv.CustomApis.systemuser_outgoingemaildeliverymethod), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("OutgoingEmailDeliveryMethod");
+				if ((value == null))
+				{
+					this.SetAttributeValue("outgoingemaildeliverymethod", null);
+				}
+				else
+				{
+					this.SetAttributeValue("outgoingemaildeliverymethod", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("OutgoingEmailDeliveryMethod");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time that the record was migrated.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("overriddencreatedon")]
+		public System.Nullable<System.DateTime> OverriddenCreatedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("overriddencreatedon");
+			}
+			set
+			{
+				this.OnPropertyChanging("OverriddenCreatedOn");
+				this.SetAttributeValue("overriddencreatedon", value);
+				this.OnPropertyChanged("OverriddenCreatedOn");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the manager of the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("parentsystemuserid")]
+		public Microsoft.Xrm.Sdk.EntityReference ParentSystemUserId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("parentsystemuserid");
+			}
+			set
+			{
+				this.OnPropertyChanging("ParentSystemUserId");
+				this.SetAttributeValue("parentsystemuserid", value);
+				this.OnPropertyChanged("ParentSystemUserId");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("passporthi")]
+		public System.Nullable<int> PassportHi
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("passporthi");
+			}
+			set
+			{
+				this.OnPropertyChanging("PassportHi");
+				this.SetAttributeValue("passporthi", value);
+				this.OnPropertyChanged("PassportHi");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("passportlo")]
+		public System.Nullable<int> PassportLo
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("passportlo");
+			}
+			set
+			{
+				this.OnPropertyChanging("PassportLo");
+				this.SetAttributeValue("passportlo", value);
+				this.OnPropertyChanged("PassportLo");
+			}
+		}
+		
+		/// <summary>
+		/// Personal email address of the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("personalemailaddress")]
+		public string PersonalEMailAddress
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("personalemailaddress");
+			}
+			set
+			{
+				this.OnPropertyChanging("PersonalEMailAddress");
+				this.SetAttributeValue("personalemailaddress", value);
+				this.OnPropertyChanged("PersonalEMailAddress");
+			}
+		}
+		
+		/// <summary>
+		/// URL for the Website on which a photo of the user is located.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("photourl")]
+		public string PhotoUrl
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("photourl");
+			}
+			set
+			{
+				this.OnPropertyChanging("PhotoUrl");
+				this.SetAttributeValue("photourl", value);
+				this.OnPropertyChanged("PhotoUrl");
+			}
+		}
+		
+		/// <summary>
+		/// User's position in hierarchical security model.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("positionid")]
+		public Microsoft.Xrm.Sdk.EntityReference PositionId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("positionid");
+			}
+			set
+			{
+				this.OnPropertyChanging("PositionId");
+				this.SetAttributeValue("positionid", value);
+				this.OnPropertyChanged("PositionId");
+			}
+		}
+		
+		/// <summary>
+		/// Preferred address for the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("preferredaddresscode")]
+		public System.Nullable<Driv.CustomApis.systemuser_preferredaddresscode> PreferredAddressCode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("preferredaddresscode");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.systemuser_preferredaddresscode)(System.Enum.ToObject(typeof(Driv.CustomApis.systemuser_preferredaddresscode), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("PreferredAddressCode");
+				if ((value == null))
+				{
+					this.SetAttributeValue("preferredaddresscode", null);
+				}
+				else
+				{
+					this.SetAttributeValue("preferredaddresscode", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("PreferredAddressCode");
+			}
+		}
+		
+		/// <summary>
+		/// Preferred email address for the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("preferredemailcode")]
+		public System.Nullable<Driv.CustomApis.systemuser_preferredemailcode> PreferredEmailCode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("preferredemailcode");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.systemuser_preferredemailcode)(System.Enum.ToObject(typeof(Driv.CustomApis.systemuser_preferredemailcode), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("PreferredEmailCode");
+				if ((value == null))
+				{
+					this.SetAttributeValue("preferredemailcode", null);
+				}
+				else
+				{
+					this.SetAttributeValue("preferredemailcode", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("PreferredEmailCode");
+			}
+		}
+		
+		/// <summary>
+		/// Preferred phone number for the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("preferredphonecode")]
+		public System.Nullable<Driv.CustomApis.systemuser_preferredphonecode> PreferredPhoneCode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("preferredphonecode");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.systemuser_preferredphonecode)(System.Enum.ToObject(typeof(Driv.CustomApis.systemuser_preferredphonecode), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("PreferredPhoneCode");
+				if ((value == null))
+				{
+					this.SetAttributeValue("preferredphonecode", null);
+				}
+				else
+				{
+					this.SetAttributeValue("preferredphonecode", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("PreferredPhoneCode");
+			}
+		}
+		
+		/// <summary>
+		/// Shows the ID of the process.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("processid")]
+		public System.Nullable<System.Guid> ProcessId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("processid");
+			}
+			set
+			{
+				this.OnPropertyChanging("ProcessId");
+				this.SetAttributeValue("processid", value);
+				this.OnPropertyChanged("ProcessId");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the default queue for the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("queueid")]
+		public Microsoft.Xrm.Sdk.EntityReference QueueId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("queueid");
+			}
+			set
+			{
+				this.OnPropertyChanging("QueueId");
+				this.SetAttributeValue("queueid", value);
+				this.OnPropertyChanged("QueueId");
+			}
+		}
+		
+		/// <summary>
+		/// Salutation for correspondence with the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("salutation")]
+		public string Salutation
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("salutation");
+			}
+			set
+			{
+				this.OnPropertyChanging("Salutation");
+				this.SetAttributeValue("salutation", value);
+				this.OnPropertyChanged("Salutation");
+			}
+		}
+		
+		/// <summary>
+		/// Check if user is a setup user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("setupuser")]
+		public System.Nullable<bool> SetupUser
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("setupuser");
+			}
+			set
+			{
+				this.OnPropertyChanging("SetupUser");
+				this.SetAttributeValue("setupuser", value);
+				this.OnPropertyChanged("SetupUser");
+			}
+		}
+		
+		/// <summary>
+		/// SharePoint Work Email Address
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("sharepointemailaddress")]
+		public string SharePointEmailAddress
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("sharepointemailaddress");
+			}
+			set
+			{
+				this.OnPropertyChanging("SharePointEmailAddress");
+				this.SetAttributeValue("sharepointemailaddress", value);
+				this.OnPropertyChanged("SharePointEmailAddress");
+			}
+		}
+		
+		/// <summary>
+		/// Skill set of the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("skills")]
+		public string Skills
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("skills");
+			}
+			set
+			{
+				this.OnPropertyChanging("Skills");
+				this.SetAttributeValue("skills", value);
+				this.OnPropertyChanged("Skills");
+			}
+		}
+		
+		/// <summary>
+		/// Shows the ID of the stage.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("stageid")]
+		public System.Nullable<System.Guid> StageId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("stageid");
+			}
+			set
+			{
+				this.OnPropertyChanging("StageId");
+				this.SetAttributeValue("stageid", value);
+				this.OnPropertyChanged("StageId");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("systemuserid")]
+		public System.Nullable<System.Guid> SystemUserId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("systemuserid");
+			}
+			set
+			{
+				this.OnPropertyChanging("SystemUserId");
+				this.SetAttributeValue("systemuserid", value);
+				if (value.HasValue)
+				{
+					base.Id = value.Value;
+				}
+				else
+				{
+					base.Id = System.Guid.Empty;
+				}
+				this.OnPropertyChanged("SystemUserId");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("systemuserid")]
+		public override System.Guid Id
+		{
+			get
+			{
+				return base.Id;
+			}
+			set
+			{
+				this.SystemUserId = value;
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the territory to which the user is assigned.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("territoryid")]
+		public Microsoft.Xrm.Sdk.EntityReference TerritoryId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("territoryid");
+			}
+			set
+			{
+				this.OnPropertyChanging("TerritoryId");
+				this.SetAttributeValue("territoryid", value);
+				this.OnPropertyChanged("TerritoryId");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezoneruleversionnumber")]
+		public System.Nullable<int> TimeZoneRuleVersionNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezoneruleversionnumber");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneRuleVersionNumber");
+				this.SetAttributeValue("timezoneruleversionnumber", value);
+				this.OnPropertyChanged("TimeZoneRuleVersionNumber");
+			}
+		}
+		
+		/// <summary>
+		/// Title of the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("title")]
+		public string Title
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("title");
+			}
+			set
+			{
+				this.OnPropertyChanging("Title");
+				this.SetAttributeValue("title", value);
+				this.OnPropertyChanged("Title");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the currency associated with the systemuser.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("transactioncurrencyid")]
+		public Microsoft.Xrm.Sdk.EntityReference TransactionCurrencyId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("transactioncurrencyid");
+			}
+			set
+			{
+				this.OnPropertyChanging("TransactionCurrencyId");
+				this.SetAttributeValue("transactioncurrencyid", value);
+				this.OnPropertyChanged("TransactionCurrencyId");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("traversedpath")]
+		public string TraversedPath
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("traversedpath");
+			}
+			set
+			{
+				this.OnPropertyChanging("TraversedPath");
+				this.SetAttributeValue("traversedpath", value);
+				this.OnPropertyChanged("TraversedPath");
+			}
+		}
+		
+		/// <summary>
+		/// Shows the type of user license.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("userlicensetype")]
+		public System.Nullable<int> UserLicenseType
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("userlicensetype");
+			}
+			set
+			{
+				this.OnPropertyChanging("UserLicenseType");
+				this.SetAttributeValue("userlicensetype", value);
+				this.OnPropertyChanged("UserLicenseType");
+			}
+		}
+		
+		/// <summary>
+		///  User PUID User Identifiable Information
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("userpuid")]
+		public string UserPuid
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("userpuid");
+			}
+		}
+		
+		/// <summary>
+		/// Time zone code that was in use when the record was created.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("utcconversiontimezonecode")]
+		public System.Nullable<int> UTCConversionTimeZoneCode
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("utcconversiontimezonecode");
+			}
+			set
+			{
+				this.OnPropertyChanging("UTCConversionTimeZoneCode");
+				this.SetAttributeValue("utcconversiontimezonecode", value);
+				this.OnPropertyChanged("UTCConversionTimeZoneCode");
+			}
+		}
+		
+		/// <summary>
+		/// Version number of the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("versionnumber")]
+		public System.Nullable<long> VersionNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<long>>("versionnumber");
+			}
+		}
+		
+		/// <summary>
+		/// Windows Live ID
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("windowsliveid")]
+		public string WindowsLiveID
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("windowsliveid");
+			}
+			set
+			{
+				this.OnPropertyChanging("WindowsLiveID");
+				this.SetAttributeValue("windowsliveid", value);
+				this.OnPropertyChanged("WindowsLiveID");
+			}
+		}
+		
+		/// <summary>
+		/// User's Yammer login email address
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("yammeremailaddress")]
+		public string YammerEmailAddress
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("yammeremailaddress");
+			}
+			set
+			{
+				this.OnPropertyChanging("YammerEmailAddress");
+				this.SetAttributeValue("yammeremailaddress", value);
+				this.OnPropertyChanged("YammerEmailAddress");
+			}
+		}
+		
+		/// <summary>
+		/// User's Yammer ID
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("yammeruserid")]
+		public string YammerUserId
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("yammeruserid");
+			}
+			set
+			{
+				this.OnPropertyChanging("YammerUserId");
+				this.SetAttributeValue("yammeruserid", value);
+				this.OnPropertyChanged("YammerUserId");
+			}
+		}
+		
+		/// <summary>
+		/// Pronunciation of the first name of the user, written in phonetic hiragana or katakana characters.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("yomifirstname")]
+		public string YomiFirstName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("yomifirstname");
+			}
+			set
+			{
+				this.OnPropertyChanging("YomiFirstName");
+				this.SetAttributeValue("yomifirstname", value);
+				this.OnPropertyChanged("YomiFirstName");
+			}
+		}
+		
+		/// <summary>
+		/// Pronunciation of the full name of the user, written in phonetic hiragana or katakana characters.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("yomifullname")]
+		public string YomiFullName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("yomifullname");
+			}
+		}
+		
+		/// <summary>
+		/// Pronunciation of the last name of the user, written in phonetic hiragana or katakana characters.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("yomilastname")]
+		public string YomiLastName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("yomilastname");
+			}
+			set
+			{
+				this.OnPropertyChanging("YomiLastName");
+				this.SetAttributeValue("yomilastname", value);
+				this.OnPropertyChanged("YomiLastName");
+			}
+		}
+		
+		/// <summary>
+		/// Pronunciation of the middle name of the user, written in phonetic hiragana or katakana characters.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("yomimiddlename")]
+		public string YomiMiddleName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("yomimiddlename");
+			}
+			set
+			{
+				this.OnPropertyChanging("YomiMiddleName");
+				this.SetAttributeValue("yomimiddlename", value);
+				this.OnPropertyChanged("YomiMiddleName");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_appmodule_createdby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_appmodule_createdby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.AppModule> lk_appmodule_createdby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.AppModule>("lk_appmodule_createdby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_appmodule_createdby");
+				this.SetRelatedEntities<Driv.CustomApis.AppModule>("lk_appmodule_createdby", null, value);
+				this.OnPropertyChanged("lk_appmodule_createdby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_appmodule_createdonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_appmodule_createdonbehalfby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.AppModule> lk_appmodule_createdonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.AppModule>("lk_appmodule_createdonbehalfby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_appmodule_createdonbehalfby");
+				this.SetRelatedEntities<Driv.CustomApis.AppModule>("lk_appmodule_createdonbehalfby", null, value);
+				this.OnPropertyChanged("lk_appmodule_createdonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_appmodule_modifiedby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_appmodule_modifiedby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.AppModule> lk_appmodule_modifiedby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.AppModule>("lk_appmodule_modifiedby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_appmodule_modifiedby");
+				this.SetRelatedEntities<Driv.CustomApis.AppModule>("lk_appmodule_modifiedby", null, value);
+				this.OnPropertyChanged("lk_appmodule_modifiedby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_appmodule_modifiedonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_appmodule_modifiedonbehalfby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.AppModule> lk_appmodule_modifiedonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.AppModule>("lk_appmodule_modifiedonbehalfby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_appmodule_modifiedonbehalfby");
+				this.SetRelatedEntities<Driv.CustomApis.AppModule>("lk_appmodule_modifiedonbehalfby", null, value);
+				this.OnPropertyChanged("lk_appmodule_modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_appsetting_createdby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_appsetting_createdby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.AppSetting> lk_appsetting_createdby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.AppSetting>("lk_appsetting_createdby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_appsetting_createdby");
+				this.SetRelatedEntities<Driv.CustomApis.AppSetting>("lk_appsetting_createdby", null, value);
+				this.OnPropertyChanged("lk_appsetting_createdby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_appsetting_createdonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_appsetting_createdonbehalfby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.AppSetting> lk_appsetting_createdonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.AppSetting>("lk_appsetting_createdonbehalfby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_appsetting_createdonbehalfby");
+				this.SetRelatedEntities<Driv.CustomApis.AppSetting>("lk_appsetting_createdonbehalfby", null, value);
+				this.OnPropertyChanged("lk_appsetting_createdonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_appsetting_modifiedby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_appsetting_modifiedby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.AppSetting> lk_appsetting_modifiedby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.AppSetting>("lk_appsetting_modifiedby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_appsetting_modifiedby");
+				this.SetRelatedEntities<Driv.CustomApis.AppSetting>("lk_appsetting_modifiedby", null, value);
+				this.OnPropertyChanged("lk_appsetting_modifiedby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_appsetting_modifiedonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_appsetting_modifiedonbehalfby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.AppSetting> lk_appsetting_modifiedonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.AppSetting>("lk_appsetting_modifiedonbehalfby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_appsetting_modifiedonbehalfby");
+				this.SetRelatedEntities<Driv.CustomApis.AppSetting>("lk_appsetting_modifiedonbehalfby", null, value);
+				this.OnPropertyChanged("lk_appsetting_modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_environmentvariabledefinition_createdby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_environmentvariabledefinition_createdby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.EnvironmentVariableDefinition> lk_environmentvariabledefinition_createdby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.EnvironmentVariableDefinition>("lk_environmentvariabledefinition_createdby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_environmentvariabledefinition_createdby");
+				this.SetRelatedEntities<Driv.CustomApis.EnvironmentVariableDefinition>("lk_environmentvariabledefinition_createdby", null, value);
+				this.OnPropertyChanged("lk_environmentvariabledefinition_createdby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_environmentvariabledefinition_createdonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_environmentvariabledefinition_createdonbehalfby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.EnvironmentVariableDefinition> lk_environmentvariabledefinition_createdonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.EnvironmentVariableDefinition>("lk_environmentvariabledefinition_createdonbehalfby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_environmentvariabledefinition_createdonbehalfby");
+				this.SetRelatedEntities<Driv.CustomApis.EnvironmentVariableDefinition>("lk_environmentvariabledefinition_createdonbehalfby", null, value);
+				this.OnPropertyChanged("lk_environmentvariabledefinition_createdonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_environmentvariabledefinition_modifiedby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_environmentvariabledefinition_modifiedby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.EnvironmentVariableDefinition> lk_environmentvariabledefinition_modifiedby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.EnvironmentVariableDefinition>("lk_environmentvariabledefinition_modifiedby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_environmentvariabledefinition_modifiedby");
+				this.SetRelatedEntities<Driv.CustomApis.EnvironmentVariableDefinition>("lk_environmentvariabledefinition_modifiedby", null, value);
+				this.OnPropertyChanged("lk_environmentvariabledefinition_modifiedby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_environmentvariabledefinition_modifiedonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_environmentvariabledefinition_modifiedonbehalfby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.EnvironmentVariableDefinition> lk_environmentvariabledefinition_modifiedonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.EnvironmentVariableDefinition>("lk_environmentvariabledefinition_modifiedonbehalfby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_environmentvariabledefinition_modifiedonbehalfby");
+				this.SetRelatedEntities<Driv.CustomApis.EnvironmentVariableDefinition>("lk_environmentvariabledefinition_modifiedonbehalfby", null, value);
+				this.OnPropertyChanged("lk_environmentvariabledefinition_modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_environmentvariablevalue_createdby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_environmentvariablevalue_createdby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.EnvironmentVariableValue> lk_environmentvariablevalue_createdby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.EnvironmentVariableValue>("lk_environmentvariablevalue_createdby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_environmentvariablevalue_createdby");
+				this.SetRelatedEntities<Driv.CustomApis.EnvironmentVariableValue>("lk_environmentvariablevalue_createdby", null, value);
+				this.OnPropertyChanged("lk_environmentvariablevalue_createdby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_environmentvariablevalue_createdonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_environmentvariablevalue_createdonbehalfby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.EnvironmentVariableValue> lk_environmentvariablevalue_createdonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.EnvironmentVariableValue>("lk_environmentvariablevalue_createdonbehalfby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_environmentvariablevalue_createdonbehalfby");
+				this.SetRelatedEntities<Driv.CustomApis.EnvironmentVariableValue>("lk_environmentvariablevalue_createdonbehalfby", null, value);
+				this.OnPropertyChanged("lk_environmentvariablevalue_createdonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_environmentvariablevalue_modifiedby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_environmentvariablevalue_modifiedby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.EnvironmentVariableValue> lk_environmentvariablevalue_modifiedby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.EnvironmentVariableValue>("lk_environmentvariablevalue_modifiedby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_environmentvariablevalue_modifiedby");
+				this.SetRelatedEntities<Driv.CustomApis.EnvironmentVariableValue>("lk_environmentvariablevalue_modifiedby", null, value);
+				this.OnPropertyChanged("lk_environmentvariablevalue_modifiedby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_environmentvariablevalue_modifiedonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_environmentvariablevalue_modifiedonbehalfby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.EnvironmentVariableValue> lk_environmentvariablevalue_modifiedonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.EnvironmentVariableValue>("lk_environmentvariablevalue_modifiedonbehalfby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_environmentvariablevalue_modifiedonbehalfby");
+				this.SetRelatedEntities<Driv.CustomApis.EnvironmentVariableValue>("lk_environmentvariablevalue_modifiedonbehalfby", null, value);
+				this.OnPropertyChanged("lk_environmentvariablevalue_modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_organizationsetting_createdby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_organizationsetting_createdby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.OrganizationSetting> lk_organizationsetting_createdby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.OrganizationSetting>("lk_organizationsetting_createdby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_organizationsetting_createdby");
+				this.SetRelatedEntities<Driv.CustomApis.OrganizationSetting>("lk_organizationsetting_createdby", null, value);
+				this.OnPropertyChanged("lk_organizationsetting_createdby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_organizationsetting_createdonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_organizationsetting_createdonbehalfby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.OrganizationSetting> lk_organizationsetting_createdonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.OrganizationSetting>("lk_organizationsetting_createdonbehalfby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_organizationsetting_createdonbehalfby");
+				this.SetRelatedEntities<Driv.CustomApis.OrganizationSetting>("lk_organizationsetting_createdonbehalfby", null, value);
+				this.OnPropertyChanged("lk_organizationsetting_createdonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_organizationsetting_modifiedby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_organizationsetting_modifiedby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.OrganizationSetting> lk_organizationsetting_modifiedby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.OrganizationSetting>("lk_organizationsetting_modifiedby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_organizationsetting_modifiedby");
+				this.SetRelatedEntities<Driv.CustomApis.OrganizationSetting>("lk_organizationsetting_modifiedby", null, value);
+				this.OnPropertyChanged("lk_organizationsetting_modifiedby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_organizationsetting_modifiedonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_organizationsetting_modifiedonbehalfby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.OrganizationSetting> lk_organizationsetting_modifiedonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.OrganizationSetting>("lk_organizationsetting_modifiedonbehalfby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_organizationsetting_modifiedonbehalfby");
+				this.SetRelatedEntities<Driv.CustomApis.OrganizationSetting>("lk_organizationsetting_modifiedonbehalfby", null, value);
+				this.OnPropertyChanged("lk_organizationsetting_modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_settingdefinition_createdby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_settingdefinition_createdby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.SettingDefinition> lk_settingdefinition_createdby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.SettingDefinition>("lk_settingdefinition_createdby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_settingdefinition_createdby");
+				this.SetRelatedEntities<Driv.CustomApis.SettingDefinition>("lk_settingdefinition_createdby", null, value);
+				this.OnPropertyChanged("lk_settingdefinition_createdby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_settingdefinition_createdonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_settingdefinition_createdonbehalfby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.SettingDefinition> lk_settingdefinition_createdonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.SettingDefinition>("lk_settingdefinition_createdonbehalfby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_settingdefinition_createdonbehalfby");
+				this.SetRelatedEntities<Driv.CustomApis.SettingDefinition>("lk_settingdefinition_createdonbehalfby", null, value);
+				this.OnPropertyChanged("lk_settingdefinition_createdonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_settingdefinition_modifiedby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_settingdefinition_modifiedby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.SettingDefinition> lk_settingdefinition_modifiedby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.SettingDefinition>("lk_settingdefinition_modifiedby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_settingdefinition_modifiedby");
+				this.SetRelatedEntities<Driv.CustomApis.SettingDefinition>("lk_settingdefinition_modifiedby", null, value);
+				this.OnPropertyChanged("lk_settingdefinition_modifiedby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_settingdefinition_modifiedonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_settingdefinition_modifiedonbehalfby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.SettingDefinition> lk_settingdefinition_modifiedonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.SettingDefinition>("lk_settingdefinition_modifiedonbehalfby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_settingdefinition_modifiedonbehalfby");
+				this.SetRelatedEntities<Driv.CustomApis.SettingDefinition>("lk_settingdefinition_modifiedonbehalfby", null, value);
+				this.OnPropertyChanged("lk_settingdefinition_modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_systemuser_createdonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_systemuser_createdonbehalfby", Microsoft.Xrm.Sdk.EntityRole.Referenced)]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.SystemUser> Referencedlk_systemuser_createdonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.SystemUser>("lk_systemuser_createdonbehalfby", Microsoft.Xrm.Sdk.EntityRole.Referenced);
+			}
+			set
+			{
+				this.OnPropertyChanging("Referencedlk_systemuser_createdonbehalfby");
+				this.SetRelatedEntities<Driv.CustomApis.SystemUser>("lk_systemuser_createdonbehalfby", Microsoft.Xrm.Sdk.EntityRole.Referenced, value);
+				this.OnPropertyChanged("Referencedlk_systemuser_createdonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_systemuser_modifiedonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_systemuser_modifiedonbehalfby", Microsoft.Xrm.Sdk.EntityRole.Referenced)]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.SystemUser> Referencedlk_systemuser_modifiedonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.SystemUser>("lk_systemuser_modifiedonbehalfby", Microsoft.Xrm.Sdk.EntityRole.Referenced);
+			}
+			set
+			{
+				this.OnPropertyChanging("Referencedlk_systemuser_modifiedonbehalfby");
+				this.SetRelatedEntities<Driv.CustomApis.SystemUser>("lk_systemuser_modifiedonbehalfby", Microsoft.Xrm.Sdk.EntityRole.Referenced, value);
+				this.OnPropertyChanged("Referencedlk_systemuser_modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_systemuserbase_createdby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_systemuserbase_createdby", Microsoft.Xrm.Sdk.EntityRole.Referenced)]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.SystemUser> Referencedlk_systemuserbase_createdby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.SystemUser>("lk_systemuserbase_createdby", Microsoft.Xrm.Sdk.EntityRole.Referenced);
+			}
+			set
+			{
+				this.OnPropertyChanging("Referencedlk_systemuserbase_createdby");
+				this.SetRelatedEntities<Driv.CustomApis.SystemUser>("lk_systemuserbase_createdby", Microsoft.Xrm.Sdk.EntityRole.Referenced, value);
+				this.OnPropertyChanged("Referencedlk_systemuserbase_createdby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_systemuserbase_modifiedby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_systemuserbase_modifiedby", Microsoft.Xrm.Sdk.EntityRole.Referenced)]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.SystemUser> Referencedlk_systemuserbase_modifiedby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.SystemUser>("lk_systemuserbase_modifiedby", Microsoft.Xrm.Sdk.EntityRole.Referenced);
+			}
+			set
+			{
+				this.OnPropertyChanging("Referencedlk_systemuserbase_modifiedby");
+				this.SetRelatedEntities<Driv.CustomApis.SystemUser>("lk_systemuserbase_modifiedby", Microsoft.Xrm.Sdk.EntityRole.Referenced, value);
+				this.OnPropertyChanged("Referencedlk_systemuserbase_modifiedby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_timezonedefinition_createdby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_timezonedefinition_createdby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.TimeZoneDefinition> lk_timezonedefinition_createdby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.TimeZoneDefinition>("lk_timezonedefinition_createdby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_timezonedefinition_createdby");
+				this.SetRelatedEntities<Driv.CustomApis.TimeZoneDefinition>("lk_timezonedefinition_createdby", null, value);
+				this.OnPropertyChanged("lk_timezonedefinition_createdby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_timezonedefinition_createdonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_timezonedefinition_createdonbehalfby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.TimeZoneDefinition> lk_timezonedefinition_createdonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.TimeZoneDefinition>("lk_timezonedefinition_createdonbehalfby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_timezonedefinition_createdonbehalfby");
+				this.SetRelatedEntities<Driv.CustomApis.TimeZoneDefinition>("lk_timezonedefinition_createdonbehalfby", null, value);
+				this.OnPropertyChanged("lk_timezonedefinition_createdonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_timezonedefinition_modifiedby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_timezonedefinition_modifiedby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.TimeZoneDefinition> lk_timezonedefinition_modifiedby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.TimeZoneDefinition>("lk_timezonedefinition_modifiedby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_timezonedefinition_modifiedby");
+				this.SetRelatedEntities<Driv.CustomApis.TimeZoneDefinition>("lk_timezonedefinition_modifiedby", null, value);
+				this.OnPropertyChanged("lk_timezonedefinition_modifiedby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_timezonedefinition_modifiedonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_timezonedefinition_modifiedonbehalfby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.TimeZoneDefinition> lk_timezonedefinition_modifiedonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.TimeZoneDefinition>("lk_timezonedefinition_modifiedonbehalfby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_timezonedefinition_modifiedonbehalfby");
+				this.SetRelatedEntities<Driv.CustomApis.TimeZoneDefinition>("lk_timezonedefinition_modifiedonbehalfby", null, value);
+				this.OnPropertyChanged("lk_timezonedefinition_modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_usersettings_createdonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_usersettings_createdonbehalfby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.UserSettings> lk_usersettings_createdonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.UserSettings>("lk_usersettings_createdonbehalfby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_usersettings_createdonbehalfby");
+				this.SetRelatedEntities<Driv.CustomApis.UserSettings>("lk_usersettings_createdonbehalfby", null, value);
+				this.OnPropertyChanged("lk_usersettings_createdonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_usersettings_modifiedonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_usersettings_modifiedonbehalfby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.UserSettings> lk_usersettings_modifiedonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.UserSettings>("lk_usersettings_modifiedonbehalfby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_usersettings_modifiedonbehalfby");
+				this.SetRelatedEntities<Driv.CustomApis.UserSettings>("lk_usersettings_modifiedonbehalfby", null, value);
+				this.OnPropertyChanged("lk_usersettings_modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_usersettingsbase_createdby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_usersettingsbase_createdby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.UserSettings> lk_usersettingsbase_createdby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.UserSettings>("lk_usersettingsbase_createdby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_usersettingsbase_createdby");
+				this.SetRelatedEntities<Driv.CustomApis.UserSettings>("lk_usersettingsbase_createdby", null, value);
+				this.OnPropertyChanged("lk_usersettingsbase_createdby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N lk_usersettingsbase_modifiedby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_usersettingsbase_modifiedby")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.UserSettings> lk_usersettingsbase_modifiedby
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.UserSettings>("lk_usersettingsbase_modifiedby", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("lk_usersettingsbase_modifiedby");
+				this.SetRelatedEntities<Driv.CustomApis.UserSettings>("lk_usersettingsbase_modifiedby", null, value);
+				this.OnPropertyChanged("lk_usersettingsbase_modifiedby");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N user_environmentvariabledefinition
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("user_environmentvariabledefinition")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.EnvironmentVariableDefinition> user_environmentvariabledefinition
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.EnvironmentVariableDefinition>("user_environmentvariabledefinition", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("user_environmentvariabledefinition");
+				this.SetRelatedEntities<Driv.CustomApis.EnvironmentVariableDefinition>("user_environmentvariabledefinition", null, value);
+				this.OnPropertyChanged("user_environmentvariabledefinition");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N user_environmentvariablevalue
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("user_environmentvariablevalue")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.EnvironmentVariableValue> user_environmentvariablevalue
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.EnvironmentVariableValue>("user_environmentvariablevalue", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("user_environmentvariablevalue");
+				this.SetRelatedEntities<Driv.CustomApis.EnvironmentVariableValue>("user_environmentvariablevalue", null, value);
+				this.OnPropertyChanged("user_environmentvariablevalue");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N user_parent_user
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("user_parent_user", Microsoft.Xrm.Sdk.EntityRole.Referenced)]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.SystemUser> Referenceduser_parent_user
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.SystemUser>("user_parent_user", Microsoft.Xrm.Sdk.EntityRole.Referenced);
+			}
+			set
+			{
+				this.OnPropertyChanging("Referenceduser_parent_user");
+				this.SetRelatedEntities<Driv.CustomApis.SystemUser>("user_parent_user", Microsoft.Xrm.Sdk.EntityRole.Referenced, value);
+				this.OnPropertyChanged("Referenceduser_parent_user");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N user_settings
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("user_settings")]
+		public System.Collections.Generic.IEnumerable<Driv.CustomApis.UserSettings> user_settings
+		{
+			get
+			{
+				return this.GetRelatedEntities<Driv.CustomApis.UserSettings>("user_settings", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("user_settings");
+				this.SetRelatedEntities<Driv.CustomApis.UserSettings>("user_settings", null, value);
+				this.OnPropertyChanged("user_settings");
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_systemuser_createdonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_systemuser_createdonbehalfby", Microsoft.Xrm.Sdk.EntityRole.Referencing)]
+		public Driv.CustomApis.SystemUser Referencinglk_systemuser_createdonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_systemuser_createdonbehalfby", Microsoft.Xrm.Sdk.EntityRole.Referencing);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_systemuser_modifiedonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_systemuser_modifiedonbehalfby", Microsoft.Xrm.Sdk.EntityRole.Referencing)]
+		public Driv.CustomApis.SystemUser Referencinglk_systemuser_modifiedonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_systemuser_modifiedonbehalfby", Microsoft.Xrm.Sdk.EntityRole.Referencing);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_systemuserbase_createdby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_systemuserbase_createdby", Microsoft.Xrm.Sdk.EntityRole.Referencing)]
+		public Driv.CustomApis.SystemUser Referencinglk_systemuserbase_createdby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_systemuserbase_createdby", Microsoft.Xrm.Sdk.EntityRole.Referencing);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_systemuserbase_modifiedby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_systemuserbase_modifiedby", Microsoft.Xrm.Sdk.EntityRole.Referencing)]
+		public Driv.CustomApis.SystemUser Referencinglk_systemuserbase_modifiedby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_systemuserbase_modifiedby", Microsoft.Xrm.Sdk.EntityRole.Referencing);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 user_parent_user
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("parentsystemuserid")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("user_parent_user", Microsoft.Xrm.Sdk.EntityRole.Referencing)]
+		public Driv.CustomApis.SystemUser Referencinguser_parent_user
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("user_parent_user", Microsoft.Xrm.Sdk.EntityRole.Referencing);
+			}
+			set
+			{
+				this.OnPropertyChanging("Referencinguser_parent_user");
+				this.SetRelatedEntity<Driv.CustomApis.SystemUser>("user_parent_user", Microsoft.Xrm.Sdk.EntityRole.Referencing, value);
+				this.OnPropertyChanged("Referencinguser_parent_user");
+			}
+		}
+	}
+	
+	/// <summary>
+	/// Time zone definition, including name and time zone code.
+	/// </summary>
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[Microsoft.Xrm.Sdk.Client.EntityLogicalNameAttribute("timezonedefinition")]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public partial class TimeZoneDefinition : Microsoft.Xrm.Sdk.Entity, System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	{
+		
+		/// <summary>
+		/// Default Constructor.
+		/// </summary>
+		public TimeZoneDefinition() : 
+				base(EntityLogicalName)
+		{
+		}
+		
+		public const string EntityLogicalName = "timezonedefinition";
+		
+		public const int EntityTypeCode = 4810;
+		
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+		
+		public event System.ComponentModel.PropertyChangingEventHandler PropertyChanging;
+		
+		private void OnPropertyChanged(string propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void OnPropertyChanging(string propertyName)
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, new System.ComponentModel.PropertyChangingEventArgs(propertyName));
+			}
+		}
+		
+		/// <summary>
+		/// Base time bias of the time zone.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("bias")]
+		public System.Nullable<int> Bias
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("bias");
+			}
+			set
+			{
+				this.OnPropertyChanging("Bias");
+				this.SetAttributeValue("bias", value);
+				this.OnPropertyChanged("Bias");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the user who created the time zone record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
+		public Microsoft.Xrm.Sdk.EntityReference CreatedBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdby");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time when the time zone record was created.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdon")]
+		public System.Nullable<System.DateTime> CreatedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("createdon");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the delegate user who created the timezonedefinition.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
+		public Microsoft.Xrm.Sdk.EntityReference CreatedOnBehalfBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// Time zone name for the daylight time.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("daylightname")]
+		public string DaylightName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("daylightname");
+			}
+			set
+			{
+				this.OnPropertyChanging("DaylightName");
+				this.SetAttributeValue("daylightname", value);
+				this.OnPropertyChanged("DaylightName");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the user who last modified the time zone record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
+		public Microsoft.Xrm.Sdk.EntityReference ModifiedBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedby");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time when the time zone record was modified.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedon")]
+		public System.Nullable<System.DateTime> ModifiedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("modifiedon");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the delegate user who last modified the timezonedefinition.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
+		public Microsoft.Xrm.Sdk.EntityReference ModifiedOnBehalfBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the organization associated with the time zone definition.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("organizationid")]
+		public Microsoft.Xrm.Sdk.EntityReference OrganizationId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("organizationid");
+			}
+		}
+		
+		/// <summary>
+		/// Order an entry for a time zone definition is retired. 0 for the latest entry.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("retiredorder")]
+		public System.Nullable<int> RetiredOrder
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("retiredorder");
+			}
+			set
+			{
+				this.OnPropertyChanging("RetiredOrder");
+				this.SetAttributeValue("retiredorder", value);
+				this.OnPropertyChanged("RetiredOrder");
+			}
+		}
+		
+		/// <summary>
+		/// Time zone name for the standard time.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("standardname")]
+		public string StandardName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("standardname");
+			}
+			set
+			{
+				this.OnPropertyChanging("StandardName");
+				this.SetAttributeValue("standardname", value);
+				this.OnPropertyChanged("StandardName");
+			}
+		}
+		
+		/// <summary>
+		/// Time zone identification code.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezonecode")]
+		public System.Nullable<int> TimeZoneCode
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezonecode");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneCode");
+				this.SetAttributeValue("timezonecode", value);
+				this.OnPropertyChanged("TimeZoneCode");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the time zone record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezonedefinitionid")]
+		public System.Nullable<System.Guid> TimeZoneDefinitionId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("timezonedefinitionid");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneDefinitionId");
+				this.SetAttributeValue("timezonedefinitionid", value);
+				if (value.HasValue)
+				{
+					base.Id = value.Value;
+				}
+				else
+				{
+					base.Id = System.Guid.Empty;
+				}
+				this.OnPropertyChanged("TimeZoneDefinitionId");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezonedefinitionid")]
+		public override System.Guid Id
+		{
+			get
+			{
+				return base.Id;
+			}
+			set
+			{
+				this.TimeZoneDefinitionId = value;
+			}
+		}
+		
+		/// <summary>
+		/// Display name for the time zone in the Microsoft Windows registry.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("userinterfacename")]
+		public string UserInterfaceName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("userinterfacename");
+			}
+			set
+			{
+				this.OnPropertyChanging("UserInterfaceName");
+				this.SetAttributeValue("userinterfacename", value);
+				this.OnPropertyChanged("UserInterfaceName");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("versionnumber")]
+		public System.Nullable<long> VersionNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<long>>("versionnumber");
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_timezonedefinition_createdby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_timezonedefinition_createdby")]
+		public Driv.CustomApis.SystemUser lk_timezonedefinition_createdby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_timezonedefinition_createdby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_timezonedefinition_createdonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_timezonedefinition_createdonbehalfby")]
+		public Driv.CustomApis.SystemUser lk_timezonedefinition_createdonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_timezonedefinition_createdonbehalfby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_timezonedefinition_modifiedby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_timezonedefinition_modifiedby")]
+		public Driv.CustomApis.SystemUser lk_timezonedefinition_modifiedby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_timezonedefinition_modifiedby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_timezonedefinition_modifiedonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_timezonedefinition_modifiedonbehalfby")]
+		public Driv.CustomApis.SystemUser lk_timezonedefinition_modifiedonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_timezonedefinition_modifiedonbehalfby", null);
+			}
+		}
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum usersettings_datavalidationmodeforexporttoexcel
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Full = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		None = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum usersettings_defaultsearchexperience
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Uselastsearch = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Relevancesearch = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Categorizedsearch = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Customsearch = 3,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum usersettings_entityformmode
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Organizationdefault = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Readoptimized = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Edit = 2,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum usersettings_incomingemailfilteringmethod
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Allemailmessages = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		EmailmessagesinresponsetoDynamics365email = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		EmailmessagesfromDynamics365LeadsContactsandAccounts = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		EmailmessagesfromDynamics365recordsthatareemailenabled = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Noemailmessages = 4,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum usersettings_reportscripterrors
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		AskmeforpermissiontosendanerrorreporttoMicrosoft = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		AutomaticallysendanerrorreporttoMicrosoftwithoutaskingmeforpermission = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		NeversendanerrorreporttoMicrosoftaboutMicrosoftDynamics365 = 3,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum usersettings_visualizationpanelayout
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Topbottom = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Sidebyside = 1,
+	}
+	
+	/// <summary>
+	/// User's preferred settings.
+	/// </summary>
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[Microsoft.Xrm.Sdk.Client.EntityLogicalNameAttribute("usersettings")]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public partial class UserSettings : Microsoft.Xrm.Sdk.Entity, System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	{
+		
+		/// <summary>
+		/// Default Constructor.
+		/// </summary>
+		public UserSettings() : 
+				base(EntityLogicalName)
+		{
+		}
+		
+		public const string EntityLogicalName = "usersettings";
+		
+		public const int EntityTypeCode = 150;
+		
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+		
+		public event System.ComponentModel.PropertyChangingEventHandler PropertyChanging;
+		
+		private void OnPropertyChanged(string propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void OnPropertyChanging(string propertyName)
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, new System.ComponentModel.PropertyChangingEventArgs(propertyName));
+			}
+		}
+		
+		/// <summary>
+		/// Normal polling frequency used for address book synchronization in Microsoft Office Outlook.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("addressbooksyncinterval")]
+		public System.Nullable<int> AddressBookSyncInterval
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("addressbooksyncinterval");
+			}
+			set
+			{
+				this.OnPropertyChanging("AddressBookSyncInterval");
+				this.SetAttributeValue("addressbooksyncinterval", value);
+				this.OnPropertyChanged("AddressBookSyncInterval");
+			}
+		}
+		
+		/// <summary>
+		/// Default mode, such as simple or detailed, for advanced find.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("advancedfindstartupmode")]
+		public System.Nullable<int> AdvancedFindStartupMode
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("advancedfindstartupmode");
+			}
+			set
+			{
+				this.OnPropertyChanging("AdvancedFindStartupMode");
+				this.SetAttributeValue("advancedfindstartupmode", value);
+				this.OnPropertyChanged("AdvancedFindStartupMode");
+			}
+		}
+		
+		/// <summary>
+		/// This attribute is no longer used. The data is now in the Mailbox.AllowEmailConnectorToUseCredentials attribute.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("allowemailcredentials")]
+		[System.ObsoleteAttribute()]
+		public System.Nullable<bool> AllowEmailCredentials
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("allowemailcredentials");
+			}
+		}
+		
+		/// <summary>
+		/// AM designator to use in Microsoft Dynamics 365.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("amdesignator")]
+		public string AMDesignator
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("amdesignator");
+			}
+			set
+			{
+				this.OnPropertyChanging("AMDesignator");
+				this.SetAttributeValue("amdesignator", value);
+				this.OnPropertyChanged("AMDesignator");
+			}
+		}
+		
+		/// <summary>
+		/// Set user status for ADC Suggestions
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("autocaptureuserstatus")]
+		public System.Nullable<int> AutoCaptureUserStatus
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("autocaptureuserstatus");
+			}
+			set
+			{
+				this.OnPropertyChanging("AutoCaptureUserStatus");
+				this.SetAttributeValue("autocaptureuserstatus", value);
+				this.OnPropertyChanged("AutoCaptureUserStatus");
+			}
+		}
+		
+		/// <summary>
+		/// Auto-create contact on client promote
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("autocreatecontactonpromote")]
+		public System.Nullable<int> AutoCreateContactOnPromote
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("autocreatecontactonpromote");
+			}
+			set
+			{
+				this.OnPropertyChanging("AutoCreateContactOnPromote");
+				this.SetAttributeValue("autocreatecontactonpromote", value);
+				this.OnPropertyChanged("AutoCreateContactOnPromote");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the business unit with which the user is associated.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("businessunitid")]
+		public System.Nullable<System.Guid> BusinessUnitId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("businessunitid");
+			}
+			set
+			{
+				this.OnPropertyChanging("BusinessUnitId");
+				this.SetAttributeValue("businessunitid", value);
+				this.OnPropertyChanged("BusinessUnitId");
+			}
+		}
+		
+		/// <summary>
+		/// Calendar type for the system. Set to Gregorian US by default.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("calendartype")]
+		public System.Nullable<int> CalendarType
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("calendartype");
+			}
+			set
+			{
+				this.OnPropertyChanging("CalendarType");
+				this.SetAttributeValue("calendartype", value);
+				this.OnPropertyChanged("CalendarType");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the user who created the user settings.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
+		public Microsoft.Xrm.Sdk.EntityReference CreatedBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdby");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time when the user settings object was created.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdon")]
+		public System.Nullable<System.DateTime> CreatedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("createdon");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the delegate user who created the usersettings.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
+		public Microsoft.Xrm.Sdk.EntityReference CreatedOnBehalfBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// Number of decimal places that can be used for currency.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("currencydecimalprecision")]
+		[System.ObsoleteAttribute()]
+		public System.Nullable<int> CurrencyDecimalPrecision
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("currencydecimalprecision");
+			}
+			set
+			{
+				this.OnPropertyChanging("CurrencyDecimalPrecision");
+				this.SetAttributeValue("currencydecimalprecision", value);
+				this.OnPropertyChanged("CurrencyDecimalPrecision");
+			}
+		}
+		
+		/// <summary>
+		/// Information about how currency symbols are placed in Microsoft Dynamics 365.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("currencyformatcode")]
+		public System.Nullable<int> CurrencyFormatCode
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("currencyformatcode");
+			}
+			set
+			{
+				this.OnPropertyChanging("CurrencyFormatCode");
+				this.SetAttributeValue("currencyformatcode", value);
+				this.OnPropertyChanged("CurrencyFormatCode");
+			}
+		}
+		
+		/// <summary>
+		/// Symbol used for currency in Microsoft Dynamics 365.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("currencysymbol")]
+		public string CurrencySymbol
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("currencysymbol");
+			}
+			set
+			{
+				this.OnPropertyChanging("CurrencySymbol");
+				this.SetAttributeValue("currencysymbol", value);
+				this.OnPropertyChanged("CurrencySymbol");
+			}
+		}
+		
+		/// <summary>
+		/// Information that specifies the level of data validation in excel worksheets exported in a format suitable for import.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("datavalidationmodeforexporttoexcel")]
+		public System.Nullable<Driv.CustomApis.usersettings_datavalidationmodeforexporttoexcel> DataValidationModeForExportToExcel
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("datavalidationmodeforexporttoexcel");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.usersettings_datavalidationmodeforexporttoexcel)(System.Enum.ToObject(typeof(Driv.CustomApis.usersettings_datavalidationmodeforexporttoexcel), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("DataValidationModeForExportToExcel");
+				if ((value == null))
+				{
+					this.SetAttributeValue("datavalidationmodeforexporttoexcel", null);
+				}
+				else
+				{
+					this.SetAttributeValue("datavalidationmodeforexporttoexcel", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("DataValidationModeForExportToExcel");
+			}
+		}
+		
+		/// <summary>
+		/// Information about how the date is displayed in Microsoft Dynamics 365.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("dateformatcode")]
+		public System.Nullable<int> DateFormatCode
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("dateformatcode");
+			}
+			set
+			{
+				this.OnPropertyChanging("DateFormatCode");
+				this.SetAttributeValue("dateformatcode", value);
+				this.OnPropertyChanged("DateFormatCode");
+			}
+		}
+		
+		/// <summary>
+		/// String showing how the date is displayed throughout Microsoft 365.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("dateformatstring")]
+		public string DateFormatString
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("dateformatstring");
+			}
+			set
+			{
+				this.OnPropertyChanging("DateFormatString");
+				this.SetAttributeValue("dateformatstring", value);
+				this.OnPropertyChanged("DateFormatString");
+			}
+		}
+		
+		/// <summary>
+		/// Character used to separate the month, the day, and the year in dates in Microsoft Dynamics 365.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("dateseparator")]
+		public string DateSeparator
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("dateseparator");
+			}
+			set
+			{
+				this.OnPropertyChanging("DateSeparator");
+				this.SetAttributeValue("dateseparator", value);
+				this.OnPropertyChanged("DateSeparator");
+			}
+		}
+		
+		/// <summary>
+		/// Symbol used for decimal in Microsoft Dynamics 365.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("decimalsymbol")]
+		public string DecimalSymbol
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("decimalsymbol");
+			}
+			set
+			{
+				this.OnPropertyChanging("DecimalSymbol");
+				this.SetAttributeValue("decimalsymbol", value);
+				this.OnPropertyChanged("DecimalSymbol");
+			}
+		}
+		
+		/// <summary>
+		/// Default calendar view for the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("defaultcalendarview")]
+		public System.Nullable<int> DefaultCalendarView
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("defaultcalendarview");
+			}
+			set
+			{
+				this.OnPropertyChanging("DefaultCalendarView");
+				this.SetAttributeValue("defaultcalendarview", value);
+				this.OnPropertyChanged("DefaultCalendarView");
+			}
+		}
+		
+		/// <summary>
+		/// Text area to enter default country code.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("defaultcountrycode")]
+		public string DefaultCountryCode
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("defaultcountrycode");
+			}
+			set
+			{
+				this.OnPropertyChanging("DefaultCountryCode");
+				this.SetAttributeValue("defaultcountrycode", value);
+				this.OnPropertyChanged("DefaultCountryCode");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the default dashboard.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("defaultdashboardid")]
+		public System.Nullable<System.Guid> DefaultDashboardId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("defaultdashboardid");
+			}
+			set
+			{
+				this.OnPropertyChanging("DefaultDashboardId");
+				this.SetAttributeValue("defaultdashboardid", value);
+				this.OnPropertyChanged("DefaultDashboardId");
+			}
+		}
+		
+		/// <summary>
+		/// Default search experience for the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("defaultsearchexperience")]
+		public System.Nullable<Driv.CustomApis.usersettings_defaultsearchexperience> DefaultSearchExperience
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("defaultsearchexperience");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.usersettings_defaultsearchexperience)(System.Enum.ToObject(typeof(Driv.CustomApis.usersettings_defaultsearchexperience), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("DefaultSearchExperience");
+				if ((value == null))
+				{
+					this.SetAttributeValue("defaultsearchexperience", null);
+				}
+				else
+				{
+					this.SetAttributeValue("defaultsearchexperience", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("DefaultSearchExperience");
+			}
+		}
+		
+		/// <summary>
+		/// This attribute is no longer used. The data is now in the Mailbox.Password attribute.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("emailpassword")]
+		[System.ObsoleteAttribute()]
+		public string EmailPassword
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("emailpassword");
+			}
+		}
+		
+		/// <summary>
+		/// This attribute is no longer used. The data is now in the Mailbox.UserName attribute.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("emailusername")]
+		[System.ObsoleteAttribute()]
+		public string EmailUsername
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("emailusername");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates the form mode to be used.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("entityformmode")]
+		public System.Nullable<Driv.CustomApis.usersettings_entityformmode> EntityFormMode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("entityformmode");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.usersettings_entityformmode)(System.Enum.ToObject(typeof(Driv.CustomApis.usersettings_entityformmode), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("EntityFormMode");
+				if ((value == null))
+				{
+					this.SetAttributeValue("entityformmode", null);
+				}
+				else
+				{
+					this.SetAttributeValue("entityformmode", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("EntityFormMode");
+			}
+		}
+		
+		/// <summary>
+		/// Order in which names are to be displayed in Microsoft Dynamics 365.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("fullnameconventioncode")]
+		public System.Nullable<int> FullNameConventionCode
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("fullnameconventioncode");
+			}
+			set
+			{
+				this.OnPropertyChanging("FullNameConventionCode");
+				this.SetAttributeValue("fullnameconventioncode", value);
+				this.OnPropertyChanged("FullNameConventionCode");
+			}
+		}
+		
+		/// <summary>
+		/// Information that specifies whether the Get Started pane in lists is enabled.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("getstartedpanecontentenabled")]
+		public System.Nullable<bool> GetStartedPaneContentEnabled
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("getstartedpanecontentenabled");
+			}
+			set
+			{
+				this.OnPropertyChanging("GetStartedPaneContentEnabled");
+				this.SetAttributeValue("getstartedpanecontentenabled", value);
+				this.OnPropertyChanged("GetStartedPaneContentEnabled");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the Help language.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("helplanguageid")]
+		public System.Nullable<int> HelpLanguageId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("helplanguageid");
+			}
+			set
+			{
+				this.OnPropertyChanging("HelpLanguageId");
+				this.SetAttributeValue("helplanguageid", value);
+				this.OnPropertyChanged("HelpLanguageId");
+			}
+		}
+		
+		/// <summary>
+		/// Web site home page for the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("homepagearea")]
+		public string HomepageArea
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("homepagearea");
+			}
+			set
+			{
+				this.OnPropertyChanging("HomepageArea");
+				this.SetAttributeValue("homepagearea", value);
+				this.OnPropertyChanged("HomepageArea");
+			}
+		}
+		
+		/// <summary>
+		/// Configuration of the home page layout.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("homepagelayout")]
+		public string HomepageLayout
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("homepagelayout");
+			}
+			set
+			{
+				this.OnPropertyChanging("HomepageLayout");
+				this.SetAttributeValue("homepagelayout", value);
+				this.OnPropertyChanged("HomepageLayout");
+			}
+		}
+		
+		/// <summary>
+		/// Web site page for the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("homepagesubarea")]
+		public string HomepageSubarea
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("homepagesubarea");
+			}
+			set
+			{
+				this.OnPropertyChanging("HomepageSubarea");
+				this.SetAttributeValue("homepagesubarea", value);
+				this.OnPropertyChanged("HomepageSubarea");
+			}
+		}
+		
+		/// <summary>
+		/// Information that specifies whether a user account is to ignore unsolicited email (deprecated).
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("ignoreunsolicitedemail")]
+		public System.Nullable<bool> IgnoreUnsolicitedEmail
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("ignoreunsolicitedemail");
+			}
+			set
+			{
+				this.OnPropertyChanging("IgnoreUnsolicitedEmail");
+				this.SetAttributeValue("ignoreunsolicitedemail", value);
+				this.OnPropertyChanged("IgnoreUnsolicitedEmail");
+			}
+		}
+		
+		/// <summary>
+		/// Incoming email filtering method.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("incomingemailfilteringmethod")]
+		public System.Nullable<Driv.CustomApis.usersettings_incomingemailfilteringmethod> IncomingEmailFilteringMethod
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("incomingemailfilteringmethod");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.usersettings_incomingemailfilteringmethod)(System.Enum.ToObject(typeof(Driv.CustomApis.usersettings_incomingemailfilteringmethod), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("IncomingEmailFilteringMethod");
+				if ((value == null))
+				{
+					this.SetAttributeValue("incomingemailfilteringmethod", null);
+				}
+				else
+				{
+					this.SetAttributeValue("incomingemailfilteringmethod", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("IncomingEmailFilteringMethod");
+			}
+		}
+		
+		/// <summary>
+		/// Show or dismiss alert for Apps for 365.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isappsforcrmalertdismissed")]
+		public System.Nullable<bool> IsAppsForCrmAlertDismissed
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isappsforcrmalertdismissed");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsAppsForCrmAlertDismissed");
+				this.SetAttributeValue("isappsforcrmalertdismissed", value);
+				this.OnPropertyChanged("IsAppsForCrmAlertDismissed");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether to use the Auto Capture feature enabled or not.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isautodatacaptureenabled")]
+		public System.Nullable<bool> IsAutoDataCaptureEnabled
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isautodatacaptureenabled");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsAutoDataCaptureEnabled");
+				this.SetAttributeValue("isautodatacaptureenabled", value);
+				this.OnPropertyChanged("IsAutoDataCaptureEnabled");
+			}
+		}
+		
+		/// <summary>
+		/// Enable or disable country code selection .
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isdefaultcountrycodecheckenabled")]
+		public System.Nullable<bool> IsDefaultCountryCodeCheckEnabled
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isdefaultcountrycodecheckenabled");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsDefaultCountryCodeCheckEnabled");
+				this.SetAttributeValue("isdefaultcountrycodecheckenabled", value);
+				this.OnPropertyChanged("IsDefaultCountryCodeCheckEnabled");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates if duplicate detection is enabled when going online.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isduplicatedetectionenabledwhengoingonline")]
+		public System.Nullable<bool> IsDuplicateDetectionEnabledWhenGoingOnline
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isduplicatedetectionenabledwhengoingonline");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsDuplicateDetectionEnabledWhenGoingOnline");
+				this.SetAttributeValue("isduplicatedetectionenabledwhengoingonline", value);
+				this.OnPropertyChanged("IsDuplicateDetectionEnabledWhenGoingOnline");
+			}
+		}
+		
+		/// <summary>
+		/// Enable or disable email conversation view on timeline wall selection.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isemailconversationviewenabled")]
+		public System.Nullable<bool> IsEmailConversationViewEnabled
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isemailconversationviewenabled");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsEmailConversationViewEnabled");
+				this.SetAttributeValue("isemailconversationviewenabled", value);
+				this.OnPropertyChanged("IsEmailConversationViewEnabled");
+			}
+		}
+		
+		/// <summary>
+		/// Enable or disable guided help.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isguidedhelpenabled")]
+		public System.Nullable<bool> IsGuidedHelpEnabled
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isguidedhelpenabled");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsGuidedHelpEnabled");
+				this.SetAttributeValue("isguidedhelpenabled", value);
+				this.OnPropertyChanged("IsGuidedHelpEnabled");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates if the synchronization of user resource booking with Exchange is enabled at user level.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isresourcebookingexchangesyncenabled")]
+		public System.Nullable<bool> IsResourceBookingExchangeSyncEnabled
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("isresourcebookingexchangesyncenabled");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsResourceBookingExchangeSyncEnabled");
+				this.SetAttributeValue("isresourcebookingexchangesyncenabled", value);
+				this.OnPropertyChanged("IsResourceBookingExchangeSyncEnabled");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates if send as other user privilege is enabled or not.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("issendasallowed")]
+		public System.Nullable<bool> IsSendAsAllowed
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("issendasallowed");
+			}
+			set
+			{
+				this.OnPropertyChanging("IsSendAsAllowed");
+				this.SetAttributeValue("issendasallowed", value);
+				this.OnPropertyChanged("IsSendAsAllowed");
+			}
+		}
+		
+		/// <summary>
+		/// Shows the last time when the traces were read from the database.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("lastalertsviewedtime")]
+		public System.Nullable<System.DateTime> LastAlertsViewedTime
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("lastalertsviewedtime");
+			}
+			set
+			{
+				this.OnPropertyChanging("LastAlertsViewedTime");
+				this.SetAttributeValue("lastalertsviewedtime", value);
+				this.OnPropertyChanged("LastAlertsViewedTime");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the user locale.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("localeid")]
+		public System.Nullable<int> LocaleId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("localeid");
+			}
+			set
+			{
+				this.OnPropertyChanging("LocaleId");
+				this.SetAttributeValue("localeid", value);
+				this.OnPropertyChanged("LocaleId");
+			}
+		}
+		
+		/// <summary>
+		/// Information that specifies how Long Date is displayed throughout Microsoft 365.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("longdateformatcode")]
+		public System.Nullable<int> LongDateFormatCode
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("longdateformatcode");
+			}
+			set
+			{
+				this.OnPropertyChanging("LongDateFormatCode");
+				this.SetAttributeValue("longdateformatcode", value);
+				this.OnPropertyChanged("LongDateFormatCode");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the user who last modified the user settings.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
+		public Microsoft.Xrm.Sdk.EntityReference ModifiedBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedby");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time when the user settings object was last modified.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedon")]
+		public System.Nullable<System.DateTime> ModifiedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("modifiedon");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the delegate user who last modified the usersettings.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
+		public Microsoft.Xrm.Sdk.EntityReference ModifiedOnBehalfBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedonbehalfby");
+			}
+		}
+		
+		/// <summary>
+		/// Information that specifies how negative currency numbers are displayed in Microsoft Dynamics 365.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("negativecurrencyformatcode")]
+		public System.Nullable<int> NegativeCurrencyFormatCode
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("negativecurrencyformatcode");
+			}
+			set
+			{
+				this.OnPropertyChanging("NegativeCurrencyFormatCode");
+				this.SetAttributeValue("negativecurrencyformatcode", value);
+				this.OnPropertyChanged("NegativeCurrencyFormatCode");
+			}
+		}
+		
+		/// <summary>
+		/// Information that specifies how negative numbers are displayed in Microsoft Dynamics 365.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("negativeformatcode")]
+		public System.Nullable<int> NegativeFormatCode
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("negativeformatcode");
+			}
+			set
+			{
+				this.OnPropertyChanging("NegativeFormatCode");
+				this.SetAttributeValue("negativeformatcode", value);
+				this.OnPropertyChanged("NegativeFormatCode");
+			}
+		}
+		
+		/// <summary>
+		/// Next tracking number.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("nexttrackingnumber")]
+		public System.Nullable<int> NextTrackingNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("nexttrackingnumber");
+			}
+			set
+			{
+				this.OnPropertyChanging("NextTrackingNumber");
+				this.SetAttributeValue("nexttrackingnumber", value);
+				this.OnPropertyChanged("NextTrackingNumber");
+			}
+		}
+		
+		/// <summary>
+		/// Information that specifies how numbers are grouped in Microsoft Dynamics 365.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("numbergroupformat")]
+		public string NumberGroupFormat
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("numbergroupformat");
+			}
+			set
+			{
+				this.OnPropertyChanging("NumberGroupFormat");
+				this.SetAttributeValue("numbergroupformat", value);
+				this.OnPropertyChanged("NumberGroupFormat");
+			}
+		}
+		
+		/// <summary>
+		/// Symbol used for number separation in Microsoft Dynamics 365.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("numberseparator")]
+		public string NumberSeparator
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("numberseparator");
+			}
+			set
+			{
+				this.OnPropertyChanging("NumberSeparator");
+				this.SetAttributeValue("numberseparator", value);
+				this.OnPropertyChanged("NumberSeparator");
+			}
+		}
+		
+		/// <summary>
+		/// Normal polling frequency used for background offline synchronization in Microsoft Office Outlook.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("offlinesyncinterval")]
+		public System.Nullable<int> OfflineSyncInterval
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("offlinesyncinterval");
+			}
+			set
+			{
+				this.OnPropertyChanging("OfflineSyncInterval");
+				this.SetAttributeValue("offlinesyncinterval", value);
+				this.OnPropertyChanged("OfflineSyncInterval");
+			}
+		}
+		
+		/// <summary>
+		/// Normal polling frequency used for record synchronization in Microsoft Office Outlook.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("outlooksyncinterval")]
+		public System.Nullable<int> OutlookSyncInterval
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("outlooksyncinterval");
+			}
+			set
+			{
+				this.OnPropertyChanging("OutlookSyncInterval");
+				this.SetAttributeValue("outlooksyncinterval", value);
+				this.OnPropertyChanged("OutlookSyncInterval");
+			}
+		}
+		
+		/// <summary>
+		/// Information that specifies how many items to list on a page in list views.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("paginglimit")]
+		public System.Nullable<int> PagingLimit
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("paginglimit");
+			}
+			set
+			{
+				this.OnPropertyChanging("PagingLimit");
+				this.SetAttributeValue("paginglimit", value);
+				this.OnPropertyChanged("PagingLimit");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("personalizationsettings")]
+		public string PersonalizationSettings
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("personalizationsettings");
+			}
+			set
+			{
+				this.OnPropertyChanging("PersonalizationSettings");
+				this.SetAttributeValue("personalizationsettings", value);
+				this.OnPropertyChanged("PersonalizationSettings");
+			}
+		}
+		
+		/// <summary>
+		/// PM designator to use in Microsoft Dynamics 365.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("pmdesignator")]
+		public string PMDesignator
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("pmdesignator");
+			}
+			set
+			{
+				this.OnPropertyChanging("PMDesignator");
+				this.SetAttributeValue("pmdesignator", value);
+				this.OnPropertyChanged("PMDesignator");
+			}
+		}
+		
+		/// <summary>
+		/// Number of decimal places that can be used for prices.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("pricingdecimalprecision")]
+		[System.ObsoleteAttribute()]
+		public System.Nullable<int> PricingDecimalPrecision
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("pricingdecimalprecision");
+			}
+			set
+			{
+				this.OnPropertyChanging("PricingDecimalPrecision");
+				this.SetAttributeValue("pricingdecimalprecision", value);
+				this.OnPropertyChanged("PricingDecimalPrecision");
+			}
+		}
+		
+		/// <summary>
+		/// Picklist for selecting the user preference for reporting scripting errors.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("reportscripterrors")]
+		public System.Nullable<Driv.CustomApis.usersettings_reportscripterrors> ReportScriptErrors
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("reportscripterrors");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.usersettings_reportscripterrors)(System.Enum.ToObject(typeof(Driv.CustomApis.usersettings_reportscripterrors), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("ReportScriptErrors");
+				if ((value == null))
+				{
+					this.SetAttributeValue("reportscripterrors", null);
+				}
+				else
+				{
+					this.SetAttributeValue("reportscripterrors", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("ReportScriptErrors");
+			}
+		}
+		
+		/// <summary>
+		/// The version number for resource booking synchronization with Exchange.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("resourcebookingexchangesyncversion")]
+		public System.Nullable<long> ResourceBookingExchangeSyncVersion
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<long>>("resourcebookingexchangesyncversion");
+			}
+			set
+			{
+				this.OnPropertyChanging("ResourceBookingExchangeSyncVersion");
+				this.SetAttributeValue("resourcebookingexchangesyncversion", value);
+				this.OnPropertyChanged("ResourceBookingExchangeSyncVersion");
+			}
+		}
+		
+		/// <summary>
+		/// Store selected customer service hub dashboard saved filter id.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("selectedglobalfilterid")]
+		public System.Nullable<System.Guid> SelectedGlobalFilterId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("selectedglobalfilterid");
+			}
+			set
+			{
+				this.OnPropertyChanging("SelectedGlobalFilterId");
+				this.SetAttributeValue("selectedglobalfilterid", value);
+				this.OnPropertyChanged("SelectedGlobalFilterId");
+			}
+		}
+		
+		/// <summary>
+		/// Information that specifies whether to display the week number in calendar displays in Microsoft Dynamics 365.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("showweeknumber")]
+		public System.Nullable<bool> ShowWeekNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("showweeknumber");
+			}
+			set
+			{
+				this.OnPropertyChanging("ShowWeekNumber");
+				this.SetAttributeValue("showweeknumber", value);
+				this.OnPropertyChanged("ShowWeekNumber");
+			}
+		}
+		
+		/// <summary>
+		/// For Internal use only
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("splitviewstate")]
+		public System.Nullable<bool> SplitViewState
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("splitviewstate");
+			}
+			set
+			{
+				this.OnPropertyChanging("SplitViewState");
+				this.SetAttributeValue("splitviewstate", value);
+				this.OnPropertyChanged("SplitViewState");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates if the company field in Microsoft Office Outlook items are set during Outlook synchronization.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("synccontactcompany")]
+		public System.Nullable<bool> SyncContactCompany
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("synccontactcompany");
+			}
+			set
+			{
+				this.OnPropertyChanging("SyncContactCompany");
+				this.SetAttributeValue("synccontactcompany", value);
+				this.OnPropertyChanged("SyncContactCompany");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("systemuserid")]
+		public System.Nullable<System.Guid> SystemUserId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("systemuserid");
+			}
+			set
+			{
+				this.OnPropertyChanging("SystemUserId");
+				this.SetAttributeValue("systemuserid", value);
+				if (value.HasValue)
+				{
+					base.Id = value.Value;
+				}
+				else
+				{
+					base.Id = System.Guid.Empty;
+				}
+				this.OnPropertyChanged("SystemUserId");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("systemuserid")]
+		public override System.Guid Id
+		{
+			get
+			{
+				return base.Id;
+			}
+			set
+			{
+				this.SystemUserId = value;
+			}
+		}
+		
+		/// <summary>
+		/// Information that specifies how the time is displayed in Microsoft Dynamics 365.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timeformatcode")]
+		public System.Nullable<int> TimeFormatCode
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timeformatcode");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeFormatCode");
+				this.SetAttributeValue("timeformatcode", value);
+				this.OnPropertyChanged("TimeFormatCode");
+			}
+		}
+		
+		/// <summary>
+		/// Text for how time is displayed in Microsoft Dynamics 365.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timeformatstring")]
+		public string TimeFormatString
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("timeformatstring");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeFormatString");
+				this.SetAttributeValue("timeformatstring", value);
+				this.OnPropertyChanged("TimeFormatString");
+			}
+		}
+		
+		/// <summary>
+		/// Text for how time is displayed in Microsoft Dynamics 365.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timeseparator")]
+		public string TimeSeparator
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("timeseparator");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeSeparator");
+				this.SetAttributeValue("timeseparator", value);
+				this.OnPropertyChanged("TimeSeparator");
+			}
+		}
+		
+		/// <summary>
+		/// Local time zone adjustment for the user. System calculated based on the time zone selected.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezonebias")]
+		public System.Nullable<int> TimeZoneBias
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezonebias");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneBias");
+				this.SetAttributeValue("timezonebias", value);
+				this.OnPropertyChanged("TimeZoneBias");
+			}
+		}
+		
+		/// <summary>
+		/// Local time zone for the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezonecode")]
+		public System.Nullable<int> TimeZoneCode
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezonecode");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneCode");
+				this.SetAttributeValue("timezonecode", value);
+				this.OnPropertyChanged("TimeZoneCode");
+			}
+		}
+		
+		/// <summary>
+		/// Local time zone daylight adjustment for the user. System calculated based on the time zone selected.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezonedaylightbias")]
+		public System.Nullable<int> TimeZoneDaylightBias
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezonedaylightbias");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneDaylightBias");
+				this.SetAttributeValue("timezonedaylightbias", value);
+				this.OnPropertyChanged("TimeZoneDaylightBias");
+			}
+		}
+		
+		/// <summary>
+		/// Local time zone daylight day for the user. System calculated based on the time zone selected.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezonedaylightday")]
+		public System.Nullable<int> TimeZoneDaylightDay
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezonedaylightday");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneDaylightDay");
+				this.SetAttributeValue("timezonedaylightday", value);
+				this.OnPropertyChanged("TimeZoneDaylightDay");
+			}
+		}
+		
+		/// <summary>
+		/// Local time zone daylight day of week for the user. System calculated based on the time zone selected in Options.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezonedaylightdayofweek")]
+		public System.Nullable<int> TimeZoneDaylightDayOfWeek
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezonedaylightdayofweek");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneDaylightDayOfWeek");
+				this.SetAttributeValue("timezonedaylightdayofweek", value);
+				this.OnPropertyChanged("TimeZoneDaylightDayOfWeek");
+			}
+		}
+		
+		/// <summary>
+		/// Local time zone daylight hour for the user. System calculated based on the time zone selected.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezonedaylighthour")]
+		public System.Nullable<int> TimeZoneDaylightHour
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezonedaylighthour");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneDaylightHour");
+				this.SetAttributeValue("timezonedaylighthour", value);
+				this.OnPropertyChanged("TimeZoneDaylightHour");
+			}
+		}
+		
+		/// <summary>
+		/// Local time zone daylight minute for the user. System calculated based on the time zone selected.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezonedaylightminute")]
+		public System.Nullable<int> TimeZoneDaylightMinute
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezonedaylightminute");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneDaylightMinute");
+				this.SetAttributeValue("timezonedaylightminute", value);
+				this.OnPropertyChanged("TimeZoneDaylightMinute");
+			}
+		}
+		
+		/// <summary>
+		/// Local time zone daylight month for the user. System calculated based on the time zone selected.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezonedaylightmonth")]
+		public System.Nullable<int> TimeZoneDaylightMonth
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezonedaylightmonth");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneDaylightMonth");
+				this.SetAttributeValue("timezonedaylightmonth", value);
+				this.OnPropertyChanged("TimeZoneDaylightMonth");
+			}
+		}
+		
+		/// <summary>
+		/// Local time zone daylight second for the user. System calculated based on the time zone selected.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezonedaylightsecond")]
+		public System.Nullable<int> TimeZoneDaylightSecond
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezonedaylightsecond");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneDaylightSecond");
+				this.SetAttributeValue("timezonedaylightsecond", value);
+				this.OnPropertyChanged("TimeZoneDaylightSecond");
+			}
+		}
+		
+		/// <summary>
+		/// Local time zone daylight year for the user. System calculated based on the time zone selected.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezonedaylightyear")]
+		public System.Nullable<int> TimeZoneDaylightYear
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezonedaylightyear");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneDaylightYear");
+				this.SetAttributeValue("timezonedaylightyear", value);
+				this.OnPropertyChanged("TimeZoneDaylightYear");
+			}
+		}
+		
+		/// <summary>
+		/// Local time zone standard time bias for the user. System calculated based on the time zone selected.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezonestandardbias")]
+		public System.Nullable<int> TimeZoneStandardBias
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezonestandardbias");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneStandardBias");
+				this.SetAttributeValue("timezonestandardbias", value);
+				this.OnPropertyChanged("TimeZoneStandardBias");
+			}
+		}
+		
+		/// <summary>
+		/// Local time zone standard day for the user. System calculated based on the time zone selected.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezonestandardday")]
+		public System.Nullable<int> TimeZoneStandardDay
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezonestandardday");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneStandardDay");
+				this.SetAttributeValue("timezonestandardday", value);
+				this.OnPropertyChanged("TimeZoneStandardDay");
+			}
+		}
+		
+		/// <summary>
+		/// Local time zone standard day of week for the user. System calculated based on the time zone selected.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezonestandarddayofweek")]
+		public System.Nullable<int> TimeZoneStandardDayOfWeek
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezonestandarddayofweek");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneStandardDayOfWeek");
+				this.SetAttributeValue("timezonestandarddayofweek", value);
+				this.OnPropertyChanged("TimeZoneStandardDayOfWeek");
+			}
+		}
+		
+		/// <summary>
+		/// Local time zone standard hour for the user. System calculated based on the time zone selected.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezonestandardhour")]
+		public System.Nullable<int> TimeZoneStandardHour
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezonestandardhour");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneStandardHour");
+				this.SetAttributeValue("timezonestandardhour", value);
+				this.OnPropertyChanged("TimeZoneStandardHour");
+			}
+		}
+		
+		/// <summary>
+		/// Local time zone standard minute for the user. System calculated based on the time zone selected.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezonestandardminute")]
+		public System.Nullable<int> TimeZoneStandardMinute
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezonestandardminute");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneStandardMinute");
+				this.SetAttributeValue("timezonestandardminute", value);
+				this.OnPropertyChanged("TimeZoneStandardMinute");
+			}
+		}
+		
+		/// <summary>
+		/// Local time zone standard month for the user. System calculated based on the time zone selected.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezonestandardmonth")]
+		public System.Nullable<int> TimeZoneStandardMonth
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezonestandardmonth");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneStandardMonth");
+				this.SetAttributeValue("timezonestandardmonth", value);
+				this.OnPropertyChanged("TimeZoneStandardMonth");
+			}
+		}
+		
+		/// <summary>
+		/// Local time zone standard second for the user. System calculated based on the time zone selected.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezonestandardsecond")]
+		public System.Nullable<int> TimeZoneStandardSecond
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezonestandardsecond");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneStandardSecond");
+				this.SetAttributeValue("timezonestandardsecond", value);
+				this.OnPropertyChanged("TimeZoneStandardSecond");
+			}
+		}
+		
+		/// <summary>
+		/// Local time zone standard year for the user. System calculated based on the time zone selected.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezonestandardyear")]
+		public System.Nullable<int> TimeZoneStandardYear
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezonestandardyear");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneStandardYear");
+				this.SetAttributeValue("timezonestandardyear", value);
+				this.OnPropertyChanged("TimeZoneStandardYear");
+			}
+		}
+		
+		/// <summary>
+		/// Tracking token ID.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("trackingtokenid")]
+		public System.Nullable<int> TrackingTokenId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("trackingtokenid");
+			}
+			set
+			{
+				this.OnPropertyChanging("TrackingTokenId");
+				this.SetAttributeValue("trackingtokenid", value);
+				this.OnPropertyChanged("TrackingTokenId");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the default currency of the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("transactioncurrencyid")]
+		public Microsoft.Xrm.Sdk.EntityReference TransactionCurrencyId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("transactioncurrencyid");
+			}
+			set
+			{
+				this.OnPropertyChanging("TransactionCurrencyId");
+				this.SetAttributeValue("transactioncurrencyid", value);
+				this.OnPropertyChanged("TransactionCurrencyId");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the language in which to view the user interface (UI).
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("uilanguageid")]
+		public System.Nullable<int> UILanguageId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("uilanguageid");
+			}
+			set
+			{
+				this.OnPropertyChanging("UILanguageId");
+				this.SetAttributeValue("uilanguageid", value);
+				this.OnPropertyChanged("UILanguageId");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether to use the Microsoft Dynamics 365 appointment form within Microsoft Office Outlook for creating new appointments.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("usecrmformforappointment")]
+		public System.Nullable<bool> UseCrmFormForAppointment
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("usecrmformforappointment");
+			}
+			set
+			{
+				this.OnPropertyChanging("UseCrmFormForAppointment");
+				this.SetAttributeValue("usecrmformforappointment", value);
+				this.OnPropertyChanged("UseCrmFormForAppointment");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether to use the Microsoft Dynamics 365 contact form within Microsoft Office Outlook for creating new contacts.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("usecrmformforcontact")]
+		public System.Nullable<bool> UseCrmFormForContact
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("usecrmformforcontact");
+			}
+			set
+			{
+				this.OnPropertyChanging("UseCrmFormForContact");
+				this.SetAttributeValue("usecrmformforcontact", value);
+				this.OnPropertyChanged("UseCrmFormForContact");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether to use the Microsoft Dynamics 365 email form within Microsoft Office Outlook for creating new emails.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("usecrmformforemail")]
+		public System.Nullable<bool> UseCrmFormForEmail
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("usecrmformforemail");
+			}
+			set
+			{
+				this.OnPropertyChanging("UseCrmFormForEmail");
+				this.SetAttributeValue("usecrmformforemail", value);
+				this.OnPropertyChanged("UseCrmFormForEmail");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether to use the Microsoft Dynamics 365 task form within Microsoft Office Outlook for creating new tasks.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("usecrmformfortask")]
+		public System.Nullable<bool> UseCrmFormForTask
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("usecrmformfortask");
+			}
+			set
+			{
+				this.OnPropertyChanging("UseCrmFormForTask");
+				this.SetAttributeValue("usecrmformfortask", value);
+				this.OnPropertyChanged("UseCrmFormForTask");
+			}
+		}
+		
+		/// <summary>
+		/// Indicates whether image strips are used to render images.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("useimagestrips")]
+		public System.Nullable<bool> UseImageStrips
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<bool>>("useimagestrips");
+			}
+			set
+			{
+				this.OnPropertyChanging("UseImageStrips");
+				this.SetAttributeValue("useimagestrips", value);
+				this.OnPropertyChanged("UseImageStrips");
+			}
+		}
+		
+		/// <summary>
+		/// Specifies user profile ids in comma separated list.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("userprofile")]
+		public string UserProfile
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("userprofile");
+			}
+			set
+			{
+				this.OnPropertyChanging("UserProfile");
+				this.SetAttributeValue("userprofile", value);
+				this.OnPropertyChanged("UserProfile");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("versionnumber")]
+		public System.Nullable<long> VersionNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<long>>("versionnumber");
+			}
+		}
+		
+		/// <summary>
+		/// The layout of the visualization pane.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("visualizationpanelayout")]
+		public System.Nullable<Driv.CustomApis.usersettings_visualizationpanelayout> VisualizationPaneLayout
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("visualizationpanelayout");
+				if ((optionSet != null))
+				{
+					return ((Driv.CustomApis.usersettings_visualizationpanelayout)(System.Enum.ToObject(typeof(Driv.CustomApis.usersettings_visualizationpanelayout), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("VisualizationPaneLayout");
+				if ((value == null))
+				{
+					this.SetAttributeValue("visualizationpanelayout", null);
+				}
+				else
+				{
+					this.SetAttributeValue("visualizationpanelayout", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("VisualizationPaneLayout");
+			}
+		}
+		
+		/// <summary>
+		/// Workday start time for the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("workdaystarttime")]
+		public string WorkdayStartTime
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("workdaystarttime");
+			}
+			set
+			{
+				this.OnPropertyChanging("WorkdayStartTime");
+				this.SetAttributeValue("workdaystarttime", value);
+				this.OnPropertyChanged("WorkdayStartTime");
+			}
+		}
+		
+		/// <summary>
+		/// Workday stop time for the user.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("workdaystoptime")]
+		public string WorkdayStopTime
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("workdaystoptime");
+			}
+			set
+			{
+				this.OnPropertyChanging("WorkdayStopTime");
+				this.SetAttributeValue("workdaystoptime", value);
+				this.OnPropertyChanged("WorkdayStopTime");
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_usersettings_createdonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_usersettings_createdonbehalfby")]
+		public Driv.CustomApis.SystemUser lk_usersettings_createdonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_usersettings_createdonbehalfby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_usersettings_modifiedonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_usersettings_modifiedonbehalfby")]
+		public Driv.CustomApis.SystemUser lk_usersettings_modifiedonbehalfby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_usersettings_modifiedonbehalfby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_usersettingsbase_createdby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_usersettingsbase_createdby")]
+		public Driv.CustomApis.SystemUser lk_usersettingsbase_createdby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_usersettingsbase_createdby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_usersettingsbase_modifiedby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_usersettingsbase_modifiedby")]
+		public Driv.CustomApis.SystemUser lk_usersettingsbase_modifiedby
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("lk_usersettingsbase_modifiedby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 user_settings
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("systemuserid")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("user_settings")]
+		public Driv.CustomApis.SystemUser user_settings
+		{
+			get
+			{
+				return this.GetRelatedEntity<Driv.CustomApis.SystemUser>("user_settings", null);
+			}
+			set
+			{
+				this.OnPropertyChanging("user_settings");
+				this.SetRelatedEntity<Driv.CustomApis.SystemUser>("user_settings", null, value);
+				this.OnPropertyChanged("user_settings");
+			}
+		}
+	}
+	
+	/// <summary>
+	/// Represents a source of entities bound to a CRM service. It tracks and manages changes made to the retrieved entities.
+	/// </summary>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public partial class XrmContext : Microsoft.Xrm.Sdk.Client.OrganizationServiceContext
+	{
+		
+		/// <summary>
+		/// Constructor.
+		/// </summary>
+		public XrmContext(Microsoft.Xrm.Sdk.IOrganizationService service) : 
+				base(service)
+		{
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="Driv.CustomApis.AppModule"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<Driv.CustomApis.AppModule> AppModuleSet
+		{
+			get
+			{
+				return this.CreateQuery<Driv.CustomApis.AppModule>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="Driv.CustomApis.AppSetting"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<Driv.CustomApis.AppSetting> AppSettingSet
+		{
+			get
+			{
+				return this.CreateQuery<Driv.CustomApis.AppSetting>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="Driv.CustomApis.EnvironmentVariableDefinition"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<Driv.CustomApis.EnvironmentVariableDefinition> EnvironmentVariableDefinitionSet
+		{
+			get
+			{
+				return this.CreateQuery<Driv.CustomApis.EnvironmentVariableDefinition>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="Driv.CustomApis.EnvironmentVariableValue"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<Driv.CustomApis.EnvironmentVariableValue> EnvironmentVariableValueSet
+		{
+			get
+			{
+				return this.CreateQuery<Driv.CustomApis.EnvironmentVariableValue>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="Driv.CustomApis.OrganizationSetting"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<Driv.CustomApis.OrganizationSetting> OrganizationSettingSet
+		{
+			get
+			{
+				return this.CreateQuery<Driv.CustomApis.OrganizationSetting>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="Driv.CustomApis.SettingDefinition"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<Driv.CustomApis.SettingDefinition> SettingDefinitionSet
+		{
+			get
+			{
+				return this.CreateQuery<Driv.CustomApis.SettingDefinition>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="Driv.CustomApis.SystemUser"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<Driv.CustomApis.SystemUser> SystemUserSet
+		{
+			get
+			{
+				return this.CreateQuery<Driv.CustomApis.SystemUser>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="Driv.CustomApis.TimeZoneDefinition"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<Driv.CustomApis.TimeZoneDefinition> TimeZoneDefinitionSet
+		{
+			get
+			{
+				return this.CreateQuery<Driv.CustomApis.TimeZoneDefinition>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="Driv.CustomApis.UserSettings"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<Driv.CustomApis.UserSettings> UserSettingsSet
+		{
+			get
+			{
+				return this.CreateQuery<Driv.CustomApis.UserSettings>();
+			}
+		}
+	}
 }

@@ -1,0 +1,8 @@
+<customapiresponseproperty uniquename="IsOverridable">
+  <displayname default="GetSetting-Out-IsOverridable">
+    <label description="GetSetting-Out-IsOverridable" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <name>GetSetting-Out-IsOverridable</name>
+  <type>0</type>
+</customapiresponseproperty>

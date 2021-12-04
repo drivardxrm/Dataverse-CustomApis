@@ -50,14 +50,14 @@ namespace Driv.CustomApis.API
 
                 switch (definition.Type) 
                 {
-                    case EnvironmentVariableDefinition_Type.Boolean:
+                    case environmentvariabledefinition_type.Boolean:
                 
                             outputparameters["ValueBool"] = overridenvalue != null ?
                                                                     overridenvalue.Value == "yes" :
                                                                     definition.DefaultValue == "yes";
                         break;
 
-                    case EnvironmentVariableDefinition_Type.Number:
+                    case environmentvariabledefinition_type.Number:
                         outputparameters["ValueDecimal"] = overridenvalue != null ?
                                                                  decimal.Parse(overridenvalue.Value):
                                                                  decimal.Parse(definition.DefaultValue);

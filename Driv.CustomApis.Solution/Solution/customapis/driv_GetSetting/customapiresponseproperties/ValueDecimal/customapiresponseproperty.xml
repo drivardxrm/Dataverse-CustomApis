@@ -1,0 +1,8 @@
+<customapiresponseproperty uniquename="ValueDecimal">
+  <displayname default="GetSetting-Out-ValueDecimal">
+    <label description="GetSetting-Out-ValueDecimal" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <name>GetSetting-Out-ValueDecimal</name>
+  <type>2</type>
+</customapiresponseproperty>

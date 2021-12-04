@@ -1,0 +1,8 @@
+<customapiresponseproperty uniquename="TypeName">
+  <displayname default="GetSetting-Out-TypeName">
+    <label description="GetSetting-Out-TypeName" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <name>GetSetting-Out-TypeName</name>
+  <type>10</type>
+</customapiresponseproperty>

@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="Exists">
+  <description default="Does the setting exist in the environment">
+    <label description="Does the setting exist in the environment" languagecode="1033" />
+  </description>
+  <displayname default="GetSetting-Out-Exists">
+    <label description="GetSetting-Out-Exists" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <name>GetSetting-Out-Exists</name>
+  <type>0</type>
+</customapiresponseproperty>

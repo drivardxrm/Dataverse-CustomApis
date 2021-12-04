@@ -20,6 +20,9 @@
     <PluginType AssemblyQualifiedName="Driv.CustomApis.API.GetLocalizedChoiceLabel, Driv.CustomApis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e86c979a4e901f1" PluginTypeId="2939cb71-36f3-4c60-a6b2-b4e0adb7a2b8" Name="Driv.CustomApis.API.GetLocalizedChoiceLabel">
       <FriendlyName>b379b2b4-70ce-426e-a431-2edd9205753d</FriendlyName>
     </PluginType>
+    <PluginType AssemblyQualifiedName="Driv.CustomApis.API.GetSetting, Driv.CustomApis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e86c979a4e901f1" PluginTypeId="9f9f7f5c-a181-4584-9920-4261ac0908cf" Name="Driv.CustomApis.API.GetSetting">
+      <FriendlyName>324289d1-79f9-4d0b-a651-94cefce16e09</FriendlyName>
+    </PluginType>
     <PluginType AssemblyQualifiedName="Driv.CustomApis.API.GetTableInfo, Driv.CustomApis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e86c979a4e901f1" PluginTypeId="6d8b95d3-44de-4885-98d1-e6c51f8b80ed" Name="Driv.CustomApis.API.GetTableInfo">
       <FriendlyName>d49fff01-f742-4e07-b513-e89bee7ba715</FriendlyName>
     </PluginType>

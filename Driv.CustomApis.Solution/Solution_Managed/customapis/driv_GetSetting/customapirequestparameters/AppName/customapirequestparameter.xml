@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="AppName">
+  <description default="Model-driven app unique name (optional)">
+    <label description="Model-driven app unique name (optional)" languagecode="1033" />
+  </description>
+  <displayname default="GetSetting-In-AppName">
+    <label description="GetSetting-In-AppName" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isoptional>1</isoptional>
+  <name>GetSetting-In-AppName</name>
+  <type>10</type>
+</customapirequestparameter>

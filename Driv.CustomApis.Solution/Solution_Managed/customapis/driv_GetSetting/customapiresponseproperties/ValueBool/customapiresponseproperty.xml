@@ -1,0 +1,8 @@
+<customapiresponseproperty uniquename="ValueBool">
+  <displayname default="GetSetting-Out-ValueBool">
+    <label description="GetSetting-Out-ValueBool" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <name>GetSetting-Out-ValueBool</name>
+  <type>0</type>
+</customapiresponseproperty>

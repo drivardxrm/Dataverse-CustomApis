@@ -1,0 +1,18 @@
+<customapi uniquename="driv_GetSetting">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Get Setting value">
+    <label description="Get Setting value" languagecode="1033" />
+  </description>
+  <displayname default="GetSetting">
+    <label description="GetSetting" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>GetSetting</name>
+  <plugintypeid>
+    <plugintypeid>9f9f7f5c-a181-4584-9920-4261ac0908cf</plugintypeid>
+  </plugintypeid>
+  <workflowsdkstepenabled>1</workflowsdkstepenabled>
+</customapi>

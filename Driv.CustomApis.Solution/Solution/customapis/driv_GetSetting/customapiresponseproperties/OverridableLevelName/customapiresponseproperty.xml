@@ -1,0 +1,8 @@
+<customapiresponseproperty uniquename="OverridableLevelName">
+  <displayname default="GetSetting-Out-OverridableLevelName">
+    <label description="GetSetting-Out-OverridableLevelName" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <name>GetSetting-Out-OverridableLevelName</name>
+  <type>10</type>
+</customapiresponseproperty>

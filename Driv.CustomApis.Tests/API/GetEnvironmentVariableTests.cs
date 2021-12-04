@@ -29,7 +29,7 @@ namespace Driv.CustomApis.Tests.API
                 Id = Guid.NewGuid(),
                 SchemaName = "MyKey",
                 ValueSchema = "StringValue",
-                Type = EnvironmentVariableDefinition_Type.String
+                Type = environmentvariabledefinition_type.String
 
             };
 
@@ -84,7 +84,7 @@ namespace Driv.CustomApis.Tests.API
                 Id = Guid.NewGuid(),
                 SchemaName = "MyKey",
                 DefaultValue = "MyKeyValue",
-                Type = EnvironmentVariableDefinition_Type.String
+                Type = environmentvariabledefinition_type.String
 
             };
 
@@ -129,7 +129,7 @@ namespace Driv.CustomApis.Tests.API
             #region ASSERT
             Assert.IsTrue((bool)context.OutputParameters["Exists"]);
             Assert.AreEqual("MyKeyValue",(string)context.OutputParameters["ValueString"]);
-            Assert.AreEqual(new OptionSetValue((int)EnvironmentVariableDefinition_Type.String), (OptionSetValue)context.OutputParameters["Type"]);
+            Assert.AreEqual(new OptionSetValue((int)environmentvariabledefinition_type.String), (OptionSetValue)context.OutputParameters["Type"]);
             #endregion
         }
 
@@ -143,7 +143,7 @@ namespace Driv.CustomApis.Tests.API
                 Id = Guid.NewGuid(),
                 SchemaName = "MyKey",
                 DefaultValue = "MyKeyValue",
-                Type = EnvironmentVariableDefinition_Type.String
+                Type = environmentvariabledefinition_type.String
 
             };
             var environmentvariblevalue = new EnvironmentVariableValue()
@@ -196,7 +196,7 @@ namespace Driv.CustomApis.Tests.API
             #region ASSERT
             Assert.IsTrue((bool)context.OutputParameters["Exists"]);
             Assert.AreEqual("MyOverridenValue", (string)context.OutputParameters["ValueString"]);
-            Assert.AreEqual(new OptionSetValue((int)EnvironmentVariableDefinition_Type.String), (OptionSetValue)context.OutputParameters["Type"]);
+            Assert.AreEqual(new OptionSetValue((int)environmentvariabledefinition_type.String), (OptionSetValue)context.OutputParameters["Type"]);
             #endregion 
         }
 
@@ -210,7 +210,7 @@ namespace Driv.CustomApis.Tests.API
                 Id = Guid.NewGuid(),
                 SchemaName = "MyKey",
                 DefaultValue = "no", //false
-                Type = EnvironmentVariableDefinition_Type.Boolean
+                Type = environmentvariabledefinition_type.Boolean
 
             };
             var environmentvariblevalue = new EnvironmentVariableValue()
@@ -264,7 +264,7 @@ namespace Driv.CustomApis.Tests.API
             Assert.IsTrue((bool)context.OutputParameters["Exists"]);
             Assert.AreEqual("yes", (string)context.OutputParameters["ValueString"]);
             Assert.AreEqual(true, (bool)context.OutputParameters["ValueBool"]);
-            Assert.AreEqual(new OptionSetValue((int)EnvironmentVariableDefinition_Type.Boolean), (OptionSetValue)context.OutputParameters["Type"]);
+            Assert.AreEqual(new OptionSetValue((int)environmentvariabledefinition_type.Boolean), (OptionSetValue)context.OutputParameters["Type"]);
             #endregion 
         }
 
@@ -280,7 +280,7 @@ namespace Driv.CustomApis.Tests.API
                 Id = Guid.NewGuid(),
                 SchemaName = "MyKey",
                 DefaultValue = "10.5", 
-                Type = EnvironmentVariableDefinition_Type.Number
+                Type = environmentvariabledefinition_type.Number
 
             };
             var environmentvariblevalue = new EnvironmentVariableValue()
@@ -333,7 +333,7 @@ namespace Driv.CustomApis.Tests.API
             Assert.IsTrue((bool)context.OutputParameters["Exists"]);
             Assert.AreEqual("100.5", (string)context.OutputParameters["ValueString"]);
             Assert.AreEqual(new decimal(100.5), (decimal)context.OutputParameters["ValueDecimal"]);
-            Assert.AreEqual(new OptionSetValue((int)EnvironmentVariableDefinition_Type.Number), (OptionSetValue)context.OutputParameters["Type"]);
+            Assert.AreEqual(new OptionSetValue((int)environmentvariabledefinition_type.Number), (OptionSetValue)context.OutputParameters["Type"]);
             #endregion
         }
 
@@ -348,7 +348,7 @@ namespace Driv.CustomApis.Tests.API
                 Id = Guid.NewGuid(),
                 SchemaName = "MyKey",
                 DefaultValue = "{'test':'test'}",
-                Type = EnvironmentVariableDefinition_Type.JSON
+                Type = environmentvariabledefinition_type.JSON
 
             };
             var environmentvariblevalue = new EnvironmentVariableValue()
@@ -400,7 +400,7 @@ namespace Driv.CustomApis.Tests.API
             #region ASSERT
             Assert.IsTrue((bool)context.OutputParameters["Exists"]);
             Assert.AreEqual("{'test2':'test2'}", (string)context.OutputParameters["ValueString"]);
-            Assert.AreEqual(new OptionSetValue((int)EnvironmentVariableDefinition_Type.JSON), (OptionSetValue)context.OutputParameters["Type"]);
+            Assert.AreEqual(new OptionSetValue((int)environmentvariabledefinition_type.JSON), (OptionSetValue)context.OutputParameters["Type"]);
             #endregion
         }
     }

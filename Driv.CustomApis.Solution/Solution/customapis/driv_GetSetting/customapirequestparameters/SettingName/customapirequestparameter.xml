@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="SettingName">
+  <description default="Setting Unique Name (KEY)">
+    <label description="Setting Unique Name (KEY)" languagecode="1033" />
+  </description>
+  <displayname default="GetSetting-In-SettingName">
+    <label description="GetSetting-In-SettingName" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>GetSetting-In-SettingName</name>
+  <type>10</type>
+</customapirequestparameter>
