@@ -1,4 +1,5 @@
 ﻿using Driv.CustomApis.Helpers;
+using Microsoft.Crm.Sdk.Messages;
 using Microsoft.Xrm.Sdk;
 using XrmVision.Extensions.Extensions;
 
@@ -27,35 +28,37 @@ namespace Driv.CustomApis.API
             //default values
             outputparameters["Exists"] = false;
             outputparameters["ValueString"] = string.Empty;
-            
+
 
             var definition = xrmcontext.GetSettingDefinitionFor(settingname);
             if (definition != null)
             {
                 outputparameters["Exists"] = true;
 
-                var appmodule = xrmcontext.GetAppModuleByUniqueName(appname);
+                //Error handling
+                if (!string.IsNullOrEmpty(appname))
+                {
+                    var appmodule = xrmcontext.GetAppModuleByUniqueName(appname);
+                    if (appmodule == null)
+                    {
+                        throw new InvalidPluginExecutionException($"App with name {appname} doesn't exists");
+                    }
+                }
 
-                var organizationsetting = xrmcontext.GetOrganizationSettingFor(definition);
+                // use OOB RetrieveSEtting function
+                var settingdetail = service.RetrieveSetting(settingname, appname);
 
-                var appsetting = xrmcontext.GetAppSettingFor(definition, appmodule);
+                outputparameters["ValueString"] = settingdetail.Value;
 
-                var valuestring = appsetting != null ?
-                                    appsetting.Value :
-                                    (organizationsetting != null ?
-                                        organizationsetting.Value :
-                                        definition.DefaultValue);
-
-                outputparameters["ValueString"] = valuestring;
                 switch (definition.DataType)
                 {
                     case settingdefinition_datatype.Boolean:
 
-                        outputparameters["ValueBool"] = valuestring.ToLower() == "true";
+                        outputparameters["ValueBool"] = settingdetail.Value.ToLower() == "true";
                         break;
 
                     case settingdefinition_datatype.Number:
-                        outputparameters["ValueDecimal"] = decimal.Parse(valuestring);
+                        outputparameters["ValueDecimal"] = decimal.Parse(settingdetail.Value);
 
                         break;
 
