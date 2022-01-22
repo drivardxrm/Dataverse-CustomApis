@@ -1,6 +1,6 @@
 <customapiresponseproperty uniquename="ValueDecimal">
-  <description default="Environment variable when type is Decimal">
-    <label description="Environment variable when type is Decimal" languagecode="1033" />
+  <description default="Value when type is Decimal">
+    <label description="Value when type is Decimal" languagecode="1033" />
   </description>
   <displayname default="GetEnvironmentVariable-Out-ValueDecimal">
     <label description="GetEnvironmentVariable-Out-ValueDecimal" languagecode="1033" />

@@ -658,6 +658,15 @@ namespace Driv.CustomApis
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum onlinemeetingtype
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		TeamsMeeting = 1,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
 	public enum activitypointer_deliveryprioritycode
 	{
 		
@@ -669,6 +678,33 @@ namespace Driv.CustomApis
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
 		High = 2,
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public enum msdyn_numberofsearchresults
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Number_10 = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Number_15 = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Number_20 = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Number_25 = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Number_30 = 4,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Number_40 = 5,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Number_50 = 6,
 	}
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
@@ -12041,6 +12077,64 @@ namespace Driv.CustomApis
 			get
 			{
 				return this.CreateQuery<Driv.CustomApis.UserSettings>();
+			}
+		}
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute(Namespace="http://schemas.microsoft.com/xrm/2011/new/")]
+	[Microsoft.Xrm.Sdk.Client.RequestProxyAttribute("RetrieveEnvironmentVariableSecretValue")]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public partial class RetrieveEnvironmentVariableSecretValueRequest : Microsoft.Xrm.Sdk.OrganizationRequest
+	{
+		
+		public string EnvironmentVariableName
+		{
+			get
+			{
+				if (this.Parameters.Contains("EnvironmentVariableName"))
+				{
+					return ((string)(this.Parameters["EnvironmentVariableName"]));
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+			set
+			{
+				this.Parameters["EnvironmentVariableName"] = value;
+			}
+		}
+		
+		public RetrieveEnvironmentVariableSecretValueRequest()
+		{
+			this.RequestName = "RetrieveEnvironmentVariableSecretValue";
+			this.EnvironmentVariableName = default(string);
+		}
+	}
+	
+	[System.Runtime.Serialization.DataContractAttribute(Namespace="http://schemas.microsoft.com/xrm/2011/new/")]
+	[Microsoft.Xrm.Sdk.Client.ResponseProxyAttribute("RetrieveEnvironmentVariableSecretValue")]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.1.0.67")]
+	public partial class RetrieveEnvironmentVariableSecretValueResponse : Microsoft.Xrm.Sdk.OrganizationResponse
+	{
+		
+		public RetrieveEnvironmentVariableSecretValueResponse()
+		{
+		}
+		
+		public string EnvironmentVariableSecretValue
+		{
+			get
+			{
+				if (this.Results.Contains("EnvironmentVariableSecretValue"))
+				{
+					return ((string)(this.Results["EnvironmentVariableSecretValue"]));
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 	}

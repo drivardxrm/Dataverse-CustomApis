@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="ValueSecret">
+  <description default="Secret Value from Key Vault">
+    <label description="Secret Value from Key Vault" languagecode="1033" />
+  </description>
+  <displayname default="GetEnvironmentVariable-Out-ValueSecret">
+    <label description="GetEnvironmentVariable-Out-ValueSecret" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>GetEnvironmentVariable-Out-ValueSecret</name>
+  <type>10</type>
+</customapiresponseproperty>

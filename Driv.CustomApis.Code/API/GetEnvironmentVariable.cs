@@ -52,15 +52,20 @@ namespace Driv.CustomApis.API
                 {
                     case environmentvariabledefinition_type.Boolean:
                 
-                            outputparameters["ValueBool"] = overridenvalue != null ?
-                                                                    overridenvalue.Value == "yes" :
-                                                                    definition.DefaultValue == "yes";
+                        outputparameters["ValueBool"] = overridenvalue != null ?
+                                                            overridenvalue.Value == "yes" :
+                                                            definition.DefaultValue == "yes";
                         break;
 
                     case environmentvariabledefinition_type.Number:
                         outputparameters["ValueDecimal"] = overridenvalue != null ?
                                                                  decimal.Parse(overridenvalue.Value):
                                                                  decimal.Parse(definition.DefaultValue);
+
+                        break;
+                    case environmentvariabledefinition_type.Secret:
+                        var secretresponse = service.GetEnvironmentVariableSecretValue(key);
+                        outputparameters["ValueSecret"] = secretresponse.EnvironmentVariableSecretValue;
 
                         break;
 

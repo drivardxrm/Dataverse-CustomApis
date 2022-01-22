@@ -3,7 +3,7 @@
 
     {
       "entities": "environmentvariabledefinition,environmentvariablevalue,systemuser,timezonedefinition,usersettings,settingdefinition,organizationsetting,appsetting,appmodule",
-      "actions": "",
+      "actions": "RetrieveEnvironmentVariableSecretValue",
       "generateOptionsetEnums": true,
       "generateGlobalOptionsets": true,
       "generateStateEnums": true,
