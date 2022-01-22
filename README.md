@@ -18,7 +18,7 @@ Managed and unmanaged solutions are provided in the [Release section](https://gi
 * [AgeCalculation](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/AgeCalculation)
 * [DateInfo ](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/DateInfo) 
 * [DateCompare ](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/DateCompare) 
-* [GetEnvironmentVariable ](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetEnvironmentVariable)
+* [GetEnvironmentVariable ](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetEnvironmentVariable) (✨updated v1.2022.01.62)
 * [GetLocalizedChoiceLabel](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetLocalizedChoiceLabel)
 * [GetSetting](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetSettting) (:new: v1.2021.12.60)
 * [GetTableInfo](https://github.com/drivardxrm/Dataverse-CustomApis/wiki/GetTableInfo)
