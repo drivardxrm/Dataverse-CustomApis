@@ -1,5 +1,6 @@
 ﻿using Driv.CustomApis.API;
-using FakeXrmEasy;
+using FakeXrmEasy.Abstractions.Plugins;
+using FakeXrmEasy.Plugins;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.Xrm.Sdk;
 using System;

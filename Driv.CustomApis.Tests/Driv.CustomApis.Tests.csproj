@@ -46,8 +46,23 @@
     <Reference Include="FakeItEasy, Version=6.0.0.0, Culture=neutral, PublicKeyToken=eff28e2146d5fd2c, processorArchitecture=MSIL">
       <HintPath>..\packages\FakeItEasy.6.2.1\lib\net45\FakeItEasy.dll</HintPath>
     </Reference>
-    <Reference Include="FakeXrmEasy, Version=1.57.1.0, Culture=neutral, PublicKeyToken=dd4e58c4492635a6, processorArchitecture=MSIL">
-      <HintPath>..\packages\FakeXrmEasy.9.1.57.1\lib\net462\FakeXrmEasy.dll</HintPath>
+    <Reference Include="FakeXrmEasy, Version=2.1.2.0, Culture=neutral, PublicKeyToken=d91a65dda907a34f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FakeXrmEasy.v9.2.1.2\lib\net462\FakeXrmEasy.dll</HintPath>
+    </Reference>
+    <Reference Include="FakeXrmEasy.Abstractions, Version=2.1.1.0, Culture=neutral, PublicKeyToken=d91a65dda907a34f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FakeXrmEasy.Abstractions.v9.2.1.1\lib\net462\FakeXrmEasy.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="FakeXrmEasy.CodeActivities, Version=2.1.1.0, Culture=neutral, PublicKeyToken=d91a65dda907a34f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FakeXrmEasy.CodeActivities.v9.2.1.1\lib\net462\FakeXrmEasy.CodeActivities.dll</HintPath>
+    </Reference>
+    <Reference Include="FakeXrmEasy.Core, Version=2.1.1.0, Culture=neutral, PublicKeyToken=d91a65dda907a34f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FakeXrmEasy.Core.v9.2.1.1\lib\net462\FakeXrmEasy.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FakeXrmEasy.Messages, Version=2.1.1.0, Culture=neutral, PublicKeyToken=d91a65dda907a34f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FakeXrmEasy.Messages.v9.2.1.1\lib\net462\FakeXrmEasy.Messages.dll</HintPath>
+    </Reference>
+    <Reference Include="FakeXrmEasy.Plugins, Version=2.1.1.0, Culture=neutral, PublicKeyToken=d91a65dda907a34f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FakeXrmEasy.Plugins.v9.2.1.1\lib\net462\FakeXrmEasy.Plugins.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>

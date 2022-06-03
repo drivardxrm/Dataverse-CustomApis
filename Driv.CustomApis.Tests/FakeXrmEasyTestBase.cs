@@ -1,25 +1,33 @@
-﻿
-using FakeXrmEasy;
+﻿using FakeXrmEasy.Abstractions;
+using FakeXrmEasy.Abstractions.Enums;
+using FakeXrmEasy.FakeMessageExecutors;
+using FakeXrmEasy.Middleware;
+using FakeXrmEasy.Middleware.Crud;
+using FakeXrmEasy.Middleware.Messages;
 using Microsoft.Xrm.Sdk;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Reflection;
 
 namespace Driv.CustomApis.Tests
 {
     public class FakeXrmEasyTestBase
     {
         protected readonly IOrganizationService _service;
-        protected readonly XrmFakedContext _context;
+        protected readonly IXrmFakedContext _context;
 
         public FakeXrmEasyTestBase()
         {
-            _context = new XrmFakedContext();
+            _context = MiddlewareBuilder
+                        .New()
+
+                        .AddCrud()
+                        .AddFakeMessageExecutors(Assembly.GetAssembly(typeof(AddListMembersListRequestExecutor)))
+
+                        .UseCrud()
+                        .UseMessages()
+                        .SetLicense(FakeXrmEasyLicense.RPL_1_5)
+                        .Build();
+
             _service = _context.GetOrganizationService();
         }
-
-
     }
 }

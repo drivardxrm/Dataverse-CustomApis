@@ -1,9 +1,9 @@
 ﻿using Driv.CustomApis.API;
-using FakeXrmEasy;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.Xrm.Sdk;
 using System;
-
+using FakeXrmEasy.Plugins;
+using FakeXrmEasy.Abstractions.Plugins;
 
 namespace Driv.CustomApis.Tests.API
 {
