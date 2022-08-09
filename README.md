@@ -1,4 +1,4 @@
-# Dataverse-CustomApis
+# Dataverse-CustomApis ![GitHub all releases](https://img.shields.io/github/downloads/drivardxrm/dataverse-customapis/total?style=plastic)
 
 This project contains a set of generic Dataverse Custom APIs that can be installed and consumed in any Dataverse environment.
 
